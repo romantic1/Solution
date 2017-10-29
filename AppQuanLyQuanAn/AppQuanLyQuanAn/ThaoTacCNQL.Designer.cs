@@ -45,9 +45,10 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.HeaderPanelDM = new System.Windows.Forms.Panel();
+            this.button6 = new System.Windows.Forms.Button();
             this.OffThaoTacCNQL = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.HeaderPanelDM.SuspendLayout();
             this.SuspendLayout();
@@ -56,6 +57,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.Tan;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.button6);
             this.panel1.Controls.Add(this.dateTimePicker1);
             this.panel1.Controls.Add(this.label10);
@@ -234,6 +236,20 @@
             this.HeaderPanelDM.Size = new System.Drawing.Size(489, 31);
             this.HeaderPanelDM.TabIndex = 1;
             // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.button6.Image = global::AppQuanLyQuanAn.Properties.Resources.Add;
+            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button6.Location = new System.Drawing.Point(164, 186);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(170, 37);
+            this.button6.TabIndex = 48;
+            this.button6.Text = "Thêm chi nhánh";
+            this.button6.UseVisualStyleBackColor = false;
+            // 
             // OffThaoTacCNQL
             // 
             this.OffThaoTacCNQL.BackColor = System.Drawing.Color.Transparent;
@@ -261,19 +277,19 @@
             this.label1.Text = "Thao Tác Chi Nhánh";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // button6
+            // button1
             // 
-            this.button6.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.button6.Image = global::AppQuanLyQuanAn.Properties.Resources.Add;
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(164, 186);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(170, 37);
-            this.button6.TabIndex = 48;
-            this.button6.Text = "Thêm chi nhánh";
-            this.button6.UseVisualStyleBackColor = false;
+            this.button1.BackColor = System.Drawing.Color.LightSalmon;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(374, 136);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(82, 37);
+            this.button1.TabIndex = 49;
+            this.button1.Text = "Menu";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // ThaoTacCNQL
             // 
@@ -316,5 +332,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button1;
     }
 }

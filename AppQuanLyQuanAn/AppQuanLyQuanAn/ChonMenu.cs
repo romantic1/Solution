@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace AppQuanLyQuanAn
 {
-    public partial class ThaoTacCNQL : Form
+    public partial class ChonMenu : Form
     {
-        public ThaoTacCNQL()
+        public ChonMenu()
         {
             InitializeComponent();
         }
@@ -20,13 +20,6 @@ namespace AppQuanLyQuanAn
         private void OffThaoTacCNQL_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            ChonMenu frChonMenu = new ChonMenu();
-
-            frChonMenu.Show();
         }
     }
 }

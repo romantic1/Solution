@@ -70,6 +70,12 @@
     <Compile Include="ChiNhanhQL.Designer.cs">
       <DependentUpon>ChiNhanhQL.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChonMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChonMenu.Designer.cs">
+      <DependentUpon>ChonMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="DangXuatControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -122,6 +128,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ChiNhanhQL.resx">
       <DependentUpon>ChiNhanhQL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChonMenu.resx">
+      <DependentUpon>ChonMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DangXuatControl.resx">
       <DependentUpon>DangXuatControl.cs</DependentUpon>
@@ -352,6 +361,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\delete2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tick.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
