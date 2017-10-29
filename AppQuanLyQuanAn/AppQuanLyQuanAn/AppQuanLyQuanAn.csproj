@@ -100,8 +100,14 @@
     <Compile Include="HomeControl.Designer.cs">
       <DependentUpon>HomeControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="kn.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QLQUANANDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLQUANANDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="QuanLyControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -177,6 +183,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="QLQUANANDataSet.xsc">
+      <DependentUpon>QLQUANANDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QLQUANANDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLQUANANDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLQUANANDataSet.xss">
+      <DependentUpon>QLQUANANDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Resources\Home.ico" />
   </ItemGroup>
   <ItemGroup>
