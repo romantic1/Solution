@@ -111,14 +111,13 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.button1.Image = global::AppQuanLyQuanAn.Properties.Resources.Tick;
+            this.button1.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(211, 381);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(84, 45);
+            this.button1.Size = new System.Drawing.Size(70, 45);
             this.button1.TabIndex = 10;
             this.button1.Text = "Chọn";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = false;
             // 
             // button4
@@ -128,7 +127,7 @@
             this.button4.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.button4.Image = global::AppQuanLyQuanAn.Properties.Resources.Delete;
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(128, 203);
+            this.button4.Location = new System.Drawing.Point(128, 175);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(67, 37);
             this.button4.TabIndex = 34;
@@ -143,7 +142,7 @@
             this.ThemMoiCNQL.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.ThemMoiCNQL.Image = global::AppQuanLyQuanAn.Properties.Resources.Add;
             this.ThemMoiCNQL.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ThemMoiCNQL.Location = new System.Drawing.Point(128, 117);
+            this.ThemMoiCNQL.Location = new System.Drawing.Point(128, 82);
             this.ThemMoiCNQL.Name = "ThemMoiCNQL";
             this.ThemMoiCNQL.Size = new System.Drawing.Size(67, 37);
             this.ThemMoiCNQL.TabIndex = 33;
