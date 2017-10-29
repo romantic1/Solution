@@ -21,5 +21,12 @@ namespace AppQuanLyQuanAn
         {
             this.Close();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ChonMenu frChonMenuUpdate = new ChonMenu();
+
+            frChonMenuUpdate.Show();
+        }
     }
 }
