@@ -30,7 +30,7 @@ namespace AppQuanLyQuanAn
         private void btn_CapNhatMonAn_Click(object sender, EventArgs e)
         {
             conn.Open();
-            string SqlUpdate = "Update Mon_An set Ten_MA = N'" + txt_TenMonAn.Text + "',Gia = '" + txt_Gia.Text + "',GhiChu = N'" + txt_GhiChu.Text + "' Where Ma_MA = '" + txt_MaMonAn.Text + "'";
+            string SqlUpdate = "Update Mon_An set Ten_MA = N'" + txt_TenMonAn.Text + "',Gia = '" + txt_Gia.Text + "',GhiChu = N'" + txt_GhiChu.Text + "',Ten_DM = N'" + txt_TenDanhMuc.Text + "' Where Ma_MA = '" + txt_MaMonAn.Text + "'";
             cmd = new SqlCommand(SqlUpdate, conn);
             if (cmd.ExecuteNonQuery() == 1)
             {
@@ -41,7 +41,7 @@ namespace AppQuanLyQuanAn
                 MessageBox.Show("Update fail", "Thông báo");
             }
             HienThiMonAn();
-            txt_MaMonAn.Text = txt_TenMonAn.Text = txt_Gia.Text = txt_GhiChu.Text = "";
+            txt_MaMonAn.Text = txt_TenMonAn.Text = txt_Gia.Text = txt_GhiChu.Text = txt_TenDanhMuc.Text = "";
             conn.Close();
         }
 
@@ -70,6 +70,7 @@ namespace AppQuanLyQuanAn
             txt_TenMonAn.Text = row.Cells[1].Value.ToString();
             txt_Gia.Text = row.Cells[2].Value.ToString();
             txt_GhiChu.Text = row.Cells[3].Value.ToString();
+            txt_TenDanhMuc.Text = row.Cells[4].Value.ToString();
         }
     }
 }

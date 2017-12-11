@@ -39,7 +39,7 @@ namespace AppQuanLyQuanAn
                 txt_MaMonAn.Text = "MA" + (chuoi2 + 1).ToString();
             }
             conn.Open();
-            string SqlInsert = "Insert into Mon_An values('" + txt_MaMonAn.Text + "',N'" + txt_TenMonAn.Text + "','" + txt_Gia.Text + "',N'" + txt_GhiChu.Text + "')";
+            string SqlInsert = "Insert into Mon_An values('" + txt_MaMonAn.Text + "',N'" + txt_TenMonAn.Text + "','" + txt_Gia.Text + "',N'" + txt_GhiChu.Text + "',N'" + txt_TenDanhMuc.Text + "')";
             cmd = new SqlCommand(SqlInsert, conn);
             if (cmd.ExecuteNonQuery() == 1)
             {

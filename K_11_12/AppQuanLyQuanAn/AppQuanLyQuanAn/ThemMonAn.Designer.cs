@@ -44,6 +44,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_ThemMonAn = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txt_TenDanhMuc = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ThemMonAn)).BeginInit();
             this.HeaderPanelDM.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -65,7 +67,7 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(447, 213);
+            this.button1.Location = new System.Drawing.Point(506, 224);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(115, 37);
             this.button1.TabIndex = 49;
@@ -196,7 +198,7 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(63, 15);
             this.label6.TabIndex = 41;
-            this.label6.Text = "Ghi chú:";
+            this.label6.Text = "Ghi Chú:";
             // 
             // panel1
             // 
@@ -205,7 +207,9 @@
             this.panel1.Controls.Add(this.dgv_ThemMonAn);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.btn_ThemMonAn);
+            this.panel1.Controls.Add(this.txt_TenDanhMuc);
             this.panel1.Controls.Add(this.txt_GhiChu);
+            this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.txt_Gia);
             this.panel1.Controls.Add(this.label4);
@@ -227,13 +231,32 @@
             this.btn_ThemMonAn.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btn_ThemMonAn.Image = global::AppQuanLyQuanAn.Properties.Resources.Add;
             this.btn_ThemMonAn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_ThemMonAn.Location = new System.Drawing.Point(129, 213);
+            this.btn_ThemMonAn.Location = new System.Drawing.Point(164, 224);
             this.btn_ThemMonAn.Name = "btn_ThemMonAn";
             this.btn_ThemMonAn.Size = new System.Drawing.Size(170, 37);
             this.btn_ThemMonAn.TabIndex = 48;
             this.btn_ThemMonAn.Text = "Thêm món ăn";
             this.btn_ThemMonAn.UseVisualStyleBackColor = false;
             this.btn_ThemMonAn.Click += new System.EventHandler(this.btn_ThemMonAn_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label7.Location = new System.Drawing.Point(0, 197);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(98, 15);
+            this.label7.TabIndex = 41;
+            this.label7.Text = "Tên Danh Mục:";
+            // 
+            // txt_TenDanhMuc
+            // 
+            this.txt_TenDanhMuc.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_TenDanhMuc.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt_TenDanhMuc.Location = new System.Drawing.Point(164, 197);
+            this.txt_TenDanhMuc.Name = "txt_TenDanhMuc";
+            this.txt_TenDanhMuc.Size = new System.Drawing.Size(335, 18);
+            this.txt_TenDanhMuc.TabIndex = 40;
             // 
             // ThemMonAn
             // 
@@ -273,5 +296,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox txt_TenDanhMuc;
+        private System.Windows.Forms.Label label7;
     }
 }

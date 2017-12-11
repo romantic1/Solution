@@ -44,6 +44,8 @@
             this.HeaderPanelDM = new System.Windows.Forms.Panel();
             this.OffThaoTacCNQL = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txt_TenDanhMuc = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_CapNhatMonAn)).BeginInit();
             this.panel1.SuspendLayout();
             this.HeaderPanelDM.SuspendLayout();
@@ -81,7 +83,7 @@
             this.txt_GhiChu.Multiline = true;
             this.txt_GhiChu.Name = "txt_GhiChu";
             this.txt_GhiChu.Size = new System.Drawing.Size(143, 45);
-            this.txt_GhiChu.TabIndex = 56;
+            this.txt_GhiChu.TabIndex = 55;
             // 
             // label6
             // 
@@ -172,7 +174,9 @@
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.txt_Gia);
             this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.txt_TenDanhMuc);
             this.panel1.Controls.Add(this.txt_TenMonAn);
+            this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.txt_MaMonAn);
             this.panel1.Controls.Add(this.label5);
@@ -193,7 +197,7 @@
             this.btn_CapNhatMonAn.Location = new System.Drawing.Point(136, 176);
             this.btn_CapNhatMonAn.Name = "btn_CapNhatMonAn";
             this.btn_CapNhatMonAn.Size = new System.Drawing.Size(191, 37);
-            this.btn_CapNhatMonAn.TabIndex = 64;
+            this.btn_CapNhatMonAn.TabIndex = 56;
             this.btn_CapNhatMonAn.Text = "Cập nhật món ăn";
             this.btn_CapNhatMonAn.UseVisualStyleBackColor = false;
             this.btn_CapNhatMonAn.Click += new System.EventHandler(this.btn_CapNhatMonAn_Click);
@@ -236,6 +240,25 @@
             this.label1.Text = "Cập Nhật Món Ăn";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label7.Location = new System.Drawing.Point(23, 110);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(98, 15);
+            this.label7.TabIndex = 53;
+            this.label7.Text = "Tên Danh Mục:";
+            // 
+            // txt_TenDanhMuc
+            // 
+            this.txt_TenDanhMuc.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_TenDanhMuc.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt_TenDanhMuc.Location = new System.Drawing.Point(136, 110);
+            this.txt_TenDanhMuc.Name = "txt_TenDanhMuc";
+            this.txt_TenDanhMuc.Size = new System.Drawing.Size(191, 18);
+            this.txt_TenDanhMuc.TabIndex = 53;
+            // 
             // CapNhatMonAn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -274,5 +297,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel HeaderPanelDM;
+        private System.Windows.Forms.TextBox txt_TenDanhMuc;
+        private System.Windows.Forms.Label label7;
     }
 }

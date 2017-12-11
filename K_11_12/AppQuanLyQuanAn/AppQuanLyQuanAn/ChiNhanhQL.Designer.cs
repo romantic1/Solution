@@ -51,7 +51,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.MenuCNQL = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbb_DanhMucMonAn = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.RefeshDM = new System.Windows.Forms.Button();
             this.txt_SearchMonAn = new System.Windows.Forms.TextBox();
@@ -311,7 +311,7 @@
             this.groupBox1.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.groupBox1.Controls.Add(this.MenuCNQL);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.cbb_DanhMucMonAn);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.RefeshDM);
             this.groupBox1.Controls.Add(this.txt_SearchMonAn);
@@ -336,16 +336,20 @@
             this.MenuCNQL.Text = "Menu Món Ăn";
             this.MenuCNQL.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // comboBox1
+            // cbb_DanhMucMonAn
             // 
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(337, 54);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(95, 22);
-            this.comboBox1.TabIndex = 28;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.cbb_DanhMucMonAn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbb_DanhMucMonAn.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.cbb_DanhMucMonAn.FormattingEnabled = true;
+            this.cbb_DanhMucMonAn.Items.AddRange(new object[] {
+            "Gà",
+            "Lợn",
+            "Bò"});
+            this.cbb_DanhMucMonAn.Location = new System.Drawing.Point(337, 54);
+            this.cbb_DanhMucMonAn.Name = "cbb_DanhMucMonAn";
+            this.cbb_DanhMucMonAn.Size = new System.Drawing.Size(95, 22);
+            this.cbb_DanhMucMonAn.TabIndex = 28;
+            this.cbb_DanhMucMonAn.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label8
             // 
@@ -681,7 +685,7 @@
         private System.Windows.Forms.Button SearchCNQL;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label MenuCNQL;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbb_DanhMucMonAn;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txt_SearchMonAn;
         private System.Windows.Forms.Button btSearchMACNQL;

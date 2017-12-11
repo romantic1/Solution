@@ -46,15 +46,15 @@ namespace AppQuanLyQuanAn
             dgv_HienThiThongTinCN.DataSource = dt;
         }
 
-        void HienThiMonAn()
-        {
-            string SqlSelect = "Select * from MON_AN";
-            cmd = new SqlCommand(SqlSelect, conn);
-            SqlDataReader dr = cmd.ExecuteReader();
-            DataTable dt = new DataTable();
-            dt.Load(dr);
-            dgvHienThiDanhSachMonAn.DataSource = dt;            
-        }
+        //void HienThiMonAn()
+        //{
+        //    string SqlSelect = "Select * from MON_AN";
+        //    cmd = new SqlCommand(SqlSelect, conn);
+        //    SqlDataReader dr = cmd.ExecuteReader();
+        //    DataTable dt = new DataTable();
+        //    dt.Load(dr);
+        //    dgvHienThiDanhSachMonAn.DataSource = dt;            
+        //}
 
         void HienThiDanhSachMonAn()
         {
@@ -62,60 +62,11 @@ namespace AppQuanLyQuanAn
             SqlDataAdapter da = new SqlDataAdapter("Select * from Mon_An",conn);
             da.Fill(dt);
             dgvHienThiDanhSachMonAn.DataSource = dt;
+           
         }
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            switch ((sender as Control).Text)
-            {
-                case "Bò":
-                    string SqlSelect = "SELECT * FROM DANH_MUC Where Ma_DM = 'DM1'";
-                    SqlCommand cmd = new SqlCommand(SqlSelect, conn);
-                    SqlDataReader dr = cmd.ExecuteReader();
-                    DataTable dt = new DataTable();
-                    dt.Load(dr);
-                    dgvHienThiDanhSachMonAn.DataSource = dt;
-                    break;
-                case "Gà":
-                    SqlSelect = "SELECT * FROM [dbo].[DANH_MUC] Where Ma_DM = 'DM2'";
-                    cmd = new SqlCommand(SqlSelect, conn);
-                    dr = cmd.ExecuteReader();
-                    dt = new DataTable();
-                    dt.Load(dr);
-                    dgvHienThiDanhSachMonAn.DataSource = dt;
-                    break;
-                case "Heo":
-                    SqlSelect = "SELECT * FROM [dbo].[DANH_MUC] Where Ma_DM = 'DM3'";
-                    cmd = new SqlCommand(SqlSelect, conn);
-                    dr = cmd.ExecuteReader();
-                    dt = new DataTable();
-                    dt.Load(dr);
-                    dgvHienThiDanhSachMonAn.DataSource = dt;
-                    break;
-                case "Dê":
-                   SqlSelect = "SELECT * FROM [dbo].[DANH_MUC] Where Ma_DM = 'DM4'";
-                    cmd = new SqlCommand(SqlSelect, conn);
-                    dr = cmd.ExecuteReader();
-                    dt = new DataTable();
-                    dt.Load(dr);
-                    dgvHienThiDanhSachMonAn.DataSource = dt;
-                    break;
-               case "Cá":
-                    SqlSelect = "SELECT * FROM [dbo].[DANH_MUC] Where Ma_DM = 'DM5'";
-                    cmd = new SqlCommand(SqlSelect, conn);
-                    dr = cmd.ExecuteReader();
-                    dt = new DataTable();
-                    dt.Load(dr);
-                    dgvHienThiDanhSachMonAn.DataSource = dt;
-                    break;
-                case "Bạch tuộc":
-                    SqlSelect = "SELECT * FROM [dbo].[DANH_MUC] Where Ma_DM = 'DM6'";
-                    cmd = new SqlCommand(SqlSelect, conn);
-                    dr = cmd.ExecuteReader();
-                    dt = new DataTable();
-                    dt.Load(dr);
-                    dgvHienThiDanhSachMonAn.DataSource = dt;
-                    break;
-            }
+            (dgvHienThiDanhSachMonAn.DataSource as DataTable).DefaultView.RowFilter = string.Format("Ten_DM LIKE '%{0}%'",  cbb_DanhMucMonAn.SelectedItem.ToString());        
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -187,17 +138,23 @@ namespace AppQuanLyQuanAn
         }
 
         private void txt_Search_TextChanged(object sender, EventArgs e)
-        {
-            //DataTable dt = new DataTable("Chi_Nhanh");
-            //DataView dv = new DataView(dt);
-            //dv.RowFilter = string.Format("Ten_CN like '%{0}%'", txt_Search.Text);
-            (dgv_HienThiThongTinCN.DataSource as DataTable).DefaultView.RowFilter = string.Format("Ten_CN LIKE '%{0}%'", txt_Search.Text);
-            //dgv_HienThiThongTinCN.DataSource = dv;
+        { 
+            (dgv_HienThiThongTinCN.DataSource as DataTable).DefaultView.RowFilter = string.Format("Ten_CN LIKE '%{0}%'", txt_Search.Text); 
         }
 
         private void text_search_TextChanged(object sender, EventArgs e)
         {
             (dgvHienThiDanhSachMonAn.DataSource as DataTable).DefaultView.RowFilter = string.Format("Ten_MA LIKE '%{0}%'", txt_SearchMonAn.Text);
         }
+
+        //void ComboboxMonAn()
+        //{
+        //    cmd = new SqlCommand("Select Ten_DM from Mon_An", conn);
+        //    SqlDataAdapter da = new SqlDataAdapter(cmd);
+        //    DataSet ds = new DataSet();
+        //    da.Fill(ds, "Mon_An");
+        //    cbb_DanhMucMonAn.DataSource = ds.Tables[0];
+        //    cbb_DanhMucMonAn.DisplayMember = "Ten_DM";
+        //}
     }
 }
