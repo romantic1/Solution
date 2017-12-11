@@ -72,7 +72,7 @@ namespace AppQuanLyQuanAn
         private void button3_Click(object sender, EventArgs e)
         {
             string SqlSelect = "Select * from MON_AN";
-            SqlCommand cmd = new SqlCommand(SqlSelect, conn);
+            cmd = new SqlCommand(SqlSelect, conn);
             SqlDataReader dr = cmd.ExecuteReader();
             DataTable dt = new DataTable();
             dt.Load(dr);
@@ -83,36 +83,49 @@ namespace AppQuanLyQuanAn
         {
             ThemChiNhanh frmTCN = new ThemChiNhanh();
             frmTCN.ShowDialog();
+            HienThiThongTinCN();
+            HienThiDanhSachMonAn();
+
         }
 
         private void button5_Click_1(object sender, EventArgs e)
         {
             CapNhatChiNhanh frmCNCN = new CapNhatChiNhanh();
             frmCNCN.ShowDialog();
+            HienThiThongTinCN();
+            HienThiDanhSachMonAn();
         }
 
         private void button4_Click_1(object sender, EventArgs e)
         {
             XoaChiNhanh frmXCN = new XoaChiNhanh();
             frmXCN.ShowDialog();
+            HienThiThongTinCN();
+            HienThiDanhSachMonAn();
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
             ThemMonAn frmTMA = new ThemMonAn();
             frmTMA.ShowDialog();
+            HienThiThongTinCN();
+            HienThiDanhSachMonAn();
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
             CapNhatMonAn frmCNMA = new CapNhatMonAn();
             frmCNMA.ShowDialog();
+            HienThiThongTinCN();
+            HienThiDanhSachMonAn();
         }
 
         private void button3_Click_1(object sender, EventArgs e)
         {
             XoaMonAn frmXMA = new XoaMonAn();
             frmXMA.ShowDialog();
+            HienThiThongTinCN();
+            HienThiDanhSachMonAn();
         }
 
         private void dgv_HienThiThongTinCN_CellClick(object sender, DataGridViewCellEventArgs e)

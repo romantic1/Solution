@@ -44,8 +44,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_ThemMonAn = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
             this.txt_TenDanhMuc = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ThemMonAn)).BeginInit();
             this.HeaderPanelDM.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -119,7 +119,7 @@
             this.txt_GhiChu.Location = new System.Drawing.Point(164, 163);
             this.txt_GhiChu.Name = "txt_GhiChu";
             this.txt_GhiChu.Size = new System.Drawing.Size(335, 18);
-            this.txt_GhiChu.TabIndex = 40;
+            this.txt_GhiChu.TabIndex = 38;
             // 
             // txt_Gia
             // 
@@ -128,7 +128,7 @@
             this.txt_Gia.Location = new System.Drawing.Point(164, 131);
             this.txt_Gia.Name = "txt_Gia";
             this.txt_Gia.Size = new System.Drawing.Size(335, 18);
-            this.txt_Gia.TabIndex = 38;
+            this.txt_Gia.TabIndex = 37;
             // 
             // label4
             // 
@@ -234,10 +234,19 @@
             this.btn_ThemMonAn.Location = new System.Drawing.Point(164, 224);
             this.btn_ThemMonAn.Name = "btn_ThemMonAn";
             this.btn_ThemMonAn.Size = new System.Drawing.Size(170, 37);
-            this.btn_ThemMonAn.TabIndex = 48;
+            this.btn_ThemMonAn.TabIndex = 40;
             this.btn_ThemMonAn.Text = "Thêm món ăn";
             this.btn_ThemMonAn.UseVisualStyleBackColor = false;
             this.btn_ThemMonAn.Click += new System.EventHandler(this.btn_ThemMonAn_Click);
+            // 
+            // txt_TenDanhMuc
+            // 
+            this.txt_TenDanhMuc.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_TenDanhMuc.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt_TenDanhMuc.Location = new System.Drawing.Point(164, 197);
+            this.txt_TenDanhMuc.Name = "txt_TenDanhMuc";
+            this.txt_TenDanhMuc.Size = new System.Drawing.Size(335, 18);
+            this.txt_TenDanhMuc.TabIndex = 39;
             // 
             // label7
             // 
@@ -248,15 +257,6 @@
             this.label7.Size = new System.Drawing.Size(98, 15);
             this.label7.TabIndex = 41;
             this.label7.Text = "Tên Danh Mục:";
-            // 
-            // txt_TenDanhMuc
-            // 
-            this.txt_TenDanhMuc.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_TenDanhMuc.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txt_TenDanhMuc.Location = new System.Drawing.Point(164, 197);
-            this.txt_TenDanhMuc.Name = "txt_TenDanhMuc";
-            this.txt_TenDanhMuc.Size = new System.Drawing.Size(335, 18);
-            this.txt_TenDanhMuc.TabIndex = 40;
             // 
             // ThemMonAn
             // 

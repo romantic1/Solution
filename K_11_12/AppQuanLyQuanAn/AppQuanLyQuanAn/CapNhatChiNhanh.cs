@@ -48,7 +48,6 @@ namespace AppQuanLyQuanAn
                 MessageBox.Show("Update fail", "Thông báo");
             }
             HienThiChiNhanh();
-            //txt_MaMonAn.Text = txt_TenMonAn.Text = txt_Gia.Text = txt_GhiChu.Text = "";
             conn.Close();
         }
 

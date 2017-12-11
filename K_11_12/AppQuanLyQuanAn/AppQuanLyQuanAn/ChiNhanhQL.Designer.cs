@@ -127,6 +127,7 @@
             this.panel3.Controls.Add(this.label7);
             this.panel3.Controls.Add(this.label6);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.Enabled = false;
             this.panel3.Location = new System.Drawing.Point(3, 40);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(415, 453);
@@ -524,6 +525,7 @@
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(877, 79);
             this.groupBox3.Name = "groupBox3";
+            this.groupBox3.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.groupBox3.Size = new System.Drawing.Size(158, 178);
             this.groupBox3.TabIndex = 56;
             this.groupBox3.TabStop = false;

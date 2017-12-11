@@ -29,5 +29,11 @@ namespace AppQuanLyQuanAn
             ChiNhanhQL frChiNhanh = new ChiNhanhQL();
             frChiNhanh.Show();
         }
+
+        private void btKhachHangQL_Click(object sender, EventArgs e)
+        {
+            KhachHang frmKH = new KhachHang();
+            frmKH.Show();
+        }
     }
 }
