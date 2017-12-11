@@ -16,5 +16,10 @@ namespace AppQuanLyQuanAn
         {
             InitializeComponent();
         }
+
+        private void DangXuatControl_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

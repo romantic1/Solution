@@ -12,6 +12,12 @@ namespace AppQuanLyQuanAn
 {
     public partial class Home : Form
     {
+    
+        public string bophan //lấy dữ liệu từ phân quyền từ form đăng nhập đưa qua
+        {
+            get;
+            set;
+        }
         public Home()
         {
             InitializeComponent();
@@ -51,6 +57,32 @@ namespace AppQuanLyQuanAn
         private void button5_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void HeaderPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void dangXuatControl1_Load(object sender, EventArgs e)
+        {
+
+        }
+      
+        private void Home_Load_1(object sender, EventArgs e)
+        {
+            btTongDai.Enabled = false;
+            btQuanLy.Enabled = false;
+            btChiNhanh.Enabled = false;
+
+
+            if (bophan == "0")
+            {
+                btTongDai.Enabled = false;
+                
+            }
+
+            btChiNhanh.Enabled = false;
         }
     }
 }

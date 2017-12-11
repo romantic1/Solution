@@ -82,6 +82,12 @@
     <Compile Include="ChonMenu.Designer.cs">
       <DependentUpon>ChonMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="DangNhapControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DangNhapControl.Designer.cs">
+      <DependentUpon>DangNhapControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="DangXuatControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -112,8 +118,14 @@
     <Compile Include="KhachHangQL.Designer.cs">
       <DependentUpon>KhachHangQL.cs</DependentUpon>
     </Compile>
+    <Compile Include="kn.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuanLiQuanAnDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLiQuanAnDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="QuanLyControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -164,6 +176,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ChonMenu.resx">
       <DependentUpon>ChonMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DangNhapControl.resx">
+      <DependentUpon>DangNhapControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DangXuatControl.resx">
       <DependentUpon>DangXuatControl.cs</DependentUpon>
@@ -219,6 +234,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="QuanLiQuanAnDataSet.xsc">
+      <DependentUpon>QuanLiQuanAnDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLiQuanAnDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLiQuanAnDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLiQuanAnDataSet.xss">
+      <DependentUpon>QuanLiQuanAnDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Resources\Home.ico" />
   </ItemGroup>
   <ItemGroup>
@@ -406,6 +432,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Tick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Login_Icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
