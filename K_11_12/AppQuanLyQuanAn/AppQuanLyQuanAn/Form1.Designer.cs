@@ -44,6 +44,10 @@
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
+<<<<<<< HEAD
+=======
+            this.dangNhapControl1 = new AppQuanLyQuanAn.DangNhapControl();
+>>>>>>> b385bd75bf8e41431c7690d527aba3b2a945a654
             this.dangXuatControl1 = new AppQuanLyQuanAn.DangXuatControl();
             this.tongDaiControl1 = new AppQuanLyQuanAn.TongDaiControl();
             this.quanLyControl1 = new AppQuanLyQuanAn.QuanLyControl();
@@ -66,8 +70,9 @@
             this.SidePanel.Controls.Add(this.NameApp);
             this.SidePanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.SidePanel.Location = new System.Drawing.Point(0, 0);
+            this.SidePanel.Margin = new System.Windows.Forms.Padding(4);
             this.SidePanel.Name = "SidePanel";
-            this.SidePanel.Size = new System.Drawing.Size(154, 508);
+            this.SidePanel.Size = new System.Drawing.Size(205, 625);
             this.SidePanel.TabIndex = 1;
             // 
             // button5
@@ -78,9 +83,10 @@
             this.button5.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.Image = global::AppQuanLyQuanAn.Properties.Resources.Off;
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(0, 391);
+            this.button5.Location = new System.Drawing.Point(0, 481);
+            this.button5.Margin = new System.Windows.Forms.Padding(4);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(154, 65);
+            this.button5.Size = new System.Drawing.Size(205, 80);
             this.button5.TabIndex = 6;
             this.button5.Text = "Thoát";
             this.button5.UseVisualStyleBackColor = true;
@@ -94,9 +100,10 @@
             this.btDangXuat.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btDangXuat.Image = global::AppQuanLyQuanAn.Properties.Resources.Logout;
             this.btDangXuat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btDangXuat.Location = new System.Drawing.Point(0, 330);
+            this.btDangXuat.Location = new System.Drawing.Point(0, 406);
+            this.btDangXuat.Margin = new System.Windows.Forms.Padding(4);
             this.btDangXuat.Name = "btDangXuat";
-            this.btDangXuat.Size = new System.Drawing.Size(154, 65);
+            this.btDangXuat.Size = new System.Drawing.Size(205, 80);
             this.btDangXuat.TabIndex = 5;
             this.btDangXuat.Text = "  Đăng Xuất";
             this.btDangXuat.UseVisualStyleBackColor = true;
@@ -110,9 +117,10 @@
             this.btTongDai.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btTongDai.Image = global::AppQuanLyQuanAn.Properties.Resources.TongDai;
             this.btTongDai.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btTongDai.Location = new System.Drawing.Point(0, 269);
+            this.btTongDai.Location = new System.Drawing.Point(0, 331);
+            this.btTongDai.Margin = new System.Windows.Forms.Padding(4);
             this.btTongDai.Name = "btTongDai";
-            this.btTongDai.Size = new System.Drawing.Size(154, 65);
+            this.btTongDai.Size = new System.Drawing.Size(205, 80);
             this.btTongDai.TabIndex = 4;
             this.btTongDai.Text = " Tổng Đài";
             this.btTongDai.UseVisualStyleBackColor = true;
@@ -126,9 +134,10 @@
             this.btChiNhanh.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btChiNhanh.Image = global::AppQuanLyQuanAn.Properties.Resources.Branch;
             this.btChiNhanh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btChiNhanh.Location = new System.Drawing.Point(0, 208);
+            this.btChiNhanh.Location = new System.Drawing.Point(0, 256);
+            this.btChiNhanh.Margin = new System.Windows.Forms.Padding(4);
             this.btChiNhanh.Name = "btChiNhanh";
-            this.btChiNhanh.Size = new System.Drawing.Size(154, 65);
+            this.btChiNhanh.Size = new System.Drawing.Size(205, 80);
             this.btChiNhanh.TabIndex = 3;
             this.btChiNhanh.Text = "  Chi Nhánh";
             this.btChiNhanh.UseVisualStyleBackColor = true;
@@ -142,9 +151,10 @@
             this.btQuanLy.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btQuanLy.Image = global::AppQuanLyQuanAn.Properties.Resources.Business2;
             this.btQuanLy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btQuanLy.Location = new System.Drawing.Point(0, 147);
+            this.btQuanLy.Location = new System.Drawing.Point(0, 181);
+            this.btQuanLy.Margin = new System.Windows.Forms.Padding(4);
             this.btQuanLy.Name = "btQuanLy";
-            this.btQuanLy.Size = new System.Drawing.Size(154, 65);
+            this.btQuanLy.Size = new System.Drawing.Size(205, 80);
             this.btQuanLy.TabIndex = 2;
             this.btQuanLy.Text = "Quản Lý";
             this.btQuanLy.UseVisualStyleBackColor = true;
@@ -158,9 +168,10 @@
             this.btHome.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btHome.Image = global::AppQuanLyQuanAn.Properties.Resources.Home3;
             this.btHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btHome.Location = new System.Drawing.Point(0, 86);
+            this.btHome.Location = new System.Drawing.Point(0, 106);
+            this.btHome.Margin = new System.Windows.Forms.Padding(4);
             this.btHome.Name = "btHome";
-            this.btHome.Size = new System.Drawing.Size(154, 65);
+            this.btHome.Size = new System.Drawing.Size(205, 80);
             this.btHome.TabIndex = 1;
             this.btHome.Text = "     Màn Hình Chính";
             this.btHome.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -174,8 +185,14 @@
             this.NameApp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.NameApp.Controls.Add(this.label1);
             this.NameApp.Location = new System.Drawing.Point(0, 0);
+<<<<<<< HEAD
             this.NameApp.Name = "NameApp";
             this.NameApp.Size = new System.Drawing.Size(154, 79);
+=======
+            this.NameApp.Margin = new System.Windows.Forms.Padding(4);
+            this.NameApp.Name = "NameApp";
+            this.NameApp.Size = new System.Drawing.Size(205, 97);
+>>>>>>> b385bd75bf8e41431c7690d527aba3b2a945a654
             this.NameApp.TabIndex = 0;
             // 
             // label1
@@ -185,8 +202,9 @@
             this.label1.ForeColor = System.Drawing.Color.Honeydew;
             this.label1.Image = global::AppQuanLyQuanAn.Properties.Resources.Backgound5;
             this.label1.Location = new System.Drawing.Point(-1, -1);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(154, 79);
+            this.label1.Size = new System.Drawing.Size(205, 97);
             this.label1.TabIndex = 0;
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -200,10 +218,19 @@
             this.HeaderPanel.Controls.Add(this.button7);
             this.HeaderPanel.Controls.Add(this.button6);
             this.HeaderPanel.Dock = System.Windows.Forms.DockStyle.Top;
+<<<<<<< HEAD
             this.HeaderPanel.Location = new System.Drawing.Point(154, 0);
             this.HeaderPanel.Name = "HeaderPanel";
             this.HeaderPanel.Size = new System.Drawing.Size(741, 79);
             this.HeaderPanel.TabIndex = 2;
+=======
+            this.HeaderPanel.Location = new System.Drawing.Point(205, 0);
+            this.HeaderPanel.Margin = new System.Windows.Forms.Padding(4);
+            this.HeaderPanel.Name = "HeaderPanel";
+            this.HeaderPanel.Size = new System.Drawing.Size(988, 98);
+            this.HeaderPanel.TabIndex = 2;
+            this.HeaderPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.HeaderPanel_Paint);
+>>>>>>> b385bd75bf8e41431c7690d527aba3b2a945a654
             // 
             // button17
             // 
@@ -212,9 +239,16 @@
             this.button17.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button17.Image = global::AppQuanLyQuanAn.Properties.Resources.Option;
             this.button17.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+<<<<<<< HEAD
             this.button17.Location = new System.Drawing.Point(650, 12);
             this.button17.Name = "button17";
             this.button17.Size = new System.Drawing.Size(41, 56);
+=======
+            this.button17.Location = new System.Drawing.Point(867, 15);
+            this.button17.Margin = new System.Windows.Forms.Padding(4);
+            this.button17.Name = "button17";
+            this.button17.Size = new System.Drawing.Size(55, 69);
+>>>>>>> b385bd75bf8e41431c7690d527aba3b2a945a654
             this.button17.TabIndex = 12;
             this.button17.UseVisualStyleBackColor = true;
             // 
@@ -225,9 +259,16 @@
             this.button10.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button10.Image = global::AppQuanLyQuanAn.Properties.Resources.Call;
             this.button10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+<<<<<<< HEAD
             this.button10.Location = new System.Drawing.Point(159, 12);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(41, 56);
+=======
+            this.button10.Location = new System.Drawing.Point(212, 15);
+            this.button10.Margin = new System.Windows.Forms.Padding(4);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(55, 69);
+>>>>>>> b385bd75bf8e41431c7690d527aba3b2a945a654
             this.button10.TabIndex = 11;
             this.button10.UseVisualStyleBackColor = true;
             // 
@@ -238,9 +279,16 @@
             this.button9.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button9.Image = global::AppQuanLyQuanAn.Properties.Resources.Facebook;
             this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+<<<<<<< HEAD
             this.button9.Location = new System.Drawing.Point(18, 12);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(41, 56);
+=======
+            this.button9.Location = new System.Drawing.Point(24, 15);
+            this.button9.Margin = new System.Windows.Forms.Padding(4);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(55, 69);
+>>>>>>> b385bd75bf8e41431c7690d527aba3b2a945a654
             this.button9.TabIndex = 10;
             this.button9.UseVisualStyleBackColor = true;
             // 
@@ -251,9 +299,16 @@
             this.button8.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.Image = global::AppQuanLyQuanAn.Properties.Resources.Switter;
             this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+<<<<<<< HEAD
             this.button8.Location = new System.Drawing.Point(65, 12);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(41, 56);
+=======
+            this.button8.Location = new System.Drawing.Point(87, 15);
+            this.button8.Margin = new System.Windows.Forms.Padding(4);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(55, 69);
+>>>>>>> b385bd75bf8e41431c7690d527aba3b2a945a654
             this.button8.TabIndex = 9;
             this.button8.UseVisualStyleBackColor = true;
             // 
@@ -264,9 +319,16 @@
             this.button7.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.Image = global::AppQuanLyQuanAn.Properties.Resources.Google;
             this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+<<<<<<< HEAD
             this.button7.Location = new System.Drawing.Point(112, 12);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(41, 56);
+=======
+            this.button7.Location = new System.Drawing.Point(149, 15);
+            this.button7.Margin = new System.Windows.Forms.Padding(4);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(55, 69);
+>>>>>>> b385bd75bf8e41431c7690d527aba3b2a945a654
             this.button7.TabIndex = 8;
             this.button7.UseVisualStyleBackColor = true;
             // 
@@ -277,54 +339,79 @@
             this.button6.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.Image = global::AppQuanLyQuanAn.Properties.Resources.Out;
             this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+<<<<<<< HEAD
             this.button6.Location = new System.Drawing.Point(697, 12);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(41, 56);
             this.button6.TabIndex = 7;
             this.button6.UseVisualStyleBackColor = true;
             // 
+=======
+            this.button6.Location = new System.Drawing.Point(929, 15);
+            this.button6.Margin = new System.Windows.Forms.Padding(4);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(55, 69);
+            this.button6.TabIndex = 7;
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // dangNhapControl1
+            // 
+            this.dangNhapControl1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.dangNhapControl1.Location = new System.Drawing.Point(264, 241);
+            this.dangNhapControl1.Name = "dangNhapControl1";
+            this.dangNhapControl1.Size = new System.Drawing.Size(642, 278);
+            this.dangNhapControl1.TabIndex = 41;
+            // 
+>>>>>>> b385bd75bf8e41431c7690d527aba3b2a945a654
             // dangXuatControl1
             // 
-            this.dangXuatControl1.Location = new System.Drawing.Point(154, 79);
+            this.dangXuatControl1.Location = new System.Drawing.Point(205, 97);
+            this.dangXuatControl1.Margin = new System.Windows.Forms.Padding(5);
             this.dangXuatControl1.Name = "dangXuatControl1";
-            this.dangXuatControl1.Size = new System.Drawing.Size(741, 426);
+            this.dangXuatControl1.Size = new System.Drawing.Size(988, 524);
             this.dangXuatControl1.TabIndex = 40;
+            this.dangXuatControl1.Load += new System.EventHandler(this.dangXuatControl1_Load);
             // 
             // tongDaiControl1
             // 
-            this.tongDaiControl1.Location = new System.Drawing.Point(154, 79);
+            this.tongDaiControl1.Location = new System.Drawing.Point(205, 97);
+            this.tongDaiControl1.Margin = new System.Windows.Forms.Padding(5);
             this.tongDaiControl1.Name = "tongDaiControl1";
-            this.tongDaiControl1.Size = new System.Drawing.Size(741, 426);
+            this.tongDaiControl1.Size = new System.Drawing.Size(988, 524);
             this.tongDaiControl1.TabIndex = 39;
             // 
             // quanLyControl1
             // 
             this.quanLyControl1.BackColor = System.Drawing.SystemColors.Control;
-            this.quanLyControl1.Location = new System.Drawing.Point(154, 79);
+            this.quanLyControl1.Location = new System.Drawing.Point(205, 97);
+            this.quanLyControl1.Margin = new System.Windows.Forms.Padding(5);
             this.quanLyControl1.Name = "quanLyControl1";
-            this.quanLyControl1.Size = new System.Drawing.Size(741, 426);
+            this.quanLyControl1.Size = new System.Drawing.Size(988, 524);
             this.quanLyControl1.TabIndex = 38;
             // 
             // homeControl1
             // 
-            this.homeControl1.Location = new System.Drawing.Point(154, 79);
+            this.homeControl1.Location = new System.Drawing.Point(205, 97);
+            this.homeControl1.Margin = new System.Windows.Forms.Padding(5);
             this.homeControl1.Name = "homeControl1";
-            this.homeControl1.Size = new System.Drawing.Size(741, 426);
+            this.homeControl1.Size = new System.Drawing.Size(988, 524);
             this.homeControl1.TabIndex = 37;
             // 
             // chiNhanhControl1
             // 
-            this.chiNhanhControl1.Location = new System.Drawing.Point(154, 79);
+            this.chiNhanhControl1.Location = new System.Drawing.Point(205, 97);
+            this.chiNhanhControl1.Margin = new System.Windows.Forms.Padding(5);
             this.chiNhanhControl1.Name = "chiNhanhControl1";
-            this.chiNhanhControl1.Size = new System.Drawing.Size(741, 429);
+            this.chiNhanhControl1.Size = new System.Drawing.Size(988, 528);
             this.chiNhanhControl1.TabIndex = 36;
             // 
             // Home
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(895, 508);
+            this.ClientSize = new System.Drawing.Size(1193, 625);
+            this.Controls.Add(this.dangNhapControl1);
             this.Controls.Add(this.dangXuatControl1);
             this.Controls.Add(this.tongDaiControl1);
             this.Controls.Add(this.quanLyControl1);
@@ -333,9 +420,11 @@
             this.Controls.Add(this.HeaderPanel);
             this.Controls.Add(this.SidePanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Home";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home";
+            this.Load += new System.EventHandler(this.Home_Load_1);
             this.SidePanel.ResumeLayout(false);
             this.NameApp.ResumeLayout(false);
             this.HeaderPanel.ResumeLayout(false);
@@ -366,6 +455,7 @@
         private QuanLyControl quanLyControl1;
         private TongDaiControl tongDaiControl1;
         private DangXuatControl dangXuatControl1;
+        private DangNhapControl dangNhapControl1;
     }
 }
 

@@ -160,6 +160,11 @@ namespace AppQuanLyQuanAn
             (dgvHienThiDanhSachMonAn.DataSource as DataTable).DefaultView.RowFilter = string.Format("Ten_MA LIKE '%{0}%'", txt_SearchMonAn.Text);
         }
 
+        private void HeaderPanelDM_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         //void ComboboxMonAn()
         //{
         //    cmd = new SqlCommand("Select Ten_DM from Mon_An", conn);
