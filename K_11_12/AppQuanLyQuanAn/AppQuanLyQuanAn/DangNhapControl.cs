@@ -17,7 +17,7 @@ namespace AppQuanLyQuanAn
     public partial class DangNhapControl : UserControl
     {
         string a;
-      
+        public event EventHandler OnLoggedIn;
         static SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-0T7B1M9\SQLEXPRESS;Initial Catalog=QuanLiQuanAn;Integrated Security=True");
         public DangNhapControl()
         {
@@ -46,14 +46,11 @@ namespace AppQuanLyQuanAn
 
             if (kq.Rows.Count > 0)
             {
-
-
                 a = kq.Rows[0]["BoPhan"].ToString();
-                cmd.ExecuteNonQuery();
-               
-                Home f = new Home();
+                cmd.ExecuteNonQuery();            
+                Home f = new Home();               
                 f.bophan = a;
-
+               
                 
             }
             else
@@ -61,6 +58,9 @@ namespace AppQuanLyQuanAn
                 MessageBox.Show("Sai mã đăng nhập hoặc mật khẩu", "Thông Báo");
             }
             conn.Close();
+            if(OnLoggedIn !=null) 
+            OnLoggedIn(this, null);
+            
         }
 
         
