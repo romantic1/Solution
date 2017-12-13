@@ -1,14 +1,14 @@
-﻿use master
-go
-if DB_ID('QuanLiQuanAn')is not null
-drop database QuanLiQuanAn
-go
-Create database QuanLiQuanAn
-go
-use QuanLiQuanAn
-
-go
-
+﻿USE master
+GO
+IF DB_ID('QuanLiQuanAn')IS NOT NULL
+BEGIN
+	DROP DATABASE QuanLiQuanAn
+END
+GO
+CREATE DATABASE QuanLiQuanAn
+GO
+USE QuanLiQuanAn
+GO
 CREATE TABLE Danh_Muc
 (
 	Ma_DM char(10),
@@ -110,19 +110,19 @@ CREATE TABLE Bieu_Do_Khach_Hang
 
 CREATE TABLE Nhan_Vien
 (
-	Ma_NV char(10),
-	ID_NV char(10),
+	Ma_NV char(20),
+	ID_NV char(20),
 	Password_NV char(20),
-	Ten_NV varchar(10),
-	CMND char(9) Unique,
+	Ten_NV nvarchar(50),
+	CMND char(10) Unique,
 	SoDienThoai_NV char(10),
-	Ma_CN char(10),
-	CaLam varchar(5),
-	BoPhan varchar(10),
-	DanhGia_NV varchar(6),
+	Ma_CN char(20),
+	CaLam nvarchar(10),
+	BoPhan nvarchar(20),
+	DanhGia nvarchar(50),
 	ThamNien varchar(10),
 	NgayBatDauLam datetime,
-	Luong float
+	Luong char(15)
 	PRIMARY KEY(Ma_NV)
 )
 
@@ -175,21 +175,9 @@ CREATE TABLE Tong_Dai
 	Ma_DH char(10),
 	PRIMARY KEY(MA_TD)
 )
-
 GO
 
-ALTER PROC DELETE_MonAn
-@TenMonAn nvarchar(50)
-AS
-BEGIN
-	DELETE Mon_An Where Ten_MA = @TenMonAn
-END
-
-GO
-
-EXEC DELETE_MonAn 'Cơm Trộn4'
-
-
+---------------------------------------------------------------------------------------------------------------------------------
 Insert into Mon_An
 values('MA1','Banh Canh',15000,'Ngon','CN1'),
 		('MA2','Banh Canh Sua',25000,'Tuyet','CN2')
@@ -201,6 +189,8 @@ TRUNCATE TABLE Mon_An
 select * from Chi_Nhanh
 
 select * from Mon_An
+
+Select * from Nhan_Vien
 
 Delete Mon_An Where Ten_MA = N'Cơm Trộn1'
 
@@ -224,17 +214,12 @@ InSert into Mon_An values('MA03',N'Cơm Trộn3','20000',N'Món truyền thống
 InSert into Mon_An values('MA04',N'Cơm Trộn4','20000',N'Món truyền thống','Heo')
 
 
---CREATE TABLE Khach_Hang
---(
---	Ma_KH char(10),
---	ID_KH char(10),
---	Password_KH char(20),
---	Ten_KH varchar(20),
---	NgaySinh_KH datetime,
---	DiaChi_KH varchar(20),
---	SoDienThoai_KH char(10)
---	PRIMARY KEY(Ma_KH)
---)
-Truncate table Khach_Hang
+Insert into Nhan_Vien values('NV1','TKNV01','123',N'Nguyễn Văn A','100','626262','','','','','','20100225','')
+
+Truncate table Nhan_Vien
+
+Select * from Khach_Hang
+
+Select * from Nhan_Vien
 
 Insert into Khach_Hang values('KH01','TK01','123',N'Nguyễn Văn A','20100320',N'Đường C','55656')

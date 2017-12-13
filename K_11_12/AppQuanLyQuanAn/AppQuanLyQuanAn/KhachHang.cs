@@ -84,7 +84,6 @@ namespace AppQuanLyQuanAn
             Time_NgaySinh.Text = row.Cells[4].Value.ToString();
             txt_DiaChi.Text = row.Cells[5].Value.ToString();
             txt_SoDienThoai.Text = row.Cells[6].Value.ToString();
-
         }
 
         private void btn_CapNhat_Click(object sender, EventArgs e)

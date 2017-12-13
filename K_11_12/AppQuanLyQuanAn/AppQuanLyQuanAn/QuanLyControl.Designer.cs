@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.QQ = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
@@ -41,29 +41,29 @@
             this.btKhachHangQL = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.btDanhMucQL = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
+            this.QQ.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // QQ
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.btBieuDoQL);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.btNhanVienQL);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.btBaoCaoQL);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.btKhachHangQL);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.btDanhMucQL);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(741, 426);
-            this.panel1.TabIndex = 1;
+            this.QQ.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.QQ.Controls.Add(this.label1);
+            this.QQ.Controls.Add(this.button1);
+            this.QQ.Controls.Add(this.label7);
+            this.QQ.Controls.Add(this.btBieuDoQL);
+            this.QQ.Controls.Add(this.label6);
+            this.QQ.Controls.Add(this.btNhanVienQL);
+            this.QQ.Controls.Add(this.label5);
+            this.QQ.Controls.Add(this.btBaoCaoQL);
+            this.QQ.Controls.Add(this.label4);
+            this.QQ.Controls.Add(this.btKhachHangQL);
+            this.QQ.Controls.Add(this.label2);
+            this.QQ.Controls.Add(this.btDanhMucQL);
+            this.QQ.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.QQ.Location = new System.Drawing.Point(0, 0);
+            this.QQ.Name = "QQ";
+            this.QQ.Size = new System.Drawing.Size(741, 426);
+            this.QQ.TabIndex = 1;
             // 
             // label1
             // 
@@ -141,6 +141,7 @@
             this.btNhanVienQL.Size = new System.Drawing.Size(136, 150);
             this.btNhanVienQL.TabIndex = 80;
             this.btNhanVienQL.UseVisualStyleBackColor = true;
+            this.btNhanVienQL.Click += new System.EventHandler(this.btNhanVienQL_Click);
             // 
             // label5
             // 
@@ -224,18 +225,18 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.QQ);
             this.Name = "QuanLyControl";
             this.Size = new System.Drawing.Size(741, 426);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.QQ.ResumeLayout(false);
+            this.QQ.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel QQ;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btBieuDoQL;
         private System.Windows.Forms.Label label6;

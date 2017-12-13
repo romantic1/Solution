@@ -17,12 +17,8 @@ namespace AppQuanLyQuanAn
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            Application.Run(new Home());
-           // Application.Run(new KhachHang());
-
-            Application.Run(new Home());
-
-
+            Application.Run(new NhanVien());
+            //Application.Run(new Home());
         }
     }
 }

@@ -35,5 +35,11 @@ namespace AppQuanLyQuanAn
             KhachHang frmKH = new KhachHang();
             frmKH.Show();
         }
+
+        private void btNhanVienQL_Click(object sender, EventArgs e)
+        {
+            NhanVien frmNV = new NhanVien();
+            frmNV.Show();
+        }
     }
 }
