@@ -44,10 +44,8 @@
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-<<<<<<< HEAD
-=======
+
             this.dangNhapControl1 = new AppQuanLyQuanAn.DangNhapControl();
->>>>>>> b385bd75bf8e41431c7690d527aba3b2a945a654
             this.dangXuatControl1 = new AppQuanLyQuanAn.DangXuatControl();
             this.tongDaiControl1 = new AppQuanLyQuanAn.TongDaiControl();
             this.quanLyControl1 = new AppQuanLyQuanAn.QuanLyControl();
@@ -185,14 +183,11 @@
             this.NameApp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.NameApp.Controls.Add(this.label1);
             this.NameApp.Location = new System.Drawing.Point(0, 0);
-<<<<<<< HEAD
             this.NameApp.Name = "NameApp";
             this.NameApp.Size = new System.Drawing.Size(154, 79);
-=======
             this.NameApp.Margin = new System.Windows.Forms.Padding(4);
             this.NameApp.Name = "NameApp";
             this.NameApp.Size = new System.Drawing.Size(205, 97);
->>>>>>> b385bd75bf8e41431c7690d527aba3b2a945a654
             this.NameApp.TabIndex = 0;
             // 
             // label1
@@ -218,19 +213,18 @@
             this.HeaderPanel.Controls.Add(this.button7);
             this.HeaderPanel.Controls.Add(this.button6);
             this.HeaderPanel.Dock = System.Windows.Forms.DockStyle.Top;
-<<<<<<< HEAD
+
             this.HeaderPanel.Location = new System.Drawing.Point(154, 0);
             this.HeaderPanel.Name = "HeaderPanel";
             this.HeaderPanel.Size = new System.Drawing.Size(741, 79);
             this.HeaderPanel.TabIndex = 2;
-=======
             this.HeaderPanel.Location = new System.Drawing.Point(205, 0);
             this.HeaderPanel.Margin = new System.Windows.Forms.Padding(4);
             this.HeaderPanel.Name = "HeaderPanel";
             this.HeaderPanel.Size = new System.Drawing.Size(988, 98);
             this.HeaderPanel.TabIndex = 2;
             this.HeaderPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.HeaderPanel_Paint);
->>>>>>> b385bd75bf8e41431c7690d527aba3b2a945a654
+
             // 
             // button17
             // 
@@ -239,16 +233,16 @@
             this.button17.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button17.Image = global::AppQuanLyQuanAn.Properties.Resources.Option;
             this.button17.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-<<<<<<< HEAD
+
             this.button17.Location = new System.Drawing.Point(650, 12);
             this.button17.Name = "button17";
             this.button17.Size = new System.Drawing.Size(41, 56);
-=======
+
             this.button17.Location = new System.Drawing.Point(867, 15);
             this.button17.Margin = new System.Windows.Forms.Padding(4);
             this.button17.Name = "button17";
             this.button17.Size = new System.Drawing.Size(55, 69);
->>>>>>> b385bd75bf8e41431c7690d527aba3b2a945a654
+
             this.button17.TabIndex = 12;
             this.button17.UseVisualStyleBackColor = true;
             // 
@@ -259,16 +253,16 @@
             this.button10.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button10.Image = global::AppQuanLyQuanAn.Properties.Resources.Call;
             this.button10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-<<<<<<< HEAD
+
             this.button10.Location = new System.Drawing.Point(159, 12);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(41, 56);
-=======
+
             this.button10.Location = new System.Drawing.Point(212, 15);
             this.button10.Margin = new System.Windows.Forms.Padding(4);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(55, 69);
->>>>>>> b385bd75bf8e41431c7690d527aba3b2a945a654
+
             this.button10.TabIndex = 11;
             this.button10.UseVisualStyleBackColor = true;
             // 
@@ -279,16 +273,16 @@
             this.button9.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button9.Image = global::AppQuanLyQuanAn.Properties.Resources.Facebook;
             this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-<<<<<<< HEAD
+
             this.button9.Location = new System.Drawing.Point(18, 12);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(41, 56);
-=======
+
             this.button9.Location = new System.Drawing.Point(24, 15);
             this.button9.Margin = new System.Windows.Forms.Padding(4);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(55, 69);
->>>>>>> b385bd75bf8e41431c7690d527aba3b2a945a654
+
             this.button9.TabIndex = 10;
             this.button9.UseVisualStyleBackColor = true;
             // 
@@ -299,16 +293,16 @@
             this.button8.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.Image = global::AppQuanLyQuanAn.Properties.Resources.Switter;
             this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-<<<<<<< HEAD
+
             this.button8.Location = new System.Drawing.Point(65, 12);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(41, 56);
-=======
+
             this.button8.Location = new System.Drawing.Point(87, 15);
             this.button8.Margin = new System.Windows.Forms.Padding(4);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(55, 69);
->>>>>>> b385bd75bf8e41431c7690d527aba3b2a945a654
+
             this.button8.TabIndex = 9;
             this.button8.UseVisualStyleBackColor = true;
             // 
@@ -319,16 +313,16 @@
             this.button7.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.Image = global::AppQuanLyQuanAn.Properties.Resources.Google;
             this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-<<<<<<< HEAD
+
             this.button7.Location = new System.Drawing.Point(112, 12);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(41, 56);
-=======
+
             this.button7.Location = new System.Drawing.Point(149, 15);
             this.button7.Margin = new System.Windows.Forms.Padding(4);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(55, 69);
->>>>>>> b385bd75bf8e41431c7690d527aba3b2a945a654
+
             this.button7.TabIndex = 8;
             this.button7.UseVisualStyleBackColor = true;
             // 
@@ -339,14 +333,13 @@
             this.button6.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.Image = global::AppQuanLyQuanAn.Properties.Resources.Out;
             this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-<<<<<<< HEAD
+
             this.button6.Location = new System.Drawing.Point(697, 12);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(41, 56);
             this.button6.TabIndex = 7;
             this.button6.UseVisualStyleBackColor = true;
-            // 
-=======
+
             this.button6.Location = new System.Drawing.Point(929, 15);
             this.button6.Margin = new System.Windows.Forms.Padding(4);
             this.button6.Name = "button6";
@@ -362,7 +355,7 @@
             this.dangNhapControl1.Size = new System.Drawing.Size(642, 278);
             this.dangNhapControl1.TabIndex = 41;
             // 
->>>>>>> b385bd75bf8e41431c7690d527aba3b2a945a654
+
             // dangXuatControl1
             // 
             this.dangXuatControl1.Location = new System.Drawing.Point(205, 97);
