@@ -16,8 +16,16 @@ namespace AppQuanLyQuanAn
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+<<<<<<< HEAD
             Application.Run(new Home());
             //Application.Run(new KhachHang());
+=======
+
+           // Application.Run(new KhachHang());
+
+            Application.Run(new Home());
+
+>>>>>>> 7036469285d3b9807dee665a177926f979014bb9
         }
     }
 }

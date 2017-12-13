@@ -22,7 +22,27 @@ namespace AppQuanLyQuanAn
         {
             InitializeComponent();
         }
+        void dangnhap()
+        {
+            if (bophan == "0")
+            {
+                btTongDai.Enabled = false;
+                
+               
 
+            }
+            if (bophan == "1")
+            {
+                btQuanLy.Enabled = false;
+                
+
+            }
+            if (bophan == "2")
+            {
+                btChiNhanh.Enabled = false;
+            }
+            
+        }
         private void btQuanLy_Click(object sender, EventArgs e)
         {
             // Doi qua Slide cua Quan Ly khi click vao quan ly
@@ -33,6 +53,7 @@ namespace AppQuanLyQuanAn
         {
             // Doi qua Sile cua Home khi click vao man hinh chinh
             homeControl1.BringToFront();
+           
         }
 
         private void btChiNhanh_Click(object sender, EventArgs e)
@@ -51,6 +72,8 @@ namespace AppQuanLyQuanAn
         private void btDangXuat_Click(object sender, EventArgs e)
         {
             // Doi qua Slide cua Dang Nhap khi click vao dang xuat
+            Home_Load_1(sender, e);
+
             dangXuatControl1.BringToFront();
         }
 
@@ -68,21 +91,34 @@ namespace AppQuanLyQuanAn
         {
 
         }
-      
+        
+        
+        
+       
+
+        private void LoginControl_OnLoggedIn(object sender, EventArgs e)
+{
+            DangNhapControl uc = new DangNhapControl();          
+            uc.OnLoggedIn += new EventHandler(LoginControl_OnLoggedIn);
+            Home_Load_1(sender, e);
+//this is your eventhandler
+}
         private void Home_Load_1(object sender, EventArgs e)
         {
             btTongDai.Enabled = false;
             btQuanLy.Enabled = false;
             btChiNhanh.Enabled = false;
+            dangnhap();
 
-
-            if (bophan == "0")
-            {
-                btTongDai.Enabled = false;
-                
-            }
-
-            btChiNhanh.Enabled = false;
+            
+            
         }
+
+        private void homeControl2_Load(object sender, EventArgs e)
+        {
+            Home_Load_1(sender, e);
+        }
+
+        
     }
 }
