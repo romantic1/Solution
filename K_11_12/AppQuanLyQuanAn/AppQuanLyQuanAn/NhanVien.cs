@@ -29,20 +29,20 @@ namespace AppQuanLyQuanAn
 
         private void btn_ThemMoi_Click(object sender, EventArgs e)
         {
-            //int count = 0;
-            //count = dgv_HienThiDanhSachNhanVien.Rows.Count;
-            //string chuoi = "";
-            //int chuoi2 = 0;
-            //chuoi = Convert.ToString(dgv_HienThiDanhSachNhanVien.Rows[count - 2].Cells[0].Value);
-            //chuoi2 = Convert.ToInt32((chuoi.Remove(0, 2)));
-            //if (chuoi2 + 1 < 10)
-            //{
-            //    txt_MaNhanVien.Text = "NV" + (chuoi2 + 1).ToString();
-            //}
-            //else if (chuoi2 + 1 < 100)
-            //{
-            //    txt_MaNhanVien.Text = "NV" + (chuoi2 + 1).ToString();
-            //}
+            int count = 0;
+            count = dgv_HienThiDanhSachNhanVien.Rows.Count;
+            string chuoi = "";
+            int chuoi2 = 0;
+            chuoi = Convert.ToString(dgv_HienThiDanhSachNhanVien.Rows[count - 2].Cells[0].Value);
+            chuoi2 = Convert.ToInt32((chuoi.Remove(0, 2)));
+            if (chuoi2 + 1 < 10)
+            {
+                txt_MaNhanVien.Text = "NV0" + (chuoi2 + 1).ToString();
+            }
+            else if (chuoi2 + 1 < 100)
+            {
+                txt_MaNhanVien.Text = "NV" + (chuoi2 + 1).ToString();
+            }
             conn.Open();
             string SqlInsert = "Insert into Nhan_Vien values('" + txt_MaNhanVien.Text + "','" + txt_TaiKhoan.Text + "','" + txt_MatKhau.Text + "',N'" + txt_TenNhanVien.Text + "','" + txt_CMND.Text + "','" + txt_SoDienThoai.Text + "','" + cbb_TenChiNhanh.Text + "',N'" + cbb_CaLam.Text + "',N'" + cbb_BoPhan.Text + "',N'" + txt_DanhGia.Text + "','" + txt_ThamNien.Text + "','" + Time_NgayBatDauLam.Text + "','" + txt_Luong.Text + "')";
             cmd = new SqlCommand(SqlInsert, conn);
@@ -57,40 +57,7 @@ namespace AppQuanLyQuanAn
             HienThiNhanVien();
             txt_MaNhanVien.Text = txt_TaiKhoan.Text = txt_MatKhau.Text = txt_TenNhanVien.Text = txt_CMND.Text = txt_SoDienThoai.Text = cbb_TenChiNhanh.Text = cbb_CaLam.Text = cbb_BoPhan.Text = txt_DanhGia.Text = txt_ThamNien.Text = Time_NgayBatDauLam.Text = txt_Luong.Text = "";
             conn.Close();
-        }
-
-        void TangMaTuDong()
-        {
-            conn.Open();
-            //string SqlSelect = @"Select * from Nhan_Vien";
-            //SqlDataAdapter da = new SqlDataAdapter(SqlSelect, conn);
-            //da.Fill(dt);
-            DataTable dt = new DataTable();
-            HienThiNhanVien();
-            string Chuoi = "";
-            if (dt.Rows.Count <= 0)
-            {
-                Chuoi = "NV1";
-            }
-            else
-            {
-                int k;
-                Chuoi = "NV";
-                k = Convert.ToInt32(dt.Rows[dt.Rows.Count - 1][0].ToString().Substring(2, 2));
-                k = k + 1;
-                if (k < 10)
-                {
-                    Chuoi = Chuoi + "";
-                }
-                else if(k < 100)
-                {
-                    Chuoi = Chuoi + "";
-                }
-                Chuoi = Chuoi + k.ToString();
-            }
-            txt_MaNhanVien.Text = Chuoi;
-            conn.Close();
-        }
+        }     
 
         void HienThiNhanVien()
         {

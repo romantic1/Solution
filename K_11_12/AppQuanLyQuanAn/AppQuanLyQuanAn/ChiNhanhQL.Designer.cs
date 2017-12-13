@@ -136,9 +136,9 @@
             // Time_NgayThanhLap
             // 
             this.Time_NgayThanhLap.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.Time_NgayThanhLap.Location = new System.Drawing.Point(122, 303);
+            this.Time_NgayThanhLap.Location = new System.Drawing.Point(119, 303);
             this.Time_NgayThanhLap.Name = "Time_NgayThanhLap";
-            this.Time_NgayThanhLap.Size = new System.Drawing.Size(261, 20);
+            this.Time_NgayThanhLap.Size = new System.Drawing.Size(264, 20);
             this.Time_NgayThanhLap.TabIndex = 60;
             // 
             // cbb_TinhTrang
@@ -459,7 +459,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.BackColor = System.Drawing.Color.Bisque;
+            this.groupBox2.BackColor = System.Drawing.Color.PaleGoldenrod;
             this.groupBox2.Controls.Add(this.button4);
             this.groupBox2.Controls.Add(this.button5);
             this.groupBox2.Controls.Add(this.ThemMoiCNQL);
@@ -518,7 +518,7 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.BackColor = System.Drawing.Color.Bisque;
+            this.groupBox3.BackColor = System.Drawing.Color.PaleGoldenrod;
             this.groupBox3.Controls.Add(this.button3);
             this.groupBox3.Controls.Add(this.button6);
             this.groupBox3.Controls.Add(this.button7);

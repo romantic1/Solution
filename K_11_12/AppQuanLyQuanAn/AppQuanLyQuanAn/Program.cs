@@ -17,7 +17,7 @@ namespace AppQuanLyQuanAn
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            Application.Run(new NhanVien());
+            Application.Run(new ChiNhanhQL());
             //Application.Run(new Home());
         }
     }

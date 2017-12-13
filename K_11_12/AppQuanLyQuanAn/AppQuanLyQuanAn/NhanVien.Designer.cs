@@ -509,7 +509,7 @@
             // dgv_HienThiDanhSachNhanVien
             // 
             this.dgv_HienThiDanhSachNhanVien.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dgv_HienThiDanhSachNhanVien.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_HienThiDanhSachNhanVien.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCellsExceptHeader;
             this.dgv_HienThiDanhSachNhanVien.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dgv_HienThiDanhSachNhanVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_HienThiDanhSachNhanVien.Location = new System.Drawing.Point(3, 54);

@@ -42,7 +42,7 @@ namespace AppQuanLyQuanAn
             string chuoi = "";
             int chuoi2 = 0;
             chuoi = Convert.ToString(dgv_ThemChiNhanh.Rows[count - 2].Cells[0].Value);
-            chuoi2 = Convert.ToInt32((chuoi.Remove(0, 3)));
+            chuoi2 = Convert.ToInt32((chuoi.Remove(0, 2)));
             if (chuoi2 + 1 < 10)
             {
                 txt_MaChiNhanh.Text = "CN0" + (chuoi2 + 1).ToString();

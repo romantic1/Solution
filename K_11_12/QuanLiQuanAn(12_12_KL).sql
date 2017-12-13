@@ -114,15 +114,15 @@ CREATE TABLE Nhan_Vien
 	ID_NV char(20),
 	Password_NV char(20),
 	Ten_NV nvarchar(50),
-	CMND char(10) Unique,
-	SoDienThoai_NV char(10),
+	CMND char(15) Unique,
+	SoDienThoai_NV char(15),
 	Ma_CN char(20),
-	CaLam nvarchar(10),
+	CaLam nvarchar(15),
 	BoPhan nvarchar(20),
 	DanhGia nvarchar(50),
 	ThamNien varchar(10),
 	NgayBatDauLam datetime,
-	Luong char(15)
+	Luong char(20),
 	PRIMARY KEY(Ma_NV)
 )
 
@@ -206,15 +206,14 @@ InSert into Chi_Nhanh values('CN04',N'Bánh Đa','26265656',N'Đường D4',N'Qu
 InSert into Chi_Nhanh values('CN05',N'Bánh Củ Cải','26265656',N'Đường D5',N'Quận 5',N'Hoạt động bình thường','20101020','50','MA1-5-6-8-1-3')
 InSert into Chi_Nhanh values('CN06',N'Bánh Bao','26265656',N'Đường D6',N'Quận 6',N'Hoạt động bình thường','20101020','50','MA1-6-8-1-3')
 
-update Chi_Nhanh set NgayThanhLap = '20100920' Where Ma_CN = 'CN01'
 
-InSert into Mon_An values('MA01',N'Cơm Trộn1','20000',N'Món truyền thống','Cơm')
-InSert into Mon_An values('MA06',N'Cơm Trộn2','20000',N'Món truyền thống','Gà')
-InSert into Mon_An values('MA03',N'Cơm Trộn3','20000',N'Món truyền thống','Dê')
-InSert into Mon_An values('MA04',N'Cơm Trộn4','20000',N'Món truyền thống','Heo')
+InSert into Mon_An values('MA01',N'Cơm Chiên','20000',N'Món truyền thống','Cơm')
+InSert into Mon_An values('MA06',N'Cơm Cuộn','20000',N'Món truyền thống','Gà')
+InSert into Mon_An values('MA03',N'Cơm Thái','20000',N'Món truyền thống','Dê')
+InSert into Mon_An values('MA04',N'Cơm SuSi','20000',N'Món truyền thống','Heo')
 
 
-Insert into Nhan_Vien values('NV1','TKNV01','123',N'Nguyễn Văn A','100','626262','','','','','','20100225','')
+Insert into Nhan_Vien values('NV01','TK01','123',N'Nguyễn Văn A','100','626262','','123','123','123','123','20100225','')
 
 Truncate table Nhan_Vien
 
@@ -223,3 +222,5 @@ Select * from Khach_Hang
 Select * from Nhan_Vien
 
 Insert into Khach_Hang values('KH01','TK01','123',N'Nguyễn Văn A','20100320',N'Đường C','55656')
+
+TRUNCATE TABLE Khach_Hang

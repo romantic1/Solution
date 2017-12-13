@@ -29,7 +29,7 @@ namespace AppQuanLyQuanAn
             string chuoi = "";
             int chuoi2 = 0;
             chuoi = Convert.ToString(dgv_ThemMonAn.Rows[count - 2].Cells[0].Value);
-            chuoi2 = Convert.ToInt32((chuoi.Remove(0, 3)));
+            chuoi2 = Convert.ToInt32((chuoi.Remove(0, 2)));
             if (chuoi2 + 1 < 10)
             {
                 txt_MaMonAn.Text = "MA0" + (chuoi2 + 1).ToString();

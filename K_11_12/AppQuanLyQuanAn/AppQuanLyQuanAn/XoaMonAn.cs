@@ -30,7 +30,7 @@ namespace AppQuanLyQuanAn
         private void btn_XoaMonAn_Click(object sender, EventArgs e)
         {
             conn.Open();
-            string SqlDelete = "Delete from Mon_An Where Ten_MA = '" + cbb_TenMonAn.Text + "'";
+            string SqlDelete = "Delete Mon_An Where Ten_MA = '" + cbb_TenMonAn.Text + "'";
             cmd = new SqlCommand(SqlDelete, conn);
             if (cmd.ExecuteNonQuery() == 1)
             {
