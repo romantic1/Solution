@@ -11,7 +11,7 @@ using System.Data.SqlClient;
 
 namespace AppQuanLyQuanAn
 {
-    public partial class ChiNhanhQL : Form
+    public partial class QuanLiChiNhanh : Form
     {
         DataTable dt = new DataTable();
         SqlConnection conn;
@@ -19,7 +19,7 @@ namespace AppQuanLyQuanAn
         public delegate void SendMessage(string Message);
         public SendMessage Sender;
 
-        public ChiNhanhQL()
+        public QuanLiChiNhanh()
         {
             InitializeComponent();
             String Sqlconnection = "Data Source=DESKTOP-CSFRQ67\\SQLEXPRESS;Initial Catalog=QuanLiQuanAn;Integrated Security=True";
@@ -61,12 +61,12 @@ namespace AppQuanLyQuanAn
             DataTable dt = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter("Select * from Mon_An",conn);
             da.Fill(dt);
-            dgvHienThiDanhSachMonAn.DataSource = dt;
+            dgv_HienThiDanhSachMonAn.DataSource = dt;
            
         }
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            (dgvHienThiDanhSachMonAn.DataSource as DataTable).DefaultView.RowFilter = string.Format("Ten_DM LIKE '%{0}%'",  cbb_DanhMucMonAn.SelectedItem.ToString());        
+            (dgv_HienThiDanhSachMonAn.DataSource as DataTable).DefaultView.RowFilter = string.Format("Ten_DM LIKE '%{0}%'",  cbb_DanhMucMonAn.SelectedItem.ToString());
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -76,7 +76,7 @@ namespace AppQuanLyQuanAn
             SqlDataReader dr = cmd.ExecuteReader();
             DataTable dt = new DataTable();
             dt.Load(dr);
-            dgvHienThiDanhSachMonAn.DataSource = dt;     
+            dgv_HienThiDanhSachMonAn.DataSource = dt;     
         }
 
         private void ThemMoiCNQL_Click(object sender, EventArgs e)
@@ -157,22 +157,12 @@ namespace AppQuanLyQuanAn
 
         private void text_search_TextChanged(object sender, EventArgs e)
         {
-            (dgvHienThiDanhSachMonAn.DataSource as DataTable).DefaultView.RowFilter = string.Format("Ten_MA LIKE '%{0}%'", txt_SearchMonAn.Text);
+            (dgv_HienThiDanhSachMonAn.DataSource as DataTable).DefaultView.RowFilter = string.Format("Ten_MA LIKE '%{0}%'", txt_SearchMonAn.Text);
         }
 
         private void HeaderPanelDM_Paint(object sender, PaintEventArgs e)
         {
 
         }
-
-        //void ComboboxMonAn()
-        //{
-        //    cmd = new SqlCommand("Select Ten_DM from Mon_An", conn);
-        //    SqlDataAdapter da = new SqlDataAdapter(cmd);
-        //    DataSet ds = new DataSet();
-        //    da.Fill(ds, "Mon_An");
-        //    cbb_DanhMucMonAn.DataSource = ds.Tables[0];
-        //    cbb_DanhMucMonAn.DisplayMember = "Ten_DM";
-        //}
     }
 }

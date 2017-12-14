@@ -1,6 +1,6 @@
 ﻿namespace AppQuanLyQuanAn
 {
-    partial class ChiNhanhQL
+    partial class QuanLiChiNhanh
     {
         /// <summary>
         /// Required designer variable.
@@ -56,9 +56,7 @@
             this.RefeshDM = new System.Windows.Forms.Button();
             this.txt_SearchMonAn = new System.Windows.Forms.TextBox();
             this.btSearchMACNQL = new System.Windows.Forms.Button();
-            this.dgvHienThiDanhSachMonAn = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.dgv_HienThiDanhSachMonAn = new System.Windows.Forms.DataGridView();
             this.dgv_HienThiThongTinCN = new System.Windows.Forms.DataGridView();
             this.label13 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -77,7 +75,7 @@
             this.gbSearchCNQL.SuspendLayout();
             this.panel3.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvHienThiDanhSachMonAn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_HienThiDanhSachMonAn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_HienThiThongTinCN)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -107,7 +105,6 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.PaleGoldenrod;
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.Time_NgayThanhLap);
             this.panel3.Controls.Add(this.cbb_TinhTrang);
             this.panel3.Controls.Add(this.cbb_TinhThanh);
@@ -317,7 +314,7 @@
             this.groupBox1.Controls.Add(this.RefeshDM);
             this.groupBox1.Controls.Add(this.txt_SearchMonAn);
             this.groupBox1.Controls.Add(this.btSearchMACNQL);
-            this.groupBox1.Controls.Add(this.dgvHienThiDanhSachMonAn);
+            this.groupBox1.Controls.Add(this.dgv_HienThiDanhSachMonAn);
             this.groupBox1.Location = new System.Drawing.Point(433, 263);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(602, 264);
@@ -403,36 +400,18 @@
             this.btSearchMACNQL.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btSearchMACNQL.UseVisualStyleBackColor = true;
             // 
-            // dgvHienThiDanhSachMonAn
+            // dgv_HienThiDanhSachMonAn
             // 
-            this.dgvHienThiDanhSachMonAn.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvHienThiDanhSachMonAn.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
-            this.dgvHienThiDanhSachMonAn.BackgroundColor = System.Drawing.SystemColors.Window;
-            this.dgvHienThiDanhSachMonAn.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvHienThiDanhSachMonAn.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvHienThiDanhSachMonAn.Location = new System.Drawing.Point(3, 85);
-            this.dgvHienThiDanhSachMonAn.Name = "dgvHienThiDanhSachMonAn";
-            this.dgvHienThiDanhSachMonAn.ReadOnly = true;
-            this.dgvHienThiDanhSachMonAn.Size = new System.Drawing.Size(596, 176);
-            this.dgvHienThiDanhSachMonAn.TabIndex = 25;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(-15, -15);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(-15, -15);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 17;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.dgv_HienThiDanhSachMonAn.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_HienThiDanhSachMonAn.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
+            this.dgv_HienThiDanhSachMonAn.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.dgv_HienThiDanhSachMonAn.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_HienThiDanhSachMonAn.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dgv_HienThiDanhSachMonAn.Location = new System.Drawing.Point(3, 85);
+            this.dgv_HienThiDanhSachMonAn.Name = "dgv_HienThiDanhSachMonAn";
+            this.dgv_HienThiDanhSachMonAn.ReadOnly = true;
+            this.dgv_HienThiDanhSachMonAn.Size = new System.Drawing.Size(596, 176);
+            this.dgv_HienThiDanhSachMonAn.TabIndex = 25;
             // 
             // dgv_HienThiThongTinCN
             // 
@@ -640,7 +619,7 @@
             this.label1.Text = "Chi Nhánh";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // ChiNhanhQL
+            // QuanLiChiNhanh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -652,13 +631,11 @@
             this.Controls.Add(this.label13);
             this.Controls.Add(this.dgv_HienThiThongTinCN);
             this.Controls.Add(this.txt_Search);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.gbSearchCNQL);
             this.Controls.Add(this.HeaderPanelDM);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "ChiNhanhQL";
+            this.Name = "QuanLiChiNhanh";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ChiNhanhQL";
             this.Load += new System.EventHandler(this.ChiNhanhQL_Load);
@@ -668,7 +645,7 @@
             this.panel3.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvHienThiDanhSachMonAn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_HienThiDanhSachMonAn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_HienThiThongTinCN)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
@@ -691,13 +668,11 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txt_SearchMonAn;
         private System.Windows.Forms.Button btSearchMACNQL;
-        private System.Windows.Forms.DataGridView dgvHienThiDanhSachMonAn;
+        private System.Windows.Forms.DataGridView dgv_HienThiDanhSachMonAn;
         private System.Windows.Forms.TextBox txt_SoDienThoai;
         private System.Windows.Forms.TextBox txt_DiaChi;
         private System.Windows.Forms.TextBox txt_TenChiNhanh;
         private System.Windows.Forms.Button RefeshDM;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox txt_MaMonAn;

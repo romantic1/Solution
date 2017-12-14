@@ -231,7 +231,6 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.PaleGoldenrod;
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.cbb_BoPhan);
             this.panel3.Controls.Add(this.cbb_CaLam);
             this.panel3.Controls.Add(this.cbb_TenChiNhanh);
@@ -509,7 +508,7 @@
             // dgv_HienThiDanhSachNhanVien
             // 
             this.dgv_HienThiDanhSachNhanVien.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dgv_HienThiDanhSachNhanVien.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCellsExceptHeader;
+            this.dgv_HienThiDanhSachNhanVien.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgv_HienThiDanhSachNhanVien.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dgv_HienThiDanhSachNhanVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_HienThiDanhSachNhanVien.Location = new System.Drawing.Point(3, 54);
@@ -564,6 +563,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.PaleGoldenrod;
             this.ClientSize = new System.Drawing.Size(1044, 543);
             this.Controls.Add(this.btn_LamMoi);
             this.Controls.Add(this.gbSearchCNQL);

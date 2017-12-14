@@ -30,7 +30,7 @@ namespace AppQuanLyQuanAn
         private void btn_XoaMonAn_Click(object sender, EventArgs e)
         {
             conn.Open();
-            string SqlDelete = "Delete Mon_An Where Ten_MA = '" + cbb_TenMonAn.Text + "'";
+            string SqlDelete = "Delete Mon_An Where Ma_MA = '" + cbb_MaMonAn.Text + "'";
             cmd = new SqlCommand(SqlDelete, conn);
             if (cmd.ExecuteNonQuery() == 1)
             {
@@ -46,12 +46,12 @@ namespace AppQuanLyQuanAn
 
         void ComboboxMonAn()
         {
-            cmd = new SqlCommand("Select Ten_MA from Mon_An", conn);
+            cmd = new SqlCommand("Select Ma_MA from Mon_An", conn);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataSet ds = new DataSet();
             da.Fill(ds, "Mon_An");
-            cbb_TenMonAn.DataSource = ds.Tables[0];
-            cbb_TenMonAn.DisplayMember = "Ten_MA";
+            cbb_MaMonAn.DataSource = ds.Tables[0];
+            cbb_MaMonAn.DisplayMember = "Ma_MA";
         }
 
         private void OffChiNhanh_Click(object sender, EventArgs e)
@@ -61,7 +61,7 @@ namespace AppQuanLyQuanAn
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ChiNhanhQL frmCNQL = new ChiNhanhQL();
+            QuanLiChiNhanh frmCNQL = new QuanLiChiNhanh();
             this.Close();
             frmCNQL.Show();
         }

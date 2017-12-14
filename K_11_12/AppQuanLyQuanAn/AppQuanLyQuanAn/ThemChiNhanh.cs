@@ -30,7 +30,7 @@ namespace AppQuanLyQuanAn
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ChiNhanhQL frmQLCT = new ChiNhanhQL();
+            QuanLiChiNhanh frmQLCT = new QuanLiChiNhanh();
             this.Close();
             frmQLCT.Show();
         }

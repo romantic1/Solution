@@ -254,7 +254,6 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.PaleGoldenrod;
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.Time_NgaySinh);
             this.panel3.Controls.Add(this.label10);
             this.panel3.Controls.Add(this.label5);
@@ -428,6 +427,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.PaleGoldenrod;
             this.ClientSize = new System.Drawing.Size(1040, 533);
             this.Controls.Add(this.btn_LamMoi);
             this.Controls.Add(this.label13);

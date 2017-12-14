@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.button14 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             this.button13 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.button12 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.button11 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -60,50 +60,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(741, 426);
             this.panel1.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label1.ForeColor = System.Drawing.Color.Firebrick;
-            this.label1.Location = new System.Drawing.Point(269, 372);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(230, 22);
-            this.label1.TabIndex = 85;
-            this.label1.Text = "Chuyển Xuống Chi Nhánh";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label4.ForeColor = System.Drawing.Color.Firebrick;
-            this.label4.Location = new System.Drawing.Point(571, 170);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(110, 22);
-            this.label4.TabIndex = 77;
-            this.label4.Text = "Khách Hàng";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label3.ForeColor = System.Drawing.Color.Firebrick;
-            this.label3.Location = new System.Drawing.Point(310, 170);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(150, 22);
-            this.label3.TabIndex = 75;
-            this.label3.Text = "Duyệt Đơn Hàng";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label2.ForeColor = System.Drawing.Color.Firebrick;
-            this.label2.Location = new System.Drawing.Point(77, 170);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(130, 22);
-            this.label2.TabIndex = 73;
-            this.label2.Text = "Tạo Đơn Hàng";
             // 
             // label6
             // 
@@ -129,6 +85,17 @@
             this.button2.TabIndex = 88;
             this.button2.UseVisualStyleBackColor = true;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label1.ForeColor = System.Drawing.Color.Firebrick;
+            this.label1.Location = new System.Drawing.Point(269, 372);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(230, 22);
+            this.label1.TabIndex = 85;
+            this.label1.Text = "Chuyển Xuống Chi Nhánh";
+            // 
             // button14
             // 
             this.button14.FlatAppearance.BorderSize = 0;
@@ -141,6 +108,17 @@
             this.button14.Size = new System.Drawing.Size(136, 150);
             this.button14.TabIndex = 84;
             this.button14.UseVisualStyleBackColor = true;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label4.ForeColor = System.Drawing.Color.Firebrick;
+            this.label4.Location = new System.Drawing.Point(571, 170);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(110, 22);
+            this.label4.TabIndex = 77;
+            this.label4.Text = "Khách Hàng";
             // 
             // button13
             // 
@@ -155,6 +133,17 @@
             this.button13.TabIndex = 76;
             this.button13.UseVisualStyleBackColor = true;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label3.ForeColor = System.Drawing.Color.Firebrick;
+            this.label3.Location = new System.Drawing.Point(310, 170);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(150, 22);
+            this.label3.TabIndex = 75;
+            this.label3.Text = "Duyệt Đơn Hàng";
+            // 
             // button12
             // 
             this.button12.FlatAppearance.BorderSize = 0;
@@ -167,6 +156,17 @@
             this.button12.Size = new System.Drawing.Size(136, 150);
             this.button12.TabIndex = 74;
             this.button12.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label2.ForeColor = System.Drawing.Color.Firebrick;
+            this.label2.Location = new System.Drawing.Point(77, 170);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(130, 22);
+            this.label2.TabIndex = 73;
+            this.label2.Text = "Tạo Đơn Hàng";
             // 
             // button11
             // 

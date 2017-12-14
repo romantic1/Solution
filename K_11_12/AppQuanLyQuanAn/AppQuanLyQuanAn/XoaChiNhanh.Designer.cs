@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.cbb_TenChiNhanh = new System.Windows.Forms.ComboBox();
+            this.cbb_MaChiNhanh = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.btn_XoaChiNhanh = new System.Windows.Forms.Button();
@@ -43,18 +43,18 @@
             this.HeaderPanelDM.SuspendLayout();
             this.SuspendLayout();
             // 
-            // cbb_TenChiNhanh
+            // cbb_MaChiNhanh
             // 
-            this.cbb_TenChiNhanh.FormattingEnabled = true;
-            this.cbb_TenChiNhanh.Location = new System.Drawing.Point(182, 79);
-            this.cbb_TenChiNhanh.Name = "cbb_TenChiNhanh";
-            this.cbb_TenChiNhanh.Size = new System.Drawing.Size(202, 21);
-            this.cbb_TenChiNhanh.TabIndex = 66;
+            this.cbb_MaChiNhanh.FormattingEnabled = true;
+            this.cbb_MaChiNhanh.Location = new System.Drawing.Point(182, 79);
+            this.cbb_MaChiNhanh.Name = "cbb_MaChiNhanh";
+            this.cbb_MaChiNhanh.Size = new System.Drawing.Size(202, 21);
+            this.cbb_MaChiNhanh.TabIndex = 66;
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.Tan;
-            this.panel2.Controls.Add(this.cbb_TenChiNhanh);
+            this.panel2.BackColor = System.Drawing.Color.PaleGoldenrod;
+            this.panel2.Controls.Add(this.cbb_MaChiNhanh);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.btn_XoaChiNhanh);
             this.panel2.Controls.Add(this.label3);
@@ -194,7 +194,7 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox cbb_TenChiNhanh;
+        private System.Windows.Forms.ComboBox cbb_MaChiNhanh;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btn_XoaChiNhanh;

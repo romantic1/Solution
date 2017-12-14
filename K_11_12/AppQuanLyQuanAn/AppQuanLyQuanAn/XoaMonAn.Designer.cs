@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
-            this.cbb_TenMonAn = new System.Windows.Forms.ComboBox();
+            this.cbb_MaMonAn = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.btn_XoaMonAn = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -44,8 +44,8 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.Tan;
-            this.panel2.Controls.Add(this.cbb_TenMonAn);
+            this.panel2.BackColor = System.Drawing.Color.PaleGoldenrod;
+            this.panel2.Controls.Add(this.cbb_MaMonAn);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.btn_XoaMonAn);
             this.panel2.Controls.Add(this.label3);
@@ -56,13 +56,13 @@
             this.panel2.Size = new System.Drawing.Size(467, 261);
             this.panel2.TabIndex = 21;
             // 
-            // cbb_TenMonAn
+            // cbb_MaMonAn
             // 
-            this.cbb_TenMonAn.FormattingEnabled = true;
-            this.cbb_TenMonAn.Location = new System.Drawing.Point(182, 79);
-            this.cbb_TenMonAn.Name = "cbb_TenMonAn";
-            this.cbb_TenMonAn.Size = new System.Drawing.Size(202, 21);
-            this.cbb_TenMonAn.TabIndex = 66;
+            this.cbb_MaMonAn.FormattingEnabled = true;
+            this.cbb_MaMonAn.Location = new System.Drawing.Point(182, 79);
+            this.cbb_MaMonAn.Name = "cbb_MaMonAn";
+            this.cbb_MaMonAn.Size = new System.Drawing.Size(202, 21);
+            this.cbb_MaMonAn.TabIndex = 66;
             // 
             // button1
             // 
@@ -181,7 +181,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.ComboBox cbb_TenMonAn;
+        private System.Windows.Forms.ComboBox cbb_MaMonAn;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btn_XoaMonAn;
         private System.Windows.Forms.Label label3;

@@ -140,16 +140,31 @@ CREATE TABLE Khach_Hang
 
 CREATE TABLE Don_Hang
 (
-	Ma_DH char(10),
-	MA_KH char(10),
-	Ma_CN char(10),
+	Ma_DH char(15),
+	MA_KH char(15),
+	Ma_CN nvarchar(50),
 	SoLuong int,
 	NgayDat datetime,
-	KhuyenMai varchar(30),
+	NgayGiao datetime,
+	KhuyenMai nvarchar(30),
 	PhiShip float,
-	TrangThai_DH varchar(10)
+	TrangThai_DH nvarchar(15)
 	PRIMARY KEY(Ma_DH)
 )
+
+CREATE TABLE Don_Hang_Chi_Nhanh(
+	Ma_DHCN char(15),
+	Ten_DH nvarchar(50),
+	Ma_KH char(15),
+	Ten_CN nvarchar(50),
+	TrangThai nvarchar(50),
+	KhuyenMai nvarchar(20),
+	NhanVien nvarchar(20),
+	ThoiGian datetime,
+	TongTien float,
+	Primary key(Ma_DHCN)
+)
+
 
 CREATE TABLE Chi_Tiet_Don_Hang
 (
@@ -175,9 +190,21 @@ CREATE TABLE Tong_Dai
 	Ma_DH char(10),
 	PRIMARY KEY(MA_TD)
 )
-GO
 
+CREATE TABLE DON_HANG_TONG_DAI(
+	Ma_DHTD char(15),
+	Ten_DH nvarchar(50),
+	Ma_KH char(15),
+	Ten_CN nvarchar(50),
+	TrangThai nvarchar(15),
+	KhuyenMai nvarchar(15),
+	NhanVien nvarchar(20),
+	ThoiGian datetime,
+	TongTien float,
+)
+GO
 ---------------------------------------------------------------------------------------------------------------------------------
+
 Insert into Mon_An
 values('MA1','Banh Canh',15000,'Ngon','CN1'),
 		('MA2','Banh Canh Sua',25000,'Tuyet','CN2')
@@ -221,6 +248,23 @@ Select * from Khach_Hang
 
 Select * from Nhan_Vien
 
+Select * from Mon_An
+
+Select * from Chi_Nhanh
+
+Select * from Don_Hang_Chi_Nhanh
+
+TRUNCATE TABLE Don_Hang_Chi_Nhanh
+
+
 Insert into Khach_Hang values('KH01','TK01','123',N'Nguyễn Văn A','20100320',N'Đường C','55656')
 
+Insert into Don_Hang_Chi_Nhanh values('DHCN01',N'Bàn Số 12','','','','','','20120320','2000')
+
 TRUNCATE TABLE Khach_Hang
+
+Delete from Mon_An Where Ten_MA = 'Cơm Chiên'
+
+Insert into Don_Hang values('DH01','','','','','','','','')
+
+TRUNCATE TABLE Don_Hang

@@ -36,12 +36,16 @@
             this.button1 = new System.Windows.Forms.Button();
             this.btn_CapNhatChiNhanh = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.cbb_TinhTrang = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.cbb_TinhThanh = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.txt_MaMonAn = new System.Windows.Forms.TextBox();
+            this.txt_SoBan = new System.Windows.Forms.TextBox();
             this.txt_DienThoai = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txt_DiaChi = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -50,10 +54,6 @@
             this.txt_MaChiNhanh = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txt_SoBan = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.txt_MaMonAn = new System.Windows.Forms.TextBox();
             this.HeaderPanelDM.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_CapNhatChiNhanh)).BeginInit();
@@ -99,7 +99,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Tan;
+            this.panel1.BackColor = System.Drawing.Color.PaleGoldenrod;
             this.panel1.Controls.Add(this.dgv_CapNhatChiNhanh);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.btn_CapNhatChiNhanh);
@@ -176,6 +176,16 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(143, 20);
             this.dateTimePicker1.TabIndex = 63;
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label11.Location = new System.Drawing.Point(393, 142);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(77, 15);
+            this.label11.TabIndex = 62;
+            this.label11.Text = "Mã Món Ăn:";
+            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -244,6 +254,24 @@
             this.label7.TabIndex = 58;
             this.label7.Text = "Tỉnh Thành:";
             // 
+            // txt_MaMonAn
+            // 
+            this.txt_MaMonAn.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_MaMonAn.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt_MaMonAn.Location = new System.Drawing.Point(473, 143);
+            this.txt_MaMonAn.Name = "txt_MaMonAn";
+            this.txt_MaMonAn.Size = new System.Drawing.Size(143, 18);
+            this.txt_MaMonAn.TabIndex = 56;
+            // 
+            // txt_SoBan
+            // 
+            this.txt_SoBan.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_SoBan.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt_SoBan.Location = new System.Drawing.Point(139, 173);
+            this.txt_SoBan.Name = "txt_SoBan";
+            this.txt_SoBan.Size = new System.Drawing.Size(188, 18);
+            this.txt_SoBan.TabIndex = 56;
+            // 
             // txt_DienThoai
             // 
             this.txt_DienThoai.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -252,6 +280,16 @@
             this.txt_DienThoai.Name = "txt_DienThoai";
             this.txt_DienThoai.Size = new System.Drawing.Size(188, 18);
             this.txt_DienThoai.TabIndex = 56;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label8.Location = new System.Drawing.Point(65, 173);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(56, 15);
+            this.label8.TabIndex = 57;
+            this.label8.Text = "Số Bàn:";
             // 
             // label6
             // 
@@ -331,44 +369,6 @@
             this.label2.Size = new System.Drawing.Size(100, 22);
             this.label2.TabIndex = 49;
             this.label2.Text = "Thông Tin";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label8.Location = new System.Drawing.Point(65, 173);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(56, 15);
-            this.label8.TabIndex = 57;
-            this.label8.Text = "Số Bàn:";
-            // 
-            // txt_SoBan
-            // 
-            this.txt_SoBan.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_SoBan.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txt_SoBan.Location = new System.Drawing.Point(139, 173);
-            this.txt_SoBan.Name = "txt_SoBan";
-            this.txt_SoBan.Size = new System.Drawing.Size(188, 18);
-            this.txt_SoBan.TabIndex = 56;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label11.Location = new System.Drawing.Point(393, 142);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(77, 15);
-            this.label11.TabIndex = 62;
-            this.label11.Text = "Mã Món Ăn:";
-            // 
-            // txt_MaMonAn
-            // 
-            this.txt_MaMonAn.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_MaMonAn.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txt_MaMonAn.Location = new System.Drawing.Point(473, 143);
-            this.txt_MaMonAn.Name = "txt_MaMonAn";
-            this.txt_MaMonAn.Size = new System.Drawing.Size(143, 18);
-            this.txt_MaMonAn.TabIndex = 56;
             // 
             // CapNhatChiNhanh
             // 

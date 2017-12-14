@@ -32,12 +32,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Messaging" />
     <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -52,6 +55,12 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaoCaoThongKe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaoCaoThongKe.Designer.cs">
+      <DependentUpon>BaoCaoThongKe.cs</DependentUpon>
+    </Compile>
     <Compile Include="CapNhatMonAn.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,17 +73,29 @@
     <Compile Include="CapNhatChiNhanh.Designer.cs">
       <DependentUpon>CapNhatChiNhanh.cs</DependentUpon>
     </Compile>
-    <Compile Include="ChiNhanhControl.cs">
+    <Compile Include="ChiTietChiNhanh.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ChiNhanhControl.Designer.cs">
-      <DependentUpon>ChiNhanhControl.cs</DependentUpon>
+    <Compile Include="ChiTietChiNhanh.Designer.cs">
+      <DependentUpon>ChiTietChiNhanh.cs</DependentUpon>
     </Compile>
-    <Compile Include="ChiNhanhQL.cs">
+    <Compile Include="DonHangChiNhanh.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ChiNhanhQL.Designer.cs">
-      <DependentUpon>ChiNhanhQL.cs</DependentUpon>
+    <Compile Include="DonHangChiNhanh.Designer.cs">
+      <DependentUpon>DonHangChiNhanh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DonHangTongDai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DonHangTongDai.Designer.cs">
+      <DependentUpon>DonHangTongDai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLiChiNhanh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLiChiNhanh.Designer.cs">
+      <DependentUpon>QuanLiChiNhanh.cs</DependentUpon>
     </Compile>
     <Compile Include="ChonMenu.cs">
       <SubType>Form</SubType>
@@ -144,6 +165,12 @@
     <Compile Include="QuanLyControl.Designer.cs">
       <DependentUpon>QuanLyControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="TaoDonHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaoDonHang.Designer.cs">
+      <DependentUpon>TaoDonHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="ThemChiNhanh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -174,17 +201,26 @@
     <Compile Include="XoaMonAn.Designer.cs">
       <DependentUpon>XoaMonAn.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="BaoCaoThongKe.resx">
+      <DependentUpon>BaoCaoThongKe.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CapNhatChiNhanh.resx">
       <DependentUpon>CapNhatChiNhanh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CapNhatMonAn.resx">
       <DependentUpon>CapNhatMonAn.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ChiNhanhControl.resx">
-      <DependentUpon>ChiNhanhControl.cs</DependentUpon>
+    <EmbeddedResource Include="ChiTietChiNhanh.resx">
+      <DependentUpon>ChiTietChiNhanh.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ChiNhanhQL.resx">
-      <DependentUpon>ChiNhanhQL.cs</DependentUpon>
+    <EmbeddedResource Include="DonHangChiNhanh.resx">
+      <DependentUpon>DonHangChiNhanh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DonHangTongDai.resx">
+      <DependentUpon>DonHangTongDai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLiChiNhanh.resx">
+      <DependentUpon>QuanLiChiNhanh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChonMenu.resx">
       <DependentUpon>ChonMenu.cs</DependentUpon>
@@ -222,6 +258,9 @@
     </Compile>
     <EmbeddedResource Include="QuanLyControl.resx">
       <DependentUpon>QuanLyControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaoDonHang.resx">
+      <DependentUpon>TaoDonHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ThemChiNhanh.resx">
       <DependentUpon>ThemChiNhanh.cs</DependentUpon>

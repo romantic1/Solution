@@ -54,7 +54,7 @@
             this.tongDaiControl1 = new AppQuanLyQuanAn.TongDaiControl();
             this.quanLyControl1 = new AppQuanLyQuanAn.QuanLyControl();
             this.homeControl1 = new AppQuanLyQuanAn.HomeControl();
-            this.chiNhanhControl1 = new AppQuanLyQuanAn.ChiNhanhControl();
+            this.chiNhanhControl1 = new AppQuanLyQuanAn.ChiTietChiNhanh();
             this.SidePanel.SuspendLayout();
             this.NameApp.SuspendLayout();
             this.HeaderPanel.SuspendLayout();
@@ -463,7 +463,7 @@
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button17;
-        private ChiNhanhControl chiNhanhControl1;
+        private ChiTietChiNhanh chiNhanhControl1;
         private HomeControl homeControl1;
         private QuanLyControl quanLyControl1;
         private TongDaiControl tongDaiControl1;
