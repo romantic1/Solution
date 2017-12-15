@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
-            this.dangNhapControl1 = new AppQuanLyQuanAn.DangNhapControl();
             this.SuspendLayout();
             // 
             // monthCalendar1
@@ -39,21 +38,12 @@
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 1;
             // 
-            // dangNhapControl1
-            // 
-            this.dangNhapControl1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.dangNhapControl1.Location = new System.Drawing.Point(34, 118);
-            this.dangNhapControl1.Name = "dangNhapControl1";
-            this.dangNhapControl1.Size = new System.Drawing.Size(636, 281);
-            this.dangNhapControl1.TabIndex = 2;
-            // 
             // HomeControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.dangNhapControl1);
             this.Controls.Add(this.monthCalendar1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "HomeControl";
             this.Size = new System.Drawing.Size(988, 524);
             this.ResumeLayout(false);
@@ -63,6 +53,5 @@
         #endregion
 
         private System.Windows.Forms.MonthCalendar monthCalendar1;
-        private DangNhapControl dangNhapControl1;
     }
 }

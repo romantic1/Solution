@@ -21,5 +21,10 @@ namespace AppQuanLyQuanAn
         {
             this.Close();
         }
+
+        private void HeaderPanelDM_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

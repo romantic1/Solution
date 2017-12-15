@@ -24,25 +24,27 @@ namespace AppQuanLyQuanAn
         }
         void dangnhap()
         {
-            if (bophan == "0")
+            if(bophan == "0")
             {
+                btChiNhanh.Enabled = true;
+                btQuanLy.Enabled = false;
                 btTongDai.Enabled = false;
-                
-               
-
             }
             if (bophan == "1")
             {
-                btQuanLy.Enabled = false;
-                
-
+                btQuanLy.Enabled = true;
+                btTongDai.Enabled = false;
+                btChiNhanh.Enabled = false;
             }
             if (bophan == "2")
             {
+                btTongDai.Enabled = true;
+                btQuanLy.Enabled = false;
                 btChiNhanh.Enabled = false;
-            }
+            }                     
             
         }
+        
         private void btQuanLy_Click(object sender, EventArgs e)
         {
             // Doi qua Slide cua Quan Ly khi click vao quan ly
@@ -81,43 +83,18 @@ namespace AppQuanLyQuanAn
         {
             this.Close();
         }
-
-        private void HeaderPanel_Paint(object sender, PaintEventArgs e)
+        public void Home_Load_1(object sender, EventArgs e)
         {
-
-        }
-
-        private void dangXuatControl1_Load(object sender, EventArgs e)
-        {
-
-        }
-        
-        
-        
-       
-
-        private void LoginControl_OnLoggedIn(object sender, EventArgs e)
-{
-            DangNhapControl uc = new DangNhapControl();          
-            uc.OnLoggedIn += new EventHandler(LoginControl_OnLoggedIn);
-            Home_Load_1(sender, e);
-//this is your eventhandler
-}
-        private void Home_Load_1(object sender, EventArgs e)
-        {
-            btTongDai.Enabled = false;
-            btQuanLy.Enabled = false;
-            btChiNhanh.Enabled = false;
             dangnhap();
-
-            
-            
+                                               
         }
 
         private void homeControl2_Load(object sender, EventArgs e)
         {
             Home_Load_1(sender, e);
         }
+
+      
 
         
     }

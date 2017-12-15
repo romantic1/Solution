@@ -9,27 +9,19 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
-
 namespace AppQuanLyQuanAn
 {
-    public partial class DangNhapControl : UserControl
-    {
+    public partial class DanNhap : Form
+    {   
         string a;
-        public event EventHandler OnLoggedIn;
+       
         static SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-0T7B1M9\SQLEXPRESS;Initial Catalog=QuanLiQuanAn;Integrated Security=True");
-        public DangNhapControl()
+        
+        public DanNhap()
         {
             InitializeComponent();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void DangNhapControl_Load(object sender, EventArgs e)
-        {
-
-        }
         private void dangnhap_Click(object sender, EventArgs e)
         {
             conn.Open();
@@ -44,23 +36,27 @@ namespace AppQuanLyQuanAn
 
             if (kq.Rows.Count > 0)
             {
+                this.Hide();
                 a = kq.Rows[0]["BoPhan"].ToString();
-                cmd.ExecuteNonQuery();            
-                Home f = new Home();               
+                cmd.ExecuteNonQuery();
+                Home f = new Home();
                 f.bophan = a;
-               
-                
+                f.ShowDialog();
+                this.Close();
+
+
+
             }
             else
             {
                 MessageBox.Show("Sai mã đăng nhập hoặc mật khẩu", "Thông Báo");
             }
             conn.Close();
-            if(OnLoggedIn !=null) 
-            OnLoggedIn(this, null);
-            
         }
 
-        
+        private void DanNhap_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
