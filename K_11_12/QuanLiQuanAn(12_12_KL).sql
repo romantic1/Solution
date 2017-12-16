@@ -191,7 +191,7 @@ CREATE TABLE Tong_Dai
 	PRIMARY KEY(MA_TD)
 )
 
-CREATE TABLE DON_HANG_TONG_DAI(
+CREATE TABLE Don_Hang_Tong_Dai(
 	Ma_DHTD char(15),
 	Ten_DH nvarchar(50),
 	Ma_KH char(15),
@@ -202,6 +202,7 @@ CREATE TABLE DON_HANG_TONG_DAI(
 	ThoiGian datetime,
 	TongTien float,
 )
+
 GO
 ---------------------------------------------------------------------------------------------------------------------------------
 
@@ -240,9 +241,11 @@ InSert into Mon_An values('MA03',N'Cơm Thái','20000',N'Món truyền thống',
 InSert into Mon_An values('MA04',N'Cơm SuSi','20000',N'Món truyền thống','Heo')
 
 
-Insert into Nhan_Vien values('NV01','TK01','123',N'Nguyễn Văn A','100','626262','','123','123','123','123','20100225','')
+Insert into Nhan_Vien values('NV01','123','123',N'Nguyễn Văn A','100','626262','','123','123','123','123','20100225','')
 
-Truncate table Nhan_Vien
+Delete Nhan_Vien Where Ma_NV = 'NV01'
+
+TRUNCATE TABLE Nhan_Vien
 
 Select * from Khach_Hang
 

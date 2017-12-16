@@ -311,12 +311,16 @@
             // 
             // btn_Search
             // 
-            this.btn_Search.Location = new System.Drawing.Point(490, 22);
+            this.btn_Search.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btn_Search.BackgroundImage = global::AppQuanLyQuanAn.Properties.Resources.Search2;
+            this.btn_Search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btn_Search.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Search.Location = new System.Drawing.Point(490, 13);
             this.btn_Search.Name = "btn_Search";
-            this.btn_Search.Size = new System.Drawing.Size(105, 23);
+            this.btn_Search.Size = new System.Drawing.Size(112, 37);
             this.btn_Search.TabIndex = 27;
             this.btn_Search.Text = "Search";
-            this.btn_Search.UseVisualStyleBackColor = true;
+            this.btn_Search.UseVisualStyleBackColor = false;
             // 
             // cbb_SearchTenChiNhanh
             // 

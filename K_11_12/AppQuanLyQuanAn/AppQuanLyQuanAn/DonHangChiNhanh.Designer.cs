@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DonHangChiNhanh));
-            this.btn_LamMoi = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.gbSearchCNQL = new System.Windows.Forms.GroupBox();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -51,43 +50,29 @@
             this.txt_TenDonHang = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.txt_SearchDonHangChiNhanh = new System.Windows.Forms.TextBox();
+            this.dgv_HienThiDanhSachDonHangChiNhanh = new System.Windows.Forms.DataGridView();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btn_Search = new System.Windows.Forms.Button();
+            this.cbb_SearchTenChiNhanh = new System.Windows.Forms.ComboBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.btSearchMACNQL = new System.Windows.Forms.Button();
+            this.label13 = new System.Windows.Forms.Label();
+            this.btn_LamMoi = new System.Windows.Forms.Button();
             this.btn_Xoa = new System.Windows.Forms.Button();
             this.btn_CapNhat = new System.Windows.Forms.Button();
             this.btn_ThemMoi = new System.Windows.Forms.Button();
             this.HeaderPanelDM = new System.Windows.Forms.Panel();
             this.OffChiNhanh = new System.Windows.Forms.Button();
-            this.txt_SearchDonHangChiNhanh = new System.Windows.Forms.TextBox();
-            this.btSearchMACNQL = new System.Windows.Forms.Button();
-            this.dgv_HienThiDanhSachDonHangChiNhanh = new System.Windows.Forms.DataGridView();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cbb_SearchTenChiNhanh = new System.Windows.Forms.ComboBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.label13 = new System.Windows.Forms.Label();
-            this.btn_Search = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.gbSearchCNQL.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.HeaderPanelDM.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_HienThiDanhSachDonHangChiNhanh)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.HeaderPanelDM.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btn_LamMoi
-            // 
-            this.btn_LamMoi.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btn_LamMoi.FlatAppearance.BorderSize = 0;
-            this.btn_LamMoi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_LamMoi.Image = ((System.Drawing.Image)(resources.GetObject("btn_LamMoi.Image")));
-            this.btn_LamMoi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_LamMoi.Location = new System.Drawing.Point(774, 480);
-            this.btn_LamMoi.Name = "btn_LamMoi";
-            this.btn_LamMoi.Size = new System.Drawing.Size(112, 37);
-            this.btn_LamMoi.TabIndex = 75;
-            this.btn_LamMoi.Text = "Làm Mới";
-            this.btn_LamMoi.UseVisualStyleBackColor = false;
-            this.btn_LamMoi.Click += new System.EventHandler(this.btn_LamMoi_Click);
             // 
             // label2
             // 
@@ -311,19 +296,143 @@
             this.label6.TabIndex = 51;
             this.label6.Text = "Tên Chi Nhánh:";
             // 
-            // label1
+            // txt_SearchDonHangChiNhanh
             // 
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label1.Image = global::AppQuanLyQuanAn.Properties.Resources.Chung12;
-            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label1.Location = new System.Drawing.Point(2, -1);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(181, 33);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Đơn Hàng Chi Nhánh";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.txt_SearchDonHangChiNhanh.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_SearchDonHangChiNhanh.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt_SearchDonHangChiNhanh.Location = new System.Drawing.Point(97, 23);
+            this.txt_SearchDonHangChiNhanh.Name = "txt_SearchDonHangChiNhanh";
+            this.txt_SearchDonHangChiNhanh.Size = new System.Drawing.Size(98, 19);
+            this.txt_SearchDonHangChiNhanh.TabIndex = 23;
+            this.txt_SearchDonHangChiNhanh.TextChanged += new System.EventHandler(this.txt_SearchDonHangChiNhanh_TextChanged);
+            // 
+            // dgv_HienThiDanhSachDonHangChiNhanh
+            // 
+            this.dgv_HienThiDanhSachDonHangChiNhanh.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dgv_HienThiDanhSachDonHangChiNhanh.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_HienThiDanhSachDonHangChiNhanh.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.dgv_HienThiDanhSachDonHangChiNhanh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_HienThiDanhSachDonHangChiNhanh.Location = new System.Drawing.Point(7, 58);
+            this.dgv_HienThiDanhSachDonHangChiNhanh.Name = "dgv_HienThiDanhSachDonHangChiNhanh";
+            this.dgv_HienThiDanhSachDonHangChiNhanh.ReadOnly = true;
+            this.dgv_HienThiDanhSachDonHangChiNhanh.Size = new System.Drawing.Size(604, 331);
+            this.dgv_HienThiDanhSachDonHangChiNhanh.TabIndex = 25;
+            this.dgv_HienThiDanhSachDonHangChiNhanh.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_HienThiDanhSachDonHangChiNhanh_CellClick);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(-49, -31);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 73;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(-49, -31);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 72;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.groupBox1.Controls.Add(this.btn_Search);
+            this.groupBox1.Controls.Add(this.cbb_SearchTenChiNhanh);
+            this.groupBox1.Controls.Add(this.txt_SearchDonHangChiNhanh);
+            this.groupBox1.Controls.Add(this.button3);
+            this.groupBox1.Controls.Add(this.btSearchMACNQL);
+            this.groupBox1.Controls.Add(this.dgv_HienThiDanhSachDonHangChiNhanh);
+            this.groupBox1.Location = new System.Drawing.Point(433, 73);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(611, 392);
+            this.groupBox1.TabIndex = 71;
+            this.groupBox1.TabStop = false;
+            // 
+            // btn_Search
+            // 
+            this.btn_Search.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btn_Search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn_Search.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Search.Image = global::AppQuanLyQuanAn.Properties.Resources.Search2;
+            this.btn_Search.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Search.Location = new System.Drawing.Point(490, 16);
+            this.btn_Search.Name = "btn_Search";
+            this.btn_Search.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btn_Search.Size = new System.Drawing.Size(112, 36);
+            this.btn_Search.TabIndex = 27;
+            this.btn_Search.Text = "Search";
+            this.btn_Search.UseVisualStyleBackColor = false;
+            this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click);
+            // 
+            // cbb_SearchTenChiNhanh
+            // 
+            this.cbb_SearchTenChiNhanh.FormattingEnabled = true;
+            this.cbb_SearchTenChiNhanh.Location = new System.Drawing.Point(341, 24);
+            this.cbb_SearchTenChiNhanh.Name = "cbb_SearchTenChiNhanh";
+            this.cbb_SearchTenChiNhanh.Size = new System.Drawing.Size(133, 21);
+            this.cbb_SearchTenChiNhanh.TabIndex = 26;
+            // 
+            // button3
+            // 
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.button3.Image = global::AppQuanLyQuanAn.Properties.Resources.Search;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(250, 18);
+            this.button3.Name = "button3";
+            this.button3.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.button3.Size = new System.Drawing.Size(85, 29);
+            this.button3.TabIndex = 24;
+            this.button3.Text = "Tên CN";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // btSearchMACNQL
+            // 
+            this.btSearchMACNQL.FlatAppearance.BorderSize = 0;
+            this.btSearchMACNQL.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btSearchMACNQL.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btSearchMACNQL.Image = global::AppQuanLyQuanAn.Properties.Resources.Search;
+            this.btSearchMACNQL.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btSearchMACNQL.Location = new System.Drawing.Point(6, 19);
+            this.btSearchMACNQL.Name = "btSearchMACNQL";
+            this.btSearchMACNQL.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btSearchMACNQL.Size = new System.Drawing.Size(85, 29);
+            this.btSearchMACNQL.TabIndex = 24;
+            this.btSearchMACNQL.Text = "Tìm kiếm";
+            this.btSearchMACNQL.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btSearchMACNQL.UseVisualStyleBackColor = true;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(669, 49);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(227, 18);
+            this.label13.TabIndex = 74;
+            this.label13.Text = "Danh Sách Đơn Hàng Tại CN";
+            // 
+            // btn_LamMoi
+            // 
+            this.btn_LamMoi.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btn_LamMoi.FlatAppearance.BorderSize = 0;
+            this.btn_LamMoi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_LamMoi.Image = ((System.Drawing.Image)(resources.GetObject("btn_LamMoi.Image")));
+            this.btn_LamMoi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_LamMoi.Location = new System.Drawing.Point(774, 480);
+            this.btn_LamMoi.Name = "btn_LamMoi";
+            this.btn_LamMoi.Size = new System.Drawing.Size(112, 37);
+            this.btn_LamMoi.TabIndex = 75;
+            this.btn_LamMoi.Text = "Làm Mới";
+            this.btn_LamMoi.UseVisualStyleBackColor = false;
+            this.btn_LamMoi.Click += new System.EventHandler(this.btn_LamMoi_Click);
             // 
             // btn_Xoa
             // 
@@ -394,122 +503,19 @@
             this.OffChiNhanh.UseVisualStyleBackColor = false;
             this.OffChiNhanh.Click += new System.EventHandler(this.OffChiNhanh_Click);
             // 
-            // txt_SearchDonHangChiNhanh
+            // label1
             // 
-            this.txt_SearchDonHangChiNhanh.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_SearchDonHangChiNhanh.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txt_SearchDonHangChiNhanh.Location = new System.Drawing.Point(113, 23);
-            this.txt_SearchDonHangChiNhanh.Name = "txt_SearchDonHangChiNhanh";
-            this.txt_SearchDonHangChiNhanh.Size = new System.Drawing.Size(98, 19);
-            this.txt_SearchDonHangChiNhanh.TabIndex = 23;
-            this.txt_SearchDonHangChiNhanh.TextChanged += new System.EventHandler(this.txt_SearchDonHangChiNhanh_TextChanged);
-            // 
-            // btSearchMACNQL
-            // 
-            this.btSearchMACNQL.FlatAppearance.BorderSize = 0;
-            this.btSearchMACNQL.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btSearchMACNQL.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btSearchMACNQL.Image = global::AppQuanLyQuanAn.Properties.Resources.Search;
-            this.btSearchMACNQL.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btSearchMACNQL.Location = new System.Drawing.Point(6, 19);
-            this.btSearchMACNQL.Name = "btSearchMACNQL";
-            this.btSearchMACNQL.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btSearchMACNQL.Size = new System.Drawing.Size(85, 29);
-            this.btSearchMACNQL.TabIndex = 24;
-            this.btSearchMACNQL.Text = "Tìm kiếm";
-            this.btSearchMACNQL.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btSearchMACNQL.UseVisualStyleBackColor = true;
-            // 
-            // dgv_HienThiDanhSachDonHangChiNhanh
-            // 
-            this.dgv_HienThiDanhSachDonHangChiNhanh.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dgv_HienThiDanhSachDonHangChiNhanh.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgv_HienThiDanhSachDonHangChiNhanh.BackgroundColor = System.Drawing.SystemColors.Window;
-            this.dgv_HienThiDanhSachDonHangChiNhanh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_HienThiDanhSachDonHangChiNhanh.Location = new System.Drawing.Point(7, 54);
-            this.dgv_HienThiDanhSachDonHangChiNhanh.Name = "dgv_HienThiDanhSachDonHangChiNhanh";
-            this.dgv_HienThiDanhSachDonHangChiNhanh.ReadOnly = true;
-            this.dgv_HienThiDanhSachDonHangChiNhanh.Size = new System.Drawing.Size(604, 335);
-            this.dgv_HienThiDanhSachDonHangChiNhanh.TabIndex = 25;
-            this.dgv_HienThiDanhSachDonHangChiNhanh.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_HienThiDanhSachDonHangChiNhanh_CellClick);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(-49, -31);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 73;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(-49, -31);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 72;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.groupBox1.Controls.Add(this.btn_Search);
-            this.groupBox1.Controls.Add(this.cbb_SearchTenChiNhanh);
-            this.groupBox1.Controls.Add(this.txt_SearchDonHangChiNhanh);
-            this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Controls.Add(this.btSearchMACNQL);
-            this.groupBox1.Controls.Add(this.dgv_HienThiDanhSachDonHangChiNhanh);
-            this.groupBox1.Location = new System.Drawing.Point(433, 73);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(611, 392);
-            this.groupBox1.TabIndex = 71;
-            this.groupBox1.TabStop = false;
-            // 
-            // cbb_SearchTenChiNhanh
-            // 
-            this.cbb_SearchTenChiNhanh.FormattingEnabled = true;
-            this.cbb_SearchTenChiNhanh.Location = new System.Drawing.Point(330, 23);
-            this.cbb_SearchTenChiNhanh.Name = "cbb_SearchTenChiNhanh";
-            this.cbb_SearchTenChiNhanh.Size = new System.Drawing.Size(133, 21);
-            this.cbb_SearchTenChiNhanh.TabIndex = 26;
-            // 
-            // button3
-            // 
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.button3.Image = global::AppQuanLyQuanAn.Properties.Resources.Search;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(239, 16);
-            this.button3.Name = "button3";
-            this.button3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.button3.Size = new System.Drawing.Size(85, 29);
-            this.button3.TabIndex = 24;
-            this.button3.Text = "Tên CN";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(669, 49);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(227, 18);
-            this.label13.TabIndex = 74;
-            this.label13.Text = "Danh Sách Đơn Hàng Tại CN";
-            // 
-            // btn_Search
-            // 
-            this.btn_Search.Location = new System.Drawing.Point(490, 22);
-            this.btn_Search.Name = "btn_Search";
-            this.btn_Search.Size = new System.Drawing.Size(105, 23);
-            this.btn_Search.TabIndex = 27;
-            this.btn_Search.Text = "Search";
-            this.btn_Search.UseVisualStyleBackColor = true;
-            this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label1.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label1.Image = global::AppQuanLyQuanAn.Properties.Resources.Chung12;
+            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label1.Location = new System.Drawing.Point(2, -1);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(181, 33);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Đơn Hàng Chi Nhánh";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // DonHangChiNhanh
             // 
@@ -536,10 +542,10 @@
             this.gbSearchCNQL.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.HeaderPanelDM.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_HienThiDanhSachDonHangChiNhanh)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.HeaderPanelDM.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

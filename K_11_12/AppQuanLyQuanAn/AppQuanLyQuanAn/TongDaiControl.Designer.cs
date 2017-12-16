@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.TongDai = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -39,27 +39,27 @@
             this.button12 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.button11 = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
+            this.TongDai.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // TongDai
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.button14);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.button13);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.button12);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.button11);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(741, 426);
-            this.panel1.TabIndex = 1;
+            this.TongDai.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.TongDai.Controls.Add(this.label6);
+            this.TongDai.Controls.Add(this.button2);
+            this.TongDai.Controls.Add(this.label1);
+            this.TongDai.Controls.Add(this.button14);
+            this.TongDai.Controls.Add(this.label4);
+            this.TongDai.Controls.Add(this.button13);
+            this.TongDai.Controls.Add(this.label3);
+            this.TongDai.Controls.Add(this.button12);
+            this.TongDai.Controls.Add(this.label2);
+            this.TongDai.Controls.Add(this.button11);
+            this.TongDai.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TongDai.Location = new System.Drawing.Point(0, 0);
+            this.TongDai.Name = "TongDai";
+            this.TongDai.Size = new System.Drawing.Size(741, 426);
+            this.TongDai.TabIndex = 1;
             // 
             // label6
             // 
@@ -185,18 +185,18 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.TongDai);
             this.Name = "TongDaiControl";
             this.Size = new System.Drawing.Size(741, 426);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.TongDai.ResumeLayout(false);
+            this.TongDai.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel TongDai;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Label label4;

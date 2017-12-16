@@ -12,37 +12,11 @@ namespace AppQuanLyQuanAn
 {
     public partial class Home : Form
     {
-    
-        public string bophan //lấy dữ liệu từ phân quyền từ form đăng nhập đưa qua
-        {
-            get;
-            set;
-        }
         public Home()
         {
             InitializeComponent();
         }
-        void dangnhap()
-        {
-            if (bophan == "0")
-            {
-                btTongDai.Enabled = false;
-                
-               
-
-            }
-            if (bophan == "1")
-            {
-                btQuanLy.Enabled = false;
-                
-
-            }
-            if (bophan == "2")
-            {
-                btChiNhanh.Enabled = false;
-            }
-            
-        }
+ 
         private void btQuanLy_Click(object sender, EventArgs e)
         {
             // Doi qua Slide cua Quan Ly khi click vao quan ly
@@ -82,36 +56,14 @@ namespace AppQuanLyQuanAn
             this.Close();
         }
 
-        private void HeaderPanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void dangXuatControl1_Load(object sender, EventArgs e)
-        {
-
-        }
-        
-        
-        
-       
-
         private void LoginControl_OnLoggedIn(object sender, EventArgs e)
-{
+        {
             DangNhapControl uc = new DangNhapControl();          
-            uc.OnLoggedIn += new EventHandler(LoginControl_OnLoggedIn);
             Home_Load_1(sender, e);
-//this is your eventhandler
-}
+        }
         private void Home_Load_1(object sender, EventArgs e)
         {
-            btTongDai.Enabled = false;
-            btQuanLy.Enabled = false;
-            btChiNhanh.Enabled = false;
-            dangnhap();
-
-            
-            
+   
         }
 
         private void homeControl2_Load(object sender, EventArgs e)
@@ -119,6 +71,9 @@ namespace AppQuanLyQuanAn
             Home_Load_1(sender, e);
         }
 
-        
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

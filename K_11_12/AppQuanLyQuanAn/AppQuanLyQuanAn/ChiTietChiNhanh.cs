@@ -36,7 +36,8 @@ namespace AppQuanLyQuanAn
 
         private void button11_Click(object sender, EventArgs e)
         {
-            
+            DonHangChiNhanh frmDHCN = new DonHangChiNhanh();
+            frmDHCN.Show();
         }
     }
 }

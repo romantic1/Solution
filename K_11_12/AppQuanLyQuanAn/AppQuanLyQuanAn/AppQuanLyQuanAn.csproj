@@ -91,6 +91,18 @@
     <Compile Include="DonHangTongDai.Designer.cs">
       <DependentUpon>DonHangTongDai.cs</DependentUpon>
     </Compile>
+    <Compile Include="Home_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home_Login.Designer.cs">
+      <DependentUpon>Home_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManHinhChinh.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ManHinhChinh.Designer.cs">
+      <DependentUpon>ManHinhChinh.cs</DependentUpon>
+    </Compile>
     <Compile Include="QuanLiChiNhanh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,11 +133,11 @@
     <Compile Include="DanhMucMonAn.Designer.cs">
       <DependentUpon>DanhMucMonAn.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
     </Compile>
     <Compile Include="HomeControl.cs">
       <SubType>UserControl</SubType>
@@ -219,6 +231,12 @@
     <EmbeddedResource Include="DonHangTongDai.resx">
       <DependentUpon>DonHangTongDai.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Home_Login.resx">
+      <DependentUpon>Home_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManHinhChinh.resx">
+      <DependentUpon>ManHinhChinh.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="QuanLiChiNhanh.resx">
       <DependentUpon>QuanLiChiNhanh.cs</DependentUpon>
     </EmbeddedResource>
@@ -234,8 +252,8 @@
     <EmbeddedResource Include="DanhMucMonAn.resx">
       <DependentUpon>DanhMucMonAn.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HomeControl.resx">
       <DependentUpon>HomeControl.cs</DependentUpon>
@@ -492,6 +510,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\Login_Icon.png" />
+    <None Include="Resources\Search2.ico" />
+    <None Include="Resources\Search1.ico" />
+    <None Include="Resources\Search.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

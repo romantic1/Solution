@@ -1,6 +1,6 @@
 ﻿namespace AppQuanLyQuanAn
 {
-    partial class HomeControl
+    partial class ManHinhChinh
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,34 +29,21 @@
         private void InitializeComponent()
         {
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
-            this.dangNhapControl1 = new AppQuanLyQuanAn.DangNhapControl();
             this.SuspendLayout();
             // 
             // monthCalendar1
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(505, 9);
+            this.monthCalendar1.Location = new System.Drawing.Point(502, 9);
             this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 1;
+            this.monthCalendar1.TabIndex = 3;
             // 
-            // dangNhapControl1
-            // 
-            this.dangNhapControl1.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.dangNhapControl1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.dangNhapControl1.Location = new System.Drawing.Point(26, 96);
-            this.dangNhapControl1.Margin = new System.Windows.Forms.Padding(2);
-            this.dangNhapControl1.Name = "dangNhapControl1";
-            this.dangNhapControl1.Size = new System.Drawing.Size(477, 228);
-            this.dangNhapControl1.TabIndex = 2;
-            // 
-            // HomeControl
+            // ManHinhChinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.PaleGoldenrod;
-            this.Controls.Add(this.dangNhapControl1);
             this.Controls.Add(this.monthCalendar1);
-            this.Name = "HomeControl";
-            this.Size = new System.Drawing.Size(741, 426);
+            this.Name = "ManHinhChinh";
+            this.Size = new System.Drawing.Size(738, 419);
             this.ResumeLayout(false);
 
         }
@@ -64,6 +51,5 @@
         #endregion
 
         private System.Windows.Forms.MonthCalendar monthCalendar1;
-        private DangNhapControl dangNhapControl1;
     }
 }
