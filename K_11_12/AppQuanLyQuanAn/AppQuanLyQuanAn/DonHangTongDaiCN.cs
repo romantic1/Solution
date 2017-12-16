@@ -11,11 +11,11 @@ using System.Windows.Forms;
 
 namespace AppQuanLyQuanAn
 {
-    public partial class DonHangTongDai : Form
+    public partial class DonHangTongDaiCN : Form
     {
        SqlConnection conn;
         SqlCommand cmd;
-        public DonHangTongDai()
+        public DonHangTongDaiCN()
         {
             InitializeComponent();
             string Sqlconnection = "Data Source=DESKTOP-CSFRQ67\\SQLEXPRESS;Initial Catalog=QuanLiQuanAn;Integrated Security=True";

@@ -79,23 +79,23 @@
     <Compile Include="ChiTietChiNhanh.Designer.cs">
       <DependentUpon>ChiTietChiNhanh.cs</DependentUpon>
     </Compile>
-    <Compile Include="DanNhap.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DanNhap.Designer.cs">
-      <DependentUpon>DanNhap.cs</DependentUpon>
-    </Compile>
     <Compile Include="DonHangChiNhanh.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DonHangChiNhanh.Designer.cs">
       <DependentUpon>DonHangChiNhanh.cs</DependentUpon>
     </Compile>
-    <Compile Include="DonHangTongDai.cs">
+    <Compile Include="DonHangTongDaiCN.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DonHangTongDai.Designer.cs">
-      <DependentUpon>DonHangTongDai.cs</DependentUpon>
+    <Compile Include="DonHangTongDaiCN.Designer.cs">
+      <DependentUpon>DonHangTongDaiCN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
     </Compile>
     <Compile Include="Home_Login.cs">
       <SubType>Form</SubType>
@@ -121,12 +121,6 @@
     <Compile Include="ChonMenu.Designer.cs">
       <DependentUpon>ChonMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="DangNhapControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="DangNhapControl.Designer.cs">
-      <DependentUpon>DangNhapControl.cs</DependentUpon>
-    </Compile>
     <Compile Include="DangXuatControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -138,12 +132,6 @@
     </Compile>
     <Compile Include="DanhMucMonAn.Designer.cs">
       <DependentUpon>DanhMucMonAn.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Home.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Home.Designer.cs">
-      <DependentUpon>Home.cs</DependentUpon>
     </Compile>
     <Compile Include="HomeControl.cs">
       <SubType>UserControl</SubType>
@@ -231,14 +219,14 @@
     <EmbeddedResource Include="ChiTietChiNhanh.resx">
       <DependentUpon>ChiTietChiNhanh.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DanNhap.resx">
-      <DependentUpon>DanNhap.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="DonHangChiNhanh.resx">
       <DependentUpon>DonHangChiNhanh.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DonHangTongDai.resx">
-      <DependentUpon>DonHangTongDai.cs</DependentUpon>
+    <EmbeddedResource Include="DonHangTongDaiCN.resx">
+      <DependentUpon>DonHangTongDaiCN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Home_Login.resx">
       <DependentUpon>Home_Login.cs</DependentUpon>
@@ -252,17 +240,11 @@
     <EmbeddedResource Include="ChonMenu.resx">
       <DependentUpon>ChonMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DangNhapControl.resx">
-      <DependentUpon>DangNhapControl.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="DangXuatControl.resx">
       <DependentUpon>DangXuatControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DanhMucMonAn.resx">
       <DependentUpon>DanhMucMonAn.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Home.resx">
-      <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HomeControl.resx">
       <DependentUpon>HomeControl.cs</DependentUpon>

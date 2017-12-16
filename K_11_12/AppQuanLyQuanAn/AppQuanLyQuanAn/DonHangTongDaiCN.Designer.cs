@@ -1,6 +1,6 @@
 ﻿namespace AppQuanLyQuanAn
 {
-    partial class DonHangTongDai
+    partial class DonHangTongDaiCN
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DonHangTongDai));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DonHangTongDaiCN));
             this.HeaderPanelDM = new System.Windows.Forms.Panel();
             this.OffChiNhanh = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
