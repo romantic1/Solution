@@ -79,6 +79,12 @@
     <Compile Include="ChiTietChiNhanh.Designer.cs">
       <DependentUpon>ChiTietChiNhanh.cs</DependentUpon>
     </Compile>
+    <Compile Include="DanNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanNhap.Designer.cs">
+      <DependentUpon>DanNhap.cs</DependentUpon>
+    </Compile>
     <Compile Include="DonHangChiNhanh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -224,6 +230,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ChiTietChiNhanh.resx">
       <DependentUpon>ChiTietChiNhanh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanNhap.resx">
+      <DependentUpon>DanNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DonHangChiNhanh.resx">
       <DependentUpon>DonHangChiNhanh.cs</DependentUpon>

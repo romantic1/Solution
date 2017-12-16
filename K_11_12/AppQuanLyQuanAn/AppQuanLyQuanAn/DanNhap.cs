@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
-
 namespace AppQuanLyQuanAn
 {
+<<<<<<< HEAD:K_11_12/AppQuanLyQuanAn/AppQuanLyQuanAn/DangNhapControl.cs
     public partial class DangNhapControl : UserControl
     {
         SqlConnection conn;
@@ -19,14 +19,26 @@ namespace AppQuanLyQuanAn
         DataTable dt = new DataTable();
         SqlDataAdapter da;
         public DangNhapControl()
+=======
+    public partial class DanNhap : Form
+    {   
+        string a;
+       
+        static SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-0T7B1M9\SQLEXPRESS;Initial Catalog=QuanLiQuanAn;Integrated Security=True");
+        
+        public DanNhap()
+>>>>>>> 2aded26205219ec0c3eb921864fdea7c11c6d42e:K_11_12/AppQuanLyQuanAn/AppQuanLyQuanAn/DanNhap.cs
         {
             InitializeComponent();
             string Sqlconnection = "Data Source=DESKTOP-CSFRQ67\\SQLEXPRESS;Initial Catalog=QuanLiQuanAn;Integrated Security=True";
             conn = new SqlConnection(Sqlconnection);
         }
 
+<<<<<<< HEAD:K_11_12/AppQuanLyQuanAn/AppQuanLyQuanAn/DangNhapControl.cs
         public static string ID_USER = "";
 
+=======
+>>>>>>> 2aded26205219ec0c3eb921864fdea7c11c6d42e:K_11_12/AppQuanLyQuanAn/AppQuanLyQuanAn/DanNhap.cs
         private void dangnhap_Click(object sender, EventArgs e)
         {
             conn.Open();
@@ -51,9 +63,22 @@ namespace AppQuanLyQuanAn
             ID_USER = getID(txt_TaiKhoan.Text, txt_MatKhau.Text);
             if (ID_USER != "")
             {
+<<<<<<< HEAD:K_11_12/AppQuanLyQuanAn/AppQuanLyQuanAn/DangNhapControl.cs
                 Home_Login frmHL = new Home_Login();
                 this.Hide();
                 frmHL.Show();
+=======
+                this.Hide();
+                a = kq.Rows[0]["BoPhan"].ToString();
+                cmd.ExecuteNonQuery();
+                Home f = new Home();
+                f.bophan = a;
+                f.ShowDialog();
+                this.Close();
+
+
+
+>>>>>>> 2aded26205219ec0c3eb921864fdea7c11c6d42e:K_11_12/AppQuanLyQuanAn/AppQuanLyQuanAn/DanNhap.cs
             }
             else
             {
@@ -62,6 +87,7 @@ namespace AppQuanLyQuanAn
             conn.Close();
         }
 
+<<<<<<< HEAD:K_11_12/AppQuanLyQuanAn/AppQuanLyQuanAn/DangNhapControl.cs
 
         private string getID(string TaiKhoan, string MatKhau)
         {
@@ -90,6 +116,11 @@ namespace AppQuanLyQuanAn
                 conn.Close();
             }
             return id;
+=======
+        private void DanNhap_Load(object sender, EventArgs e)
+        {
+
+>>>>>>> 2aded26205219ec0c3eb921864fdea7c11c6d42e:K_11_12/AppQuanLyQuanAn/AppQuanLyQuanAn/DanNhap.cs
         }
     }
 }

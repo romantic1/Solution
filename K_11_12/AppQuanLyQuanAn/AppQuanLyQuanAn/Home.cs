@@ -16,7 +16,33 @@ namespace AppQuanLyQuanAn
         {
             InitializeComponent();
         }
+<<<<<<< HEAD:K_11_12/AppQuanLyQuanAn/AppQuanLyQuanAn/Home.cs
  
+=======
+        void dangnhap()
+        {
+            if(bophan == "0")
+            {
+                btChiNhanh.Enabled = true;
+                btQuanLy.Enabled = false;
+                btTongDai.Enabled = false;
+            }
+            if (bophan == "1")
+            {
+                btQuanLy.Enabled = true;
+                btTongDai.Enabled = false;
+                btChiNhanh.Enabled = false;
+            }
+            if (bophan == "2")
+            {
+                btTongDai.Enabled = true;
+                btQuanLy.Enabled = false;
+                btChiNhanh.Enabled = false;
+            }                     
+            
+        }
+        
+>>>>>>> 2aded26205219ec0c3eb921864fdea7c11c6d42e:K_11_12/AppQuanLyQuanAn/AppQuanLyQuanAn/Form1.cs
         private void btQuanLy_Click(object sender, EventArgs e)
         {
             // Doi qua Slide cua Quan Ly khi click vao quan ly
@@ -55,6 +81,7 @@ namespace AppQuanLyQuanAn
         {
             this.Close();
         }
+<<<<<<< HEAD:K_11_12/AppQuanLyQuanAn/AppQuanLyQuanAn/Home.cs
 
         private void LoginControl_OnLoggedIn(object sender, EventArgs e)
         {
@@ -64,6 +91,12 @@ namespace AppQuanLyQuanAn
         private void Home_Load_1(object sender, EventArgs e)
         {
    
+=======
+        public void Home_Load_1(object sender, EventArgs e)
+        {
+            dangnhap();
+                                               
+>>>>>>> 2aded26205219ec0c3eb921864fdea7c11c6d42e:K_11_12/AppQuanLyQuanAn/AppQuanLyQuanAn/Form1.cs
         }
 
         private void homeControl2_Load(object sender, EventArgs e)
@@ -71,9 +104,15 @@ namespace AppQuanLyQuanAn
             Home_Load_1(sender, e);
         }
 
+<<<<<<< HEAD:K_11_12/AppQuanLyQuanAn/AppQuanLyQuanAn/Home.cs
         private void button6_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
+=======
+      
+
+        
+>>>>>>> 2aded26205219ec0c3eb921864fdea7c11c6d42e:K_11_12/AppQuanLyQuanAn/AppQuanLyQuanAn/Form1.cs
     }
 }
