@@ -265,6 +265,8 @@
             // cbb_BoPhan
             // 
             this.cbb_BoPhan.FormattingEnabled = true;
+            this.cbb_BoPhan.Items.AddRange(new object[] {
+            "Nhân Viên"});
             this.cbb_BoPhan.Location = new System.Drawing.Point(132, 306);
             this.cbb_BoPhan.Name = "cbb_BoPhan";
             this.cbb_BoPhan.Size = new System.Drawing.Size(264, 21);

@@ -38,6 +38,7 @@
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Messaging" />
     <Reference Include="System.ServiceProcess" />
     <Reference Include="System.Web.Services" />
@@ -120,12 +121,6 @@
     </Compile>
     <Compile Include="ChonMenu.Designer.cs">
       <DependentUpon>ChonMenu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DangXuatControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="DangXuatControl.Designer.cs">
-      <DependentUpon>DangXuatControl.cs</DependentUpon>
     </Compile>
     <Compile Include="DanhMucMonAn.cs">
       <SubType>Form</SubType>
@@ -239,9 +234,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ChonMenu.resx">
       <DependentUpon>ChonMenu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DangXuatControl.resx">
-      <DependentUpon>DangXuatControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DanhMucMonAn.resx">
       <DependentUpon>DanhMucMonAn.cs</DependentUpon>
@@ -500,6 +492,7 @@
     <None Include="Resources\Tick.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Login.ico" />
     <Content Include="Resources\Login_Icon.png" />
     <None Include="Resources\Search2.ico" />
     <None Include="Resources\Search1.ico" />

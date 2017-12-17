@@ -241,7 +241,7 @@ InSert into Mon_An values('MA03',N'Cơm Thái','20000',N'Món truyền thống',
 InSert into Mon_An values('MA04',N'Cơm SuSi','20000',N'Món truyền thống','Heo')
 
 
-Insert into Nhan_Vien values('NV01','123','123',N'Nguyễn Văn A','100','626262','','123','123','123','123','20100225','')
+Insert into Nhan_Vien values('NV01','123','123',N'Nguyễn Văn A','100','626262','','123',N'Giám Đốc','123','123','20100225','')
 
 Delete Nhan_Vien Where Ma_NV = 'NV01'
 

@@ -19,7 +19,8 @@ namespace AppQuanLyQuanAn
 
 
             //Application.Run(new QuanLiChiNhanh());
-            Application.Run(new Home_Login());
+            Application.Run(new Home());
+            //Application.Run(new NhanVien());
         }
     }
 }
