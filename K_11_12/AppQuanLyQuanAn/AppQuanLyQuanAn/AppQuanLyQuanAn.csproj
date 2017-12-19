@@ -79,6 +79,7 @@
     <Compile Include="ChiTietChiNhanh.Designer.cs">
       <DependentUpon>ChiTietChiNhanh.cs</DependentUpon>
     </Compile>
+    <Compile Include="ConnectionString.cs" />
     <Compile Include="DonHangChiNhanh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +110,7 @@
     <Compile Include="ManHinhChinh.Designer.cs">
       <DependentUpon>ManHinhChinh.cs</DependentUpon>
     </Compile>
+    <Compile Include="Provider.cs" />
     <Compile Include="QuanLiChiNhanh.cs">
       <SubType>Form</SubType>
     </Compile>
