@@ -37,6 +37,7 @@ namespace AppQuanLyQuanAn
             SqlDataAdapter da = new SqlDataAdapter("Select * from Don_Hang_Chi_Nhanh", conn);
             da.Fill(dt);
             dgv_HienThiDanhSachDonHangChiNhanh.DataSource = dt;
+            dgv_HienThiDanhSachDonHangChiNhanh.RowHeadersVisible = false;
         }
 
         private void OffChiNhanh_Click(object sender, EventArgs e)
@@ -73,6 +74,7 @@ namespace AppQuanLyQuanAn
             }
             HienThiDonHangChiNhanh();
             txt_MaDonHang.Text = txt_TenDonHang.Text = cbb_MaKhachHang.Text = cbb_TenChiNhanh.Text = cbb_TrangThai.Text = cbb_KhuyenMai.Text = cbb_NhanVien.Text = Time_ThoiGian.Text = txt_TongTien.Text = "";
+            btn_ThemMoi.Visible = true;
             conn.Close();
         }
 
@@ -80,6 +82,7 @@ namespace AppQuanLyQuanAn
         {
             HienThiDonHangChiNhanh();
             txt_MaDonHang.Text = txt_TenDonHang.Text = cbb_MaKhachHang.Text = cbb_TenChiNhanh.Text = cbb_TrangThai.Text = cbb_KhuyenMai.Text = cbb_NhanVien.Text = Time_ThoiGian.Text = txt_TongTien.Text = "";
+            btn_ThemMoi.Visible = true;
         }
 
         private void btn_CapNhat_Click(object sender, EventArgs e)
@@ -97,6 +100,7 @@ namespace AppQuanLyQuanAn
             }
             HienThiDonHangChiNhanh();
             txt_MaDonHang.Text = txt_TenDonHang.Text = cbb_MaKhachHang.Text = cbb_TenChiNhanh.Text = cbb_TrangThai.Text = cbb_KhuyenMai.Text = cbb_NhanVien.Text = Time_ThoiGian.Text = txt_TongTien.Text = "";
+            btn_ThemMoi.Visible = true;
             conn.Close();
         }
 
@@ -115,6 +119,7 @@ namespace AppQuanLyQuanAn
             }
             HienThiDonHangChiNhanh();
             txt_MaDonHang.Text = txt_TenDonHang.Text = cbb_MaKhachHang.Text = cbb_TenChiNhanh.Text = cbb_TrangThai.Text = cbb_KhuyenMai.Text = cbb_NhanVien.Text = Time_ThoiGian.Text = txt_TongTien.Text = "";
+            btn_ThemMoi.Visible = true;
             conn.Close();
         }
 
@@ -132,6 +137,7 @@ namespace AppQuanLyQuanAn
             cbb_NhanVien.Text = row.Cells[6].Value.ToString();
             Time_ThoiGian.Text = row.Cells[7].Value.ToString();
             txt_TongTien.Text = row.Cells[8].Value.ToString();
+            btn_ThemMoi.Visible = false;
         }
 
         void ComboboxMaKhachHang()

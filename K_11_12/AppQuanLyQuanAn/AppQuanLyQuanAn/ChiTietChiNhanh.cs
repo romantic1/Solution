@@ -39,5 +39,23 @@ namespace AppQuanLyQuanAn
             DonHangChiNhanh frmDHCN = new DonHangChiNhanh();
             frmDHCN.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DoanhThuTungChiNhanh frmDTTCN = new DoanhThuTungChiNhanh();
+            frmDTTCN.Show();
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            DonHangTongDaiCN frmDHTDCN = new DonHangTongDaiCN();
+            frmDHTDCN.Show();
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            ThongTinBan frmTTB = new ThongTinBan();
+            frmTTB.Show();
+        }
     }
 }

@@ -58,5 +58,19 @@ namespace AppQuanLyQuanAn
             }
             conn.Close();
         }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            FormBorderStyle = FormBorderStyle.None;
+            WindowState = FormWindowState.Maximized;
+            TopMost = true;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            WindowState = FormWindowState.Normal;
+            TopMost = false;
+        }
     }
 }

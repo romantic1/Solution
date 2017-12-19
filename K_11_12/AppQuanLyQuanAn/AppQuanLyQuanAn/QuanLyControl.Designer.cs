@@ -117,13 +117,14 @@
             this.btBieuDoQL.Size = new System.Drawing.Size(136, 150);
             this.btBieuDoQL.TabIndex = 82;
             this.btBieuDoQL.UseVisualStyleBackColor = true;
+            this.btBieuDoQL.Click += new System.EventHandler(this.btBieuDoQL_Click);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label6.ForeColor = System.Drawing.Color.Firebrick;
-            this.label6.Location = new System.Drawing.Point(571, 375);
+            this.label6.Location = new System.Drawing.Point(579, 173);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(100, 22);
             this.label6.TabIndex = 81;
@@ -136,7 +137,7 @@
             this.btNhanVienQL.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btNhanVienQL.Image = global::AppQuanLyQuanAn.Properties.Resources.NhanVien;
             this.btNhanVienQL.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btNhanVienQL.Location = new System.Drawing.Point(547, 232);
+            this.btNhanVienQL.Location = new System.Drawing.Point(555, 30);
             this.btNhanVienQL.Name = "btNhanVienQL";
             this.btNhanVienQL.Size = new System.Drawing.Size(136, 150);
             this.btNhanVienQL.TabIndex = 80;
@@ -148,11 +149,11 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label5.ForeColor = System.Drawing.Color.Firebrick;
-            this.label5.Location = new System.Drawing.Point(57, 375);
+            this.label5.Location = new System.Drawing.Point(31, 375);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(170, 22);
+            this.label5.Size = new System.Drawing.Size(250, 22);
             this.label5.TabIndex = 79;
-            this.label5.Text = "Báo Cáo Thống Kê";
+            this.label5.Text = "Tổng Doanh Thu Chi Nhánh";
             // 
             // btBaoCaoQL
             // 
@@ -166,13 +167,14 @@
             this.btBaoCaoQL.Size = new System.Drawing.Size(136, 150);
             this.btBaoCaoQL.TabIndex = 78;
             this.btBaoCaoQL.UseVisualStyleBackColor = true;
+            this.btBaoCaoQL.Click += new System.EventHandler(this.btBaoCaoQL_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label4.ForeColor = System.Drawing.Color.Firebrick;
-            this.label4.Location = new System.Drawing.Point(571, 170);
+            this.label4.Location = new System.Drawing.Point(579, 387);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(110, 22);
             this.label4.TabIndex = 77;
@@ -185,7 +187,7 @@
             this.btKhachHangQL.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btKhachHangQL.Image = global::AppQuanLyQuanAn.Properties.Resources.User;
             this.btKhachHangQL.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btKhachHangQL.Location = new System.Drawing.Point(547, 30);
+            this.btKhachHangQL.Location = new System.Drawing.Point(555, 247);
             this.btKhachHangQL.Name = "btKhachHangQL";
             this.btKhachHangQL.Size = new System.Drawing.Size(136, 150);
             this.btKhachHangQL.TabIndex = 76;

@@ -32,5 +32,12 @@ namespace AppQuanLyQuanAn
             string SqlSelect = "Select Ten_NV,ID_NV,BoPhan,NgaySinh,DiaChi,CaLam from Nhan_Vien";
             cmd = new SqlCommand(SqlSelect, conn);
         }
+
+        
+
+        private void ManHinhChinh_Load(object sender, EventArgs e)
+        {
+         
+        }
     }
 }

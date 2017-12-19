@@ -50,12 +50,10 @@
             this.cbb_TenChiNhanh = new System.Windows.Forms.ComboBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.txt_Luong = new System.Windows.Forms.TextBox();
-            this.txt_ThamNien = new System.Windows.Forms.TextBox();
             this.txt_DanhGia = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.gbSearchCNQL = new System.Windows.Forms.GroupBox();
@@ -71,6 +69,9 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btn_Search = new System.Windows.Forms.Button();
+            this.cbb_SearchTenChiNhanh = new System.Windows.Forms.ComboBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.gbSearchCNQL.SuspendLayout();
@@ -97,7 +98,7 @@
             // Time_NgayBatDauLam
             // 
             this.Time_NgayBatDauLam.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.Time_NgayBatDauLam.Location = new System.Drawing.Point(132, 409);
+            this.Time_NgayBatDauLam.Location = new System.Drawing.Point(132, 385);
             this.Time_NgayBatDauLam.Name = "Time_NgayBatDauLam";
             this.Time_NgayBatDauLam.Size = new System.Drawing.Size(261, 20);
             this.Time_NgayBatDauLam.TabIndex = 46;
@@ -237,7 +238,6 @@
             this.panel3.Controls.Add(this.Time_NgayBatDauLam);
             this.panel3.Controls.Add(this.label15);
             this.panel3.Controls.Add(this.label16);
-            this.panel3.Controls.Add(this.label14);
             this.panel3.Controls.Add(this.label12);
             this.panel3.Controls.Add(this.label11);
             this.panel3.Controls.Add(this.label8);
@@ -245,7 +245,6 @@
             this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.label9);
             this.panel3.Controls.Add(this.txt_Luong);
-            this.panel3.Controls.Add(this.txt_ThamNien);
             this.panel3.Controls.Add(this.txt_DanhGia);
             this.panel3.Controls.Add(this.txt_SoDienThoai);
             this.panel3.Controls.Add(this.txt_CMND);
@@ -266,7 +265,9 @@
             // 
             this.cbb_BoPhan.FormattingEnabled = true;
             this.cbb_BoPhan.Items.AddRange(new object[] {
-            "Nhân Viên"});
+            "Bán Hàng",
+            "Tổng Đài",
+            "Giám Đốc"});
             this.cbb_BoPhan.Location = new System.Drawing.Point(132, 306);
             this.cbb_BoPhan.Name = "cbb_BoPhan";
             this.cbb_BoPhan.Size = new System.Drawing.Size(264, 21);
@@ -275,6 +276,10 @@
             // cbb_CaLam
             // 
             this.cbb_CaLam.FormattingEnabled = true;
+            this.cbb_CaLam.Items.AddRange(new object[] {
+            "Ca 1",
+            "Ca 2",
+            "Ca 3"});
             this.cbb_CaLam.Location = new System.Drawing.Point(132, 268);
             this.cbb_CaLam.Name = "cbb_CaLam";
             this.cbb_CaLam.Size = new System.Drawing.Size(264, 21);
@@ -294,7 +299,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label15.Location = new System.Drawing.Point(3, 405);
+            this.label15.Location = new System.Drawing.Point(3, 385);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(126, 15);
             this.label15.TabIndex = 55;
@@ -304,21 +309,11 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label16.Location = new System.Drawing.Point(3, 439);
+            this.label16.Location = new System.Drawing.Point(7, 422);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(49, 15);
             this.label16.TabIndex = 55;
             this.label16.Text = "Lương:";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label14.Location = new System.Drawing.Point(3, 376);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(77, 15);
-            this.label14.TabIndex = 55;
-            this.label14.Text = "Thâm Niên:";
             // 
             // label12
             // 
@@ -354,19 +349,10 @@
             // 
             this.txt_Luong.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Luong.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txt_Luong.Location = new System.Drawing.Point(132, 439);
+            this.txt_Luong.Location = new System.Drawing.Point(132, 422);
             this.txt_Luong.Name = "txt_Luong";
             this.txt_Luong.Size = new System.Drawing.Size(264, 18);
             this.txt_Luong.TabIndex = 47;
-            // 
-            // txt_ThamNien
-            // 
-            this.txt_ThamNien.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_ThamNien.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txt_ThamNien.Location = new System.Drawing.Point(132, 376);
-            this.txt_ThamNien.Name = "txt_ThamNien";
-            this.txt_ThamNien.Size = new System.Drawing.Size(264, 18);
-            this.txt_ThamNien.TabIndex = 45;
             // 
             // txt_DanhGia
             // 
@@ -542,7 +528,10 @@
             // 
             this.groupBox1.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.groupBox1.Controls.Add(this.btn_Search);
+            this.groupBox1.Controls.Add(this.cbb_SearchTenChiNhanh);
             this.groupBox1.Controls.Add(this.txt_SearchNhanVien);
+            this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.btSearchMACNQL);
             this.groupBox1.Controls.Add(this.dgv_HienThiDanhSachNhanVien);
             this.groupBox1.Location = new System.Drawing.Point(430, 65);
@@ -550,6 +539,44 @@
             this.groupBox1.Size = new System.Drawing.Size(602, 392);
             this.groupBox1.TabIndex = 71;
             this.groupBox1.TabStop = false;
+            // 
+            // btn_Search
+            // 
+            this.btn_Search.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btn_Search.BackgroundImage = global::AppQuanLyQuanAn.Properties.Resources.Search2;
+            this.btn_Search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btn_Search.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Search.Location = new System.Drawing.Point(489, 14);
+            this.btn_Search.Name = "btn_Search";
+            this.btn_Search.Size = new System.Drawing.Size(112, 34);
+            this.btn_Search.TabIndex = 77;
+            this.btn_Search.Text = "Search";
+            this.btn_Search.UseVisualStyleBackColor = false;
+            this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click);
+            // 
+            // cbb_SearchTenChiNhanh
+            // 
+            this.cbb_SearchTenChiNhanh.FormattingEnabled = true;
+            this.cbb_SearchTenChiNhanh.Location = new System.Drawing.Point(334, 21);
+            this.cbb_SearchTenChiNhanh.Name = "cbb_SearchTenChiNhanh";
+            this.cbb_SearchTenChiNhanh.Size = new System.Drawing.Size(133, 21);
+            this.cbb_SearchTenChiNhanh.TabIndex = 76;
+            // 
+            // button3
+            // 
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.button3.Image = global::AppQuanLyQuanAn.Properties.Resources.Search;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(243, 19);
+            this.button3.Name = "button3";
+            this.button3.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.button3.Size = new System.Drawing.Size(85, 29);
+            this.button3.TabIndex = 75;
+            this.button3.Text = "Tên CN";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button3.UseVisualStyleBackColor = true;
             // 
             // label13
             // 
@@ -633,12 +660,13 @@
         private System.Windows.Forms.ComboBox cbb_TenChiNhanh;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txt_Luong;
-        private System.Windows.Forms.TextBox txt_ThamNien;
         private System.Windows.Forms.TextBox txt_DanhGia;
+        private System.Windows.Forms.ComboBox cbb_SearchTenChiNhanh;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btn_Search;
     }
 }

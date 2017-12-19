@@ -192,7 +192,7 @@
             this.btn_ChiNhanh.Name = "btn_ChiNhanh";
             this.btn_ChiNhanh.Size = new System.Drawing.Size(154, 65);
             this.btn_ChiNhanh.TabIndex = 3;
-            this.btn_ChiNhanh.Text = "  Chi Nhánh";
+            this.btn_ChiNhanh.Text = "Chi Nhánh";
             this.btn_ChiNhanh.UseVisualStyleBackColor = true;
             this.btn_ChiNhanh.Click += new System.EventHandler(this.btChiNhanh_Click);
             // 
@@ -285,6 +285,7 @@
             // 
             // manHinhChinh1
             // 
+            this.manHinhChinh1.BackColor = System.Drawing.Color.SteelBlue;
             this.manHinhChinh1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.manHinhChinh1.Location = new System.Drawing.Point(154, 80);
             this.manHinhChinh1.Name = "manHinhChinh1";

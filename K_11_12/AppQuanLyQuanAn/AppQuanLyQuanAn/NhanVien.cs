@@ -29,34 +29,42 @@ namespace AppQuanLyQuanAn
 
         private void btn_ThemMoi_Click(object sender, EventArgs e)
         {
-            int count = 0;
-            count = dgv_HienThiDanhSachNhanVien.Rows.Count;
-            string chuoi = "";
-            int chuoi2 = 0;
-            chuoi = Convert.ToString(dgv_HienThiDanhSachNhanVien.Rows[count - 2].Cells[0].Value);
-            chuoi2 = Convert.ToInt32((chuoi.Remove(0, 2)));
-            if (chuoi2 + 1 < 10)
+            if (txt_CMND.Text == "") 
             {
-                txt_MaNhanVien.Text = "NV0" + (chuoi2 + 1).ToString();
-            }
-            else if (chuoi2 + 1 < 100)
-            {
-                txt_MaNhanVien.Text = "NV" + (chuoi2 + 1).ToString();
-            }
-            conn.Open();
-            string SqlInsert = "Insert into Nhan_Vien values('" + txt_MaNhanVien.Text + "','" + txt_TaiKhoan.Text + "','" + txt_MatKhau.Text + "',N'" + txt_TenNhanVien.Text + "','" + txt_CMND.Text + "','" + txt_SoDienThoai.Text + "','" + cbb_TenChiNhanh.Text + "',N'" + cbb_CaLam.Text + "',N'" + cbb_BoPhan.Text + "',N'" + txt_DanhGia.Text + "','" + txt_ThamNien.Text + "','" + Time_NgayBatDauLam.Text + "','" + txt_Luong.Text + "')";
-            cmd = new SqlCommand(SqlInsert, conn);
-            if (cmd.ExecuteNonQuery() == 1)
-            {
-                MessageBox.Show("Add Successful", "Thông báo");
+                MessageBox.Show("Xin Hãy Nhập Đủ Thông Tin Cần Thiết!","Thông Báo");
             }
             else
             {
-                MessageBox.Show("Add fail", "Thông báo");
-            }
-            HienThiNhanVien();
-            txt_MaNhanVien.Text = txt_TaiKhoan.Text = txt_MatKhau.Text = txt_TenNhanVien.Text = txt_CMND.Text = txt_SoDienThoai.Text = cbb_TenChiNhanh.Text = cbb_CaLam.Text = cbb_BoPhan.Text = txt_DanhGia.Text = txt_ThamNien.Text = Time_NgayBatDauLam.Text = txt_Luong.Text = "";
-            conn.Close();
+                int count = 0;
+                count = dgv_HienThiDanhSachNhanVien.Rows.Count;
+                string chuoi = "";
+                int chuoi2 = 0;
+                chuoi = Convert.ToString(dgv_HienThiDanhSachNhanVien.Rows[count - 2].Cells[0].Value);
+                chuoi2 = Convert.ToInt32((chuoi.Remove(0, 2)));
+                if (chuoi2 + 1 < 10)
+                {
+                    txt_MaNhanVien.Text = "NV0" + (chuoi2 + 1).ToString();
+                }
+                else if (chuoi2 + 1 < 100)
+                {
+                    txt_MaNhanVien.Text = "NV" + (chuoi2 + 1).ToString();
+                }
+                conn.Open();
+                string SqlInsert = "Insert into Nhan_Vien values('" + txt_MaNhanVien.Text + "','" + txt_TaiKhoan.Text + "','" + txt_MatKhau.Text + "',N'" + txt_TenNhanVien.Text + "','" + txt_CMND.Text + "','" + txt_SoDienThoai.Text + "',N'" + cbb_TenChiNhanh.Text + "',N'" + cbb_CaLam.Text + "',N'" + cbb_BoPhan.Text + "',N'" + txt_DanhGia.Text + "','" + Time_NgayBatDauLam.Text + "','" + txt_Luong.Text + "')";
+                SqlCommand cmd = new SqlCommand(SqlInsert, conn);
+                if (cmd.ExecuteNonQuery() == 1)
+                {
+                    MessageBox.Show("Add Successful", "Thông báo");
+                }
+                else
+                {
+                    MessageBox.Show("Add fail", "Thông báo");
+                }
+
+                HienThiNhanVien();
+                txt_MaNhanVien.Text = txt_TaiKhoan.Text = txt_MatKhau.Text = txt_TenNhanVien.Text = txt_CMND.Text = txt_SoDienThoai.Text = cbb_TenChiNhanh.Text = cbb_CaLam.Text = cbb_BoPhan.Text = txt_DanhGia.Text = Time_NgayBatDauLam.Text = txt_Luong.Text = "";
+                conn.Close();
+            } 
         }     
 
         void HienThiNhanVien()
@@ -65,6 +73,7 @@ namespace AppQuanLyQuanAn
             SqlDataAdapter da = new SqlDataAdapter("Select * from Nhan_Vien", conn);
             da.Fill(dt);
             dgv_HienThiDanhSachNhanVien.DataSource = dt;
+            dgv_HienThiDanhSachNhanVien.RowHeadersVisible = false;
         }
 
         private void btn_Xoa_Click(object sender, EventArgs e)
@@ -81,7 +90,8 @@ namespace AppQuanLyQuanAn
                 MessageBox.Show("Delete fail", "Thông báo");
             }
             HienThiNhanVien();
-            txt_MaNhanVien.Text = txt_TaiKhoan.Text = txt_MatKhau.Text = txt_TenNhanVien.Text = txt_CMND.Text = txt_SoDienThoai.Text = cbb_TenChiNhanh.Text = cbb_CaLam.Text = cbb_BoPhan.Text = txt_DanhGia.Text = txt_ThamNien.Text = Time_NgayBatDauLam.Text = txt_Luong.Text = "";
+            txt_MaNhanVien.Text = txt_TaiKhoan.Text = txt_MatKhau.Text = txt_TenNhanVien.Text = txt_CMND.Text = txt_SoDienThoai.Text = cbb_TenChiNhanh.Text = cbb_CaLam.Text = cbb_BoPhan.Text = txt_DanhGia.Text  = Time_NgayBatDauLam.Text = txt_Luong.Text = "";
+            btn_ThemMoi.Visible = true;
             conn.Close();
         }
 
@@ -100,20 +110,22 @@ namespace AppQuanLyQuanAn
             cbb_CaLam.Text = row.Cells[7].Value.ToString();
             cbb_BoPhan.Text = row.Cells[8].Value.ToString();
             txt_DanhGia.Text = row.Cells[9].Value.ToString();
-            txt_ThamNien.Text = row.Cells[10].Value.ToString();
-            Time_NgayBatDauLam.Text = row.Cells[11].Value.ToString();
-            txt_Luong.Text = row.Cells[12].Value.ToString();
+            Time_NgayBatDauLam.Text = row.Cells[10].Value.ToString();
+            txt_Luong.Text = row.Cells[11].Value.ToString();
+            btn_ThemMoi.Visible = false;
         }
 
         private void btn_LamMoi_Click(object sender, EventArgs e)
         {
-            txt_MaNhanVien.Text = txt_TaiKhoan.Text = txt_MatKhau.Text = txt_TenNhanVien.Text = txt_CMND.Text = txt_SoDienThoai.Text = cbb_TenChiNhanh.Text = cbb_CaLam.Text = cbb_BoPhan.Text = txt_DanhGia.Text = txt_ThamNien.Text = Time_NgayBatDauLam.Text = txt_Luong.Text = "";
+            HienThiNhanVien();
+            txt_MaNhanVien.Text = txt_TaiKhoan.Text = txt_MatKhau.Text = txt_TenNhanVien.Text = txt_CMND.Text = txt_SoDienThoai.Text = cbb_TenChiNhanh.Text = cbb_CaLam.Text = cbb_BoPhan.Text = txt_DanhGia.Text  = Time_NgayBatDauLam.Text = txt_Luong.Text = "";
+            btn_ThemMoi.Visible = true;
         }
 
         private void btn_CapNhat_Click(object sender, EventArgs e)
         {
             conn.Open();
-            string SqlUpdate = "Update Nhan_Vien set ID_NV = N'" + txt_TaiKhoan.Text + "',Password_NV = '" + txt_MatKhau.Text + "',Ten_NV = N'" + txt_TenNhanVien.Text + "',CMND = '" + txt_CMND.Text + "',Ma_CN = '" + cbb_TenChiNhanh.Text + "',CaLam = N'" + cbb_CaLam.Text + "',BoPhan = N'" + cbb_BoPhan.Text + "',DanhGia = N'" + txt_DanhGia.Text + "',ThamNien = '" + txt_ThamNien.Text + "',NgayBatDauLam = '" + Time_NgayBatDauLam.Text + "',Luong = '" + txt_Luong.Text + "' Where Ma_NV = '" + txt_MaNhanVien.Text + "'";
+            string SqlUpdate = "Update Nhan_Vien set ID_NV = N'" + txt_TaiKhoan.Text + "',Password_NV = '" + txt_MatKhau.Text + "',Ten_NV = N'" + txt_TenNhanVien.Text + "',CMND = '" + txt_CMND.Text + "',Ten_CN = N'" + cbb_TenChiNhanh.Text + "',CaLam = N'" + cbb_CaLam.Text + "',BoPhan = N'" + cbb_BoPhan.Text + "',DanhGia = N'" + txt_DanhGia.Text + "',NgayBatDauLam = '" + Time_NgayBatDauLam.Text + "',Luong = '" + txt_Luong.Text + "' Where Ma_NV = '" + txt_MaNhanVien.Text + "'";
             cmd = new SqlCommand(SqlUpdate, conn);
             if (cmd.ExecuteNonQuery() == 1)
             {
@@ -124,7 +136,8 @@ namespace AppQuanLyQuanAn
                 MessageBox.Show("Update fail", "Thông báo");
             }
             HienThiNhanVien();
-            txt_MaNhanVien.Text = txt_TaiKhoan.Text = txt_MatKhau.Text = txt_TenNhanVien.Text = txt_CMND.Text = txt_SoDienThoai.Text = cbb_TenChiNhanh.Text = cbb_CaLam.Text = cbb_BoPhan.Text = txt_DanhGia.Text = txt_ThamNien.Text = Time_NgayBatDauLam.Text = txt_Luong.Text = "";
+            txt_MaNhanVien.Text = txt_TaiKhoan.Text = txt_MatKhau.Text = txt_TenNhanVien.Text = txt_CMND.Text = txt_SoDienThoai.Text = cbb_TenChiNhanh.Text = cbb_CaLam.Text = cbb_BoPhan.Text = txt_DanhGia.Text = Time_NgayBatDauLam.Text = txt_Luong.Text = "";
+            btn_ThemMoi.Visible = true;
             conn.Close();
         }
 
@@ -142,11 +155,30 @@ namespace AppQuanLyQuanAn
         {
             HienThiNhanVien();
             Combobox();
+            ComboboxSearchChiNhanh();
         }
 
         private void txt_SearchNhanVien_TextChanged(object sender, EventArgs e)
         {
             (dgv_HienThiDanhSachNhanVien.DataSource as DataTable).DefaultView.RowFilter = string.Format("ID_NV LIKE '%{0}%'", txt_SearchNhanVien.Text); 
         }
+
+        private void btn_Search_Click(object sender, EventArgs e)
+        {
+            (dgv_HienThiDanhSachNhanVien.DataSource as DataTable).DefaultView.RowFilter = string.Format("Ten_CN LIKE '%{0}%'", cbb_SearchTenChiNhanh.Text); 
+        }
+
+        void ComboboxSearchChiNhanh()
+        {
+            cmd = new SqlCommand("Select Ten_CN from Chi_Nhanh", conn);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataSet ds = new DataSet();
+            da.Fill(ds, "Chi_Nhanh");
+            cbb_SearchTenChiNhanh.DataSource = ds.Tables[0];
+            cbb_SearchTenChiNhanh.DisplayMember = "Ten_CN";
+        }
+
+
+
     }
 }

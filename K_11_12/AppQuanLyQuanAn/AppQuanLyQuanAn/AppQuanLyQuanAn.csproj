@@ -42,6 +42,7 @@
     <Reference Include="System.Messaging" />
     <Reference Include="System.ServiceProcess" />
     <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -56,11 +57,11 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaoCaoThongKe.cs">
+    <Compile Include="BieuDo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BaoCaoThongKe.Designer.cs">
-      <DependentUpon>BaoCaoThongKe.cs</DependentUpon>
+    <Compile Include="BieuDo.Designer.cs">
+      <DependentUpon>BieuDo.cs</DependentUpon>
     </Compile>
     <Compile Include="CapNhatMonAn.cs">
       <SubType>Form</SubType>
@@ -79,6 +80,12 @@
     </Compile>
     <Compile Include="ChiTietChiNhanh.Designer.cs">
       <DependentUpon>ChiTietChiNhanh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DoanhThuTungChiNhanh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoanhThuTungChiNhanh.Designer.cs">
+      <DependentUpon>DoanhThuTungChiNhanh.cs</DependentUpon>
     </Compile>
     <Compile Include="DonHangChiNhanh.cs">
       <SubType>Form</SubType>
@@ -184,11 +191,23 @@
     <Compile Include="ThemMonAn.Designer.cs">
       <DependentUpon>ThemMonAn.cs</DependentUpon>
     </Compile>
+    <Compile Include="ThongTinBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThongTinBan.Designer.cs">
+      <DependentUpon>ThongTinBan.cs</DependentUpon>
+    </Compile>
     <Compile Include="TongDaiControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="TongDaiControl.Designer.cs">
       <DependentUpon>TongDaiControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TongDoanhThuChiNhanh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TongDoanhThuChiNhanh.Designer.cs">
+      <DependentUpon>TongDoanhThuChiNhanh.cs</DependentUpon>
     </Compile>
     <Compile Include="XoaChiNhanh.cs">
       <SubType>Form</SubType>
@@ -202,8 +221,8 @@
     <Compile Include="XoaMonAn.Designer.cs">
       <DependentUpon>XoaMonAn.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="BaoCaoThongKe.resx">
-      <DependentUpon>BaoCaoThongKe.cs</DependentUpon>
+    <EmbeddedResource Include="BieuDo.resx">
+      <DependentUpon>BieuDo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CapNhatChiNhanh.resx">
       <DependentUpon>CapNhatChiNhanh.cs</DependentUpon>
@@ -213,6 +232,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ChiTietChiNhanh.resx">
       <DependentUpon>ChiTietChiNhanh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoanhThuTungChiNhanh.resx">
+      <DependentUpon>DoanhThuTungChiNhanh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DonHangChiNhanh.resx">
       <DependentUpon>DonHangChiNhanh.cs</DependentUpon>
@@ -269,8 +291,14 @@
     <EmbeddedResource Include="ThemMonAn.resx">
       <DependentUpon>ThemMonAn.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ThongTinBan.resx">
+      <DependentUpon>ThongTinBan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TongDaiControl.resx">
       <DependentUpon>TongDaiControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TongDoanhThuChiNhanh.resx">
+      <DependentUpon>TongDoanhThuChiNhanh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="XoaChiNhanh.resx">
       <DependentUpon>XoaChiNhanh.cs</DependentUpon>
