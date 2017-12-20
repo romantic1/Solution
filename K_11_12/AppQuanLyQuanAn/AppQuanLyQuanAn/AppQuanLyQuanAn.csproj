@@ -82,14 +82,20 @@
       <DependentUpon>ChiTietChiNhanh.cs</DependentUpon>
     </Compile>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <Compile Include="ConnectionString.cs" />
 =======
+=======
+>>>>>>> 8a5c68ec27d4aa2d22f56f01e1b4cbfd4a29c980
     <Compile Include="DoanhThuTungChiNhanh.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DoanhThuTungChiNhanh.Designer.cs">
       <DependentUpon>DoanhThuTungChiNhanh.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
+>>>>>>> 8a5c68ec27d4aa2d22f56f01e1b4cbfd4a29c980
+=======
 >>>>>>> 8a5c68ec27d4aa2d22f56f01e1b4cbfd4a29c980
     <Compile Include="DonHangChiNhanh.cs">
       <SubType>Form</SubType>
