@@ -1,0 +1,372 @@
+[33mcommit 524b12274f3d7c026d3cd7112341b2a4e8ae2645[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: tengichodep <ahung2k1697@gmail.com>
+Date:   Tue Dec 19 23:02:00 2017 +0700
+
+    Cai dat man hinh Danh muc mon an
+
+[33mcommit 41bb6470c2e8ce63287fd4c8ebb1f954ae9843db[m[33m ([m[1;33mtag: version1.3.1[m[33m, [m[1;33mtag: version1[m[33m)[m
+Author: Lâm Khoa <Lamkhoa201297@gmail.com>
+Date:   Sat Dec 16 12:12:22 2017 +0700
+
+    Code Phần Đăng Nhập
+
+[33mcommit 03d85c6757fea088fc71bcd2f1413bef7b71f80a[m
+Merge: 1ae6950 2aded26
+Author: Lâm Khoa <Lamkhoa201297@gmail.com>
+Date:   Sat Dec 16 11:46:15 2017 +0700
+
+    Merge branch 'master' of https://github.com/romantic1/Solution
+
+[33mcommit 1ae6950d1faa1fb77da995328d36aa804984d4b7[m
+Author: Lâm Khoa <Lamkhoa201297@gmail.com>
+Date:   Sat Dec 16 11:45:40 2017 +0700
+
+    Code phần đăng Nhập
+
+[33mcommit 2aded26205219ec0c3eb921864fdea7c11c6d42e[m
+Author: HuynhCongHau <31978939+HuynhCongHau@users.noreply.github.com>
+Date:   Fri Dec 15 20:21:34 2017 +0700
+
+    tạo from đăng nhập
+    
+    đã xong phân quyền
+
+[33mcommit f8876b4cd3371eea95cf9f474360af0edb387730[m
+Author: Lâm Khoa <Lamkhoa201297@gmail.com>
+Date:   Thu Dec 14 20:26:36 2017 +0700
+
+    Code Đơn hàng Chi nhánh + Tổng đài
+
+[33mcommit b94a41f22a7664eb1c01ef76361997357d575951[m
+Author: Lâm Khoa <Lamkhoa201297@gmail.com>
+Date:   Wed Dec 13 21:24:42 2017 +0700
+
+    Code tiếp phần Nhân viên + Khách hàng
+
+[33mcommit 323f70a263666aacc5fc66c6a02c6e4dd7b21701[m
+Author: Lâm Khoa <Lamkhoa201297@gmail.com>
+Date:   Wed Dec 13 18:01:22 2017 +0700
+
+    Code phần Khách hàng + Nhân viên
+
+[33mcommit 05b36d34f78d2fcb3bc673dbe193e6545e538b4c[m
+Author: Lâm Khoa <Lamkhoa201297@gmail.com>
+Date:   Wed Dec 13 12:00:08 2017 +0700
+
+    Delete lỗi file Program.cs
+
+[33mcommit 8e231d0092f687865da780a99b02c4ccd03de7dc[m
+Merge: 14bc67b 7036469
+Author: Lâm Khoa <Lamkhoa201297@gmail.com>
+Date:   Wed Dec 13 11:55:10 2017 +0700
+
+    Merge branch 'master' of https://github.com/romantic1/Solution
+
+[33mcommit 14bc67b864478bafafefec08d9b44bdcba51a1de[m
+Author: Lâm Khoa <Lamkhoa201297@gmail.com>
+Date:   Wed Dec 13 11:55:03 2017 +0700
+
+    Delete phần lỗi file Program.cs
+
+[33mcommit 7036469285d3b9807dee665a177926f979014bb9[m
+Author: HuynhCongHau <31978939+HuynhCongHau@users.noreply.github.com>
+Date:   Tue Dec 12 22:25:49 2017 +0700
+
+    code tiếp phần đăng nhập
+    
+    chưa xong
+
+[33mcommit 3050b75ca66fe0c68d21e1f68394b927ea2ab834[m
+Author: Lâm Khoa <Lamkhoa201297@gmail.com>
+Date:   Tue Dec 12 00:44:27 2017 +0700
+
+    Update cái Sql thêm vài chỗ của Khách Hàng
+
+[33mcommit 7acb6d5580f0c75f73409206acdfba40d53c9418[m
+Merge: 1db8bb0 b385bd7
+Author: Lâm Khoa <Lamkhoa201297@gmail.com>
+Date:   Tue Dec 12 00:40:52 2017 +0700
+
+    Merge branch 'master' of https://github.com/romantic1/Solution
+
+[33mcommit 1db8bb0017542fa279fdf0681cdfc61d7b721205[m
+Author: Lâm Khoa <Lamkhoa201297@gmail.com>
+Date:   Tue Dec 12 00:36:53 2017 +0700
+
+    Update code quản lí chi nhánh,khách hàng
+
+[33mcommit b385bd75bf8e41431c7690d527aba3b2a945a654[m
+Author: HuynhCongHau <31978939+HuynhCongHau@users.noreply.github.com>
+Date:   Mon Dec 11 23:24:36 2017 +0700
+
+    chưa code hết :v:
+    
+    chưa code :v:
+
+[33mcommit 9507b99760833ad0bdd5ff74edbdf060ebc6b761[m
+Author: Lâm Khoa <Lamkhoa201297@gmail.com>
+Date:   Mon Dec 11 15:46:10 2017 +0700
+
+    Update code phần quản lí chi nhánh
+
+[33mcommit 6534c567725464af7d754ab8f1b13fd991257f3e[m
+Author: Lâm Khoa <Lamkhoa201297@gmail.com>
+Date:   Mon Dec 11 12:26:06 2017 +0700
+
+    code phần chi nhánh
+
+[33mcommit de0ceada75777e7b4126697d14138c79dedaffa1[m
+Author: romantic1 <khoado515@gmail.com>
+Date:   Sat Oct 28 23:50:50 2017 +0700
+
+    Upload Solution
+    
+    Upload project bán hàng
+
+[33mcommit d8de93f91bc017f9712b56e9cd53a711f824b702[m
+Author: romantic94 <khoado514@gmail.com>
+Date:   Fri Oct 27 12:04:22 2017 +0700
+
+    vvvv
+
+[33mcommit c6c73bb53ef5c9a28fcf360ea8c2d9835222c2e8[m
+Author: romantic94 <khoado514@gmail.com>
+Date:   Fri Oct 27 11:58:36 2017 +0700
+
+    Source
+
+[33mcommit 8e05740fd95c0860fb96e5a67acf0457344a0d58[m
+Author: romantic1 <32670241+romantic1@users.noreply.github.com>
+Date:   Fri Oct 27 11:53:08 2017 +0700
+
+    Delete Settings.settings
+
+[33mcommit 6c2406a6ff457d906fbf75e2a9f04308bc0856ec[m
+Author: romantic1 <32670241+romantic1@users.noreply.github.com>
+Date:   Fri Oct 27 11:53:01 2017 +0700
+
+    Delete Settings.Designer.cs
+
+[33mcommit 105c0c2a80a9e8357399f254db5c22739f03ab91[m
+Author: romantic1 <32670241+romantic1@users.noreply.github.com>
+Date:   Fri Oct 27 11:52:54 2017 +0700
+
+    Delete Resources.resx
+
+[33mcommit 0ea39a20072e860fb89d8b7748c2d8b15152608d[m
+Author: romantic1 <32670241+romantic1@users.noreply.github.com>
+Date:   Fri Oct 27 11:52:44 2017 +0700
+
+    Delete Resources.Designer.cs
+
+[33mcommit 4b7e3075414b92fdbca4d5e89345751d84794a3e[m
+Author: romantic1 <32670241+romantic1@users.noreply.github.com>
+Date:   Fri Oct 27 11:52:35 2017 +0700
+
+    Delete AssemblyInfo.cs
+
+[33mcommit ed6b16629266988aaa022300658cbf2ae4ab020b[m
+Author: romantic1 <32670241+romantic1@users.noreply.github.com>
+Date:   Fri Oct 27 11:52:23 2017 +0700
+
+    Delete Program.cs
+
+[33mcommit 8b571f267c9097fbbbbb9827fb0f71c3569eadae[m
+Author: romantic1 <32670241+romantic1@users.noreply.github.com>
+Date:   Fri Oct 27 11:52:15 2017 +0700
+
+    Delete Form1.cs
+
+[33mcommit b217285db816af16fa047ca07f038ed85267b00d[m
+Author: romantic1 <32670241+romantic1@users.noreply.github.com>
+Date:   Fri Oct 27 11:52:07 2017 +0700
+
+    Delete Form1.Designer.cs
+
+[33mcommit 5a682679958c7726bb91bb496bff0ed19e8366e5[m
+Author: romantic1 <32670241+romantic1@users.noreply.github.com>
+Date:   Fri Oct 27 11:51:59 2017 +0700
+
+    Delete AppQuanLyQuanAn.csproj
+
+[33mcommit 653d8936a361735d3018738df1f7ebfbc502372c[m
+Author: romantic1 <32670241+romantic1@users.noreply.github.com>
+Date:   Fri Oct 27 11:51:48 2017 +0700
+
+    Delete App.config
+
+[33mcommit e9666d0757f4291b1882dea5877d429eff8d3df0[m
+Author: romantic1 <32670241+romantic1@users.noreply.github.com>
+Date:   Fri Oct 27 11:51:13 2017 +0700
+
+    Delete AppQuanLyQuanAn.sln
+
+[33mcommit 5cb152ffd19b26e7e021606c45483e9572d7be61[m
+Merge: d435754 06c8f94
+Author: romantic94 <khoado514@gmail.com>
+Date:   Fri Oct 27 11:48:37 2017 +0700
+
+    Merge branch 'master' into ProjectQuanAn
+
+[33mcommit 06c8f9426843136d6e5fdb1cc83c93ed42681522[m
+Author: romantic94 <khoado514@gmail.com>
+Date:   Fri Oct 27 11:38:36 2017 +0700
+
+    Commit
+
+[33mcommit 37ed2229033c22e11706ee6db594996bdfd1e0c0[m
+Author: romantic94 <khoado514@gmail.com>
+Date:   Fri Oct 27 11:33:38 2017 +0700
+
+    Update Source
+
+[33mcommit e3279e9ffa1ed6147008b3ab0e455d1d7dbdadc7[m
+Author: romantic94 <khoado514@gmail.com>
+Date:   Fri Oct 27 11:32:01 2017 +0700
+
+    DDD
+
+[33mcommit d435754b05765369143ed9d46fb9ba842442d6f3[m
+Author: romantic94 <khoado514@gmail.com>
+Date:   Fri Oct 27 11:31:13 2017 +0700
+
+    bbb
+
+[33mcommit 755eb6dd3704f5ddc1a596bd749961c7f18441a7[m
+Merge: c783833 9a1581a
+Author: romantic94 <khoado514@gmail.com>
+Date:   Fri Oct 27 11:28:03 2017 +0700
+
+    Merge branch 'ProjectQuanAn'
+
+[33mcommit c7838338d0583d0eb76f0e62a6fd50e782e871e5[m
+Author: romantic94 <khoado514@gmail.com>
+Date:   Fri Oct 27 11:27:08 2017 +0700
+
+    Commit
+
+[33mcommit 9a1581add42c88ebddd97c3a73bfac377972bd4f[m
+Author: romantic94 <khoado514@gmail.com>
+Date:   Fri Oct 27 11:22:10 2017 +0700
+
+    Update
+
+[33mcommit d776e6628eb82647983d702eee6a6f85c1fd8460[m
+Author: romantic94 <khoado514@gmail.com>
+Date:   Fri Oct 27 11:21:41 2017 +0700
+
+    Commit
+
+[33mcommit b4684fcdb4eccdc821ce91b81df7ab8ec3d2b21e[m
+Author: romantic94 <khoado514@gmail.com>
+Date:   Fri Oct 27 11:20:43 2017 +0700
+
+    Update
+
+[33mcommit a546023be9222b97bc18765f3f5c02dc8d66cd3a[m
+Merge: 5ea6b21 4833aa9
+Author: romantic94 <khoado514@gmail.com>
+Date:   Fri Oct 27 11:17:13 2017 +0700
+
+    Merge branch 'master' into ProjectQuanAn
+
+[33mcommit 4833aa943196f41963fb3df4123752f3d575e253[m
+Merge: 77fc328 d287ad2
+Author: romantic94 <khoado514@gmail.com>
+Date:   Fri Oct 27 11:15:16 2017 +0700
+
+    Merge branch 'master' of https://github.com/romantic1/Solution
+
+[33mcommit 77fc3283538884d15fa23e8f95376830e661a4e6[m
+Author: romantic94 <khoado514@gmail.com>
+Date:   Fri Oct 27 11:14:54 2017 +0700
+
+    CreateApp
+    
+    Tao App
+
+[33mcommit 5ea6b212622859a333f6ec5e511847d03d342dd4[m
+Author: romantic1 <32670241+romantic1@users.noreply.github.com>
+Date:   Fri Oct 27 11:12:58 2017 +0700
+
+    Delete bbbbs.txt
+
+[33mcommit d287ad2e5cf25fa62fbd22da23b49ac35430e8b5[m
+Author: romantic1 <32670241+romantic1@users.noreply.github.com>
+Date:   Fri Oct 27 11:12:41 2017 +0700
+
+    Delete bbbbs.txt
+
+[33mcommit 6cd516b3c561ae5632576e7bfc5de50f0baf63f6[m
+Author: romantic1 <32670241+romantic1@users.noreply.github.com>
+Date:   Fri Oct 27 11:12:33 2017 +0700
+
+    Delete bbb.txt
+
+[33mcommit 42d7bbb0f729603c29a34e7387659cdc2f132707[m
+Merge: d309091 9cf3b37
+Author: romantic94 <khoado514@gmail.com>
+Date:   Fri Oct 27 11:10:36 2017 +0700
+
+    Merge branch 'ProjectQuanAn'
+
+[33mcommit 9cf3b371a3d84d1900302926537f26f5d250186a[m
+Author: romantic1 <32670241+romantic1@users.noreply.github.com>
+Date:   Fri Oct 27 11:07:16 2017 +0700
+
+    ddd
+
+[33mcommit d30909135abd332afba9dad728989123da661cf8[m
+Author: romantic1 <32670241+romantic1@users.noreply.github.com>
+Date:   Fri Oct 27 11:05:43 2017 +0700
+
+    bbb
+
+[33mcommit 0872e57dcbcf0959c3dbde4002424428de2a9c13[m
+Author: romantic1 <32670241+romantic1@users.noreply.github.com>
+Date:   Fri Oct 27 11:03:03 2017 +0700
+
+    bbb
+
+[33mcommit bbe4eb1e7da53537fa3df58be948b51308ead196[m
+Author: romantic1 <32670241+romantic1@users.noreply.github.com>
+Date:   Fri Oct 27 10:53:23 2017 +0700
+
+    Delete 1560265.docx
+
+[33mcommit a67a47d3693865f9d293465361af2ed157148717[m
+Merge: 194f729 6b53803
+Author: romantic94 <khoado514@gmail.com>
+Date:   Fri Oct 27 10:50:42 2017 +0700
+
+    Merge branch 'ProjectQuanAn' of https://github.com/romantic1/Solution into ProjectQuanAn
+
+[33mcommit 194f7292ac4247eea0e5d128a854e72c4b4034cd[m
+Author: romantic94 <khoado514@gmail.com>
+Date:   Fri Oct 27 10:50:38 2017 +0700
+
+    sss
+
+[33mcommit 6b5380310f88c0b8ae2d6df81bb61efed2d39d09[m
+Author: romantic1 <32670241+romantic1@users.noreply.github.com>
+Date:   Fri Oct 27 10:49:53 2017 +0700
+
+    Add files via upload
+
+[33mcommit eec7c2c126e3c09418a79bd7a87828e3d0661818[m
+Author: romantic1 <32670241+romantic1@users.noreply.github.com>
+Date:   Fri Oct 27 10:48:46 2017 +0700
+
+    Delete 1560265.docx
+
+[33mcommit 8dff2f91ba45455c13ceaf3770e096ada004ede3[m
+Author: romantic1 <32670241+romantic1@users.noreply.github.com>
+Date:   Fri Oct 27 10:46:57 2017 +0700
+
+    Add files via upload
+
+[33mcommit 14f3db40ba5b57e75f0611a2fd9b4e11b342842f[m
+Author: romantic1 <32670241+romantic1@users.noreply.github.com>
+Date:   Fri Oct 27 10:32:25 2017 +0700
+
+    Initial commit

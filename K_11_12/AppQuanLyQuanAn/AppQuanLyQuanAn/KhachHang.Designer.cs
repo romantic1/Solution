@@ -34,7 +34,10 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btn_Search = new System.Windows.Forms.Button();
             this.txt_SearchKhachHang = new System.Windows.Forms.TextBox();
+            this.cbb_SearchTenChiNhanh = new System.Windows.Forms.ComboBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.btSearchMACNQL = new System.Windows.Forms.Button();
             this.dgv_HienThiDanhSachKhachHang = new System.Windows.Forms.DataGridView();
             this.btn_Xoa = new System.Windows.Forms.Button();
@@ -45,9 +48,11 @@
             this.gbSearchCNQL = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.cbb_TenChiNhanh = new System.Windows.Forms.ComboBox();
             this.Time_NgaySinh = new System.Windows.Forms.DateTimePicker();
             this.label10 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.txt_SoDienThoai = new System.Windows.Forms.TextBox();
             this.txt_DiaChi = new System.Windows.Forms.TextBox();
@@ -112,14 +117,31 @@
             // 
             this.groupBox1.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.groupBox1.Controls.Add(this.btn_Search);
             this.groupBox1.Controls.Add(this.txt_SearchKhachHang);
+            this.groupBox1.Controls.Add(this.cbb_SearchTenChiNhanh);
+            this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.btSearchMACNQL);
             this.groupBox1.Controls.Add(this.dgv_HienThiDanhSachKhachHang);
-            this.groupBox1.Location = new System.Drawing.Point(436, 77);
+            this.groupBox1.Location = new System.Drawing.Point(430, 77);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(602, 392);
+            this.groupBox1.Size = new System.Drawing.Size(608, 392);
             this.groupBox1.TabIndex = 61;
             this.groupBox1.TabStop = false;
+            // 
+            // btn_Search
+            // 
+            this.btn_Search.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btn_Search.BackgroundImage = global::AppQuanLyQuanAn.Properties.Resources.Search2;
+            this.btn_Search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btn_Search.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Search.Location = new System.Drawing.Point(486, 16);
+            this.btn_Search.Name = "btn_Search";
+            this.btn_Search.Size = new System.Drawing.Size(112, 34);
+            this.btn_Search.TabIndex = 80;
+            this.btn_Search.Text = "Search";
+            this.btn_Search.UseVisualStyleBackColor = false;
+            this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click);
             // 
             // txt_SearchKhachHang
             // 
@@ -131,6 +153,30 @@
             this.txt_SearchKhachHang.TabIndex = 23;
             this.txt_SearchKhachHang.TextChanged += new System.EventHandler(this.txt_SearchKhachHang_TextChanged);
             // 
+            // cbb_SearchTenChiNhanh
+            // 
+            this.cbb_SearchTenChiNhanh.FormattingEnabled = true;
+            this.cbb_SearchTenChiNhanh.Location = new System.Drawing.Point(331, 23);
+            this.cbb_SearchTenChiNhanh.Name = "cbb_SearchTenChiNhanh";
+            this.cbb_SearchTenChiNhanh.Size = new System.Drawing.Size(133, 21);
+            this.cbb_SearchTenChiNhanh.TabIndex = 79;
+            // 
+            // button3
+            // 
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.button3.Image = global::AppQuanLyQuanAn.Properties.Resources.Search;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(240, 21);
+            this.button3.Name = "button3";
+            this.button3.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.button3.Size = new System.Drawing.Size(85, 29);
+            this.button3.TabIndex = 78;
+            this.button3.Text = "Tên CN";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button3.UseVisualStyleBackColor = true;
+            // 
             // btSearchMACNQL
             // 
             this.btSearchMACNQL.FlatAppearance.BorderSize = 0;
@@ -138,7 +184,7 @@
             this.btSearchMACNQL.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btSearchMACNQL.Image = global::AppQuanLyQuanAn.Properties.Resources.Search;
             this.btSearchMACNQL.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btSearchMACNQL.Location = new System.Drawing.Point(6, 19);
+            this.btSearchMACNQL.Location = new System.Drawing.Point(6, 16);
             this.btSearchMACNQL.Name = "btSearchMACNQL";
             this.btSearchMACNQL.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btSearchMACNQL.Size = new System.Drawing.Size(85, 29);
@@ -149,14 +195,14 @@
             // 
             // dgv_HienThiDanhSachKhachHang
             // 
-            this.dgv_HienThiDanhSachKhachHang.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dgv_HienThiDanhSachKhachHang.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_HienThiDanhSachKhachHang.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgv_HienThiDanhSachKhachHang.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dgv_HienThiDanhSachKhachHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_HienThiDanhSachKhachHang.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgv_HienThiDanhSachKhachHang.Location = new System.Drawing.Point(3, 54);
             this.dgv_HienThiDanhSachKhachHang.Name = "dgv_HienThiDanhSachKhachHang";
             this.dgv_HienThiDanhSachKhachHang.ReadOnly = true;
-            this.dgv_HienThiDanhSachKhachHang.Size = new System.Drawing.Size(596, 335);
+            this.dgv_HienThiDanhSachKhachHang.Size = new System.Drawing.Size(602, 335);
             this.dgv_HienThiDanhSachKhachHang.TabIndex = 25;
             this.dgv_HienThiDanhSachKhachHang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_HienThiDanhSachKhachHang_CellClick);
             // 
@@ -254,9 +300,11 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.PaleGoldenrod;
+            this.panel3.Controls.Add(this.cbb_TenChiNhanh);
             this.panel3.Controls.Add(this.Time_NgaySinh);
             this.panel3.Controls.Add(this.label10);
             this.panel3.Controls.Add(this.label5);
+            this.panel3.Controls.Add(this.label8);
             this.panel3.Controls.Add(this.label9);
             this.panel3.Controls.Add(this.txt_SoDienThoai);
             this.panel3.Controls.Add(this.txt_DiaChi);
@@ -274,10 +322,18 @@
             this.panel3.Size = new System.Drawing.Size(415, 453);
             this.panel3.TabIndex = 48;
             // 
+            // cbb_TenChiNhanh
+            // 
+            this.cbb_TenChiNhanh.FormattingEnabled = true;
+            this.cbb_TenChiNhanh.Location = new System.Drawing.Point(116, 242);
+            this.cbb_TenChiNhanh.Name = "cbb_TenChiNhanh";
+            this.cbb_TenChiNhanh.Size = new System.Drawing.Size(264, 21);
+            this.cbb_TenChiNhanh.TabIndex = 56;
+            // 
             // Time_NgaySinh
             // 
             this.Time_NgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.Time_NgaySinh.Location = new System.Drawing.Point(116, 243);
+            this.Time_NgaySinh.Location = new System.Drawing.Point(116, 293);
             this.Time_NgaySinh.Name = "Time_NgaySinh";
             this.Time_NgaySinh.Size = new System.Drawing.Size(261, 20);
             this.Time_NgaySinh.TabIndex = 38;
@@ -286,7 +342,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label10.Location = new System.Drawing.Point(2, 343);
+            this.label10.Location = new System.Drawing.Point(2, 393);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(105, 15);
             this.label10.TabIndex = 55;
@@ -302,11 +358,21 @@
             this.label5.TabIndex = 48;
             this.label5.Text = "Mã Khách Hàng:";
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label8.Location = new System.Drawing.Point(3, 242);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(105, 15);
+            this.label8.TabIndex = 53;
+            this.label8.Text = "Tên Chi Nhánh:";
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label9.Location = new System.Drawing.Point(2, 294);
+            this.label9.Location = new System.Drawing.Point(2, 344);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(63, 15);
             this.label9.TabIndex = 53;
@@ -316,7 +382,7 @@
             // 
             this.txt_SoDienThoai.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_SoDienThoai.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txt_SoDienThoai.Location = new System.Drawing.Point(116, 343);
+            this.txt_SoDienThoai.Location = new System.Drawing.Point(116, 393);
             this.txt_SoDienThoai.Name = "txt_SoDienThoai";
             this.txt_SoDienThoai.Size = new System.Drawing.Size(264, 18);
             this.txt_SoDienThoai.TabIndex = 40;
@@ -325,7 +391,7 @@
             // 
             this.txt_DiaChi.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_DiaChi.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txt_DiaChi.Location = new System.Drawing.Point(116, 294);
+            this.txt_DiaChi.Location = new System.Drawing.Point(116, 344);
             this.txt_DiaChi.Name = "txt_DiaChi";
             this.txt_DiaChi.Size = new System.Drawing.Size(264, 18);
             this.txt_DiaChi.TabIndex = 39;
@@ -392,7 +458,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label7.Location = new System.Drawing.Point(2, 243);
+            this.label7.Location = new System.Drawing.Point(2, 293);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(77, 15);
             this.label7.TabIndex = 52;
@@ -490,6 +556,11 @@
         private System.Windows.Forms.TextBox txt_SoDienThoai;
         private System.Windows.Forms.TextBox txt_DiaChi;
         private System.Windows.Forms.Button btn_LamMoi;
+        private System.Windows.Forms.ComboBox cbb_TenChiNhanh;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button btn_Search;
+        private System.Windows.Forms.ComboBox cbb_SearchTenChiNhanh;
+        private System.Windows.Forms.Button button3;
 
     }
 }

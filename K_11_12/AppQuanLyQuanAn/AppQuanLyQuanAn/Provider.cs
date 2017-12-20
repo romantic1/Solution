@@ -8,9 +8,10 @@ using System.Threading.Tasks;
 
 namespace AppQuanLyQuanAn
 {
+
     class Provider
     {
-        //v1
+        //v1 test commit
         public SqlConnection Connection { get; set; }
 
         public void Connect()

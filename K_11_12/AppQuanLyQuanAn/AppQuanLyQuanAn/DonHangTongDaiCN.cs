@@ -28,6 +28,7 @@ namespace AppQuanLyQuanAn
             SqlDataAdapter da = new SqlDataAdapter("Select * from Don_Hang_Tong_Dai", conn);
             da.Fill(dt);
             dgv_HienThiDanhSachDonHangTongDai.DataSource = dt;
+            dgv_HienThiDanhSachDonHangTongDai.RowHeadersVisible = false;
         }
 
         private void OffChiNhanh_Click(object sender, EventArgs e)
@@ -64,6 +65,7 @@ namespace AppQuanLyQuanAn
             }
             HienThiDonHangTongDai();
             txt_MaDonHang.Text = txt_TenDonHang.Text = cbb_MaKhachHang.Text = cbb_TenChiNhanh.Text = cbb_TrangThai.Text = cbb_KhuyenMai.Text = cbb_NhanVien.Text = Time_ThoiGian.Text = txt_TongTien.Text = "";
+            btn_ThemMoi.Visible = true;
             conn.Close();
         }
 
@@ -71,6 +73,7 @@ namespace AppQuanLyQuanAn
         {
             HienThiDonHangTongDai();
             txt_MaDonHang.Text = txt_TenDonHang.Text = cbb_MaKhachHang.Text = cbb_TenChiNhanh.Text = cbb_TrangThai.Text = cbb_KhuyenMai.Text = cbb_NhanVien.Text = Time_ThoiGian.Text = txt_TongTien.Text = "";
+            btn_ThemMoi.Visible = true;
         }
 
         private void btn_CapNhat_Click(object sender, EventArgs e)
@@ -88,6 +91,7 @@ namespace AppQuanLyQuanAn
             }
             HienThiDonHangTongDai();
             txt_MaDonHang.Text = txt_TenDonHang.Text = cbb_MaKhachHang.Text = cbb_TenChiNhanh.Text = cbb_TrangThai.Text = cbb_KhuyenMai.Text = cbb_NhanVien.Text = Time_ThoiGian.Text = txt_TongTien.Text = "";
+            btn_ThemMoi.Visible = true;
             conn.Close();
         }
 
@@ -106,6 +110,7 @@ namespace AppQuanLyQuanAn
             }
             HienThiDonHangTongDai();
             txt_MaDonHang.Text = txt_TenDonHang.Text = cbb_MaKhachHang.Text = cbb_TenChiNhanh.Text = cbb_TrangThai.Text = cbb_KhuyenMai.Text = cbb_NhanVien.Text = Time_ThoiGian.Text = txt_TongTien.Text = "";
+            btn_ThemMoi.Visible = true;
             conn.Close();
         }
 
@@ -123,6 +128,7 @@ namespace AppQuanLyQuanAn
             cbb_NhanVien.Text = row.Cells[6].Value.ToString();
             Time_ThoiGian.Text = row.Cells[7].Value.ToString();
             txt_TongTien.Text = row.Cells[8].Value.ToString();
+            btn_ThemMoi.Visible = false;
         }
 
         void ComboboxMaKhachHang()
@@ -166,14 +172,6 @@ namespace AppQuanLyQuanAn
             cbb_SearchTenChiNhanh.DisplayMember = "Ten_CN";
         }
 
-        private void btn_Search_Click(object sender, EventArgs e)
-        {
-            DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter("Select * from  Don_Hang_Chi_Nhanh Where Ten_CN = '" + cbb_SearchTenChiNhanh.Text + "'", conn);
-            da.Fill(dt);
-            dgv_HienThiDanhSachDonHangTongDai.DataSource = dt;
-        }
-
         private void txt_SearchDonHangChiNhanh_TextChanged(object sender, EventArgs e)
         {
             (dgv_HienThiDanhSachDonHangTongDai.DataSource as DataTable).DefaultView.RowFilter = string.Format("Ten_DH LIKE '%{0}%'", cbb_SearchTenChiNhanh.Text);
@@ -186,6 +184,14 @@ namespace AppQuanLyQuanAn
             ComboboxNhanVien();
             ComboboxSearchChiNhanh();
             HienThiDonHangTongDai();
+        }
+
+        private void btn_Search_Click_1(object sender, EventArgs e)
+        {
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter("Select * from  Don_Hang_Chi_Nhanh Where Ten_CN = '" + cbb_SearchTenChiNhanh.Text + "'", conn);
+            da.Fill(dt);
+            dgv_HienThiDanhSachDonHangTongDai.DataSource = dt;
         }
 
     }

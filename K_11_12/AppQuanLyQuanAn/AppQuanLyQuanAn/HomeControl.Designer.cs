@@ -33,22 +33,19 @@
             // 
             // monthCalendar1
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(505, 9);
+            this.monthCalendar1.Location = new System.Drawing.Point(481, 9);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 1;
             // 
+            // HomeControl
+            // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-
             this.BackColor = System.Drawing.Color.PaleGoldenrod;
-
-            this.Controls.Add(this.monthCalendar1);
-
             this.Controls.Add(this.monthCalendar1);
             this.Margin = new System.Windows.Forms.Padding(4);
-
             this.Name = "HomeControl";
-            this.Size = new System.Drawing.Size(741, 426);
+            this.Size = new System.Drawing.Size(719, 426);
             this.ResumeLayout(false);
 
         }

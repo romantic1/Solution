@@ -70,11 +70,11 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label5.ForeColor = System.Drawing.Color.Firebrick;
-            this.label5.Location = new System.Drawing.Point(57, 375);
+            this.label5.Location = new System.Drawing.Point(48, 375);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(170, 22);
+            this.label5.Size = new System.Drawing.Size(200, 22);
             this.label5.TabIndex = 87;
-            this.label5.Text = "Báo Cáo Thống Kê";
+            this.label5.Text = "Doanh Thu Chi Nhánh";
             // 
             // button1
             // 
@@ -88,6 +88,7 @@
             this.button1.Size = new System.Drawing.Size(136, 150);
             this.button1.TabIndex = 86;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -112,6 +113,7 @@
             this.button14.Size = new System.Drawing.Size(136, 150);
             this.button14.TabIndex = 84;
             this.button14.UseVisualStyleBackColor = true;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
             // 
             // label6
             // 
@@ -131,7 +133,7 @@
             this.button15.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button15.Image = global::AppQuanLyQuanAn.Properties.Resources.NhanVien;
             this.button15.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button15.Location = new System.Drawing.Point(548, 232);
+            this.button15.Location = new System.Drawing.Point(547, 232);
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(136, 150);
             this.button15.TabIndex = 80;
@@ -186,6 +188,7 @@
             this.button12.Size = new System.Drawing.Size(136, 150);
             this.button12.TabIndex = 74;
             this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // label2
             // 

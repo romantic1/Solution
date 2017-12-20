@@ -130,6 +130,9 @@
   <data name="Delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Delete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Branch" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Branch.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="NhanVien" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\NhanVien.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -172,8 +175,8 @@
   <data name="Home2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Home2.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="User" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\User.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Bao cao" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Bao cao.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Chung1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Chung1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -214,8 +217,8 @@
   <data name="Home" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Home.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Bao cao" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Bao cao.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Hinh-nen-thien-nhien-dep-21" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hinh-nen-thien-nhien-dep-21.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Home3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Home3.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -250,14 +253,14 @@
   <data name="HinhMay1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\HinhMay1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Search2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Search2.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Chung" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Chung.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ChuyenXuongChiNhanh" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ChuyenXuongChiNhanh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="CallTongDai1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\CallTongDai1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Bieu Do" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Bieu Do.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -268,8 +271,8 @@
   <data name="Chef" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Chef.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Background4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Background4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="CallTongDai1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CallTongDai1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Don Hang" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Don Hang.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -289,8 +292,8 @@
   <data name="Switter" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Switter.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Branch" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Branch.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="User" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\User.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Cooking" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Cooking.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -310,10 +313,10 @@
   <data name="Chung12" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Chung12.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Hinh-nen-thien-nhien-dep-21" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Hinh-nen-thien-nhien-dep-21.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Background4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Background4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Search2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Search2.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Login" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Login.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
