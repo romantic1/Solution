@@ -31,9 +31,6 @@
             this.lbDanhMucMonAn = new System.Windows.Forms.ListBox();
             this.txtTimKiemDM = new System.Windows.Forms.TextBox();
             this.DanhMucPanel = new System.Windows.Forms.Panel();
-            this.btnTimKiemDM = new System.Windows.Forms.Button();
-            this.dgvDanhSachMA = new System.Windows.Forms.DataGridView();
-            this.txtTimKiemMA = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnXoaDM = new System.Windows.Forms.Button();
             this.btnCapNhatDM = new System.Windows.Forms.Button();
@@ -42,6 +39,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtMaDM = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.btnTimKiemDM = new System.Windows.Forms.Button();
+            this.dgvDanhSachMA = new System.Windows.Forms.DataGridView();
+            this.txtTimKiemMA = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.cbDanhMucMA = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -62,8 +62,8 @@
             this.OffDanhMuc = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.DanhMucPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSachMA)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSachMA)).BeginInit();
             this.panel2.SuspendLayout();
             this.HeaderPanelDM.SuspendLayout();
             this.SuspendLayout();
@@ -78,6 +78,7 @@
             this.lbDanhMucMonAn.Name = "lbDanhMucMonAn";
             this.lbDanhMucMonAn.Size = new System.Drawing.Size(226, 221);
             this.lbDanhMucMonAn.TabIndex = 2;
+            this.lbDanhMucMonAn.Click += new System.EventHandler(this.lbDanhMucMonAn_Click);
             // 
             // txtTimKiemDM
             // 
@@ -99,43 +100,6 @@
             this.DanhMucPanel.Name = "DanhMucPanel";
             this.DanhMucPanel.Size = new System.Drawing.Size(226, 466);
             this.DanhMucPanel.TabIndex = 5;
-            // 
-            // btnTimKiemDM
-            // 
-            this.btnTimKiemDM.FlatAppearance.BorderSize = 0;
-            this.btnTimKiemDM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTimKiemDM.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnTimKiemDM.Image = global::AppQuanLyQuanAn.Properties.Resources.Search;
-            this.btnTimKiemDM.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTimKiemDM.Location = new System.Drawing.Point(0, 230);
-            this.btnTimKiemDM.Name = "btnTimKiemDM";
-            this.btnTimKiemDM.Size = new System.Drawing.Size(96, 27);
-            this.btnTimKiemDM.TabIndex = 4;
-            this.btnTimKiemDM.Text = "Danh Mục";
-            this.btnTimKiemDM.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnTimKiemDM.UseVisualStyleBackColor = true;
-            this.btnTimKiemDM.Click += new System.EventHandler(this.btnTimKiemDM_Click);
-            // 
-            // dgvDanhSachMA
-            // 
-            this.dgvDanhSachMA.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvDanhSachMA.BackgroundColor = System.Drawing.SystemColors.Window;
-            this.dgvDanhSachMA.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDanhSachMA.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dgvDanhSachMA.Location = new System.Drawing.Point(226, 31);
-            this.dgvDanhSachMA.Name = "dgvDanhSachMA";
-            this.dgvDanhSachMA.Size = new System.Drawing.Size(559, 221);
-            this.dgvDanhSachMA.TabIndex = 9;
-            this.dgvDanhSachMA.Click += new System.EventHandler(this.dgvDanhSachMA_Click);
-            // 
-            // txtTimKiemMA
-            // 
-            this.txtTimKiemMA.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtTimKiemMA.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtTimKiemMA.Location = new System.Drawing.Point(323, 268);
-            this.txtTimKiemMA.Name = "txtTimKiemMA";
-            this.txtTimKiemMA.Size = new System.Drawing.Size(265, 19);
-            this.txtTimKiemMA.TabIndex = 5;
             // 
             // panel1
             // 
@@ -181,6 +145,7 @@
             this.btnCapNhatDM.TabIndex = 18;
             this.btnCapNhatDM.Text = "Cập Nhật Danh Mục";
             this.btnCapNhatDM.UseVisualStyleBackColor = true;
+            this.btnCapNhatDM.Click += new System.EventHandler(this.btnCapNhatDM_Click);
             // 
             // btnThemDM
             // 
@@ -195,6 +160,7 @@
             this.btnThemDM.TabIndex = 17;
             this.btnThemDM.Text = "Thêm Danh Mục";
             this.btnThemDM.UseVisualStyleBackColor = true;
+            this.btnThemDM.Click += new System.EventHandler(this.btnThemDM_Click);
             // 
             // txtTenDM
             // 
@@ -233,6 +199,43 @@
             this.label3.Size = new System.Drawing.Size(91, 15);
             this.label3.TabIndex = 14;
             this.label3.Text = "Mã Danh Mục:";
+            // 
+            // btnTimKiemDM
+            // 
+            this.btnTimKiemDM.FlatAppearance.BorderSize = 0;
+            this.btnTimKiemDM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTimKiemDM.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnTimKiemDM.Image = global::AppQuanLyQuanAn.Properties.Resources.Search;
+            this.btnTimKiemDM.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTimKiemDM.Location = new System.Drawing.Point(0, 230);
+            this.btnTimKiemDM.Name = "btnTimKiemDM";
+            this.btnTimKiemDM.Size = new System.Drawing.Size(96, 27);
+            this.btnTimKiemDM.TabIndex = 4;
+            this.btnTimKiemDM.Text = "Danh Mục";
+            this.btnTimKiemDM.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnTimKiemDM.UseVisualStyleBackColor = true;
+            this.btnTimKiemDM.Click += new System.EventHandler(this.btnTimKiemDM_Click);
+            // 
+            // dgvDanhSachMA
+            // 
+            this.dgvDanhSachMA.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvDanhSachMA.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.dgvDanhSachMA.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDanhSachMA.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dgvDanhSachMA.Location = new System.Drawing.Point(226, 31);
+            this.dgvDanhSachMA.Name = "dgvDanhSachMA";
+            this.dgvDanhSachMA.Size = new System.Drawing.Size(559, 221);
+            this.dgvDanhSachMA.TabIndex = 9;
+            this.dgvDanhSachMA.Click += new System.EventHandler(this.dgvDanhSachMA_Click);
+            // 
+            // txtTimKiemMA
+            // 
+            this.txtTimKiemMA.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTimKiemMA.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtTimKiemMA.Location = new System.Drawing.Point(323, 268);
+            this.txtTimKiemMA.Name = "txtTimKiemMA";
+            this.txtTimKiemMA.Size = new System.Drawing.Size(265, 19);
+            this.txtTimKiemMA.TabIndex = 5;
             // 
             // panel2
             // 
@@ -490,9 +493,9 @@
             this.Load += new System.EventHandler(this.DanhMucMonAn_Load);
             this.DanhMucPanel.ResumeLayout(false);
             this.DanhMucPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSachMA)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSachMA)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.HeaderPanelDM.ResumeLayout(false);

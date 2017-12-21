@@ -12,8 +12,7 @@ GO
 CREATE TABLE Danh_Muc
 (
 	Ma_DM char(10),
-	Ten_DM varchar(10),
-	Ma_CN char(10),
+	Ten_DM varchar(10),	
 	PRIMARY KEY(Ma_DM)
 )
 

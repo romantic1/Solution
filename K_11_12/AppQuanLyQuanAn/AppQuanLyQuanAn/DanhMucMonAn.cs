@@ -31,7 +31,9 @@ namespace AppQuanLyQuanAn
 
         Provider kn = new Provider();
         int index;
+
 //Hien Thi Man Hinh
+
         private void RefeshDM_Click(object sender, EventArgs e)
         {
             LoadDanhSachMonAn();
@@ -81,6 +83,7 @@ namespace AppQuanLyQuanAn
             cbDanhMucMA.Text = dgvDanhSachMA.Rows[index].Cells[4].Value.ToString();
         }
 //Phim Chuc Nang
+
         //Mon An
         private void btnThemMA_Click(object sender, EventArgs e)
         {
@@ -236,5 +239,63 @@ namespace AppQuanLyQuanAn
 
             kn.Disconnect();
         }
+
+        
+        private void lbDanhMucMonAn_Click(object sender, EventArgs e)
+        {
+          
+            txtMaDM.Text = "";
+            txtTenDM.Text = lbDanhMucMonAn.SelectedValue.ToString();
+        }
+
+        private void btnThemDM_Click(object sender, EventArgs e)
+        {
+            kn.Connect();
+            string sqladd = " insert into Danh_Muc values (@Ma_DM, @Ten_DM )";
+            try
+            {
+                SqlCommand cmd;
+                cmd = new SqlCommand(sqladd, kn.Connection);
+                cmd.CommandType = CommandType.Text;
+                cmd.Parameters.Add(new SqlParameter("Ma_DM", txtMaDM.Text));
+                cmd.Parameters.Add(new SqlParameter("Ten_DM", txtTenDM.Text));
+                
+
+                cmd.ExecuteNonQuery();
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+             LoadlbDanhMucMonAn();
+
+            kn.Disconnect();
+        }
+
+        private void btnCapNhatDM_Click(object sender, EventArgs e)
+        {
+            kn.Connect();
+
+            string sqledit = " update Danh_Muc SET Ma_DM = @MaDM, Ten_DM = @TenDM where Ma_DM = @MaDM ";
+            try
+            {
+                SqlCommand cmd;
+                cmd = new SqlCommand(sqledit, kn.Connection);
+                cmd.CommandType = CommandType.Text;
+                cmd.Parameters.Add(new SqlParameter("MaDM", txtMaDM.Text));
+                cmd.Parameters.Add(new SqlParameter("TenDM", txtTenDM.Text));
+                
+                cmd.ExecuteNonQuery();
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            LoadlbDanhMucMonAn();
+
+            kn.Disconnect();
+        }
+
+
     }
 }
