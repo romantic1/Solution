@@ -22,7 +22,7 @@ namespace AppQuanLyQuanAn
         public QuanLiChiNhanh()
         {
             InitializeComponent();
-            String Sqlconnection = "Data Source=DESKTOP-CSFRQ67\\SQLEXPRESS;Initial Catalog=QuanLiQuanAn;Integrated Security=True";
+            String Sqlconnection = "Data Source=.\\SQLEXPRESS;Initial Catalog=QuanLiQuanAn;Integrated Security=True";
             conn = new SqlConnection(Sqlconnection);
             
         }

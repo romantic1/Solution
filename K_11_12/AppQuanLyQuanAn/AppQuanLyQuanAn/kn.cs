@@ -12,7 +12,7 @@ namespace AppQuanLyQuanAn
 {
     class kn
     {
-        static SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-0T7B1M9\SQLEXPRESS;Initial Catalog=QuanLiQuanAn;Integrated Security=True");
+        static SqlConnection conn = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=QuanLiQuanAn;Integrated Security=True");
 
 
         public static DataTable LayBang(string sql)

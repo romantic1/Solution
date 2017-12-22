@@ -74,12 +74,11 @@
             // lbDanhMucMonAn
             // 
             this.lbDanhMucMonAn.BackColor = System.Drawing.SystemColors.Window;
-            this.lbDanhMucMonAn.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lbDanhMucMonAn.Dock = System.Windows.Forms.DockStyle.Top;
             this.lbDanhMucMonAn.FormattingEnabled = true;
             this.lbDanhMucMonAn.Location = new System.Drawing.Point(0, 0);
             this.lbDanhMucMonAn.Name = "lbDanhMucMonAn";
-            this.lbDanhMucMonAn.Size = new System.Drawing.Size(226, 221);
+            this.lbDanhMucMonAn.Size = new System.Drawing.Size(273, 251);
             this.lbDanhMucMonAn.TabIndex = 2;
             this.lbDanhMucMonAn.Click += new System.EventHandler(this.lbDanhMucMonAn_Click);
             // 
@@ -87,13 +86,14 @@
             // 
             this.txtTimKiemDM.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTimKiemDM.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtTimKiemDM.Location = new System.Drawing.Point(102, 235);
+            this.txtTimKiemDM.Location = new System.Drawing.Point(107, 277);
             this.txtTimKiemDM.Name = "txtTimKiemDM";
-            this.txtTimKiemDM.Size = new System.Drawing.Size(113, 19);
+            this.txtTimKiemDM.Size = new System.Drawing.Size(163, 19);
             this.txtTimKiemDM.TabIndex = 3;
             // 
             // DanhMucPanel
             // 
+            this.DanhMucPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.DanhMucPanel.Controls.Add(this.lbDanhMucMonAn);
             this.DanhMucPanel.Controls.Add(this.panel1);
             this.DanhMucPanel.Controls.Add(this.btnTimKiemDM);
@@ -101,12 +101,13 @@
             this.DanhMucPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.DanhMucPanel.Location = new System.Drawing.Point(0, 31);
             this.DanhMucPanel.Name = "DanhMucPanel";
-            this.DanhMucPanel.Size = new System.Drawing.Size(226, 514);
+            this.DanhMucPanel.Size = new System.Drawing.Size(277, 514);
             this.DanhMucPanel.TabIndex = 5;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.PaleGoldenrod;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.btnXoaDM);
             this.panel1.Controls.Add(this.btnCapNhatDM);
             this.panel1.Controls.Add(this.btnThemDM);
@@ -115,9 +116,9 @@
             this.panel1.Controls.Add(this.txtMaDM);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 311);
+            this.panel1.Location = new System.Drawing.Point(0, 309);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(226, 203);
+            this.panel1.Size = new System.Drawing.Size(273, 201);
             this.panel1.TabIndex = 15;
             // 
             // btnXoaDM
@@ -127,9 +128,9 @@
             this.btnXoaDM.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnXoaDM.Image = global::AppQuanLyQuanAn.Properties.Resources.Delete;
             this.btnXoaDM.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXoaDM.Location = new System.Drawing.Point(26, 146);
+            this.btnXoaDM.Location = new System.Drawing.Point(54, 158);
             this.btnXoaDM.Name = "btnXoaDM";
-            this.btnXoaDM.Size = new System.Drawing.Size(156, 37);
+            this.btnXoaDM.Size = new System.Drawing.Size(188, 37);
             this.btnXoaDM.TabIndex = 19;
             this.btnXoaDM.Text = "Xóa danh mục";
             this.btnXoaDM.UseVisualStyleBackColor = true;
@@ -142,9 +143,9 @@
             this.btnCapNhatDM.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnCapNhatDM.Image = global::AppQuanLyQuanAn.Properties.Resources.Update;
             this.btnCapNhatDM.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCapNhatDM.Location = new System.Drawing.Point(26, 111);
+            this.btnCapNhatDM.Location = new System.Drawing.Point(54, 115);
             this.btnCapNhatDM.Name = "btnCapNhatDM";
-            this.btnCapNhatDM.Size = new System.Drawing.Size(189, 37);
+            this.btnCapNhatDM.Size = new System.Drawing.Size(188, 37);
             this.btnCapNhatDM.TabIndex = 18;
             this.btnCapNhatDM.Text = "Cập Nhật Danh Mục";
             this.btnCapNhatDM.UseVisualStyleBackColor = true;
@@ -157,9 +158,9 @@
             this.btnThemDM.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnThemDM.Image = global::AppQuanLyQuanAn.Properties.Resources.Add;
             this.btnThemDM.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThemDM.Location = new System.Drawing.Point(26, 68);
+            this.btnThemDM.Location = new System.Drawing.Point(54, 67);
             this.btnThemDM.Name = "btnThemDM";
-            this.btnThemDM.Size = new System.Drawing.Size(156, 37);
+            this.btnThemDM.Size = new System.Drawing.Size(188, 37);
             this.btnThemDM.TabIndex = 17;
             this.btnThemDM.Text = "Thêm Danh Mục";
             this.btnThemDM.UseVisualStyleBackColor = true;
@@ -169,16 +170,16 @@
             // 
             this.txtTenDM.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTenDM.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtTenDM.Location = new System.Drawing.Point(120, 43);
+            this.txtTenDM.Location = new System.Drawing.Point(108, 43);
             this.txtTenDM.Name = "txtTenDM";
-            this.txtTenDM.Size = new System.Drawing.Size(95, 18);
+            this.txtTenDM.Size = new System.Drawing.Size(163, 18);
             this.txtTenDM.TabIndex = 15;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label4.Location = new System.Drawing.Point(16, 45);
+            this.label4.Location = new System.Drawing.Point(3, 43);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(98, 15);
             this.label4.TabIndex = 16;
@@ -188,16 +189,17 @@
             // 
             this.txtMaDM.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtMaDM.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtMaDM.Location = new System.Drawing.Point(120, 13);
+            this.txtMaDM.Location = new System.Drawing.Point(108, 13);
             this.txtMaDM.Name = "txtMaDM";
-            this.txtMaDM.Size = new System.Drawing.Size(95, 18);
+            this.txtMaDM.ReadOnly = true;
+            this.txtMaDM.Size = new System.Drawing.Size(163, 18);
             this.txtMaDM.TabIndex = 13;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label3.Location = new System.Drawing.Point(23, 15);
+            this.label3.Location = new System.Drawing.Point(3, 15);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(91, 15);
             this.label3.TabIndex = 14;
@@ -210,9 +212,9 @@
             this.btnTimKiemDM.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnTimKiemDM.Image = global::AppQuanLyQuanAn.Properties.Resources.Search;
             this.btnTimKiemDM.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTimKiemDM.Location = new System.Drawing.Point(0, 230);
+            this.btnTimKiemDM.Location = new System.Drawing.Point(6, 268);
             this.btnTimKiemDM.Name = "btnTimKiemDM";
-            this.btnTimKiemDM.Size = new System.Drawing.Size(96, 27);
+            this.btnTimKiemDM.Size = new System.Drawing.Size(96, 37);
             this.btnTimKiemDM.TabIndex = 4;
             this.btnTimKiemDM.Text = "Danh Mục";
             this.btnTimKiemDM.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -223,11 +225,12 @@
             // 
             this.dgvDanhSachMA.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDanhSachMA.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.dgvDanhSachMA.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvDanhSachMA.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDanhSachMA.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dgvDanhSachMA.Location = new System.Drawing.Point(226, 31);
+            this.dgvDanhSachMA.Location = new System.Drawing.Point(277, 31);
             this.dgvDanhSachMA.Name = "dgvDanhSachMA";
-            this.dgvDanhSachMA.Size = new System.Drawing.Size(819, 221);
+            this.dgvDanhSachMA.Size = new System.Drawing.Size(645, 253);
             this.dgvDanhSachMA.TabIndex = 9;
             this.dgvDanhSachMA.Click += new System.EventHandler(this.dgvDanhSachMA_Click);
             // 
@@ -235,7 +238,7 @@
             // 
             this.txtTimKiemMA.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTimKiemMA.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtTimKiemMA.Location = new System.Drawing.Point(323, 268);
+            this.txtTimKiemMA.Location = new System.Drawing.Point(403, 310);
             this.txtTimKiemMA.Name = "txtTimKiemMA";
             this.txtTimKiemMA.Size = new System.Drawing.Size(265, 19);
             this.txtTimKiemMA.TabIndex = 5;
@@ -243,6 +246,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.PaleGoldenrod;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel2.Controls.Add(this.cbDanhMucMA);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.txtGia);
@@ -257,9 +261,9 @@
             this.panel2.Controls.Add(this.txtMaMA);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(226, 342);
+            this.panel2.Location = new System.Drawing.Point(277, 342);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(819, 203);
+            this.panel2.Size = new System.Drawing.Size(645, 203);
             this.panel2.TabIndex = 16;
             // 
             // cbDanhMucMA
@@ -267,7 +271,13 @@
             this.cbDanhMucMA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbDanhMucMA.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.cbDanhMucMA.FormattingEnabled = true;
-            this.cbDanhMucMA.Location = new System.Drawing.Point(97, 161);
+            this.cbDanhMucMA.Items.AddRange(new object[] {
+            "Món Lẩu",
+            "Cơm",
+            "Món Chay",
+            "Món Tráng Miệng",
+            "Bún - Phở"});
+            this.cbDanhMucMA.Location = new System.Drawing.Point(126, 171);
             this.cbDanhMucMA.Name = "cbDanhMucMA";
             this.cbDanhMucMA.Size = new System.Drawing.Size(265, 22);
             this.cbDanhMucMA.TabIndex = 32;
@@ -276,7 +286,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label8.Location = new System.Drawing.Point(21, 163);
+            this.label8.Location = new System.Drawing.Point(50, 173);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(70, 15);
             this.label8.TabIndex = 31;
@@ -286,7 +296,7 @@
             // 
             this.txtGia.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtGia.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtGia.Location = new System.Drawing.Point(97, 91);
+            this.txtGia.Location = new System.Drawing.Point(126, 101);
             this.txtGia.Name = "txtGia";
             this.txtGia.Size = new System.Drawing.Size(265, 18);
             this.txtGia.TabIndex = 29;
@@ -295,7 +305,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label7.Location = new System.Drawing.Point(56, 94);
+            this.label7.Location = new System.Drawing.Point(85, 104);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(35, 15);
             this.label7.TabIndex = 30;
@@ -305,7 +315,7 @@
             // 
             this.txtGhiChu.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtGhiChu.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtGhiChu.Location = new System.Drawing.Point(97, 126);
+            this.txtGhiChu.Location = new System.Drawing.Point(126, 136);
             this.txtGhiChu.Name = "txtGhiChu";
             this.txtGhiChu.Size = new System.Drawing.Size(265, 18);
             this.txtGhiChu.TabIndex = 27;
@@ -314,7 +324,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label6.Location = new System.Drawing.Point(28, 129);
+            this.label6.Location = new System.Drawing.Point(57, 139);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(63, 15);
             this.label6.TabIndex = 28;
@@ -327,12 +337,11 @@
             this.btnXoaMA.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnXoaMA.Image = global::AppQuanLyQuanAn.Properties.Resources.Delete;
             this.btnXoaMA.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXoaMA.Location = new System.Drawing.Point(387, 146);
+            this.btnXoaMA.Location = new System.Drawing.Point(416, 136);
             this.btnXoaMA.Name = "btnXoaMA";
-            this.btnXoaMA.Size = new System.Drawing.Size(113, 37);
+            this.btnXoaMA.Size = new System.Drawing.Size(198, 37);
             this.btnXoaMA.TabIndex = 26;
             this.btnXoaMA.Text = "Xóa món ăn";
-            this.btnXoaMA.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnXoaMA.UseVisualStyleBackColor = true;
             this.btnXoaMA.Click += new System.EventHandler(this.btnXoaMA_Click);
             // 
@@ -343,12 +352,11 @@
             this.btnCapNhatMA.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnCapNhatMA.Image = global::AppQuanLyQuanAn.Properties.Resources.Update;
             this.btnCapNhatMA.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCapNhatMA.Location = new System.Drawing.Point(379, 111);
+            this.btnCapNhatMA.Location = new System.Drawing.Point(416, 79);
             this.btnCapNhatMA.Name = "btnCapNhatMA";
-            this.btnCapNhatMA.Size = new System.Drawing.Size(150, 37);
+            this.btnCapNhatMA.Size = new System.Drawing.Size(198, 37);
             this.btnCapNhatMA.TabIndex = 25;
             this.btnCapNhatMA.Text = "Cập Nhật Món Ăn";
-            this.btnCapNhatMA.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCapNhatMA.UseVisualStyleBackColor = true;
             this.btnCapNhatMA.Click += new System.EventHandler(this.btnCapNhatMA_Click);
             // 
@@ -359,9 +367,9 @@
             this.btnThemMA.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnThemMA.Image = global::AppQuanLyQuanAn.Properties.Resources.Add;
             this.btnThemMA.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThemMA.Location = new System.Drawing.Point(387, 68);
+            this.btnThemMA.Location = new System.Drawing.Point(416, 19);
             this.btnThemMA.Name = "btnThemMA";
-            this.btnThemMA.Size = new System.Drawing.Size(142, 37);
+            this.btnThemMA.Size = new System.Drawing.Size(198, 37);
             this.btnThemMA.TabIndex = 24;
             this.btnThemMA.Text = "Thêm Món Ăn";
             this.btnThemMA.UseVisualStyleBackColor = true;
@@ -371,7 +379,7 @@
             // 
             this.txtTenMA.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTenMA.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtTenMA.Location = new System.Drawing.Point(97, 54);
+            this.txtTenMA.Location = new System.Drawing.Point(126, 64);
             this.txtTenMA.Name = "txtTenMA";
             this.txtTenMA.Size = new System.Drawing.Size(265, 18);
             this.txtTenMA.TabIndex = 22;
@@ -380,7 +388,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label2.Location = new System.Drawing.Point(7, 57);
+            this.label2.Location = new System.Drawing.Point(36, 67);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(84, 15);
             this.label2.TabIndex = 23;
@@ -390,8 +398,9 @@
             // 
             this.txtMaMA.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtMaMA.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtMaMA.Location = new System.Drawing.Point(97, 17);
+            this.txtMaMA.Location = new System.Drawing.Point(126, 27);
             this.txtMaMA.Name = "txtMaMA";
+            this.txtMaMA.ReadOnly = true;
             this.txtMaMA.Size = new System.Drawing.Size(265, 18);
             this.txtMaMA.TabIndex = 20;
             // 
@@ -399,7 +408,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label5.Location = new System.Drawing.Point(14, 20);
+            this.label5.Location = new System.Drawing.Point(43, 30);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(77, 15);
             this.label5.TabIndex = 21;
@@ -412,12 +421,11 @@
             this.RefeshDM.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.RefeshDM.Image = global::AppQuanLyQuanAn.Properties.Resources.refesh;
             this.RefeshDM.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.RefeshDM.Location = new System.Drawing.Point(613, 264);
+            this.RefeshDM.Location = new System.Drawing.Point(693, 307);
             this.RefeshDM.Name = "RefeshDM";
-            this.RefeshDM.Size = new System.Drawing.Size(84, 27);
+            this.RefeshDM.Size = new System.Drawing.Size(173, 27);
             this.RefeshDM.TabIndex = 14;
             this.RefeshDM.Text = "Refesh";
-            this.RefeshDM.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.RefeshDM.UseVisualStyleBackColor = true;
             this.RefeshDM.Click += new System.EventHandler(this.RefeshDM_Click);
             // 
@@ -428,9 +436,9 @@
             this.btnTimKiemMA.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnTimKiemMA.Image = global::AppQuanLyQuanAn.Properties.Resources.Search;
             this.btnTimKiemMA.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTimKiemMA.Location = new System.Drawing.Point(233, 263);
+            this.btnTimKiemMA.Location = new System.Drawing.Point(323, 299);
             this.btnTimKiemMA.Name = "btnTimKiemMA";
-            this.btnTimKiemMA.Size = new System.Drawing.Size(84, 27);
+            this.btnTimKiemMA.Size = new System.Drawing.Size(84, 37);
             this.btnTimKiemMA.TabIndex = 6;
             this.btnTimKiemMA.Text = "Món Ăn";
             this.btnTimKiemMA.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -448,7 +456,7 @@
             this.HeaderPanelDM.Dock = System.Windows.Forms.DockStyle.Top;
             this.HeaderPanelDM.Location = new System.Drawing.Point(0, 0);
             this.HeaderPanelDM.Name = "HeaderPanelDM";
-            this.HeaderPanelDM.Size = new System.Drawing.Size(1045, 31);
+            this.HeaderPanelDM.Size = new System.Drawing.Size(922, 31);
             this.HeaderPanelDM.TabIndex = 0;
             // 
             // btn_Min
@@ -457,7 +465,7 @@
             this.btn_Min.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Min.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Min.Image = ((System.Drawing.Image)(resources.GetObject("btn_Min.Image")));
-            this.btn_Min.Location = new System.Drawing.Point(904, -1);
+            this.btn_Min.Location = new System.Drawing.Point(775, -1);
             this.btn_Min.Name = "btn_Min";
             this.btn_Min.Size = new System.Drawing.Size(36, 32);
             this.btn_Min.TabIndex = 69;
@@ -470,7 +478,7 @@
             this.btn_Max.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Max.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Max.Image = ((System.Drawing.Image)(resources.GetObject("btn_Max.Image")));
-            this.btn_Max.Location = new System.Drawing.Point(958, -1);
+            this.btn_Max.Location = new System.Drawing.Point(829, -1);
             this.btn_Max.Name = "btn_Max";
             this.btn_Max.Size = new System.Drawing.Size(41, 32);
             this.btn_Max.TabIndex = 68;
@@ -483,7 +491,7 @@
             this.OffDanhMuc.FlatAppearance.BorderSize = 0;
             this.OffDanhMuc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.OffDanhMuc.Image = global::AppQuanLyQuanAn.Properties.Resources.Off11;
-            this.OffDanhMuc.Location = new System.Drawing.Point(1005, -3);
+            this.OffDanhMuc.Location = new System.Drawing.Point(876, -3);
             this.OffDanhMuc.Name = "OffDanhMuc";
             this.OffDanhMuc.Size = new System.Drawing.Size(37, 36);
             this.OffDanhMuc.TabIndex = 1;
@@ -509,7 +517,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.ClientSize = new System.Drawing.Size(1045, 545);
+            this.ClientSize = new System.Drawing.Size(922, 545);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.RefeshDM);
             this.Controls.Add(this.btnTimKiemMA);
