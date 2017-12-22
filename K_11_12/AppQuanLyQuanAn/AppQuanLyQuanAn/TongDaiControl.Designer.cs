@@ -58,7 +58,7 @@
             this.TongDai.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TongDai.Location = new System.Drawing.Point(0, 0);
             this.TongDai.Name = "TongDai";
-            this.TongDai.Size = new System.Drawing.Size(741, 426);
+            this.TongDai.Size = new System.Drawing.Size(1000, 500);
             this.TongDai.TabIndex = 1;
             // 
             // label6
@@ -66,7 +66,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label6.ForeColor = System.Drawing.Color.Firebrick;
-            this.label6.Location = new System.Drawing.Point(565, 372);
+            this.label6.Location = new System.Drawing.Point(750, 410);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(100, 22);
             this.label6.TabIndex = 89;
@@ -79,7 +79,7 @@
             this.button2.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Image = global::AppQuanLyQuanAn.Properties.Resources.Stored;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(545, 232);
+            this.button2.Location = new System.Drawing.Point(730, 270);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(136, 150);
             this.button2.TabIndex = 88;
@@ -90,7 +90,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label1.ForeColor = System.Drawing.Color.Firebrick;
-            this.label1.Location = new System.Drawing.Point(269, 372);
+            this.label1.Location = new System.Drawing.Point(359, 410);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(230, 22);
             this.label1.TabIndex = 85;
@@ -103,7 +103,7 @@
             this.button14.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button14.Image = global::AppQuanLyQuanAn.Properties.Resources.ChuyenXuongChiNhanh;
             this.button14.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button14.Location = new System.Drawing.Point(314, 232);
+            this.button14.Location = new System.Drawing.Point(404, 270);
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(136, 150);
             this.button14.TabIndex = 84;
@@ -114,7 +114,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label4.ForeColor = System.Drawing.Color.Firebrick;
-            this.label4.Location = new System.Drawing.Point(571, 170);
+            this.label4.Location = new System.Drawing.Point(756, 178);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(110, 22);
             this.label4.TabIndex = 77;
@@ -127,7 +127,7 @@
             this.button13.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button13.Image = global::AppQuanLyQuanAn.Properties.Resources.User;
             this.button13.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button13.Location = new System.Drawing.Point(547, 30);
+            this.button13.Location = new System.Drawing.Point(732, 38);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(136, 150);
             this.button13.TabIndex = 76;
@@ -138,7 +138,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label3.ForeColor = System.Drawing.Color.Firebrick;
-            this.label3.Location = new System.Drawing.Point(310, 170);
+            this.label3.Location = new System.Drawing.Point(400, 178);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(150, 22);
             this.label3.TabIndex = 75;
@@ -151,7 +151,7 @@
             this.button12.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button12.Image = global::AppQuanLyQuanAn.Properties.Resources.DuyetDonHang;
             this.button12.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button12.Location = new System.Drawing.Point(314, 30);
+            this.button12.Location = new System.Drawing.Point(404, 38);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(136, 150);
             this.button12.TabIndex = 74;
@@ -162,7 +162,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label2.ForeColor = System.Drawing.Color.Firebrick;
-            this.label2.Location = new System.Drawing.Point(77, 170);
+            this.label2.Location = new System.Drawing.Point(69, 178);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(130, 22);
             this.label2.TabIndex = 73;
@@ -175,7 +175,7 @@
             this.button11.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button11.Image = global::AppQuanLyQuanAn.Properties.Resources.Don_Hang3;
             this.button11.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button11.Location = new System.Drawing.Point(71, 30);
+            this.button11.Location = new System.Drawing.Point(63, 38);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(136, 150);
             this.button11.TabIndex = 72;
@@ -187,7 +187,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.TongDai);
             this.Name = "TongDaiControl";
-            this.Size = new System.Drawing.Size(741, 426);
+            this.Size = new System.Drawing.Size(1000, 500);
             this.TongDai.ResumeLayout(false);
             this.TongDai.PerformLayout();
             this.ResumeLayout(false);

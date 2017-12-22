@@ -40,5 +40,19 @@ namespace AppQuanLyQuanAn
             BieuDoKhachHang.Series["Series1"].YValueMembers = "SoLuongKhach";
             conn.Close();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            FormBorderStyle = FormBorderStyle.None;
+            WindowState = FormWindowState.Maximized;
+            TopMost = true;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            WindowState = FormWindowState.Normal;
+            TopMost = false;
+        }
     }
 }

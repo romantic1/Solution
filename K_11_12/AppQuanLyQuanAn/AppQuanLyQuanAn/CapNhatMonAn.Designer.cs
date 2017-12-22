@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CapNhatMonAn));
             this.dgv_CapNhatMonAn = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.txt_GhiChu = new System.Windows.Forms.TextBox();
@@ -46,6 +47,8 @@
             this.HeaderPanelDM = new System.Windows.Forms.Panel();
             this.OffThaoTacCNQL = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.btn_Min = new System.Windows.Forms.Button();
+            this.btn_Max = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_CapNhatMonAn)).BeginInit();
             this.panel1.SuspendLayout();
             this.HeaderPanelDM.SuspendLayout();
@@ -223,8 +226,10 @@
             // 
             // HeaderPanelDM
             // 
-            this.HeaderPanelDM.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.HeaderPanelDM.BackColor = System.Drawing.Color.Orange;
+            this.HeaderPanelDM.Controls.Add(this.btn_Min);
             this.HeaderPanelDM.Controls.Add(this.OffThaoTacCNQL);
+            this.HeaderPanelDM.Controls.Add(this.btn_Max);
             this.HeaderPanelDM.Controls.Add(this.label1);
             this.HeaderPanelDM.Dock = System.Windows.Forms.DockStyle.Top;
             this.HeaderPanelDM.Location = new System.Drawing.Point(0, 0);
@@ -258,6 +263,32 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Cập Nhật Món Ăn";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // btn_Min
+            // 
+            this.btn_Min.FlatAppearance.BorderSize = 0;
+            this.btn_Min.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Min.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Min.Image = ((System.Drawing.Image)(resources.GetObject("btn_Min.Image")));
+            this.btn_Min.Location = new System.Drawing.Point(514, 0);
+            this.btn_Min.Name = "btn_Min";
+            this.btn_Min.Size = new System.Drawing.Size(36, 32);
+            this.btn_Min.TabIndex = 67;
+            this.btn_Min.UseVisualStyleBackColor = true;
+            this.btn_Min.Click += new System.EventHandler(this.btn_Min_Click);
+            // 
+            // btn_Max
+            // 
+            this.btn_Max.FlatAppearance.BorderSize = 0;
+            this.btn_Max.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Max.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Max.Image = ((System.Drawing.Image)(resources.GetObject("btn_Max.Image")));
+            this.btn_Max.Location = new System.Drawing.Point(568, 0);
+            this.btn_Max.Name = "btn_Max";
+            this.btn_Max.Size = new System.Drawing.Size(41, 32);
+            this.btn_Max.TabIndex = 66;
+            this.btn_Max.UseVisualStyleBackColor = true;
+            this.btn_Max.Click += new System.EventHandler(this.btn_Max_Click);
             // 
             // CapNhatMonAn
             // 
@@ -299,5 +330,7 @@
         private System.Windows.Forms.Panel HeaderPanelDM;
         private System.Windows.Forms.TextBox txt_TenDanhMuc;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button btn_Min;
+        private System.Windows.Forms.Button btn_Max;
     }
 }

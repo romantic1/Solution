@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ThemChiNhanh));
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgv_ThemChiNhanh = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
@@ -52,7 +53,9 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.HeaderPanelDM = new System.Windows.Forms.Panel();
+            this.btn_Min = new System.Windows.Forms.Button();
             this.OffThaoTacCNQL = new System.Windows.Forms.Button();
+            this.btn_Max = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ThemChiNhanh)).BeginInit();
@@ -334,14 +337,29 @@
             // 
             // HeaderPanelDM
             // 
-            this.HeaderPanelDM.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.HeaderPanelDM.BackColor = System.Drawing.Color.Orange;
+            this.HeaderPanelDM.Controls.Add(this.btn_Min);
             this.HeaderPanelDM.Controls.Add(this.OffThaoTacCNQL);
+            this.HeaderPanelDM.Controls.Add(this.btn_Max);
             this.HeaderPanelDM.Controls.Add(this.label1);
             this.HeaderPanelDM.Dock = System.Windows.Forms.DockStyle.Top;
             this.HeaderPanelDM.Location = new System.Drawing.Point(0, 0);
             this.HeaderPanelDM.Name = "HeaderPanelDM";
             this.HeaderPanelDM.Size = new System.Drawing.Size(542, 31);
             this.HeaderPanelDM.TabIndex = 1;
+            // 
+            // btn_Min
+            // 
+            this.btn_Min.FlatAppearance.BorderSize = 0;
+            this.btn_Min.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Min.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Min.Image = ((System.Drawing.Image)(resources.GetObject("btn_Min.Image")));
+            this.btn_Min.Location = new System.Drawing.Point(404, 0);
+            this.btn_Min.Name = "btn_Min";
+            this.btn_Min.Size = new System.Drawing.Size(36, 32);
+            this.btn_Min.TabIndex = 98;
+            this.btn_Min.UseVisualStyleBackColor = true;
+            this.btn_Min.Click += new System.EventHandler(this.btn_Min_Click);
             // 
             // OffThaoTacCNQL
             // 
@@ -355,6 +373,19 @@
             this.OffThaoTacCNQL.TabIndex = 1;
             this.OffThaoTacCNQL.UseVisualStyleBackColor = false;
             this.OffThaoTacCNQL.Click += new System.EventHandler(this.OffThaoTacCNQL_Click);
+            // 
+            // btn_Max
+            // 
+            this.btn_Max.FlatAppearance.BorderSize = 0;
+            this.btn_Max.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Max.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Max.Image = ((System.Drawing.Image)(resources.GetObject("btn_Max.Image")));
+            this.btn_Max.Location = new System.Drawing.Point(458, 0);
+            this.btn_Max.Name = "btn_Max";
+            this.btn_Max.Size = new System.Drawing.Size(41, 32);
+            this.btn_Max.TabIndex = 97;
+            this.btn_Max.UseVisualStyleBackColor = true;
+            this.btn_Max.Click += new System.EventHandler(this.btn_Max_Click);
             // 
             // label1
             // 
@@ -418,5 +449,7 @@
         private System.Windows.Forms.TextBox txt_SoDienThoai;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txt_SoBan;
+        private System.Windows.Forms.Button btn_Min;
+        private System.Windows.Forms.Button btn_Max;
     }
 }

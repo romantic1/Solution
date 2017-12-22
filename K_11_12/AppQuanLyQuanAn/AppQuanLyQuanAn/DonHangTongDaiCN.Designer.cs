@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DonHangTongDaiCN));
             this.HeaderPanelDM = new System.Windows.Forms.Panel();
+            this.btn_Min = new System.Windows.Forms.Button();
+            this.btn_Max = new System.Windows.Forms.Button();
             this.OffChiNhanh = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txt_SearchDonHanTongDai = new System.Windows.Forms.TextBox();
@@ -78,13 +80,41 @@
             // 
             this.HeaderPanelDM.BackColor = System.Drawing.SystemColors.Control;
             this.HeaderPanelDM.BackgroundImage = global::AppQuanLyQuanAn.Properties.Resources.HinhMay1;
+            this.HeaderPanelDM.Controls.Add(this.btn_Min);
+            this.HeaderPanelDM.Controls.Add(this.btn_Max);
             this.HeaderPanelDM.Controls.Add(this.OffChiNhanh);
             this.HeaderPanelDM.Controls.Add(this.label1);
             this.HeaderPanelDM.Dock = System.Windows.Forms.DockStyle.Top;
             this.HeaderPanelDM.Location = new System.Drawing.Point(0, 0);
             this.HeaderPanelDM.Name = "HeaderPanelDM";
-            this.HeaderPanelDM.Size = new System.Drawing.Size(1068, 31);
+            this.HeaderPanelDM.Size = new System.Drawing.Size(1045, 31);
             this.HeaderPanelDM.TabIndex = 79;
+            // 
+            // btn_Min
+            // 
+            this.btn_Min.FlatAppearance.BorderSize = 0;
+            this.btn_Min.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Min.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Min.Image = ((System.Drawing.Image)(resources.GetObject("btn_Min.Image")));
+            this.btn_Min.Location = new System.Drawing.Point(897, 1);
+            this.btn_Min.Name = "btn_Min";
+            this.btn_Min.Size = new System.Drawing.Size(36, 32);
+            this.btn_Min.TabIndex = 86;
+            this.btn_Min.UseVisualStyleBackColor = true;
+            this.btn_Min.Click += new System.EventHandler(this.btn_Min_Click);
+            // 
+            // btn_Max
+            // 
+            this.btn_Max.FlatAppearance.BorderSize = 0;
+            this.btn_Max.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Max.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Max.Image = ((System.Drawing.Image)(resources.GetObject("btn_Max.Image")));
+            this.btn_Max.Location = new System.Drawing.Point(951, 1);
+            this.btn_Max.Name = "btn_Max";
+            this.btn_Max.Size = new System.Drawing.Size(41, 32);
+            this.btn_Max.TabIndex = 85;
+            this.btn_Max.UseVisualStyleBackColor = true;
+            this.btn_Max.Click += new System.EventHandler(this.btn_Max_Click);
             // 
             // OffChiNhanh
             // 
@@ -92,7 +122,7 @@
             this.OffChiNhanh.FlatAppearance.BorderSize = 0;
             this.OffChiNhanh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.OffChiNhanh.Image = global::AppQuanLyQuanAn.Properties.Resources.Off11;
-            this.OffChiNhanh.Location = new System.Drawing.Point(1032, -3);
+            this.OffChiNhanh.Location = new System.Drawing.Point(1003, -2);
             this.OffChiNhanh.Name = "OffChiNhanh";
             this.OffChiNhanh.Size = new System.Drawing.Size(37, 36);
             this.OffChiNhanh.TabIndex = 1;
@@ -303,7 +333,7 @@
             this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.btSearchMACNQL);
             this.groupBox1.Controls.Add(this.dgv_HienThiDanhSachDonHangTongDai);
-            this.groupBox1.Location = new System.Drawing.Point(446, 72);
+            this.groupBox1.Location = new System.Drawing.Point(426, 72);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(611, 392);
             this.groupBox1.TabIndex = 81;
@@ -374,7 +404,7 @@
             this.btn_Xoa.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Xoa.Image = global::AppQuanLyQuanAn.Properties.Resources.Delete;
             this.btn_Xoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Xoa.Location = new System.Drawing.Point(936, 481);
+            this.btn_Xoa.Location = new System.Drawing.Point(906, 481);
             this.btn_Xoa.Name = "btn_Xoa";
             this.btn_Xoa.Size = new System.Drawing.Size(121, 37);
             this.btn_Xoa.TabIndex = 46;
@@ -388,7 +418,7 @@
             this.btn_CapNhat.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_CapNhat.Image = global::AppQuanLyQuanAn.Properties.Resources.Update;
             this.btn_CapNhat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_CapNhat.Location = new System.Drawing.Point(628, 479);
+            this.btn_CapNhat.Location = new System.Drawing.Point(598, 479);
             this.btn_CapNhat.Name = "btn_CapNhat";
             this.btn_CapNhat.Size = new System.Drawing.Size(121, 37);
             this.btn_CapNhat.TabIndex = 44;
@@ -489,7 +519,7 @@
             this.btn_LamMoi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_LamMoi.Image = ((System.Drawing.Image)(resources.GetObject("btn_LamMoi.Image")));
             this.btn_LamMoi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_LamMoi.Location = new System.Drawing.Point(787, 479);
+            this.btn_LamMoi.Location = new System.Drawing.Point(757, 479);
             this.btn_LamMoi.Name = "btn_LamMoi";
             this.btn_LamMoi.Size = new System.Drawing.Size(112, 37);
             this.btn_LamMoi.TabIndex = 45;
@@ -503,7 +533,7 @@
             this.btn_ThemMoi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_ThemMoi.Image = global::AppQuanLyQuanAn.Properties.Resources.Add;
             this.btn_ThemMoi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_ThemMoi.Location = new System.Drawing.Point(461, 479);
+            this.btn_ThemMoi.Location = new System.Drawing.Point(431, 479);
             this.btn_ThemMoi.Name = "btn_ThemMoi";
             this.btn_ThemMoi.Size = new System.Drawing.Size(121, 37);
             this.btn_ThemMoi.TabIndex = 43;
@@ -516,7 +546,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PaleGoldenrod;
-            this.ClientSize = new System.Drawing.Size(1068, 531);
+            this.ClientSize = new System.Drawing.Size(1045, 545);
             this.Controls.Add(this.HeaderPanelDM);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -585,5 +615,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btn_LamMoi;
         private System.Windows.Forms.Button btn_ThemMoi;
+        private System.Windows.Forms.Button btn_Min;
+        private System.Windows.Forms.Button btn_Max;
     }
 }

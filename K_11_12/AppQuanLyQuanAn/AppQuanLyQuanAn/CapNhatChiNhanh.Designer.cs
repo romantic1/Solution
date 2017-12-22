@@ -28,7 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CapNhatChiNhanh));
             this.HeaderPanelDM = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.OffThaoTacCNQL = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -61,7 +64,9 @@
             // 
             // HeaderPanelDM
             // 
-            this.HeaderPanelDM.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.HeaderPanelDM.BackColor = System.Drawing.Color.Orange;
+            this.HeaderPanelDM.Controls.Add(this.button3);
+            this.HeaderPanelDM.Controls.Add(this.button4);
             this.HeaderPanelDM.Controls.Add(this.OffThaoTacCNQL);
             this.HeaderPanelDM.Controls.Add(this.label1);
             this.HeaderPanelDM.Dock = System.Windows.Forms.DockStyle.Top;
@@ -69,6 +74,32 @@
             this.HeaderPanelDM.Name = "HeaderPanelDM";
             this.HeaderPanelDM.Size = new System.Drawing.Size(640, 31);
             this.HeaderPanelDM.TabIndex = 15;
+            // 
+            // button3
+            // 
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.Location = new System.Drawing.Point(489, 0);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(36, 32);
+            this.button3.TabIndex = 20;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button4
+            // 
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
+            this.button4.Location = new System.Drawing.Point(543, 0);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(41, 32);
+            this.button4.TabIndex = 19;
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // OffThaoTacCNQL
             // 
@@ -130,7 +161,7 @@
             // 
             // dgv_CapNhatChiNhanh
             // 
-            this.dgv_CapNhatChiNhanh.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_CapNhatChiNhanh.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgv_CapNhatChiNhanh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_CapNhatChiNhanh.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgv_CapNhatChiNhanh.Location = new System.Drawing.Point(0, 258);
@@ -418,5 +449,7 @@
         private System.Windows.Forms.TextBox txt_MaMonAn;
         private System.Windows.Forms.TextBox txt_SoBan;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
     }
 }

@@ -65,7 +65,9 @@
             this.btn_CapNhat = new System.Windows.Forms.Button();
             this.btn_ThemMoi = new System.Windows.Forms.Button();
             this.HeaderPanelDM = new System.Windows.Forms.Panel();
+            this.btn_Min = new System.Windows.Forms.Button();
             this.OffChiNhanh = new System.Windows.Forms.Button();
+            this.btn_Max = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.gbSearchCNQL.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -483,12 +485,27 @@
             // 
             this.HeaderPanelDM.BackColor = System.Drawing.SystemColors.Control;
             this.HeaderPanelDM.BackgroundImage = global::AppQuanLyQuanAn.Properties.Resources.HinhMay1;
+            this.HeaderPanelDM.Controls.Add(this.btn_Min);
             this.HeaderPanelDM.Controls.Add(this.OffChiNhanh);
+            this.HeaderPanelDM.Controls.Add(this.btn_Max);
             this.HeaderPanelDM.Controls.Add(this.label1);
             this.HeaderPanelDM.Location = new System.Drawing.Point(0, 0);
             this.HeaderPanelDM.Name = "HeaderPanelDM";
             this.HeaderPanelDM.Size = new System.Drawing.Size(1050, 31);
             this.HeaderPanelDM.TabIndex = 69;
+            // 
+            // btn_Min
+            // 
+            this.btn_Min.FlatAppearance.BorderSize = 0;
+            this.btn_Min.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Min.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Min.Image = ((System.Drawing.Image)(resources.GetObject("btn_Min.Image")));
+            this.btn_Min.Location = new System.Drawing.Point(912, 0);
+            this.btn_Min.Name = "btn_Min";
+            this.btn_Min.Size = new System.Drawing.Size(36, 32);
+            this.btn_Min.TabIndex = 77;
+            this.btn_Min.UseVisualStyleBackColor = true;
+            this.btn_Min.Click += new System.EventHandler(this.btn_Min_Click);
             // 
             // OffChiNhanh
             // 
@@ -502,6 +519,19 @@
             this.OffChiNhanh.TabIndex = 1;
             this.OffChiNhanh.UseVisualStyleBackColor = false;
             this.OffChiNhanh.Click += new System.EventHandler(this.OffChiNhanh_Click);
+            // 
+            // btn_Max
+            // 
+            this.btn_Max.FlatAppearance.BorderSize = 0;
+            this.btn_Max.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Max.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Max.Image = ((System.Drawing.Image)(resources.GetObject("btn_Max.Image")));
+            this.btn_Max.Location = new System.Drawing.Point(966, 0);
+            this.btn_Max.Name = "btn_Max";
+            this.btn_Max.Size = new System.Drawing.Size(41, 32);
+            this.btn_Max.TabIndex = 76;
+            this.btn_Max.UseVisualStyleBackColor = true;
+            this.btn_Max.Click += new System.EventHandler(this.btn_Max_Click);
             // 
             // label1
             // 
@@ -522,7 +552,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PaleGoldenrod;
-            this.ClientSize = new System.Drawing.Size(1051, 536);
+            this.ClientSize = new System.Drawing.Size(1045, 545);
             this.Controls.Add(this.btn_LamMoi);
             this.Controls.Add(this.gbSearchCNQL);
             this.Controls.Add(this.btn_Xoa);
@@ -591,5 +621,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btn_Search;
+        private System.Windows.Forms.Button btn_Min;
+        private System.Windows.Forms.Button btn_Max;
     }
 }

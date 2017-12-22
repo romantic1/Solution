@@ -44,8 +44,7 @@ namespace AppQuanLyQuanAn
             }
             else if(dt.Rows.Count > 0)
             {
-                MessageBox.Show("Đăng Nhập Thành Công!", "Thông Báo");
-                
+                MessageBox.Show("Đăng Nhập Thành Công!", "Thông Báo");      
                 Home_Login frmHL = new Home_Login(dt.Rows[0][1].ToString(), dt.Rows[0][2].ToString(), TenNhanVienTruyenSang.ToString(), dt.Rows[0][8].ToString());
                 //TenNhanVienTruyenSang = dt.Rows[0]["Ten_NV"].ToString();
                 //frmHL = new Home_Login(TenNhanVienTruyenSang.ToString());
@@ -59,6 +58,7 @@ namespace AppQuanLyQuanAn
             conn.Close();
         }
 
+        //Zoome
         private void button17_Click(object sender, EventArgs e)
         {
             FormBorderStyle = FormBorderStyle.None;
@@ -66,6 +66,7 @@ namespace AppQuanLyQuanAn
             TopMost = true;
         }
 
+        //Min
         private void button2_Click(object sender, EventArgs e)
         {
             FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

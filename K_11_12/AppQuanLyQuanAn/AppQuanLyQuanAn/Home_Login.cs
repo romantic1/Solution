@@ -86,16 +86,24 @@ namespace AppQuanLyQuanAn
                 btn_TongDai.Enabled = true;
             }
         }
-        public string TenNhanVienTruyenSang = "";
-
-        public Home_Login(string Test) : this()  
-        {
-            TenNhanVienTruyenSang = Test;
-        }
 
         private void Home_Login_Load_1(object sender, EventArgs e)
         {
             PhanQuyen();
+        }
+
+        private void btn_Zoom_Click(object sender, EventArgs e)
+        {
+            FormBorderStyle = FormBorderStyle.None;
+            WindowState = FormWindowState.Maximized;
+            TopMost = true;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            WindowState = FormWindowState.Normal;
+            TopMost = false;
         }
     }
 }

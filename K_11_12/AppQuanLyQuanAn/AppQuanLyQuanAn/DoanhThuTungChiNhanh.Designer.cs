@@ -28,7 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DoanhThuTungChiNhanh));
             this.HeaderPanelDM = new System.Windows.Forms.Panel();
+            this.btn_Min = new System.Windows.Forms.Button();
+            this.btn_Max = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -47,13 +50,41 @@
             // 
             this.HeaderPanelDM.BackColor = System.Drawing.SystemColors.Control;
             this.HeaderPanelDM.BackgroundImage = global::AppQuanLyQuanAn.Properties.Resources.HinhMay1;
+            this.HeaderPanelDM.Controls.Add(this.btn_Min);
+            this.HeaderPanelDM.Controls.Add(this.btn_Max);
             this.HeaderPanelDM.Controls.Add(this.button1);
             this.HeaderPanelDM.Controls.Add(this.label1);
             this.HeaderPanelDM.Dock = System.Windows.Forms.DockStyle.Top;
             this.HeaderPanelDM.Location = new System.Drawing.Point(0, 0);
             this.HeaderPanelDM.Name = "HeaderPanelDM";
-            this.HeaderPanelDM.Size = new System.Drawing.Size(904, 31);
+            this.HeaderPanelDM.Size = new System.Drawing.Size(1045, 31);
             this.HeaderPanelDM.TabIndex = 4;
+            // 
+            // btn_Min
+            // 
+            this.btn_Min.FlatAppearance.BorderSize = 0;
+            this.btn_Min.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Min.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Min.Image = ((System.Drawing.Image)(resources.GetObject("btn_Min.Image")));
+            this.btn_Min.Location = new System.Drawing.Point(905, -1);
+            this.btn_Min.Name = "btn_Min";
+            this.btn_Min.Size = new System.Drawing.Size(36, 32);
+            this.btn_Min.TabIndex = 71;
+            this.btn_Min.UseVisualStyleBackColor = true;
+            this.btn_Min.Click += new System.EventHandler(this.btn_Min_Click);
+            // 
+            // btn_Max
+            // 
+            this.btn_Max.FlatAppearance.BorderSize = 0;
+            this.btn_Max.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Max.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Max.Image = ((System.Drawing.Image)(resources.GetObject("btn_Max.Image")));
+            this.btn_Max.Location = new System.Drawing.Point(959, -1);
+            this.btn_Max.Name = "btn_Max";
+            this.btn_Max.Size = new System.Drawing.Size(41, 32);
+            this.btn_Max.TabIndex = 70;
+            this.btn_Max.UseVisualStyleBackColor = true;
+            this.btn_Max.Click += new System.EventHandler(this.btn_Max_Click);
             // 
             // button1
             // 
@@ -61,7 +92,7 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Image = global::AppQuanLyQuanAn.Properties.Resources.Off11;
-            this.button1.Location = new System.Drawing.Point(867, -1);
+            this.button1.Location = new System.Drawing.Point(1008, -1);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(37, 36);
             this.button1.TabIndex = 3;
@@ -137,7 +168,7 @@
             this.dgv_DoanhThuTungChiNhanh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_DoanhThuTungChiNhanh.Location = new System.Drawing.Point(0, 104);
             this.dgv_DoanhThuTungChiNhanh.Name = "dgv_DoanhThuTungChiNhanh";
-            this.dgv_DoanhThuTungChiNhanh.Size = new System.Drawing.Size(904, 377);
+            this.dgv_DoanhThuTungChiNhanh.Size = new System.Drawing.Size(1045, 377);
             this.dgv_DoanhThuTungChiNhanh.TabIndex = 10;
             // 
             // btn_Refesh
@@ -147,7 +178,7 @@
             this.btn_Refesh.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btn_Refesh.Image = global::AppQuanLyQuanAn.Properties.Resources.refesh;
             this.btn_Refesh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Refesh.Location = new System.Drawing.Point(808, 61);
+            this.btn_Refesh.Location = new System.Drawing.Point(949, 56);
             this.btn_Refesh.Name = "btn_Refesh";
             this.btn_Refesh.Size = new System.Drawing.Size(84, 27);
             this.btn_Refesh.TabIndex = 27;
@@ -170,7 +201,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PaleGoldenrod;
-            this.ClientSize = new System.Drawing.Size(904, 545);
+            this.ClientSize = new System.Drawing.Size(1045, 545);
             this.Controls.Add(this.btn_Refesh);
             this.Controls.Add(this.dgv_DoanhThuTungChiNhanh);
             this.Controls.Add(this.cbb_TenChiNhanh);
@@ -205,5 +236,7 @@
         private System.Windows.Forms.DataGridView dgv_DoanhThuTungChiNhanh;
         private System.Windows.Forms.Button btn_Refesh;
         private System.Windows.Forms.TextBox txt_TongTien;
+        private System.Windows.Forms.Button btn_Min;
+        private System.Windows.Forms.Button btn_Max;
     }
 }

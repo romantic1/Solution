@@ -28,13 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home_Login));
             this.btn_Close = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
-            this.button17 = new System.Windows.Forms.Button();
             this.HeaderPanel = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btn_Zoom = new System.Windows.Forms.Button();
             this.btHome = new System.Windows.Forms.Button();
             this.btn_QuanLy = new System.Windows.Forms.Button();
             this.btn_ChiNhanh = new System.Windows.Forms.Button();
@@ -60,7 +62,7 @@
             this.btn_Close.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Close.Image = global::AppQuanLyQuanAn.Properties.Resources.Out;
             this.btn_Close.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Close.Location = new System.Drawing.Point(710, -1);
+            this.btn_Close.Location = new System.Drawing.Point(842, 3);
             this.btn_Close.Name = "btn_Close";
             this.btn_Close.Size = new System.Drawing.Size(41, 56);
             this.btn_Close.TabIndex = 7;
@@ -119,24 +121,12 @@
             this.button10.TabIndex = 11;
             this.button10.UseVisualStyleBackColor = true;
             // 
-            // button17
-            // 
-            this.button17.FlatAppearance.BorderSize = 0;
-            this.button17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button17.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button17.Image = global::AppQuanLyQuanAn.Properties.Resources.Option;
-            this.button17.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button17.Location = new System.Drawing.Point(663, -1);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(41, 56);
-            this.button17.TabIndex = 12;
-            this.button17.UseVisualStyleBackColor = true;
-            // 
             // HeaderPanel
             // 
             this.HeaderPanel.BackColor = System.Drawing.Color.SandyBrown;
-            this.HeaderPanel.Controls.Add(this.button17);
+            this.HeaderPanel.Controls.Add(this.button2);
             this.HeaderPanel.Controls.Add(this.button10);
+            this.HeaderPanel.Controls.Add(this.btn_Zoom);
             this.HeaderPanel.Controls.Add(this.button9);
             this.HeaderPanel.Controls.Add(this.button8);
             this.HeaderPanel.Controls.Add(this.button7);
@@ -144,8 +134,34 @@
             this.HeaderPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.HeaderPanel.Location = new System.Drawing.Point(154, 0);
             this.HeaderPanel.Name = "HeaderPanel";
-            this.HeaderPanel.Size = new System.Drawing.Size(751, 80);
+            this.HeaderPanel.Size = new System.Drawing.Size(886, 78);
             this.HeaderPanel.TabIndex = 43;
+            // 
+            // button2
+            // 
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.Location = new System.Drawing.Point(718, 15);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(42, 33);
+            this.button2.TabIndex = 50;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // btn_Zoom
+            // 
+            this.btn_Zoom.FlatAppearance.BorderSize = 0;
+            this.btn_Zoom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Zoom.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Zoom.Image = ((System.Drawing.Image)(resources.GetObject("btn_Zoom.Image")));
+            this.btn_Zoom.Location = new System.Drawing.Point(775, 15);
+            this.btn_Zoom.Name = "btn_Zoom";
+            this.btn_Zoom.Size = new System.Drawing.Size(61, 33);
+            this.btn_Zoom.TabIndex = 49;
+            this.btn_Zoom.UseVisualStyleBackColor = true;
+            this.btn_Zoom.Click += new System.EventHandler(this.btn_Zoom_Click);
             // 
             // btHome
             // 
@@ -257,7 +273,7 @@
             this.SidePanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.SidePanel.Location = new System.Drawing.Point(0, 0);
             this.SidePanel.Name = "SidePanel";
-            this.SidePanel.Size = new System.Drawing.Size(154, 541);
+            this.SidePanel.Size = new System.Drawing.Size(154, 540);
             this.SidePanel.TabIndex = 42;
             // 
             // NameApp
@@ -287,40 +303,40 @@
             // 
             this.manHinhChinh1.BackColor = System.Drawing.Color.SteelBlue;
             this.manHinhChinh1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.manHinhChinh1.Location = new System.Drawing.Point(154, 80);
+            this.manHinhChinh1.Location = new System.Drawing.Point(154, 78);
             this.manHinhChinh1.Name = "manHinhChinh1";
-            this.manHinhChinh1.Size = new System.Drawing.Size(751, 461);
+            this.manHinhChinh1.Size = new System.Drawing.Size(886, 462);
             this.manHinhChinh1.TabIndex = 48;
             // 
             // quanLyControl1
             // 
             this.quanLyControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.quanLyControl1.Location = new System.Drawing.Point(154, 80);
+            this.quanLyControl1.Location = new System.Drawing.Point(154, 78);
             this.quanLyControl1.Name = "quanLyControl1";
-            this.quanLyControl1.Size = new System.Drawing.Size(751, 461);
+            this.quanLyControl1.Size = new System.Drawing.Size(886, 462);
             this.quanLyControl1.TabIndex = 47;
             // 
             // chiTietChiNhanh1
             // 
             this.chiTietChiNhanh1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.chiTietChiNhanh1.Location = new System.Drawing.Point(154, 80);
+            this.chiTietChiNhanh1.Location = new System.Drawing.Point(154, 78);
             this.chiTietChiNhanh1.Name = "chiTietChiNhanh1";
-            this.chiTietChiNhanh1.Size = new System.Drawing.Size(751, 461);
+            this.chiTietChiNhanh1.Size = new System.Drawing.Size(886, 462);
             this.chiTietChiNhanh1.TabIndex = 46;
             // 
             // tongDaiControl1
             // 
             this.tongDaiControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tongDaiControl1.Location = new System.Drawing.Point(154, 80);
+            this.tongDaiControl1.Location = new System.Drawing.Point(154, 78);
             this.tongDaiControl1.Name = "tongDaiControl1";
-            this.tongDaiControl1.Size = new System.Drawing.Size(751, 461);
+            this.tongDaiControl1.Size = new System.Drawing.Size(886, 462);
             this.tongDaiControl1.TabIndex = 45;
             // 
             // Home_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(905, 541);
+            this.ClientSize = new System.Drawing.Size(1040, 540);
             this.Controls.Add(this.manHinhChinh1);
             this.Controls.Add(this.quanLyControl1);
             this.Controls.Add(this.chiTietChiNhanh1);
@@ -346,7 +362,6 @@
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button17;
         private System.Windows.Forms.Panel HeaderPanel;
         private System.Windows.Forms.Button btHome;
         private System.Windows.Forms.Button btn_QuanLy;
@@ -361,6 +376,8 @@
         private ChiTietChiNhanh chiTietChiNhanh1;
         private QuanLyControl quanLyControl1;
         private ManHinhChinh manHinhChinh1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btn_Zoom;
 
     }
 }

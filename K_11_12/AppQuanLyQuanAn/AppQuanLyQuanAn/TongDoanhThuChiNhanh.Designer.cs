@@ -28,7 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TongDoanhThu_QuanLi));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_Min = new System.Windows.Forms.Button();
+            this.btn_Max = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.dgv_DoanhThuTongChiNhanh = new System.Windows.Forms.DataGridView();
@@ -44,13 +47,41 @@
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Control;
             this.panel1.BackgroundImage = global::AppQuanLyQuanAn.Properties.Resources.HinhMay1;
+            this.panel1.Controls.Add(this.btn_Min);
+            this.panel1.Controls.Add(this.btn_Max);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(904, 31);
+            this.panel1.Size = new System.Drawing.Size(1045, 31);
             this.panel1.TabIndex = 28;
+            // 
+            // btn_Min
+            // 
+            this.btn_Min.FlatAppearance.BorderSize = 0;
+            this.btn_Min.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Min.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Min.Image = ((System.Drawing.Image)(resources.GetObject("btn_Min.Image")));
+            this.btn_Min.Location = new System.Drawing.Point(904, -3);
+            this.btn_Min.Name = "btn_Min";
+            this.btn_Min.Size = new System.Drawing.Size(36, 32);
+            this.btn_Min.TabIndex = 117;
+            this.btn_Min.UseVisualStyleBackColor = true;
+            this.btn_Min.Click += new System.EventHandler(this.btn_Min_Click);
+            // 
+            // btn_Max
+            // 
+            this.btn_Max.FlatAppearance.BorderSize = 0;
+            this.btn_Max.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Max.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Max.Image = ((System.Drawing.Image)(resources.GetObject("btn_Max.Image")));
+            this.btn_Max.Location = new System.Drawing.Point(958, -3);
+            this.btn_Max.Name = "btn_Max";
+            this.btn_Max.Size = new System.Drawing.Size(41, 32);
+            this.btn_Max.TabIndex = 116;
+            this.btn_Max.UseVisualStyleBackColor = true;
+            this.btn_Max.Click += new System.EventHandler(this.btn_Max_Click);
             // 
             // button2
             // 
@@ -58,7 +89,7 @@
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Image = global::AppQuanLyQuanAn.Properties.Resources.Off11;
-            this.button2.Location = new System.Drawing.Point(867, 0);
+            this.button2.Location = new System.Drawing.Point(1005, -2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(37, 36);
             this.button2.TabIndex = 3;
@@ -86,7 +117,7 @@
             this.dgv_DoanhThuTongChiNhanh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_DoanhThuTongChiNhanh.Location = new System.Drawing.Point(0, 96);
             this.dgv_DoanhThuTongChiNhanh.Name = "dgv_DoanhThuTongChiNhanh";
-            this.dgv_DoanhThuTongChiNhanh.Size = new System.Drawing.Size(904, 380);
+            this.dgv_DoanhThuTongChiNhanh.Size = new System.Drawing.Size(1045, 380);
             this.dgv_DoanhThuTongChiNhanh.TabIndex = 35;
             // 
             // label3
@@ -132,7 +163,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PaleGoldenrod;
-            this.ClientSize = new System.Drawing.Size(904, 545);
+            this.ClientSize = new System.Drawing.Size(1045, 545);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dgv_DoanhThuTongChiNhanh);
@@ -161,6 +192,8 @@
         private System.Windows.Forms.TextBox txt_TongTien;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btn_Min;
+        private System.Windows.Forms.Button btn_Max;
 
     }
 }

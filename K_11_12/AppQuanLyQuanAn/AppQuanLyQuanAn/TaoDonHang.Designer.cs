@@ -53,15 +53,17 @@
             this.txt_SearchNhanVien = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btSearchMACNQL = new System.Windows.Forms.Button();
             this.dgv_HienThiDanhSachDonHang = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.btn_Xoa = new System.Windows.Forms.Button();
             this.btn_CapNhat = new System.Windows.Forms.Button();
             this.btn_ThemMoi = new System.Windows.Forms.Button();
-            this.btSearchMACNQL = new System.Windows.Forms.Button();
             this.HeaderPanelDM = new System.Windows.Forms.Panel();
+            this.btn_Min = new System.Windows.Forms.Button();
             this.OffChiNhanh = new System.Windows.Forms.Button();
+            this.btn_Max = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_LamMoi = new System.Windows.Forms.Button();
             this.gbSearchCNQL.SuspendLayout();
@@ -316,6 +318,22 @@
             this.groupBox1.TabIndex = 81;
             this.groupBox1.TabStop = false;
             // 
+            // btSearchMACNQL
+            // 
+            this.btSearchMACNQL.FlatAppearance.BorderSize = 0;
+            this.btSearchMACNQL.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btSearchMACNQL.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btSearchMACNQL.Image = global::AppQuanLyQuanAn.Properties.Resources.Search;
+            this.btSearchMACNQL.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btSearchMACNQL.Location = new System.Drawing.Point(6, 19);
+            this.btSearchMACNQL.Name = "btSearchMACNQL";
+            this.btSearchMACNQL.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btSearchMACNQL.Size = new System.Drawing.Size(85, 29);
+            this.btSearchMACNQL.TabIndex = 24;
+            this.btSearchMACNQL.Text = "Tìm kiếm";
+            this.btSearchMACNQL.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btSearchMACNQL.UseVisualStyleBackColor = true;
+            // 
             // dgv_HienThiDanhSachDonHang
             // 
             this.dgv_HienThiDanhSachDonHang.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -393,33 +411,32 @@
             this.btn_ThemMoi.UseVisualStyleBackColor = false;
             this.btn_ThemMoi.Click += new System.EventHandler(this.btn_ThemMoi_Click);
             // 
-            // btSearchMACNQL
-            // 
-            this.btSearchMACNQL.FlatAppearance.BorderSize = 0;
-            this.btSearchMACNQL.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btSearchMACNQL.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btSearchMACNQL.Image = global::AppQuanLyQuanAn.Properties.Resources.Search;
-            this.btSearchMACNQL.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btSearchMACNQL.Location = new System.Drawing.Point(6, 19);
-            this.btSearchMACNQL.Name = "btSearchMACNQL";
-            this.btSearchMACNQL.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btSearchMACNQL.Size = new System.Drawing.Size(85, 29);
-            this.btSearchMACNQL.TabIndex = 24;
-            this.btSearchMACNQL.Text = "Tìm kiếm";
-            this.btSearchMACNQL.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btSearchMACNQL.UseVisualStyleBackColor = true;
-            // 
             // HeaderPanelDM
             // 
             this.HeaderPanelDM.BackColor = System.Drawing.SystemColors.Control;
             this.HeaderPanelDM.BackgroundImage = global::AppQuanLyQuanAn.Properties.Resources.HinhMay1;
+            this.HeaderPanelDM.Controls.Add(this.btn_Min);
             this.HeaderPanelDM.Controls.Add(this.OffChiNhanh);
+            this.HeaderPanelDM.Controls.Add(this.btn_Max);
             this.HeaderPanelDM.Controls.Add(this.label1);
             this.HeaderPanelDM.Dock = System.Windows.Forms.DockStyle.Top;
             this.HeaderPanelDM.Location = new System.Drawing.Point(0, 0);
             this.HeaderPanelDM.Name = "HeaderPanelDM";
-            this.HeaderPanelDM.Size = new System.Drawing.Size(1041, 31);
+            this.HeaderPanelDM.Size = new System.Drawing.Size(1045, 31);
             this.HeaderPanelDM.TabIndex = 79;
+            // 
+            // btn_Min
+            // 
+            this.btn_Min.FlatAppearance.BorderSize = 0;
+            this.btn_Min.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Min.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Min.Image = ((System.Drawing.Image)(resources.GetObject("btn_Min.Image")));
+            this.btn_Min.Location = new System.Drawing.Point(906, -1);
+            this.btn_Min.Name = "btn_Min";
+            this.btn_Min.Size = new System.Drawing.Size(36, 32);
+            this.btn_Min.TabIndex = 96;
+            this.btn_Min.UseVisualStyleBackColor = true;
+            this.btn_Min.Click += new System.EventHandler(this.btn_Min_Click);
             // 
             // OffChiNhanh
             // 
@@ -432,6 +449,19 @@
             this.OffChiNhanh.Size = new System.Drawing.Size(37, 36);
             this.OffChiNhanh.TabIndex = 1;
             this.OffChiNhanh.UseVisualStyleBackColor = false;
+            // 
+            // btn_Max
+            // 
+            this.btn_Max.FlatAppearance.BorderSize = 0;
+            this.btn_Max.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Max.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Max.Image = ((System.Drawing.Image)(resources.GetObject("btn_Max.Image")));
+            this.btn_Max.Location = new System.Drawing.Point(960, -1);
+            this.btn_Max.Name = "btn_Max";
+            this.btn_Max.Size = new System.Drawing.Size(41, 32);
+            this.btn_Max.TabIndex = 95;
+            this.btn_Max.UseVisualStyleBackColor = true;
+            this.btn_Max.Click += new System.EventHandler(this.btn_Max_Click);
             // 
             // label1
             // 
@@ -467,7 +497,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PaleGoldenrod;
-            this.ClientSize = new System.Drawing.Size(1041, 541);
+            this.ClientSize = new System.Drawing.Size(1045, 545);
             this.Controls.Add(this.gbSearchCNQL);
             this.Controls.Add(this.btn_Xoa);
             this.Controls.Add(this.btn_CapNhat);
@@ -533,5 +563,7 @@
         private System.Windows.Forms.Button btn_LamMoi;
         private System.Windows.Forms.ComboBox cbb_TenChiNhanh;
         private System.Windows.Forms.DateTimePicker Time_NgayDat;
+        private System.Windows.Forms.Button btn_Min;
+        private System.Windows.Forms.Button btn_Max;
     }
 }

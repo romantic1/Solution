@@ -78,5 +78,19 @@ namespace AppQuanLyQuanAn
            txt_MaMonAn.Text = row.Cells[6].Value.ToString();
            txt_SoBan.Text = row.Cells[7].Value.ToString();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            FormBorderStyle = FormBorderStyle.None;
+            WindowState = FormWindowState.Maximized;
+            TopMost = true;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            WindowState = FormWindowState.Normal;
+            TopMost = false;
+        }
     }
 }

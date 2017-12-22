@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DanhMucMonAn));
             this.lbDanhMucMonAn = new System.Windows.Forms.ListBox();
             this.txtTimKiemDM = new System.Windows.Forms.TextBox();
             this.DanhMucPanel = new System.Windows.Forms.Panel();
@@ -59,6 +60,8 @@
             this.RefeshDM = new System.Windows.Forms.Button();
             this.btnTimKiemMA = new System.Windows.Forms.Button();
             this.HeaderPanelDM = new System.Windows.Forms.Panel();
+            this.btn_Min = new System.Windows.Forms.Button();
+            this.btn_Max = new System.Windows.Forms.Button();
             this.OffDanhMuc = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.DanhMucPanel.SuspendLayout();
@@ -98,7 +101,7 @@
             this.DanhMucPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.DanhMucPanel.Location = new System.Drawing.Point(0, 31);
             this.DanhMucPanel.Name = "DanhMucPanel";
-            this.DanhMucPanel.Size = new System.Drawing.Size(226, 466);
+            this.DanhMucPanel.Size = new System.Drawing.Size(226, 514);
             this.DanhMucPanel.TabIndex = 5;
             // 
             // panel1
@@ -112,7 +115,7 @@
             this.panel1.Controls.Add(this.txtMaDM);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 263);
+            this.panel1.Location = new System.Drawing.Point(0, 311);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(226, 203);
             this.panel1.TabIndex = 15;
@@ -224,7 +227,7 @@
             this.dgvDanhSachMA.Dock = System.Windows.Forms.DockStyle.Top;
             this.dgvDanhSachMA.Location = new System.Drawing.Point(226, 31);
             this.dgvDanhSachMA.Name = "dgvDanhSachMA";
-            this.dgvDanhSachMA.Size = new System.Drawing.Size(559, 221);
+            this.dgvDanhSachMA.Size = new System.Drawing.Size(819, 221);
             this.dgvDanhSachMA.TabIndex = 9;
             this.dgvDanhSachMA.Click += new System.EventHandler(this.dgvDanhSachMA_Click);
             // 
@@ -254,9 +257,9 @@
             this.panel2.Controls.Add(this.txtMaMA);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(226, 294);
+            this.panel2.Location = new System.Drawing.Point(226, 342);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(559, 203);
+            this.panel2.Size = new System.Drawing.Size(819, 203);
             this.panel2.TabIndex = 16;
             // 
             // cbDanhMucMA
@@ -438,13 +441,41 @@
             // 
             this.HeaderPanelDM.BackColor = System.Drawing.SystemColors.Control;
             this.HeaderPanelDM.BackgroundImage = global::AppQuanLyQuanAn.Properties.Resources.HinhMay1;
+            this.HeaderPanelDM.Controls.Add(this.btn_Min);
+            this.HeaderPanelDM.Controls.Add(this.btn_Max);
             this.HeaderPanelDM.Controls.Add(this.OffDanhMuc);
             this.HeaderPanelDM.Controls.Add(this.label1);
             this.HeaderPanelDM.Dock = System.Windows.Forms.DockStyle.Top;
             this.HeaderPanelDM.Location = new System.Drawing.Point(0, 0);
             this.HeaderPanelDM.Name = "HeaderPanelDM";
-            this.HeaderPanelDM.Size = new System.Drawing.Size(785, 31);
+            this.HeaderPanelDM.Size = new System.Drawing.Size(1045, 31);
             this.HeaderPanelDM.TabIndex = 0;
+            // 
+            // btn_Min
+            // 
+            this.btn_Min.FlatAppearance.BorderSize = 0;
+            this.btn_Min.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Min.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Min.Image = ((System.Drawing.Image)(resources.GetObject("btn_Min.Image")));
+            this.btn_Min.Location = new System.Drawing.Point(904, -1);
+            this.btn_Min.Name = "btn_Min";
+            this.btn_Min.Size = new System.Drawing.Size(36, 32);
+            this.btn_Min.TabIndex = 69;
+            this.btn_Min.UseVisualStyleBackColor = true;
+            this.btn_Min.Click += new System.EventHandler(this.btn_Min_Click);
+            // 
+            // btn_Max
+            // 
+            this.btn_Max.FlatAppearance.BorderSize = 0;
+            this.btn_Max.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Max.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Max.Image = ((System.Drawing.Image)(resources.GetObject("btn_Max.Image")));
+            this.btn_Max.Location = new System.Drawing.Point(958, -1);
+            this.btn_Max.Name = "btn_Max";
+            this.btn_Max.Size = new System.Drawing.Size(41, 32);
+            this.btn_Max.TabIndex = 68;
+            this.btn_Max.UseVisualStyleBackColor = true;
+            this.btn_Max.Click += new System.EventHandler(this.btn_Max_Click);
             // 
             // OffDanhMuc
             // 
@@ -452,7 +483,7 @@
             this.OffDanhMuc.FlatAppearance.BorderSize = 0;
             this.OffDanhMuc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.OffDanhMuc.Image = global::AppQuanLyQuanAn.Properties.Resources.Off11;
-            this.OffDanhMuc.Location = new System.Drawing.Point(748, -2);
+            this.OffDanhMuc.Location = new System.Drawing.Point(1005, -3);
             this.OffDanhMuc.Name = "OffDanhMuc";
             this.OffDanhMuc.Size = new System.Drawing.Size(37, 36);
             this.OffDanhMuc.TabIndex = 1;
@@ -478,7 +509,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.ClientSize = new System.Drawing.Size(785, 497);
+            this.ClientSize = new System.Drawing.Size(1045, 545);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.RefeshDM);
             this.Controls.Add(this.btnTimKiemMA);
@@ -539,5 +570,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtMaMA;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btn_Min;
+        private System.Windows.Forms.Button btn_Max;
     }
 }

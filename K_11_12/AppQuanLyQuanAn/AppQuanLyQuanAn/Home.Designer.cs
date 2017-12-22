@@ -53,6 +53,7 @@
             this.btn_Zoom = new System.Windows.Forms.Button();
             this.HeaderPanel = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.SidePanel.SuspendLayout();
             this.NameApp.SuspendLayout();
             this.HeaderPanel.SuspendLayout();
@@ -62,7 +63,7 @@
             // 
             this.btn_DangNhap.BackColor = System.Drawing.Color.DarkKhaki;
             this.btn_DangNhap.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_DangNhap.Location = new System.Drawing.Point(430, 343);
+            this.btn_DangNhap.Location = new System.Drawing.Point(505, 370);
             this.btn_DangNhap.Name = "btn_DangNhap";
             this.btn_DangNhap.Size = new System.Drawing.Size(133, 38);
             this.btn_DangNhap.TabIndex = 18;
@@ -74,7 +75,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(332, 185);
+            this.label3.Location = new System.Drawing.Point(407, 212);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(79, 19);
             this.label3.TabIndex = 14;
@@ -84,7 +85,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(332, 276);
+            this.label2.Location = new System.Drawing.Point(407, 303);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(78, 19);
             this.label2.TabIndex = 15;
@@ -92,14 +93,14 @@
             // 
             // txt_TaiKhoan
             // 
-            this.txt_TaiKhoan.Location = new System.Drawing.Point(430, 185);
+            this.txt_TaiKhoan.Location = new System.Drawing.Point(505, 212);
             this.txt_TaiKhoan.Name = "txt_TaiKhoan";
             this.txt_TaiKhoan.Size = new System.Drawing.Size(198, 20);
             this.txt_TaiKhoan.TabIndex = 16;
             // 
             // txt_MatKhau
             // 
-            this.txt_MatKhau.Location = new System.Drawing.Point(430, 276);
+            this.txt_MatKhau.Location = new System.Drawing.Point(505, 303);
             this.txt_MatKhau.Name = "txt_MatKhau";
             this.txt_MatKhau.Size = new System.Drawing.Size(198, 20);
             this.txt_MatKhau.TabIndex = 17;
@@ -115,7 +116,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(330, 102);
+            this.label4.Location = new System.Drawing.Point(342, 102);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(325, 26);
             this.label4.TabIndex = 51;
@@ -269,9 +270,9 @@
             this.button6.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.Image = global::AppQuanLyQuanAn.Properties.Resources.Out;
             this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(793, 12);
+            this.button6.Location = new System.Drawing.Point(793, 6);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(41, 56);
+            this.button6.Size = new System.Drawing.Size(41, 65);
             this.button6.TabIndex = 7;
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
@@ -334,10 +335,9 @@
             this.btn_Zoom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Zoom.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Zoom.Image = ((System.Drawing.Image)(resources.GetObject("btn_Zoom.Image")));
-            this.btn_Zoom.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Zoom.Location = new System.Drawing.Point(740, 12);
+            this.btn_Zoom.Location = new System.Drawing.Point(726, 24);
             this.btn_Zoom.Name = "btn_Zoom";
-            this.btn_Zoom.Size = new System.Drawing.Size(47, 56);
+            this.btn_Zoom.Size = new System.Drawing.Size(61, 33);
             this.btn_Zoom.TabIndex = 12;
             this.btn_Zoom.UseVisualStyleBackColor = true;
             this.btn_Zoom.Click += new System.EventHandler(this.button17_Click);
@@ -363,14 +363,23 @@
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Image = global::AppQuanLyQuanAn.Properties.Resources.Update;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(687, 12);
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.Location = new System.Drawing.Point(678, 24);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(47, 56);
+            this.button2.Size = new System.Drawing.Size(42, 33);
             this.button2.TabIndex = 14;
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel1.BackgroundImage = global::AppQuanLyQuanAn.Properties.Resources.NhanVien;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panel1.Location = new System.Drawing.Point(197, 166);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(181, 211);
+            this.panel1.TabIndex = 52;
             // 
             // Home
             // 
@@ -378,6 +387,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(1000, 500);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.monthCalendar1);
             this.Controls.Add(this.txt_MatKhau);
@@ -427,6 +437,7 @@
         private System.Windows.Forms.Button btn_Zoom;
         private System.Windows.Forms.Panel HeaderPanel;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Panel panel1;
 
 
     }
