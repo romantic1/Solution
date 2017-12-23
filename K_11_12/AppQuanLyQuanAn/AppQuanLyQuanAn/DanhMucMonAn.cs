@@ -28,6 +28,7 @@ namespace AppQuanLyQuanAn
             LoadDanhSachMonAn();
             LoadlbDanhMucMonAn();
             MaTuTangMonAn();
+            MaTuTangDanhMuc();
 
         }
 
@@ -63,6 +64,7 @@ namespace AppQuanLyQuanAn
             LoadDanhSachMonAn();
             LoadlbDanhMucMonAn();
             MaTuTangMonAn();
+            MaTuTangDanhMuc();
             ClearScr();
         }
         private void dgvDanhSachMA_Click(object sender, EventArgs e)
@@ -82,6 +84,39 @@ namespace AppQuanLyQuanAn
             string sql = "select * from Mon_An ";
             dgvDanhSachMA.DataSource = kn.Select(CommandType.Text, sql);
 
+
+            kn.Disconnect();
+        }
+
+        private void MaTuTangDanhMuc()
+        {
+            kn.Connect();
+
+            string sql = "select * from Danh_Muc ";
+            
+            SqlCommand cmd = new SqlCommand(sql, kn.Connection);
+            cmd.CommandType = CommandType.Text;
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            string g = "";
+            if ((dt.Rows.Count <= 0))
+            {
+                g = "DM01";
+            }
+            else
+            {
+                int k;
+                g = "DM";
+                k = Convert.ToInt32(dt.Rows[dt.Rows.Count - 1][0].ToString().Substring(2, 2));
+                k = k + 1;
+                if (k <= 10)
+                {
+                    g = g + "0";
+                    g = g + k.ToString();
+                }
+                txtMaDM.Text = g;
+            }
 
             kn.Disconnect();
         }
@@ -125,8 +160,8 @@ namespace AppQuanLyQuanAn
 
             string sql = "select * from Danh_Muc";
             lbDanhMucMonAn.DataSource = kn.Select(CommandType.Text, sql);
-            lbDanhMucMonAn.DisplayMember = "Tên Danh Mục";
-            lbDanhMucMonAn.ValueMember = "Ten_DM"; // Them cot Loai Mon An
+            lbDanhMucMonAn.DisplayMember = "Ten_DM";
+            lbDanhMucMonAn.ValueMember = "Ma_DM"; // Them cot Loai Mon An
 
             kn.Disconnect();
         }
@@ -287,6 +322,7 @@ namespace AppQuanLyQuanAn
                 throw ex;
             }
             kn.Disconnect();
+            MaTuTangDanhMuc();
             ClearScr();
         }
         private void btnXoaDM_Click(object sender, EventArgs e)
@@ -296,16 +332,28 @@ namespace AppQuanLyQuanAn
             string sqldelete = "delete from Danh_Muc where Ma_DM = @MaDM ";
             try
             {
-                SqlCommand cmd;
-                cmd = new SqlCommand(sqldelete, kn.Connection);
-                cmd.CommandType = CommandType.Text;
-                cmd.Parameters.Add(new SqlParameter("MaDM", txtMaDM.Text));
-                cmd.Parameters.Add(new SqlParameter("TenDM", txtTenDM.Text));
+                if (txtMaDM.Text == "")
+                {
+                    MessageBox.Show("Bạn cần chọn một danh mục để xóa!", "Thông Báo");
+                    return;
+                }
+                else
+                { 
+                    if (MessageBox.Show("Bạn thực sự muốn xóa?","Xác Nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question)== DialogResult.Yes)
+                    {
+                    SqlCommand cmd;
+                    cmd = new SqlCommand(sqldelete, kn.Connection);
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Parameters.Add(new SqlParameter("MaDM", txtMaDM.Text));
+                    cmd.Parameters.Add(new SqlParameter("TenDM", txtTenDM.Text));
 
 
-                cmd.ExecuteNonQuery();
-
-
+                    cmd.ExecuteNonQuery();
+                    MaTuTangDanhMuc();
+                    }
+                    else 
+                    { return;}
+                }
             }
             catch (SqlException ex)
             {
@@ -314,14 +362,14 @@ namespace AppQuanLyQuanAn
 
             LoadlbDanhMucMonAn();
             ClearScr();
-
             kn.Disconnect();
         }  
         private void lbDanhMucMonAn_Click(object sender, EventArgs e)
         {
-          
-            txtMaDM.Text = "";
-            txtTenDM.Text = lbDanhMucMonAn.SelectedValue.ToString();
+            
+            txtMaDM.Text =  lbDanhMucMonAn.SelectedValue.ToString();
+            txtTenDM.Text = ""; 
+           
         }
         private void btnThemDM_Click(object sender, EventArgs e)
         {
@@ -329,6 +377,7 @@ namespace AppQuanLyQuanAn
             string sqladd = " insert into Danh_Muc values (@Ma_DM, @Ten_DM )";
             try
             {
+                
                 SqlCommand cmd;
                 cmd = new SqlCommand(sqladd, kn.Connection);
                 cmd.CommandType = CommandType.Text;
@@ -337,13 +386,15 @@ namespace AppQuanLyQuanAn
                 
 
                 cmd.ExecuteNonQuery();
+                MessageBox.Show("Thêm thành công!", "Thông Báo");
             }
             catch (SqlException ex)
             {
                 throw ex;
             }
              LoadlbDanhMucMonAn();
-
+             MaTuTangDanhMuc();
+             ClearScr();
             kn.Disconnect();
         }
         private void btnCapNhatDM_Click(object sender, EventArgs e)
@@ -353,20 +404,26 @@ namespace AppQuanLyQuanAn
             string sqledit = " update Danh_Muc SET Ma_DM = @MaDM, Ten_DM = @TenDM where Ma_DM = @MaDM ";
             try
             {
-                SqlCommand cmd;
-                cmd = new SqlCommand(sqledit, kn.Connection);
-                cmd.CommandType = CommandType.Text;
-                cmd.Parameters.Add(new SqlParameter("MaDM", txtMaDM.Text));
-                cmd.Parameters.Add(new SqlParameter("TenDM", txtTenDM.Text));
-                
-                cmd.ExecuteNonQuery();
+                if (MessageBox.Show("Bạn thực sự muốn sửa?", "Xác Nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    SqlCommand cmd;
+                    cmd = new SqlCommand(sqledit, kn.Connection);
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Parameters.Add(new SqlParameter("MaDM", txtMaDM.Text));
+                    cmd.Parameters.Add(new SqlParameter("TenDM", txtTenDM.Text));
+
+                    cmd.ExecuteNonQuery();
+                }
+                else
+                { return; }
             }
             catch (SqlException ex)
             {
                 throw ex;
             }
             LoadlbDanhMucMonAn();
-
+            MaTuTangDanhMuc();
+            ClearScr();
             kn.Disconnect();
         }       
     }
