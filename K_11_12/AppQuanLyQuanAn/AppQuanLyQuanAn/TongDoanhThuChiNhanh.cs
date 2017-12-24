@@ -17,7 +17,7 @@ namespace AppQuanLyQuanAn
         public TongDoanhThu_QuanLi()
         {
             InitializeComponent();
-            string Sqlconnection = "Data Source=DESKTOP-CSFRQ67\\SQLEXPRESS;Initial Catalog=QuanLiQuanAn;Integrated Security=True";
+            string Sqlconnection = "Data Source=.\\SQLEXPRESS;Initial Catalog=QuanLiQuanAn;Integrated Security=True";
             conn = new SqlConnection(Sqlconnection);
         }
 
@@ -55,7 +55,7 @@ namespace AppQuanLyQuanAn
         public static DataTable docDuLieu(String sql)
         {
             DataTable dt = new DataTable();
-            SqlDataAdapter adapter = new SqlDataAdapter(sql,"Data Source=DESKTOP-CSFRQ67\\SQLEXPRESS;Initial Catalog=QuanLiQuanAn;Integrated Security=True");
+            SqlDataAdapter adapter = new SqlDataAdapter(sql,"Data Source=.\\SQLEXPRESS;Initial Catalog=QuanLiQuanAn;Integrated Security=True");
             adapter.Fill(dt);
             return dt;
         }

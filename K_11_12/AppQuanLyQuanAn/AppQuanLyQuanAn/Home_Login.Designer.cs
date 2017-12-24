@@ -65,7 +65,7 @@
             this.btn_Close.Location = new System.Drawing.Point(842, 3);
             this.btn_Close.Name = "btn_Close";
             this.btn_Close.Size = new System.Drawing.Size(41, 56);
-            this.btn_Close.TabIndex = 7;
+            this.btn_Close.TabIndex = 0;
             this.btn_Close.UseVisualStyleBackColor = true;
             this.btn_Close.Click += new System.EventHandler(this.button6_Click);
             // 
@@ -79,7 +79,7 @@
             this.button7.Location = new System.Drawing.Point(100, 3);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(41, 56);
-            this.button7.TabIndex = 8;
+            this.button7.TabIndex = 4;
             this.button7.UseVisualStyleBackColor = true;
             // 
             // button8
@@ -92,7 +92,7 @@
             this.button8.Location = new System.Drawing.Point(53, 3);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(41, 56);
-            this.button8.TabIndex = 9;
+            this.button8.TabIndex = 5;
             this.button8.UseVisualStyleBackColor = true;
             // 
             // button9
@@ -105,7 +105,7 @@
             this.button9.Location = new System.Drawing.Point(6, 3);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(41, 56);
-            this.button9.TabIndex = 10;
+            this.button9.TabIndex = 6;
             this.button9.UseVisualStyleBackColor = true;
             // 
             // button10
@@ -118,7 +118,7 @@
             this.button10.Location = new System.Drawing.Point(147, 3);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(41, 56);
-            this.button10.TabIndex = 11;
+            this.button10.TabIndex = 3;
             this.button10.UseVisualStyleBackColor = true;
             // 
             // HeaderPanel
@@ -135,7 +135,7 @@
             this.HeaderPanel.Location = new System.Drawing.Point(154, 0);
             this.HeaderPanel.Name = "HeaderPanel";
             this.HeaderPanel.Size = new System.Drawing.Size(886, 78);
-            this.HeaderPanel.TabIndex = 43;
+            this.HeaderPanel.TabIndex = 0;
             // 
             // button2
             // 
@@ -146,7 +146,7 @@
             this.button2.Location = new System.Drawing.Point(718, 15);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(42, 33);
-            this.button2.TabIndex = 50;
+            this.button2.TabIndex = 2;
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -159,7 +159,7 @@
             this.btn_Zoom.Location = new System.Drawing.Point(775, 15);
             this.btn_Zoom.Name = "btn_Zoom";
             this.btn_Zoom.Size = new System.Drawing.Size(61, 33);
-            this.btn_Zoom.TabIndex = 49;
+            this.btn_Zoom.TabIndex = 1;
             this.btn_Zoom.UseVisualStyleBackColor = true;
             this.btn_Zoom.Click += new System.EventHandler(this.btn_Zoom_Click);
             // 
@@ -174,7 +174,7 @@
             this.btHome.Location = new System.Drawing.Point(0, 88);
             this.btHome.Name = "btHome";
             this.btHome.Size = new System.Drawing.Size(154, 65);
-            this.btHome.TabIndex = 1;
+            this.btHome.TabIndex = 0;
             this.btHome.Text = "     Màn Hình Chính";
             this.btHome.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btHome.UseVisualStyleBackColor = true;
@@ -191,7 +191,7 @@
             this.btn_QuanLy.Location = new System.Drawing.Point(0, 147);
             this.btn_QuanLy.Name = "btn_QuanLy";
             this.btn_QuanLy.Size = new System.Drawing.Size(154, 65);
-            this.btn_QuanLy.TabIndex = 2;
+            this.btn_QuanLy.TabIndex = 1;
             this.btn_QuanLy.Text = "Quản Lý";
             this.btn_QuanLy.UseVisualStyleBackColor = true;
             this.btn_QuanLy.Click += new System.EventHandler(this.btQuanLy_Click);
@@ -207,7 +207,7 @@
             this.btn_ChiNhanh.Location = new System.Drawing.Point(0, 208);
             this.btn_ChiNhanh.Name = "btn_ChiNhanh";
             this.btn_ChiNhanh.Size = new System.Drawing.Size(154, 65);
-            this.btn_ChiNhanh.TabIndex = 3;
+            this.btn_ChiNhanh.TabIndex = 2;
             this.btn_ChiNhanh.Text = "Chi Nhánh";
             this.btn_ChiNhanh.UseVisualStyleBackColor = true;
             this.btn_ChiNhanh.Click += new System.EventHandler(this.btChiNhanh_Click);
@@ -223,7 +223,7 @@
             this.btn_TongDai.Location = new System.Drawing.Point(0, 269);
             this.btn_TongDai.Name = "btn_TongDai";
             this.btn_TongDai.Size = new System.Drawing.Size(154, 65);
-            this.btn_TongDai.TabIndex = 4;
+            this.btn_TongDai.TabIndex = 3;
             this.btn_TongDai.Text = " Tổng Đài";
             this.btn_TongDai.UseVisualStyleBackColor = true;
             this.btn_TongDai.Click += new System.EventHandler(this.btTongDai_Click);
@@ -239,7 +239,7 @@
             this.btn_DangXuat.Location = new System.Drawing.Point(0, 330);
             this.btn_DangXuat.Name = "btn_DangXuat";
             this.btn_DangXuat.Size = new System.Drawing.Size(154, 65);
-            this.btn_DangXuat.TabIndex = 5;
+            this.btn_DangXuat.TabIndex = 4;
             this.btn_DangXuat.Text = "  Đăng Xuất";
             this.btn_DangXuat.UseVisualStyleBackColor = true;
             this.btn_DangXuat.Click += new System.EventHandler(this.btDangXuat_Click);
@@ -255,7 +255,7 @@
             this.button5.Location = new System.Drawing.Point(0, 391);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(154, 65);
-            this.button5.TabIndex = 6;
+            this.button5.TabIndex = 5;
             this.button5.Text = "Thoát";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
@@ -306,7 +306,7 @@
             this.manHinhChinh1.Location = new System.Drawing.Point(154, 78);
             this.manHinhChinh1.Name = "manHinhChinh1";
             this.manHinhChinh1.Size = new System.Drawing.Size(886, 462);
-            this.manHinhChinh1.TabIndex = 48;
+            this.manHinhChinh1.TabIndex = 4;
             // 
             // quanLyControl1
             // 
@@ -314,7 +314,7 @@
             this.quanLyControl1.Location = new System.Drawing.Point(154, 78);
             this.quanLyControl1.Name = "quanLyControl1";
             this.quanLyControl1.Size = new System.Drawing.Size(886, 462);
-            this.quanLyControl1.TabIndex = 47;
+            this.quanLyControl1.TabIndex = 3;
             // 
             // chiTietChiNhanh1
             // 
@@ -322,7 +322,7 @@
             this.chiTietChiNhanh1.Location = new System.Drawing.Point(154, 78);
             this.chiTietChiNhanh1.Name = "chiTietChiNhanh1";
             this.chiTietChiNhanh1.Size = new System.Drawing.Size(886, 462);
-            this.chiTietChiNhanh1.TabIndex = 46;
+            this.chiTietChiNhanh1.TabIndex = 4;
             // 
             // tongDaiControl1
             // 
@@ -330,7 +330,7 @@
             this.tongDaiControl1.Location = new System.Drawing.Point(154, 78);
             this.tongDaiControl1.Name = "tongDaiControl1";
             this.tongDaiControl1.Size = new System.Drawing.Size(886, 462);
-            this.tongDaiControl1.TabIndex = 45;
+            this.tongDaiControl1.TabIndex = 0;
             // 
             // Home_Login
             // 

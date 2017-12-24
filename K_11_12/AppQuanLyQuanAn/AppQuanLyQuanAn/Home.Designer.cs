@@ -66,7 +66,7 @@
             this.btn_DangNhap.Location = new System.Drawing.Point(505, 370);
             this.btn_DangNhap.Name = "btn_DangNhap";
             this.btn_DangNhap.Size = new System.Drawing.Size(133, 38);
-            this.btn_DangNhap.TabIndex = 18;
+            this.btn_DangNhap.TabIndex = 9;
             this.btn_DangNhap.Text = "Đăng Nhập";
             this.btn_DangNhap.UseVisualStyleBackColor = false;
             this.btn_DangNhap.Click += new System.EventHandler(this.btn_DangNhap_Click);
@@ -78,7 +78,7 @@
             this.label3.Location = new System.Drawing.Point(407, 212);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(79, 19);
-            this.label3.TabIndex = 14;
+            this.label3.TabIndex = 6;
             this.label3.Text = "Tài Khoản";
             // 
             // label2
@@ -88,7 +88,7 @@
             this.label2.Location = new System.Drawing.Point(407, 303);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(78, 19);
-            this.label2.TabIndex = 15;
+            this.label2.TabIndex = 8;
             this.label2.Text = "Mật Khẩu";
             // 
             // txt_TaiKhoan
@@ -96,21 +96,23 @@
             this.txt_TaiKhoan.Location = new System.Drawing.Point(505, 212);
             this.txt_TaiKhoan.Name = "txt_TaiKhoan";
             this.txt_TaiKhoan.Size = new System.Drawing.Size(198, 20);
-            this.txt_TaiKhoan.TabIndex = 16;
+            this.txt_TaiKhoan.TabIndex = 5;
+            this.txt_TaiKhoan.Text = "admin";
             // 
             // txt_MatKhau
             // 
             this.txt_MatKhau.Location = new System.Drawing.Point(505, 303);
             this.txt_MatKhau.Name = "txt_MatKhau";
             this.txt_MatKhau.Size = new System.Drawing.Size(198, 20);
-            this.txt_MatKhau.TabIndex = 17;
+            this.txt_MatKhau.TabIndex = 7;
+            this.txt_MatKhau.Text = "xuan123";
             this.txt_MatKhau.UseSystemPasswordChar = true;
             // 
             // monthCalendar1
             // 
             this.monthCalendar1.Location = new System.Drawing.Point(761, 92);
             this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 50;
+            this.monthCalendar1.TabIndex = 3;
             // 
             // label4
             // 
@@ -119,7 +121,7 @@
             this.label4.Location = new System.Drawing.Point(342, 102);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(325, 26);
-            this.label4.TabIndex = 51;
+            this.label4.TabIndex = 2;
             this.label4.Text = "Phần Mềm Quản Lí Bán Hàng";
             // 
             // btHome
@@ -134,7 +136,7 @@
             this.btHome.Location = new System.Drawing.Point(0, 86);
             this.btHome.Name = "btHome";
             this.btHome.Size = new System.Drawing.Size(154, 65);
-            this.btHome.TabIndex = 1;
+            this.btHome.TabIndex = 0;
             this.btHome.Text = "     Màn Hình Chính";
             this.btHome.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btHome.UseVisualStyleBackColor = true;
@@ -152,7 +154,7 @@
             this.btQuanLy.Location = new System.Drawing.Point(0, 147);
             this.btQuanLy.Name = "btQuanLy";
             this.btQuanLy.Size = new System.Drawing.Size(154, 65);
-            this.btQuanLy.TabIndex = 2;
+            this.btQuanLy.TabIndex = 1;
             this.btQuanLy.Text = "Quản Lý";
             this.btQuanLy.UseVisualStyleBackColor = true;
             // 
@@ -169,7 +171,7 @@
             this.btChiNhanh.Location = new System.Drawing.Point(0, 208);
             this.btChiNhanh.Name = "btChiNhanh";
             this.btChiNhanh.Size = new System.Drawing.Size(154, 65);
-            this.btChiNhanh.TabIndex = 3;
+            this.btChiNhanh.TabIndex = 2;
             this.btChiNhanh.Text = "Chi Nhánh";
             this.btChiNhanh.UseVisualStyleBackColor = true;
             // 
@@ -186,7 +188,7 @@
             this.btTongDai.Location = new System.Drawing.Point(0, 269);
             this.btTongDai.Name = "btTongDai";
             this.btTongDai.Size = new System.Drawing.Size(154, 65);
-            this.btTongDai.TabIndex = 4;
+            this.btTongDai.TabIndex = 3;
             this.btTongDai.Text = " Tổng Đài";
             this.btTongDai.UseVisualStyleBackColor = true;
             // 
@@ -218,7 +220,7 @@
             this.button5.Location = new System.Drawing.Point(0, 391);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(154, 65);
-            this.button5.TabIndex = 6;
+            this.button5.TabIndex = 5;
             this.button5.Text = "Thoát";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
@@ -236,7 +238,7 @@
             this.btDangXuat.Location = new System.Drawing.Point(0, 330);
             this.btDangXuat.Name = "btDangXuat";
             this.btDangXuat.Size = new System.Drawing.Size(154, 65);
-            this.btDangXuat.TabIndex = 5;
+            this.btDangXuat.TabIndex = 4;
             this.btDangXuat.Text = "  Đăng Xuất";
             this.btDangXuat.UseVisualStyleBackColor = true;
             // 
@@ -273,7 +275,7 @@
             this.button6.Location = new System.Drawing.Point(793, 6);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(41, 65);
-            this.button6.TabIndex = 7;
+            this.button6.TabIndex = 0;
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
@@ -287,7 +289,7 @@
             this.button7.Location = new System.Drawing.Point(112, 12);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(41, 56);
-            this.button7.TabIndex = 8;
+            this.button7.TabIndex = 4;
             this.button7.UseVisualStyleBackColor = true;
             // 
             // button8
@@ -300,7 +302,7 @@
             this.button8.Location = new System.Drawing.Point(65, 12);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(41, 56);
-            this.button8.TabIndex = 9;
+            this.button8.TabIndex = 5;
             this.button8.UseVisualStyleBackColor = true;
             // 
             // button9
@@ -313,7 +315,7 @@
             this.button9.Location = new System.Drawing.Point(18, 12);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(41, 56);
-            this.button9.TabIndex = 10;
+            this.button9.TabIndex = 6;
             this.button9.UseVisualStyleBackColor = true;
             // 
             // button10
@@ -326,7 +328,7 @@
             this.button10.Location = new System.Drawing.Point(159, 12);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(41, 56);
-            this.button10.TabIndex = 11;
+            this.button10.TabIndex = 3;
             this.button10.UseVisualStyleBackColor = true;
             // 
             // btn_Zoom
@@ -338,7 +340,7 @@
             this.btn_Zoom.Location = new System.Drawing.Point(726, 24);
             this.btn_Zoom.Name = "btn_Zoom";
             this.btn_Zoom.Size = new System.Drawing.Size(61, 33);
-            this.btn_Zoom.TabIndex = 12;
+            this.btn_Zoom.TabIndex = 1;
             this.btn_Zoom.UseVisualStyleBackColor = true;
             this.btn_Zoom.Click += new System.EventHandler(this.button17_Click);
             // 
@@ -356,7 +358,7 @@
             this.HeaderPanel.Location = new System.Drawing.Point(154, 0);
             this.HeaderPanel.Name = "HeaderPanel";
             this.HeaderPanel.Size = new System.Drawing.Size(846, 80);
-            this.HeaderPanel.TabIndex = 49;
+            this.HeaderPanel.TabIndex = 1;
             // 
             // button2
             // 
@@ -367,7 +369,7 @@
             this.button2.Location = new System.Drawing.Point(678, 24);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(42, 33);
-            this.button2.TabIndex = 14;
+            this.button2.TabIndex = 2;
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -379,7 +381,7 @@
             this.panel1.Location = new System.Drawing.Point(197, 166);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(181, 211);
-            this.panel1.TabIndex = 52;
+            this.panel1.TabIndex = 4;
             // 
             // Home
             // 

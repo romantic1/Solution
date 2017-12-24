@@ -48,7 +48,7 @@
             // 
             this.monthCalendar1.Location = new System.Drawing.Point(650, 9);
             this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 3;
+            this.monthCalendar1.TabIndex = 0;
             // 
             // label2
             // 
@@ -57,7 +57,7 @@
             this.label2.Location = new System.Drawing.Point(207, 25);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(325, 26);
-            this.label2.TabIndex = 5;
+            this.label2.TabIndex = 1;
             this.label2.Text = "Phần Mềm Quản Lí Bán Hàng";
             // 
             // label1
@@ -67,7 +67,7 @@
             this.label1.Location = new System.Drawing.Point(138, 104);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(53, 17);
-            this.label1.TabIndex = 5;
+            this.label1.TabIndex = 3;
             this.label1.Text = "Họ Tên";
             // 
             // label3
@@ -87,7 +87,7 @@
             this.label4.Location = new System.Drawing.Point(138, 226);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(124, 17);
-            this.label4.TabIndex = 5;
+            this.label4.TabIndex = 7;
             this.label4.Text = "Bộ Phận Phụ Trách";
             // 
             // label5
@@ -97,7 +97,7 @@
             this.label5.Location = new System.Drawing.Point(138, 288);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(92, 17);
-            this.label5.TabIndex = 5;
+            this.label5.TabIndex = 9;
             this.label5.Text = "Số Điện Thoại";
             // 
             // txt_HoTen
@@ -105,14 +105,14 @@
             this.txt_HoTen.Location = new System.Drawing.Point(283, 104);
             this.txt_HoTen.Name = "txt_HoTen";
             this.txt_HoTen.Size = new System.Drawing.Size(222, 20);
-            this.txt_HoTen.TabIndex = 6;
+            this.txt_HoTen.TabIndex = 2;
             // 
             // txt_TaiKhoan
             // 
             this.txt_TaiKhoan.Location = new System.Drawing.Point(283, 162);
             this.txt_TaiKhoan.Name = "txt_TaiKhoan";
             this.txt_TaiKhoan.Size = new System.Drawing.Size(222, 20);
-            this.txt_TaiKhoan.TabIndex = 6;
+            this.txt_TaiKhoan.TabIndex = 4;
             // 
             // txt_BoPhan
             // 
@@ -126,7 +126,7 @@
             this.txt_NgaySinh.Location = new System.Drawing.Point(283, 288);
             this.txt_NgaySinh.Name = "txt_NgaySinh";
             this.txt_NgaySinh.Size = new System.Drawing.Size(222, 20);
-            this.txt_NgaySinh.TabIndex = 6;
+            this.txt_NgaySinh.TabIndex = 8;
             // 
             // label6
             // 
@@ -135,7 +135,7 @@
             this.label6.Location = new System.Drawing.Point(138, 348);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(53, 17);
-            this.label6.TabIndex = 5;
+            this.label6.TabIndex = 11;
             this.label6.Text = "Địa Chỉ";
             // 
             // txt_DiaChi
@@ -143,7 +143,7 @@
             this.txt_DiaChi.Location = new System.Drawing.Point(283, 348);
             this.txt_DiaChi.Name = "txt_DiaChi";
             this.txt_DiaChi.Size = new System.Drawing.Size(222, 20);
-            this.txt_DiaChi.TabIndex = 6;
+            this.txt_DiaChi.TabIndex = 10;
             // 
             // label7
             // 
@@ -152,7 +152,7 @@
             this.label7.Location = new System.Drawing.Point(138, 405);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(56, 17);
-            this.label7.TabIndex = 5;
+            this.label7.TabIndex = 13;
             this.label7.Text = "Ca Làm";
             // 
             // txt_CaLam
@@ -160,7 +160,7 @@
             this.txt_CaLam.Location = new System.Drawing.Point(282, 405);
             this.txt_CaLam.Name = "txt_CaLam";
             this.txt_CaLam.Size = new System.Drawing.Size(222, 20);
-            this.txt_CaLam.TabIndex = 6;
+            this.txt_CaLam.TabIndex = 12;
             // 
             // ManHinhChinh
             // 

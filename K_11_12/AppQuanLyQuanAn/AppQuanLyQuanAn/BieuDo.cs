@@ -17,7 +17,7 @@ namespace AppQuanLyQuanAn
         public BieuDo()
         {
             InitializeComponent();
-            string Sqlconnection = "Data Source=DESKTOP-CSFRQ67\\SQLEXPRESS;Initial Catalog=QuanLiQuanAn;Integrated Security=True";
+            string Sqlconnection = "Data Source=.\\SQLEXPRESS;Initial Catalog=QuanLiQuanAn;Integrated Security=True";
             conn = new SqlConnection(Sqlconnection);
         }
 
