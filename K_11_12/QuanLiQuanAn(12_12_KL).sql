@@ -193,15 +193,22 @@ CREATE TABLE Tong_Dai
 )
 
 CREATE TABLE Don_Hang_Tong_Dai(
-	Ma_DHTD char(15),
+	Ma_DHTD int ,
 	Ten_DH nvarchar(50),
-	Ma_KH char(15),
+	sdtKH char(15),
+	dcKH char(100),
 	Ten_CN nvarchar(50),
-	TrangThai nvarchar(15),
+	TrangThai nvarchar(100),
 	KhuyenMai nvarchar(15),
-	NhanVien nvarchar(20),
+	NhanVien nvarchar(50),
 	ThoiGian datetime,
 	TongTien float,
+)
+CREATE TABLE Chi_Tiet_Don_Hang_DT
+(	id int IDENTITY(1,1),
+	Ma_DHTD char(10),
+	Ma_MA char(10)
+	PRIMARY KEY(id)
 )
 
 CREATE TABLE DoanhThuTungChiNhanh(
@@ -238,7 +245,19 @@ InSert into Danh_Muc values('DM06',N'Cháo')
 InSert into Danh_Muc values('DM07',N'Hải Sản')
 InSert into Danh_Muc values('DM08',N'Gà')
 InSert into Danh_Muc values('DM09',N'Dê')
+--Chi_Tiet_Danh_Muc
+InSert into Chi_Tiet_Danh_Muc values('DM01','MA01')
+InSert into Chi_Tiet_Danh_Muc values('DM01','MA10')
+InSert into Chi_Tiet_Danh_Muc values('DM01','MA08')
+InSert into Chi_Tiet_Danh_Muc values('DM08','MA02')
+InSert into Chi_Tiet_Danh_Muc values('DM08','MA06')
+InSert into Chi_Tiet_Danh_Muc values('DM02','MA04')
+InSert into Chi_Tiet_Danh_Muc values('DM02','MA09')
+InSert into Chi_Tiet_Danh_Muc values('DM09','MA03')
+InSert into Chi_Tiet_Danh_Muc values('DM09','MA07')
+--Don_Hang_Tong_Dai
 
+InSert into Don_Hang_Tong_Dai values('1','','','','','','','','','')
 --Nhan Vien
 Insert into Nhan_Vien values('NV01','ADMIN','Xuan123',N'Nguyễn Thị Kiều Xuân','365423269','09094236541',N'Nhà Hàng Quận 1','123',N'Giám Đốc','','20121220','')
 Insert into Nhan_Vien values('NV02','TKNV2','Phuc123',N'Nguyễn Xuân Phúc','365423245','09094236524',N'Nhà Hàng Quận 3','123',N'Bán Hàng',N'Tốt','20121222','15000')
