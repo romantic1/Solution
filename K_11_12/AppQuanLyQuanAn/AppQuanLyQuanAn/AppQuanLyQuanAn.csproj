@@ -193,6 +193,12 @@
     <Compile Include="ThemMonAn.Designer.cs">
       <DependentUpon>ThemMonAn.cs</DependentUpon>
     </Compile>
+    <Compile Include="themmonantongdai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="themmonantongdai.Designer.cs">
+      <DependentUpon>themmonantongdai.cs</DependentUpon>
+    </Compile>
     <Compile Include="ThongTinBan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -292,6 +298,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ThemMonAn.resx">
       <DependentUpon>ThemMonAn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="themmonantongdai.resx">
+      <DependentUpon>themmonantongdai.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ThongTinBan.resx">
       <DependentUpon>ThongTinBan.cs</DependentUpon>
