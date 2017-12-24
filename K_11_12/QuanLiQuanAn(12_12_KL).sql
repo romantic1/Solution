@@ -143,7 +143,7 @@ CREATE TABLE Don_Hang
 (
 	Ma_DH char(15),
 	MA_KH char(15),
-	Ma_CN nvarchar(50),
+	Ten_CN nvarchar(50),
 	SoLuong int,
 	NgayDat datetime,
 	NgayGiao datetime,
@@ -213,81 +213,46 @@ GO
 ---------------------------------------------------------------------------------------------------------------------------------
 
 --Chi Nhanh
-InSert into Chi_Nhanh values('CN01',N'Bánh Gạo Cay Giòn','26265656',N'Đường D1',N'Quận 1',N'Hoạt động bình thường','20101010','40','MA1-5-6-8-1-3')
-InSert into Chi_Nhanh values('CN02',N'Bánh Chuối Tươi','26265656',N'Đường D2',N'Quận 2',N'Hoạt động bình thường','20101020','50','MA1-2-6-8-1-3')
-InSert into Chi_Nhanh values('CN03',N'Bánh Gạo Dừa','26265656',N'Đường D3',N'Quận 3',N'Hoạt động bình thường','20101020','50','MA1-3-6-8-1')
-InSert into Chi_Nhanh values('CN04',N'Bánh Sừng Trâu','26265656',N'Đường D4',N'Quận 4',N'Hoạt động bình thường','20101020','50','MA1-4-6-8-1-3')
-InSert into Chi_Nhanh values('CN05',N'Bánh Trôi Nước','26265656',N'Đường D5',N'Quận 5',N'Hoạt động bình thường','20101020','50','MA1-5-6-8-1-3')
-InSert into Chi_Nhanh values('CN06',N'Bánh Xèo Lá','26265656',N'Đường D6',N'Quận 6',N'Hoạt động bình thường','20101020','50','MA1-6-8-1-3')
+InSert into Chi_Nhanh values('CN01',N'Nhà Hàng Quận 1','09094623571',N'Số 315 Nguyễn Chí Thanh',N'Quận 1',N'Hoạt động bình thường','20120510','40','MA1-5-6-8-1-3')
+InSert into Chi_Nhanh values('CN02',N'Nhà Hàng Quận 3','09094623525',N'Số 125 Nguyễn Đình Chiểu',N'Quận 3',N'Tạm dừng bảo dưỡng','20101020','50','MA1-2-6-8-1-3')
+InSert into Chi_Nhanh values('CN03',N'Nhà Hàng Quận 5','09094623534',N'Số 110 Nguyễn Trãi',N'Quận 5',N'Hoạt động bình thường','20110620','50','MA1-3-6-8-1')
 
 --Mon An
-InSert into Mon_An values('MA01',N'Cơm Chiên','20000',N'Món truyền thống','Cơm')
-InSert into Mon_An values('MA06',N'Cơm Cuộn','20000',N'Món truyền thống','Gà')
-InSert into Mon_An values('MA03',N'Cơm Thái','20000',N'Món truyền thống','Dê')
-InSert into Mon_An values('MA04',N'Cơm SuSi','20000',N'Món truyền thống','Heo')
+InSert into Mon_An values('MA01',N'Lẩu Bò','150000','',N'Bò')
+InSert into Mon_An values('MA02',N'Gà Xả Ớt','110000','',N'Gà')
+InSert into Mon_An values('MA03',N'Dê Hấp','120000','',N'Dê')
+InSert into Mon_An values('MA04',N'Heo Quay Lu','140000','',N'Lợn')
+InSert into Mon_An values('MA05',N'Bành Mì Cà Ri','160000','',N'Gà')
+InSert into Mon_An values('MA06',N'Gà Ta Luột','130000','',N'Gà')
+InSert into Mon_An values('MA07',N'Dê Nướng Trong Gừng','120000','',N'Dê')
+InSert into Mon_An values('MA08',N'Bò Xiên Nướng','120000','',N'Bò')
+InSert into Mon_An values('MA09',N'Sườn Lợn Suốt','140000','',N'Lợn')
+InSert into Mon_An values('MA010',N'Bò Muối Chua Ngọt','160000','',N'Bò')
+
 
 --Nhan Vien
-
-Insert into Nhan_Vien values('NV01','123','123',N'Nguyễn Văn A','100','626262','','123',N'Giám Đốc','123','20100225','')
-
+Insert into Nhan_Vien values('NV01','ADMIN','Xuan123',N'Nguyễn Thị Kiều Xuân','365423269','09094236541',N'Nhà Hàng Quận 1','123',N'Giám Đốc','','20121220','')
+Insert into Nhan_Vien values('NV02','TKNV2','Phuc123',N'Nguyễn Xuân Phúc','365423245','09094236524',N'Nhà Hàng Quận 3','123',N'Bán Hàng',N'Tốt','20121222','15000')
+Insert into Nhan_Vien values('NV03','TKNV3','HuongT123',N'Tô Thị Cẩm Hương','365423237','09094236513',N'Nhà Hàng Quận 5','123',N'Tổng Đài',N'Tốt','20121225','15000')
 
 --Khach Hang
-Insert into Khach_Hang values('KH01','TK01','123',N'Nguyễn Văn A','','20100320',N'Đường C','55656')
+Insert into Khach_Hang values('KH01','TKKH01','Xuan123',N'Nguyễn Xuân',N'Nhà Hàng Quận 3','19900212',N'Số 112 Điện Biên Phủ','0909236545')
+Insert into Khach_Hang values('KH02','TKKH02','Tai123',N'Phan Văn Tài',N'Nhà Hàng Quận 5','19910321',N'Số 110 Bùi Viện','0909236547')
+Insert into Khach_Hang values('KH03','TKKH03','Hong123',N'Trịnh Thị Hồng',N'Nhà Hàng Quận 1','19920412',N'45 Tô Ngọc Vân','0909236531')
+Insert into Khach_Hang values('KH04','TKKH04','A123',N'Trịnh Văn A',N'Nhà Hàng Quận 1','19920412',N'45 Tô Ngọc Vân','0909236531')
+Insert into Khach_Hang values('KH05','TKKH05','B123',N'Trịnh Xuân B',N'Nhà Hàng Quận 1','19920412',N'45 Tô Ngọc Vân','0909236531')
 
 --Don Hang Chi Nhanh
-
-Insert into Don_Hang_Chi_Nhanh values('DHCN01',N'Bàn Số 12','',N'Bánh Gạo Cay Giòn','','','','20120320','2000')
-Insert into Don_Hang_Chi_Nhanh values('DHCN02',N'Bàn Số 12','',N'Bánh Chuối Tươi','','','','20120320','3000')
-Insert into Don_Hang_Chi_Nhanh values('DHCN03',N'Bàn Số 12','',N'Bánh Gạo Dừa','','','','20120320','4000')
-Insert into Don_Hang_Chi_Nhanh values('DHCN04',N'Bàn Số 12','',N'Bánh Xèo Lá','','','','20120320','5000')
-Insert into Don_Hang_Chi_Nhanh values('DHCN05',N'Bàn Số 12','',N'Bánh Xèo Lá','','','','20120320','6000')
-
+Insert into Don_Hang_Chi_Nhanh values('DHCN01',N'Bàn Số 5','KH02',N'Nhà Hàng Quận 3',N'Chưa Thanh Toán',N'Không','NV02','20120320','200000')
+Insert into Don_Hang_Chi_Nhanh values('DHCN02',N'Bàn Số 15','KH03',N'Nhà Hàng Quận 1',N'Đã Thanh Toán',N'Có','NV02','20120320','300000')
+Insert into Don_Hang_Chi_Nhanh values('DHCN03',N'Bàn Số 11','KH01',N'Nhà Hàng Quận 5',N'Chưa Thanh Toán',N'Có','NV02','20120320','400000')
 
 --Don Hang
-Insert into Don_Hang values('DH01','','','','','','','','')
+Insert into Don_Hang values('DH01','KH01',N'Nhà Hàng Quận 1','10','20171112','20171113',N'Không','15000',N'Đã Hoàn Thành')
+Insert into Don_Hang values('DH02','KH02',N'Nhà Hàng Quận 3','7','20171112','20171113',N'Không','25000',N'Đã Hoàn Thành')
+Insert into Don_Hang values('DH03','KH03',N'Nhà Hàng Quận 5','9','20171112','20171113',N'Không','20000',N'Chưa Hoàn Thành')
 
 --Thong Tin Ban
-Insert into ThongTinBan values('B01','','','','','')
-
-Delete Nhan_Vien Where Ma_NV = 'NV01'
-
-TRUNCATE TABLE Nhan_Vien
-
-Select * from Khach_Hang
-
-Select * from Nhan_Vien
-
-Select * from Mon_An
-
-Select * from Chi_Nhanh
-
-Select * from Don_Hang_Chi_Nhanh
-
-TRUNCATE TABLE Don_Hang_Chi_Nhanh
-
-TRUNCATE TABLE Khach_Hang
-
-Delete from Mon_An Where Ten_MA = 'Cơm Chiên'
-
-TRUNCATE TABLE Chi_Nhanh
-
-TRUNCATE TABLE Don_Hang_Chi_Nhanh
-
-Select sum(TongTien) as TongTien from Don_Hang_Chi_Nhanh Where Ten_CN = N'Bánh Xèo Lá'
-
-Select * from DoanhThuTungChiNhanh
-
-TRUNCATE TABLE DoanhThuTungChiNhanh
-
-Insert into DoanhThuTungChiNhanh values((Select Ten_CN from Don_Hang_Chi_Nhanh),(Select sum(TongTien) from Don_Hang_Chi_Nhanh Where Ten_CN = N'Bánh Xèo Lá' ))
-Select * from Khach_Hang
-Select Ten_CN,COUNT(Ten_CN) AS SoLuongKhach from Khach_Hang Group by Ten_CN
-
-Select Ten_CN,Sum(TongTien) AS DoanhThuChiNhanh from Don_Hang_Chi_Nhanh Group by Ten_CN
-
-Select Sum((Select Sum(TongTien) AS DoanhThuChiNhanh from Don_Hang_Chi_Nhanh Group by Ten_CN))
-
-Select * from Don_Hang_Chi_Nhanh
-
-Select Sum((Select Ten_CN,Sum(TongTien) from Don_Hang_Chi_Nhanh Group by Ten_CN))
-
+Insert into ThongTinBan values('B01',N'Bàn 2 Người','2',N'Còn Trống',N'Nhà Hàng Quận 3','')
+Insert into ThongTinBan values('B02',N'Bàn 4 Người','3',N'Đang Hoạt Động',N'Nhà Hàng Quận 3','KH02')
+Insert into ThongTinBan values('B03',N'Bàn 8 Người','7',N'Đặt Trước',N'Nhà Hàng Quận 3','KH02')

@@ -169,7 +169,7 @@
             this.cbb_TinhTrang.FormattingEnabled = true;
             this.cbb_TinhTrang.Items.AddRange(new object[] {
             "Hoạt động bình thường",
-            "Tạm dừng hoạt động"});
+            "Tạm dừng bảo dưỡng"});
             this.cbb_TinhTrang.Location = new System.Drawing.Point(398, 83);
             this.cbb_TinhTrang.Name = "cbb_TinhTrang";
             this.cbb_TinhTrang.Size = new System.Drawing.Size(131, 22);
