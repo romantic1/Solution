@@ -36,6 +36,7 @@ namespace AppQuanLyQuanAn
         int index;
 
 //Hien Thi Man Hinh
+         
         private void ClearScr()
         {
             
@@ -102,7 +103,7 @@ namespace AppQuanLyQuanAn
             string g = "";
             if ((dt.Rows.Count <= 0))
             {
-                g = "DM01";
+                txtMaDM.Text = "DM01";
             }
             else
             {
@@ -262,7 +263,7 @@ namespace AppQuanLyQuanAn
             string sqldelete = "delete from Mon_An where Ma_MA = @Ma_MA ";
             try
             {
-                if (txtMaMA.Text == "" || txtTenMA.Text == "" || txtGia.Text == "" || cbDanhMucMA.Text == "")
+                if (txtMaMA.Text == "" || txtTenMA.Text == ""  || cbDanhMucMA.Text == "")
                 {
                     MessageBox.Show("Bạn cần chọn một món ăn cần xóa!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.None);
                 }
@@ -377,16 +378,22 @@ namespace AppQuanLyQuanAn
             string sqladd = " insert into Danh_Muc values (@Ma_DM, @Ten_DM )";
             try
             {
-                
-                SqlCommand cmd;
-                cmd = new SqlCommand(sqladd, kn.Connection);
-                cmd.CommandType = CommandType.Text;
-                cmd.Parameters.Add(new SqlParameter("Ma_DM", txtMaDM.Text));
-                cmd.Parameters.Add(new SqlParameter("Ten_DM", txtTenDM.Text));
-                
+                if (txtTenDM.Text == "")
+                {
+                    MessageBox.Show("Bạn cần nhập tên danh mục!", "Thông Báo");
+                }
+                else
+                {
+                    SqlCommand cmd;
+                    cmd = new SqlCommand(sqladd, kn.Connection);
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Parameters.Add(new SqlParameter("Ma_DM", txtMaDM.Text));
+                    cmd.Parameters.Add(new SqlParameter("Ten_DM", txtTenDM.Text));
 
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Thêm thành công!", "Thông Báo");
+
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Thêm thành công!", "Thông Báo");
+                }
             }
             catch (SqlException ex)
             {

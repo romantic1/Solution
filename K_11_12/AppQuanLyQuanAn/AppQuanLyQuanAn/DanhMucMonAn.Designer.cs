@@ -271,11 +271,15 @@
             this.cbDanhMucMA.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.cbDanhMucMA.FormattingEnabled = true;
             this.cbDanhMucMA.Items.AddRange(new object[] {
-            "Món Lẩu",
+            "Bò",
+            "Lợn",
+            "Lẩu",
             "Cơm",
-            "Món Chay",
-            "Món Tráng Miệng",
-            "Bún - Phở"});
+            "Bún - Phở",
+            "Cháo",
+            "Hải Sản",
+            "Gà",
+            "Dê"});
             this.cbDanhMucMA.Location = new System.Drawing.Point(126, 171);
             this.cbDanhMucMA.Name = "cbDanhMucMA";
             this.cbDanhMucMA.Size = new System.Drawing.Size(265, 22);

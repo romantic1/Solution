@@ -12,7 +12,7 @@ GO
 CREATE TABLE Danh_Muc
 (
 	Ma_DM char(10),
-	Ten_DM varchar(10),	
+	Ten_DM nvarchar(20),	
 	PRIMARY KEY(Ma_DM)
 )
 
@@ -228,7 +228,16 @@ InSert into Mon_An values('MA07',N'Dê Nướng Trong Gừng','120000','',N'Dê'
 InSert into Mon_An values('MA08',N'Bò Xiên Nướng','120000','',N'Bò')
 InSert into Mon_An values('MA09',N'Sườn Lợn Suốt','140000','',N'Lợn')
 InSert into Mon_An values('MA010',N'Bò Muối Chua Ngọt','160000','',N'Bò')
-
+-- Danh mục
+InSert into Danh_Muc values('DM01',N'Bò')
+InSert into Danh_Muc values('DM02',N'Lợn')
+InSert into Danh_Muc values('DM03',N'Lẩu')
+InSert into Danh_Muc values('DM04',N'Cơm')
+InSert into Danh_Muc values('DM05',N'Bún - Phở')
+InSert into Danh_Muc values('DM06',N'Cháo')
+InSert into Danh_Muc values('DM07',N'Hải Sản')
+InSert into Danh_Muc values('DM08',N'Gà')
+InSert into Danh_Muc values('DM09',N'Dê')
 
 --Nhan Vien
 Insert into Nhan_Vien values('NV01','ADMIN','Xuan123',N'Nguyễn Thị Kiều Xuân','365423269','09094236541',N'Nhà Hàng Quận 1','123',N'Giám Đốc','','20121220','')
