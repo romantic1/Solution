@@ -81,6 +81,12 @@ namespace AppQuanLyQuanAn
             kn.ThayDoiDL("UPDATE Don_Hang_Tong_Dai SET Ten_DH = N'" + txt_TenDonHang.Text.ToString() + "',sdtKH = '" + txt_sdtKH.Text.ToString() + "',dcKH = N'" + txt_dcKH.Text.ToString() + "',Ten_CN = N'" + cbb_TenChiNhanh.SelectedValue.ToString() + "',TrangThai = N'" + cbb_TrangThai.Text.ToString() + "',KhuyenMai = N'" + cbb_KhuyenMai.Text.ToString() + "',ThoiGian = '" + Time_ThoiGian.Text.ToString() + "',TongTien = '" + txt_TongTien.Text.ToString() + "' where Ma_DHTD = '" + lm1.ToString() + "'");
             kn.ThayDoiDL("Insert into Don_Hang_Tong_Dai values('','','','','','','','')");
             DonHangTongDai_Load(sender, e);
+            txt_dcKH.Text = "";
+            txt_sdtKH.Text = "";
+            txt_TenDonHang.Text = "";
+            cbb_KhuyenMai.Text = "";
+            cbb_TenChiNhanh.Text = "";
+            cbb_TrangThai.Text = "";
         }
 
 
@@ -153,7 +159,8 @@ namespace AppQuanLyQuanAn
 
         private void btn_Search_Click(object sender, EventArgs e)
         {
-            dgv_HienThiDanhSachDonHangTongDai.DataSource = kn.LayBang("select * from DON_HANG_TONG_DAI where Ten_CN= '" + cbb_SearchTenChiNhanh.SelectedValue.ToString() + "'");
+            
+            dgv_HienThiDanhSachDonHangTongDai.DataSource = kn.LayBang("select * from DON_HANG_TONG_DAI where Ten_CN= N'" + cbb_SearchTenChiNhanh.SelectedValue.ToString() + "'");
         }
 
         private void gbSearchCNQL_Enter(object sender, EventArgs e)

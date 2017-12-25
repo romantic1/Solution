@@ -193,14 +193,13 @@ CREATE TABLE Tong_Dai
 )
 
 CREATE TABLE Don_Hang_Tong_Dai(
-	Ma_DHTD int ,
+	Ma_DHTD int IDENTITY(1,1) ,
 	Ten_DH nvarchar(50),
 	sdtKH char(15),
-	dcKH char(100),
+	dcKH nvarchar(100),
 	Ten_CN nvarchar(50),
 	TrangThai nvarchar(100),
 	KhuyenMai nvarchar(15),
-	NhanVien nvarchar(50),
 	ThoiGian datetime,
 	TongTien float,
 )
@@ -259,7 +258,7 @@ InSert into Chi_Tiet_Danh_Muc values('DM09','MA03')
 InSert into Chi_Tiet_Danh_Muc values('DM09','MA07')
 
 --Don_Hang_Tong_Dai
-InSert into Don_Hang_Tong_Dai values('1','','','','','','','','','')
+InSert into Don_Hang_Tong_Dai values('','','','','','','','')
 
 --Nhan Vien
 Insert into Nhan_Vien values('NV01','ADMIN','Xuan123',N'Nguyễn Thị Kiều Xuân','365423269','09094236541',N'Nhà Hàng Quận 1','123',N'Giám Đốc','','20121220','')

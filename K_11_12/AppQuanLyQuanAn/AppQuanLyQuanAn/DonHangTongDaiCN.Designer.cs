@@ -31,6 +31,15 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DonHangTongDaiCN));
             this.txt_SearchDonHanTongDai = new System.Windows.Forms.TextBox();
             this.dgv_HienThiDanhSachDonHangTongDai = new System.Windows.Forms.DataGridView();
+            this.madh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenDH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SDTkh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DcKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tencn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tragtha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Khuyenmai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Thoigian = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ttien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cbb_TenChiNhanh = new System.Windows.Forms.ComboBox();
             this.cbb_KhuyenMai = new System.Windows.Forms.ComboBox();
             this.cbb_TrangThai = new System.Windows.Forms.ComboBox();
@@ -45,7 +54,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btn_Search = new System.Windows.Forms.Button();
-            this.cbb_SearchTenChiNhanh = new System.Windows.Forms.ComboBox();
             this.button3 = new System.Windows.Forms.Button();
             this.btSearchMACNQL = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
@@ -70,15 +78,7 @@
             this.btn_Xoa = new System.Windows.Forms.Button();
             this.btn_LamMoi = new System.Windows.Forms.Button();
             this.btn_ThemMoi = new System.Windows.Forms.Button();
-            this.madh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenDH = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SDTkh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DcKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tencn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tragtha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Khuyenmai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Thoigian = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ttien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cbb_SearchTenChiNhanh = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_HienThiDanhSachDonHangTongDai)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -119,6 +119,69 @@
             this.dgv_HienThiDanhSachDonHangTongDai.ReadOnly = true;
             this.dgv_HienThiDanhSachDonHangTongDai.Size = new System.Drawing.Size(818, 424);
             this.dgv_HienThiDanhSachDonHangTongDai.TabIndex = 5;
+            // 
+            // madh
+            // 
+            this.madh.DataPropertyName = "Ma_DHTD";
+            this.madh.HeaderText = "Mã ĐH";
+            this.madh.Name = "madh";
+            this.madh.ReadOnly = true;
+            // 
+            // TenDH
+            // 
+            this.TenDH.DataPropertyName = "Ten_DH";
+            this.TenDH.HeaderText = "Tên Đơn Hàng";
+            this.TenDH.Name = "TenDH";
+            this.TenDH.ReadOnly = true;
+            // 
+            // SDTkh
+            // 
+            this.SDTkh.DataPropertyName = "sdtKH";
+            this.SDTkh.HeaderText = "SDT Khách Hàng";
+            this.SDTkh.Name = "SDTkh";
+            this.SDTkh.ReadOnly = true;
+            // 
+            // DcKH
+            // 
+            this.DcKH.DataPropertyName = "dcKH";
+            this.DcKH.HeaderText = "Địa Chỉ Khách Hàng";
+            this.DcKH.Name = "DcKH";
+            this.DcKH.ReadOnly = true;
+            // 
+            // Tencn
+            // 
+            this.Tencn.DataPropertyName = "Ten_CN";
+            this.Tencn.HeaderText = "Tên Chi Nhánh";
+            this.Tencn.Name = "Tencn";
+            this.Tencn.ReadOnly = true;
+            // 
+            // Tragtha
+            // 
+            this.Tragtha.DataPropertyName = "TrangThai";
+            this.Tragtha.HeaderText = "Trạng Thái";
+            this.Tragtha.Name = "Tragtha";
+            this.Tragtha.ReadOnly = true;
+            // 
+            // Khuyenmai
+            // 
+            this.Khuyenmai.DataPropertyName = "KhuyenMai";
+            this.Khuyenmai.HeaderText = "Khuyến Mãi";
+            this.Khuyenmai.Name = "Khuyenmai";
+            this.Khuyenmai.ReadOnly = true;
+            // 
+            // Thoigian
+            // 
+            this.Thoigian.DataPropertyName = "ThoiGIan";
+            this.Thoigian.HeaderText = "Thời Gian";
+            this.Thoigian.Name = "Thoigian";
+            this.Thoigian.ReadOnly = true;
+            // 
+            // Ttien
+            // 
+            this.Ttien.DataPropertyName = "TongTien";
+            this.Ttien.HeaderText = "Tổng Tiền";
+            this.Ttien.Name = "Ttien";
+            this.Ttien.ReadOnly = true;
             // 
             // cbb_TenChiNhanh
             // 
@@ -255,8 +318,8 @@
             // 
             this.groupBox1.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.groupBox1.Controls.Add(this.btn_Search);
             this.groupBox1.Controls.Add(this.cbb_SearchTenChiNhanh);
+            this.groupBox1.Controls.Add(this.btn_Search);
             this.groupBox1.Controls.Add(this.txt_SearchDonHanTongDai);
             this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.btSearchMACNQL);
@@ -283,16 +346,6 @@
             this.btn_Search.Text = "Search";
             this.btn_Search.UseVisualStyleBackColor = false;
             this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click);
-            // 
-            // cbb_SearchTenChiNhanh
-            // 
-            this.cbb_SearchTenChiNhanh.FormattingEnabled = true;
-            this.cbb_SearchTenChiNhanh.Location = new System.Drawing.Point(440, 28);
-            this.cbb_SearchTenChiNhanh.Margin = new System.Windows.Forms.Padding(4);
-            this.cbb_SearchTenChiNhanh.Name = "cbb_SearchTenChiNhanh";
-            this.cbb_SearchTenChiNhanh.Size = new System.Drawing.Size(133, 24);
-            this.cbb_SearchTenChiNhanh.TabIndex = 2;
-            this.cbb_SearchTenChiNhanh.SelectedIndexChanged += new System.EventHandler(this.cbb_SearchTenChiNhanh_SelectedIndexChanged);
             // 
             // button3
             // 
@@ -623,68 +676,14 @@
             this.btn_ThemMoi.UseVisualStyleBackColor = false;
             this.btn_ThemMoi.Click += new System.EventHandler(this.btn_ThemMoi_Click);
             // 
-            // madh
+            // cbb_SearchTenChiNhanh
             // 
-            this.madh.DataPropertyName = "Ma_DHTD";
-            this.madh.HeaderText = "Mã ĐH";
-            this.madh.Name = "madh";
-            this.madh.ReadOnly = true;
-            // 
-            // TenDH
-            // 
-            this.TenDH.DataPropertyName = "Ten_DH";
-            this.TenDH.HeaderText = "Tên Đơn Hàng";
-            this.TenDH.Name = "TenDH";
-            this.TenDH.ReadOnly = true;
-            // 
-            // SDTkh
-            // 
-            this.SDTkh.DataPropertyName = "sdtKH";
-            this.SDTkh.HeaderText = "SDT Khách Hàng";
-            this.SDTkh.Name = "SDTkh";
-            this.SDTkh.ReadOnly = true;
-            // 
-            // DcKH
-            // 
-            this.DcKH.DataPropertyName = "dcKH";
-            this.DcKH.HeaderText = "Địa Chỉ Khách Hàng";
-            this.DcKH.Name = "DcKH";
-            this.DcKH.ReadOnly = true;
-            // 
-            // Tencn
-            // 
-            this.Tencn.DataPropertyName = "Ten_CN";
-            this.Tencn.HeaderText = "Tên Chi Nhánh";
-            this.Tencn.Name = "Tencn";
-            this.Tencn.ReadOnly = true;
-            // 
-            // Tragtha
-            // 
-            this.Tragtha.DataPropertyName = "TrangThai";
-            this.Tragtha.HeaderText = "Trạng Thái";
-            this.Tragtha.Name = "Tragtha";
-            this.Tragtha.ReadOnly = true;
-            // 
-            // Khuyenmai
-            // 
-            this.Khuyenmai.DataPropertyName = "KhuyenMai";
-            this.Khuyenmai.HeaderText = "Khuyến Mãi";
-            this.Khuyenmai.Name = "Khuyenmai";
-            this.Khuyenmai.ReadOnly = true;
-            // 
-            // Thoigian
-            // 
-            this.Thoigian.DataPropertyName = "ThoiGIan";
-            this.Thoigian.HeaderText = "Thời Gian";
-            this.Thoigian.Name = "Thoigian";
-            this.Thoigian.ReadOnly = true;
-            // 
-            // Ttien
-            // 
-            this.Ttien.DataPropertyName = "TongTien";
-            this.Ttien.HeaderText = "Tổng Tiền";
-            this.Ttien.Name = "Ttien";
-            this.Ttien.ReadOnly = true;
+            this.cbb_SearchTenChiNhanh.FormattingEnabled = true;
+            this.cbb_SearchTenChiNhanh.Location = new System.Drawing.Point(440, 31);
+            this.cbb_SearchTenChiNhanh.Margin = new System.Windows.Forms.Padding(4);
+            this.cbb_SearchTenChiNhanh.Name = "cbb_SearchTenChiNhanh";
+            this.cbb_SearchTenChiNhanh.Size = new System.Drawing.Size(189, 24);
+            this.cbb_SearchTenChiNhanh.TabIndex = 86;
             // 
             // DonHangTongDaiCN
             // 
@@ -742,7 +741,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btn_Search;
-        private System.Windows.Forms.ComboBox cbb_SearchTenChiNhanh;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btn_Xoa;
@@ -772,5 +770,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Khuyenmai;
         private System.Windows.Forms.DataGridViewTextBoxColumn Thoigian;
         private System.Windows.Forms.DataGridViewTextBoxColumn Ttien;
+        private System.Windows.Forms.ComboBox cbb_SearchTenChiNhanh;
     }
 }
