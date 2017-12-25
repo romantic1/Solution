@@ -82,6 +82,12 @@
       <DependentUpon>ChiTietChiNhanh.cs</DependentUpon>
     </Compile>
     <Compile Include="ChuoiKetNoi.cs" />
+    <Compile Include="DHTongDaiChuyenchinhanh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DHTongDaiChuyenchinhanh.Designer.cs">
+      <DependentUpon>DHTongDaiChuyenchinhanh.cs</DependentUpon>
+    </Compile>
     <Compile Include="DoanhThuTungChiNhanh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -211,6 +217,12 @@
     <Compile Include="TongDoanhThuChiNhanh.Designer.cs">
       <DependentUpon>TongDoanhThuChiNhanh.cs</DependentUpon>
     </Compile>
+    <Compile Include="XacNhanDHDT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XacNhanDHDT.Designer.cs">
+      <DependentUpon>XacNhanDHDT.cs</DependentUpon>
+    </Compile>
     <Compile Include="XoaChiNhanh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -234,6 +246,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ChiTietChiNhanh.resx">
       <DependentUpon>ChiTietChiNhanh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DHTongDaiChuyenchinhanh.resx">
+      <DependentUpon>DHTongDaiChuyenchinhanh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DoanhThuTungChiNhanh.resx">
       <DependentUpon>DoanhThuTungChiNhanh.cs</DependentUpon>
@@ -304,6 +319,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TongDoanhThuChiNhanh.resx">
       <DependentUpon>TongDoanhThuChiNhanh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XacNhanDHDT.resx">
+      <DependentUpon>XacNhanDHDT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="XoaChiNhanh.resx">
       <DependentUpon>XoaChiNhanh.cs</DependentUpon>

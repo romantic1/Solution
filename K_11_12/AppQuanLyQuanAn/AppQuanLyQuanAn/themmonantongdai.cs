@@ -40,7 +40,6 @@ namespace AppQuanLyQuanAn
 
         private void themmonantongdai_Load_1(object sender, EventArgs e)
         {
-
             HienDanhMuc();
             HienMonAnchon();
 
@@ -61,7 +60,7 @@ namespace AppQuanLyQuanAn
 
         private void Offthemmonan_Click_1(object sender, EventArgs e)
         {
-            DonHangTongDaiCN f = new DonHangTongDaiCN();
+
 
             this.Close();
         }
@@ -90,15 +89,15 @@ namespace AppQuanLyQuanAn
 
         }
 
-      
-    
 
 
-      
 
-       
 
-       
+
+
+
+
+
 
 
     }

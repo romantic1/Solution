@@ -14,19 +14,14 @@ namespace AppQuanLyQuanAn
     public partial class DonHangTongDaiCN : Form
     {
         static SqlConnection conn = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=QuanLiQuanAn;Integrated Security=True");
-
         public DonHangTongDaiCN()
         {
             InitializeComponent();
-            string Sqlconnection = "Data Source=.\\SQLEXPRESS;Initial Catalog=QuanLiQuanAn;Integrated Security=True";
-            conn = new SqlConnection(Sqlconnection);
-
         }
         void hiendonhang()
         {
-            dgv_HienThiDanhSachDonHangTongDai.DataSource = kn.LayBang("select * from Don_Hang_Tong_Dai");
+            dgv_HienThiDanhSachDonHangTongDai.DataSource = kn.LayBang("select * from Don_Hang_Tong_Dai where TrangThai != ''");
         }
-
         void tongtien()
         {
             conn.Open();
@@ -54,10 +49,8 @@ namespace AppQuanLyQuanAn
             cbb_TenChiNhanh.DisplayMember = "Ten_CN";
             cbb_TenChiNhanh.ValueMember = "Ten_CN";
         }
-        int c, lm1, T;
-        private void DonHangTongDai_Load(object sender, EventArgs e)
+        void laymaDH()
         {
-            hiendonhang();
             conn.Open();
             string sql = "select * from Don_Hang_Tong_Dai ";
             SqlCommand cmd = new SqlCommand(sql, conn);
@@ -68,29 +61,41 @@ namespace AppQuanLyQuanAn
             lm1 = Convert.ToInt32(lm.Rows[c]["Ma_DHTD"]);
             T = lm1 + 1;
             conn.Close();
+        }
+        int c, lm1, T;
+        private void DonHangTongDai_Load(object sender, EventArgs e)
+        {
+            hiendonhang();
+            laymaDH();
             tongtien();
             hienchinhanh();
+            cbb_SearchTenChiNhanh_SelectedIndexChanged(sender, e);
         }
 
         private void OffChiNhanh_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
         private void btn_ThemMoi_Click(object sender, EventArgs e)
         {
-            kn.ThayDoiDL("UPDATE Don_Hang_Tong_Dai SET Ten_DH = '" + txt_TenDonHang.Text.ToString() + "',sdtKH = '" + txt_sdtKH.Text.ToString() + "',dcKH = '" + txt_dcKH.Text.ToString() + "',Ten_CN = '" + cbb_TenChiNhanh.Text.ToString() + "',TrangThai = '" + cbb_TrangThai.Text.ToString() + "',KhuyenMai = '" + cbb_KhuyenMai.Text.ToString() + "',NhanVien = '" + txt_tennv.Text.ToString() + "',ThoiGian = '" + Time_ThoiGian.Text.ToString() + "',TongTien = '" + txt_TongTien.Text.ToString() + "' where Ma_DHTD = '" + lm1.ToString() + "'");
-            kn.ThayDoiDL("Insert into Don_Hang_Tong_Dai(Ma_DHTD) values('" + T.ToString() + "')");
+            kn.ThayDoiDL("UPDATE Don_Hang_Tong_Dai SET Ten_DH = N'" + txt_TenDonHang.Text.ToString() + "',sdtKH = '" + txt_sdtKH.Text.ToString() + "',dcKH = N'" + txt_dcKH.Text.ToString() + "',Ten_CN = N'" + cbb_TenChiNhanh.SelectedValue.ToString() + "',TrangThai = N'" + cbb_TrangThai.Text.ToString() + "',KhuyenMai = N'" + cbb_KhuyenMai.Text.ToString() + "',ThoiGian = '" + Time_ThoiGian.Text.ToString() + "',TongTien = '" + txt_TongTien.Text.ToString() + "' where Ma_DHTD = '" + lm1.ToString() + "'");
+            kn.ThayDoiDL("Insert into Don_Hang_Tong_Dai values('','','','','','','','')");
             DonHangTongDai_Load(sender, e);
         }
 
-        private void HeaderPanelDM_Paint(object sender, PaintEventArgs e)
+
+
+
+        private void btn_Xoa_Click(object sender, EventArgs e)
         {
 
+
+            string id = dgv_HienThiDanhSachDonHangTongDai.CurrentRow.Cells[0].Value.ToString();
+
+            kn.ThayDoiDL("delete from Don_Hang_Tong_Dai  where Ma_DHTD = '" + id.ToString() + "'");
+
+            DonHangTongDai_Load(sender, e);
         }
-
-     
-
         private void timkh_Click_1(object sender, EventArgs e)
         {
             conn.Open();
@@ -120,19 +125,7 @@ namespace AppQuanLyQuanAn
             DonHangTongDai_Load(sender, e);
         }
 
-        private void btn_Xoa_Click(object sender, EventArgs e)
-        {
-            conn.Open();
 
-            string id = dgv_HienThiDanhSachDonHangTongDai.CurrentRow.Cells[0].Value.ToString();
-
-            string delete = "delete from Don_Hang_Tong_Dai  where Ma_DHTD = '" + id.ToString() + "'";
-            SqlCommand deletecmd = new SqlCommand(delete, conn);
-            deletecmd.CommandType = CommandType.Text;
-            deletecmd.ExecuteNonQuery();
-            conn.Close();
-            DonHangTongDai_Load(sender, e);
-        }
 
         private void button4_Click_1(object sender, EventArgs e)
         {
@@ -142,7 +135,34 @@ namespace AppQuanLyQuanAn
             DonHangTongDai_Load(sender, e);
         }
 
-       
+        private void txt_SearchDonHanTongDai_TextChanged(object sender, EventArgs e)
+        {
+            (dgv_HienThiDanhSachDonHangTongDai.DataSource as DataTable).DefaultView.RowFilter = string.Format("Ten_DH LIKE '%{0}%'", txt_SearchDonHanTongDai);
+        }
+
+        private void cbb_SearchTenChiNhanh_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cbb_SearchTenChiNhanh.DataSource = kn.LayBang("select Ten_CN from Chi_Nhanh");
+            cbb_SearchTenChiNhanh.DisplayMember = "Ten_CN";
+            cbb_SearchTenChiNhanh.ValueMember = "Ten_CN";
+        }
+        private void cbb_TenChiNhanh_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Search_Click(object sender, EventArgs e)
+        {
+            dgv_HienThiDanhSachDonHangTongDai.DataSource = kn.LayBang("select * from DON_HANG_TONG_DAI where Ten_CN= '" + cbb_SearchTenChiNhanh.SelectedValue.ToString() + "'");
+        }
+
+        private void gbSearchCNQL_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+
+
 
     }
 
