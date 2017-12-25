@@ -44,19 +44,26 @@ namespace AppQuanLyQuanAn
                 txt_MaKhachHang.Text = "KH" + (chuoi2 + 1).ToString();
             }
             conn.Open();
-            string SqlInsert = "Insert into Khach_Hang values('" + txt_MaKhachHang.Text + "','" + txt_TaiKhoan.Text + "','" + txt_MatKhau.Text + "',N'" + txt_TenKhachHang.Text + "',N'" + cbb_TenChiNhanh.Text + "',N'" + Time_NgaySinh.Text + "',N'" + txt_DiaChi.Text + "','" + txt_SoDienThoai.Text + "')";
-            cmd = new SqlCommand(SqlInsert, conn);
-            if (cmd.ExecuteNonQuery() == 1)
+            if (txt_TaiKhoan.Text == "")
             {
-                MessageBox.Show("Add Successful", "Thông báo");
+                MessageBox.Show("Vui Lòng Nhập Đủ Thông Tin!");
             }
             else
             {
-                MessageBox.Show("Add fail", "Thông báo");
+                string SqlInsert = "Insert into Khach_Hang values('" + txt_MaKhachHang.Text + "','" + txt_TaiKhoan.Text + "','" + txt_MatKhau.Text + "',N'" + txt_TenKhachHang.Text + "',N'" + cbb_TenChiNhanh.Text + "',N'" + Time_NgaySinh.Text + "',N'" + txt_DiaChi.Text + "','" + txt_SoDienThoai.Text + "')";
+                cmd = new SqlCommand(SqlInsert, conn);
+                if (cmd.ExecuteNonQuery() == 1)
+                {
+                    MessageBox.Show("Add Successful", "Thông báo");
+                }
+                else
+                {
+                    MessageBox.Show("Add fail", "Thông báo");
+                }
+                HienThiKhachHang();
+                txt_MaKhachHang.Text = txt_TaiKhoan.Text = txt_MatKhau.Text = txt_TenKhachHang.Text = cbb_TenChiNhanh.Text = Time_NgaySinh.Text = txt_DiaChi.Text = txt_SoDienThoai.Text = "";
+                btn_ThemMoi.Visible = true;
             }
-            HienThiKhachHang();
-            txt_MaKhachHang.Text = txt_TaiKhoan.Text = txt_MatKhau.Text = txt_TenKhachHang.Text = cbb_TenChiNhanh.Text = Time_NgaySinh.Text = txt_DiaChi.Text = txt_SoDienThoai.Text = "";
-            btn_ThemMoi.Visible = true;
             conn.Close();
         }
 

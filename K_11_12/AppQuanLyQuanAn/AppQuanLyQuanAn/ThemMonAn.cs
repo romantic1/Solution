@@ -39,18 +39,25 @@ namespace AppQuanLyQuanAn
                 txt_MaMonAn.Text = "MA" + (chuoi2 + 1).ToString();
             }
             conn.Open();
-            string SqlInsert = "Insert into Mon_An values('" + txt_MaMonAn.Text + "',N'" + txt_TenMonAn.Text + "','" + txt_Gia.Text + "',N'" + txt_GhiChu.Text + "',N'" + txt_TenDanhMuc.Text + "')";
-            cmd = new SqlCommand(SqlInsert, conn);
-            if (cmd.ExecuteNonQuery() == 1)
+            if (txt_TenMonAn.Text == "")
             {
-                MessageBox.Show("Add Successful", "Thông báo");
+                MessageBox.Show("Vui Lòng Nhập Đủ Thông Tin!");
             }
             else
             {
-                MessageBox.Show("Add fail", "Thông báo");
+                string SqlInsert = "Insert into Mon_An values('" + txt_MaMonAn.Text + "',N'" + txt_TenMonAn.Text + "','" + txt_Gia.Text + "',N'" + txt_GhiChu.Text + "',N'" + txt_TenDanhMuc.Text + "')";
+                cmd = new SqlCommand(SqlInsert, conn);
+                if (cmd.ExecuteNonQuery() == 1)
+                {
+                    MessageBox.Show("Add Successful", "Thông báo");
+                }
+                else
+                {
+                    MessageBox.Show("Add fail", "Thông báo");
+                }
+                HienThiMonAn();
+                txt_MaMonAn.Text = txt_TenMonAn.Text = txt_Gia.Text = txt_GhiChu.Text = "";
             }
-            HienThiMonAn();
-            txt_MaMonAn.Text = txt_TenMonAn.Text = txt_Gia.Text = txt_GhiChu.Text = "";
             conn.Close();
         }
 

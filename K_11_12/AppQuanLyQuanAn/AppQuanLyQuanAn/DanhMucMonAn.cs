@@ -29,15 +29,11 @@ namespace AppQuanLyQuanAn
             LoadlbDanhMucMonAn();
             MaTuTangMonAn();
             MaTuTangDanhMuc();
-<<<<<<< HEAD
-=======
 
             btnCapNhatMA.Enabled = false;
             btnXoaMA.Enabled = false;
             btnXoaDM.Enabled = false;
             btnCapNhatDM.Enabled = false;
-            
->>>>>>> 09895f0f2bc57202d52555cab5c0b06e7ef95955
         }
         ErrorProvider errp = new ErrorProvider();
         Provider kn = new Provider();

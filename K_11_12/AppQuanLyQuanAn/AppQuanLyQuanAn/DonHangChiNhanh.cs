@@ -62,19 +62,26 @@ namespace AppQuanLyQuanAn
                 txt_MaDonHang.Text = "DHCN" + (chuoi2 + 1).ToString();
             }
             conn.Open();
-            string SqlInsert = "Insert into Don_Hang_Chi_Nhanh values('" + txt_MaDonHang.Text + "',N'" + txt_TenDonHang.Text + "','" + cbb_MaKhachHang.Text + "',N'" + cbb_TenChiNhanh.Text + "',N'" + cbb_TrangThai.Text + "',N'" + cbb_KhuyenMai.Text + "',N'" + cbb_NhanVien.Text + "','" + Time_ThoiGian.Text + "','" + txt_TongTien.Text + "')";
-            cmd = new SqlCommand(SqlInsert, conn);
-            if (cmd.ExecuteNonQuery() == 1)
+            if (txt_TenDonHang.Text == "")
             {
-                MessageBox.Show("Add Successful", "Thông báo");
+                MessageBox.Show("Vui Lòng Nhập Đủ Thông Tin!");
             }
-            else
+            else 
             {
-                MessageBox.Show("Add fail", "Thông báo");
+                string SqlInsert = "Insert into Don_Hang_Chi_Nhanh values('" + txt_MaDonHang.Text + "',N'" + txt_TenDonHang.Text + "','" + cbb_MaKhachHang.Text + "',N'" + cbb_TenChiNhanh.Text + "',N'" + cbb_TrangThai.Text + "',N'" + cbb_KhuyenMai.Text + "',N'" + cbb_NhanVien.Text + "','" + Time_ThoiGian.Text + "','" + txt_TongTien.Text + "')";
+                cmd = new SqlCommand(SqlInsert, conn);
+                if (cmd.ExecuteNonQuery() == 1)
+                {
+                    MessageBox.Show("Add Successful", "Thông báo");
+                }
+                else
+                {
+                    MessageBox.Show("Add fail", "Thông báo");
+                }
+                HienThiDonHangChiNhanh();
+                txt_MaDonHang.Text = txt_TenDonHang.Text = cbb_MaKhachHang.Text = cbb_TenChiNhanh.Text = cbb_TrangThai.Text = cbb_KhuyenMai.Text = cbb_NhanVien.Text = Time_ThoiGian.Text = txt_TongTien.Text = "";
+                btn_ThemMoi.Visible = true;
             }
-            HienThiDonHangChiNhanh();
-            txt_MaDonHang.Text = txt_TenDonHang.Text = cbb_MaKhachHang.Text = cbb_TenChiNhanh.Text = cbb_TrangThai.Text = cbb_KhuyenMai.Text = cbb_NhanVien.Text = Time_ThoiGian.Text = txt_TongTien.Text = "";
-            btn_ThemMoi.Visible = true;
             conn.Close();
         }
 

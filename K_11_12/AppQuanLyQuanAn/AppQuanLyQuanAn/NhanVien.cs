@@ -50,19 +50,26 @@ namespace AppQuanLyQuanAn
                     txt_MaNhanVien.Text = "NV" + (chuoi2 + 1).ToString();
                 }
                 conn.Open();
-                string SqlInsert = "Insert into Nhan_Vien values('" + txt_MaNhanVien.Text + "','" + txt_TaiKhoan.Text + "','" + txt_MatKhau.Text + "',N'" + txt_TenNhanVien.Text + "','" + txt_CMND.Text + "','" + txt_SoDienThoai.Text + "',N'" + cbb_TenChiNhanh.Text + "',N'" + cbb_CaLam.Text + "',N'" + cbb_BoPhan.Text + "',N'" + txt_DanhGia.Text + "','" + Time_NgayBatDauLam.Text + "','" + txt_Luong.Text + "')";
-                SqlCommand cmd = new SqlCommand(SqlInsert, conn);
-                if (cmd.ExecuteNonQuery() == 1)
+                if (txt_TaiKhoan.Text == "")
                 {
-                    MessageBox.Show("Add Successful", "Thông báo");
+                    MessageBox.Show("Vui Lòng Nhập Đủ Thông Tin!");
                 }
                 else
                 {
-                    MessageBox.Show("Add fail", "Thông báo");
-                }
+                    string SqlInsert = "Insert into Nhan_Vien values('" + txt_MaNhanVien.Text + "','" + txt_TaiKhoan.Text + "','" + txt_MatKhau.Text + "',N'" + txt_TenNhanVien.Text + "','" + txt_CMND.Text + "','" + txt_SoDienThoai.Text + "',N'" + cbb_TenChiNhanh.Text + "',N'" + cbb_CaLam.Text + "',N'" + cbb_BoPhan.Text + "',N'" + txt_DanhGia.Text + "','" + Time_NgayBatDauLam.Text + "','" + txt_Luong.Text + "')";
+                    SqlCommand cmd = new SqlCommand(SqlInsert, conn);
+                    if (cmd.ExecuteNonQuery() == 1)
+                    {
+                        MessageBox.Show("Add Successful", "Thông báo");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Add fail", "Thông báo");
+                    }
 
-                HienThiNhanVien();
-                txt_MaNhanVien.Text = txt_TaiKhoan.Text = txt_MatKhau.Text = txt_TenNhanVien.Text = txt_CMND.Text = txt_SoDienThoai.Text = cbb_TenChiNhanh.Text = cbb_CaLam.Text = cbb_BoPhan.Text = txt_DanhGia.Text = Time_NgayBatDauLam.Text = txt_Luong.Text = "";
+                    HienThiNhanVien();
+                    txt_MaNhanVien.Text = txt_TaiKhoan.Text = txt_MatKhau.Text = txt_TenNhanVien.Text = txt_CMND.Text = txt_SoDienThoai.Text = cbb_TenChiNhanh.Text = cbb_CaLam.Text = cbb_BoPhan.Text = txt_DanhGia.Text = Time_NgayBatDauLam.Text = txt_Luong.Text = "";
+                }
                 conn.Close();
             } 
         }     

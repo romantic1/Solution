@@ -52,18 +52,25 @@ namespace AppQuanLyQuanAn
                 txt_MaChiNhanh.Text = "CN" + (chuoi2 + 1).ToString();
             }
             conn.Open();
-            string SqlInsert = "Insert into Chi_Nhanh values('" + txt_MaChiNhanh.Text + "',N'" + txt_TenChiNhanh.Text + "','" + txt_SoDienThoai.Text + "',N'" + txt_DiaChi.Text + "',N'" + cbb_TinhThanh.Text + "',N'" + cbb_TinhTrang.Text + "','" + dateTimePicker1.Text + "','" + txt_MaMonAn.Text + "','" + txt_SoBan.Text + "')";
-            cmd = new SqlCommand(SqlInsert, conn);
-            if (cmd.ExecuteNonQuery() == 1)
+            if (txt_TenChiNhanh.Text == "")
             {
-                MessageBox.Show("Add Successful", "Thông báo");
+                MessageBox.Show("Vui Lòng Nhập Đủ Thông Tin!");
             }
             else
             {
-                MessageBox.Show("Add fail", "Thông báo");
+                string SqlInsert = "Insert into Chi_Nhanh values('" + txt_MaChiNhanh.Text + "',N'" + txt_TenChiNhanh.Text + "','" + txt_SoDienThoai.Text + "',N'" + txt_DiaChi.Text + "',N'" + cbb_TinhThanh.Text + "',N'" + cbb_TinhTrang.Text + "','" + dateTimePicker1.Text + "','" + txt_MaMonAn.Text + "','" + txt_SoBan.Text + "')";
+                cmd = new SqlCommand(SqlInsert, conn);
+                if (cmd.ExecuteNonQuery() == 1)
+                {
+                    MessageBox.Show("Add Successful", "Thông báo");
+                }
+                else
+                {
+                    MessageBox.Show("Add fail", "Thông báo");
+                }
+                HienThiChiNhanh();
+                txt_MaChiNhanh.Text = txt_TenChiNhanh.Text = txt_DiaChi.Text = cbb_TinhThanh.Text = cbb_TinhTrang.Text = txt_SoBan.Text = txt_MaMonAn.Text = txt_SoDienThoai.Text = "";
             }
-            HienThiChiNhanh();
-            txt_MaChiNhanh.Text = txt_TenChiNhanh.Text = txt_DiaChi.Text = cbb_TinhThanh.Text = cbb_TinhTrang.Text = txt_SoBan.Text = txt_MaMonAn.Text = txt_SoDienThoai.Text = "";
             conn.Close();
         }
 

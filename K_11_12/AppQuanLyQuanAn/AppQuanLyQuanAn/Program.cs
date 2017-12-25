@@ -18,7 +18,7 @@ namespace AppQuanLyQuanAn
             Application.SetCompatibleTextRenderingDefault(false);
 
             //Application.Run(new DonHangTongDaiCN());
-            Application.Run(new DanhMucMonAn());
+            Application.Run(new Home());
         }
     }
 }
