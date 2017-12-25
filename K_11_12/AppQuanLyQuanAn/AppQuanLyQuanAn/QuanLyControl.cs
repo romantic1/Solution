@@ -19,8 +19,7 @@ namespace AppQuanLyQuanAn
 
         private void btDanhMucQL_Click(object sender, EventArgs e)
         {
-            DanhMucMonAn frDanhMuc = new DanhMucMonAn();
-
+            DanhMucMonAn frDanhMuc = new DanhMucMonAn();            
             frDanhMuc.Show();
         }
 

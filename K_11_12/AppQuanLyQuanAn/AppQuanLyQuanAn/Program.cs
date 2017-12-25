@@ -17,8 +17,8 @@ namespace AppQuanLyQuanAn
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            Application.Run(new DonHangTongDaiCN());
-            //Application.Run(new DanhMucMonAn());
+            //Application.Run(new DonHangTongDaiCN());
+            Application.Run(new DanhMucMonAn());
         }
     }
 }

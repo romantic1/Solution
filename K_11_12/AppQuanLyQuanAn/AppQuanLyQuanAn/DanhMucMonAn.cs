@@ -30,13 +30,26 @@ namespace AppQuanLyQuanAn
             MaTuTangMonAn();
             MaTuTangDanhMuc();
 
+            btnCapNhatMA.Enabled = false;
+            btnXoaMA.Enabled = false;
+            btnXoaDM.Enabled = false;
+            btnCapNhatDM.Enabled = false;
+            
         }
-
+        ErrorProvider errp = new ErrorProvider();
         Provider kn = new Provider();
         int index;
 
 //Hien Thi Man Hinh
-         
+        private bool IsNumber(string pValue)
+        {
+            foreach (Char c in pValue)
+            {
+                if (!Char.IsDigit(c))
+                    return false;
+            }
+            return true;
+        }       
         private void ClearScr()
         {
             
@@ -67,6 +80,14 @@ namespace AppQuanLyQuanAn
             MaTuTangMonAn();
             MaTuTangDanhMuc();
             ClearScr();
+
+            btnCapNhatMA.Enabled = false;
+            btnXoaMA.Enabled = false;
+            btnThemMA.Enabled = true;
+
+            btnThemDM.Enabled = true;
+            btnXoaDM.Enabled = false;
+            btnCapNhatDM.Enabled = false;
         }
         private void dgvDanhSachMA_Click(object sender, EventArgs e)
         {
@@ -76,9 +97,14 @@ namespace AppQuanLyQuanAn
             txtGia.Text = dgvDanhSachMA.Rows[index].Cells[2].Value.ToString();
             txtGhiChu.Text = dgvDanhSachMA.Rows[index].Cells[3].Value.ToString();
             cbDanhMucMA.Text = dgvDanhSachMA.Rows[index].Cells[4].Value.ToString();
+
+            
+            btnCapNhatMA.Enabled = true;
+            btnXoaMA.Enabled = true;   
+            btnThemMA.Enabled = false;
         }
 
-        private void  LoadDanhSachMonAn()
+        private void LoadDanhSachMonAn()
         {
             kn.Connect();
 
@@ -88,7 +114,6 @@ namespace AppQuanLyQuanAn
 
             kn.Disconnect();
         }
-
         private void MaTuTangDanhMuc()
         {
             kn.Connect();
@@ -111,9 +136,13 @@ namespace AppQuanLyQuanAn
                 g = "DM";
                 k = Convert.ToInt32(dt.Rows[dt.Rows.Count - 1][0].ToString().Substring(2, 2));
                 k = k + 1;
-                if (k <= 10)
+                if (k <= 9)
                 {
                     g = g + "0";
+                    g = g + k.ToString();
+                }
+                else
+                {                  
                     g = g + k.ToString();
                 }
                 txtMaDM.Text = g;
@@ -121,7 +150,6 @@ namespace AppQuanLyQuanAn
 
             kn.Disconnect();
         }
-
         private void MaTuTangMonAn()
         {
             kn.Connect();
@@ -144,9 +172,13 @@ namespace AppQuanLyQuanAn
                 g = "MA";
                 k = Convert.ToInt32(dt.Rows[dt.Rows.Count - 1][0].ToString().Substring(2, 2));
                 k = k + 1;
-                if (k <= 10)
+                if (k <= 9)
                 {
                     g = g + "0";
+                    g = g + k.ToString();
+                }
+                else
+                {
                     g = g + k.ToString();
                 }
                 txtMaMA.Text = g;
@@ -169,32 +201,58 @@ namespace AppQuanLyQuanAn
         
         
 //Phim Chuc Nang
-
-        //Mon An
-        private void btnThemMA_Click(object sender, EventArgs e)
+        
+        private void btnThemMA_Click(object sender, EventArgs e) 
         {
             kn.Connect();
             string sqladd = " insert into Mon_An values (@Ma_MA, @Ten_MA, @Gia, @GhiChu, @DanhMuc)";
+
+            
             try
             {
-                SqlCommand cmd;
-                cmd = new SqlCommand(sqladd, kn.Connection);
-                cmd.CommandType = CommandType.Text;
-                cmd.Parameters.Add(new SqlParameter("Ma_MA", txtMaMA.Text));
-                cmd.Parameters.Add(new SqlParameter("Ten_MA", txtTenMA.Text));
-                cmd.Parameters.Add(new SqlParameter("Gia", float.Parse(txtGia.Text)));
-                cmd.Parameters.Add(new SqlParameter("GhiChu", txtGhiChu.Text));
-                cmd.Parameters.Add(new SqlParameter("DanhMuc", cbDanhMucMA.Text));
                 
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Thêm món ăn thành công!", "Thông báo");
+                errp.SetError(txtGia, "");
+                errp.SetError(txtTenMA, "");
+
+                if (txtTenMA.Text == "")
+                {
+                    errp.SetError(txtTenMA, "Bạn cần nhập tên món ăn!");
+                }
+                else
+                {
+                    if (txtGia.Text == "")
+                    {
+                        errp.SetError(txtGia, "Bạn cần nhập giá của món ăn!");
+                    }
+                    else
+                    {
+                        if (IsNumber(txtGia.Text)  != true)
+                           {
+                                 errp.SetError(txtGia, "Giá trị nhập vào phải là số nguyên!");
+                           }
+                        else
+                        {
+                            SqlCommand cmd;
+                            cmd = new SqlCommand(sqladd, kn.Connection);
+                            cmd.CommandType = CommandType.Text;
+                            cmd.Parameters.Add(new SqlParameter("Ma_MA", txtMaMA.Text));
+                            cmd.Parameters.Add(new SqlParameter("Ten_MA", txtTenMA.Text));
+                            cmd.Parameters.Add(new SqlParameter("Gia", float.Parse(txtGia.Text)));
+                            cmd.Parameters.Add(new SqlParameter("GhiChu", txtGhiChu.Text));
+                            cmd.Parameters.Add(new SqlParameter("DanhMuc", cbDanhMucMA.Text));
+
+                            cmd.ExecuteNonQuery();
+                            MessageBox.Show("Thêm món ăn thành công!", "Thông báo");
+                            ClearScr();
+                        }
+                    }
+                }            
             }
             catch (SqlException ex)
             {
                 throw ex;
             }
-            LoadDanhSachMonAn();
-            ClearScr();
+            LoadDanhSachMonAn();            
             MaTuTangMonAn();
             kn.Disconnect();
         }
@@ -226,24 +284,50 @@ namespace AppQuanLyQuanAn
             string sqledit = " update Mon_An SET Ma_MA = @Ma_MA, Ten_MA = @Ten_MA, Gia = @Gia, GhiChu = @GhiChu, Ten_DM = @DanhMuc where Ma_MA = @Ma_MA ";
             try
             {
-                if (MessageBox.Show("Bạn có chắc muốn sửa đổi thông tin món ăn?", "Xác Nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (txtMaMA.Text == "" || txtTenMA.Text == "" || txtGia.Text == "")
                 {
-                    SqlCommand cmd;
-                    cmd = new SqlCommand(sqledit, kn.Connection);
-                    cmd.CommandType = CommandType.Text;
-                    cmd.Parameters.Add(new SqlParameter("Ma_MA", txtMaMA.Text));
-                    cmd.Parameters.Add(new SqlParameter("Ten_MA", txtTenMA.Text));
-                    cmd.Parameters.Add(new SqlParameter("Gia", float.Parse(txtGia.Text)));
-                    cmd.Parameters.Add(new SqlParameter("GhiChu", txtGhiChu.Text));
-                    cmd.Parameters.Add(new SqlParameter("DanhMuc", cbDanhMucMA.Text));
-
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("Thay đổi thành công!", "Thông Báo");
+                    MessageBox.Show("Bạn cần chọn một món ăn cần sửa!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.None);
                 }
                 else
                 {
-                    return;
+                    errp.SetError(txtTenMA, "");
+                    errp.SetError(txtGia, "");
+                    if (txtGia.Text == "" || txtTenMA.Text == "")
+                    {
+                        errp.SetError(txtTenMA, "Bắt buộc phải có tên món ăn!");
+                        errp.SetError(txtGia, "Bắt buộc phải có giá món ăn");
+                    }
+                    else
+                    {
+                        if (IsNumber(txtGia.Text) != true)
+                        {
+                            errp.SetError(txtGia, "Giá trị nhập vào phải là số nguyên!");
+                        }
+                        else
+                        {
+                            if (MessageBox.Show("Bạn có chắc muốn sửa đổi thông tin món ăn?", "Xác Nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                            {
+                                SqlCommand cmd;
+                                cmd = new SqlCommand(sqledit, kn.Connection);
+                                cmd.CommandType = CommandType.Text;
+                                cmd.Parameters.Add(new SqlParameter("Ma_MA", txtMaMA.Text));
+                                cmd.Parameters.Add(new SqlParameter("Ten_MA", txtTenMA.Text));
+                                cmd.Parameters.Add(new SqlParameter("Gia", float.Parse(txtGia.Text)));
+                                cmd.Parameters.Add(new SqlParameter("GhiChu", txtGhiChu.Text));
+                                cmd.Parameters.Add(new SqlParameter("DanhMuc", cbDanhMucMA.Text));
+
+                                cmd.ExecuteNonQuery();
+                                MessageBox.Show("Thay đổi thành công!", "Thông Báo");
+                                ClearScr();
+                            }
+                            else
+                            {
+                                return;
+                            }
+                        }
+                    }
                 }
+               
 
             }
             catch (SqlException ex)
@@ -251,7 +335,7 @@ namespace AppQuanLyQuanAn
                 throw ex;
             }
             LoadDanhSachMonAn();
-            ClearScr();
+            
             MaTuTangMonAn();
             kn.Disconnect();
         
@@ -369,8 +453,10 @@ namespace AppQuanLyQuanAn
         {
             
             txtMaDM.Text =  lbDanhMucMonAn.SelectedValue.ToString();
-            txtTenDM.Text = ""; 
-           
+            txtTenDM.Text = "";
+            btnThemDM.Enabled = false;
+            btnCapNhatDM.Enabled = true;
+            btnXoaDM.Enabled = true;
         }
         private void btnThemDM_Click(object sender, EventArgs e)
         {
@@ -378,9 +464,11 @@ namespace AppQuanLyQuanAn
             string sqladd = " insert into Danh_Muc values (@Ma_DM, @Ten_DM )";
             try
             {
+                errp.SetError(txtTenDM, "");
                 if (txtTenDM.Text == "")
                 {
-                    MessageBox.Show("Bạn cần nhập tên danh mục!", "Thông Báo");
+                    errp.SetError(txtTenDM, "Bạn cần nhập tên danh mục");
+                   // MessageBox.Show("Bạn cần nhập tên danh mục!", "Thông Báo");
                 }
                 else
                 {
@@ -402,7 +490,7 @@ namespace AppQuanLyQuanAn
              LoadlbDanhMucMonAn();
              MaTuTangDanhMuc();
              ClearScr();
-            kn.Disconnect();
+             kn.Disconnect();
         }
         private void btnCapNhatDM_Click(object sender, EventArgs e)
         {
@@ -411,18 +499,27 @@ namespace AppQuanLyQuanAn
             string sqledit = " update Danh_Muc SET Ma_DM = @MaDM, Ten_DM = @TenDM where Ma_DM = @MaDM ";
             try
             {
-                if (MessageBox.Show("Bạn thực sự muốn sửa?", "Xác Nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                errp.SetError(txtTenDM, "");
+                if(txtTenDM.Text ==  "")
                 {
-                    SqlCommand cmd;
-                    cmd = new SqlCommand(sqledit, kn.Connection);
-                    cmd.CommandType = CommandType.Text;
-                    cmd.Parameters.Add(new SqlParameter("MaDM", txtMaDM.Text));
-                    cmd.Parameters.Add(new SqlParameter("TenDM", txtTenDM.Text));
-
-                    cmd.ExecuteNonQuery();
+                    errp.SetError(txtTenDM, "Bạn cần nhập tên danh mục");
                 }
                 else
-                { return; }
+                {
+                    if (MessageBox.Show("Bạn thực sự muốn sửa?", "Xác Nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        SqlCommand cmd;
+                        cmd = new SqlCommand(sqledit, kn.Connection);
+                        cmd.CommandType = CommandType.Text;
+                        cmd.Parameters.Add(new SqlParameter("MaDM", txtMaDM.Text));
+                        cmd.Parameters.Add(new SqlParameter("TenDM", txtTenDM.Text));
+
+                        cmd.ExecuteNonQuery();
+                        ClearScr();
+                    }
+                    else
+                    { return; }
+                }             
             }
             catch (SqlException ex)
             {
@@ -430,7 +527,7 @@ namespace AppQuanLyQuanAn
             }
             LoadlbDanhMucMonAn();
             MaTuTangDanhMuc();
-            ClearScr();
+            
             kn.Disconnect();
         }       
     }
