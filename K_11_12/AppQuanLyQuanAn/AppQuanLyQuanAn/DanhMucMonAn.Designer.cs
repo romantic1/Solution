@@ -78,7 +78,7 @@
             this.lbDanhMucMonAn.FormattingEnabled = true;
             this.lbDanhMucMonAn.Location = new System.Drawing.Point(0, 0);
             this.lbDanhMucMonAn.Name = "lbDanhMucMonAn";
-            this.lbDanhMucMonAn.Size = new System.Drawing.Size(273, 251);
+            this.lbDanhMucMonAn.Size = new System.Drawing.Size(301, 251);
             this.lbDanhMucMonAn.TabIndex = 0;
             this.lbDanhMucMonAn.Click += new System.EventHandler(this.lbDanhMucMonAn_Click);
             // 
@@ -101,7 +101,7 @@
             this.DanhMucPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.DanhMucPanel.Location = new System.Drawing.Point(0, 31);
             this.DanhMucPanel.Name = "DanhMucPanel";
-            this.DanhMucPanel.Size = new System.Drawing.Size(277, 514);
+            this.DanhMucPanel.Size = new System.Drawing.Size(305, 514);
             this.DanhMucPanel.TabIndex = 5;
             // 
             // panel1
@@ -118,7 +118,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 309);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(273, 201);
+            this.panel1.Size = new System.Drawing.Size(301, 201);
             this.panel1.TabIndex = 3;
             // 
             // btnXoaDM
@@ -191,6 +191,7 @@
             this.txtMaDM.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtMaDM.Location = new System.Drawing.Point(108, 13);
             this.txtMaDM.Name = "txtMaDM";
+            this.txtMaDM.ReadOnly = true;
             this.txtMaDM.Size = new System.Drawing.Size(163, 18);
             this.txtMaDM.TabIndex = 0;
             // 
@@ -227,9 +228,9 @@
             this.dgvDanhSachMA.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvDanhSachMA.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDanhSachMA.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dgvDanhSachMA.Location = new System.Drawing.Point(277, 31);
+            this.dgvDanhSachMA.Location = new System.Drawing.Point(305, 31);
             this.dgvDanhSachMA.Name = "dgvDanhSachMA";
-            this.dgvDanhSachMA.Size = new System.Drawing.Size(645, 253);
+            this.dgvDanhSachMA.Size = new System.Drawing.Size(617, 253);
             this.dgvDanhSachMA.TabIndex = 5;
             this.dgvDanhSachMA.Click += new System.EventHandler(this.dgvDanhSachMA_Click);
             // 
@@ -237,7 +238,7 @@
             // 
             this.txtTimKiemMA.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTimKiemMA.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtTimKiemMA.Location = new System.Drawing.Point(403, 310);
+            this.txtTimKiemMA.Location = new System.Drawing.Point(433, 310);
             this.txtTimKiemMA.Name = "txtTimKiemMA";
             this.txtTimKiemMA.Size = new System.Drawing.Size(265, 19);
             this.txtTimKiemMA.TabIndex = 1;
@@ -260,9 +261,9 @@
             this.panel2.Controls.Add(this.txtMaMA);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(277, 342);
+            this.panel2.Location = new System.Drawing.Point(305, 342);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(645, 203);
+            this.panel2.Size = new System.Drawing.Size(617, 203);
             this.panel2.TabIndex = 0;
             // 
             // cbDanhMucMA
@@ -271,11 +272,15 @@
             this.cbDanhMucMA.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.cbDanhMucMA.FormattingEnabled = true;
             this.cbDanhMucMA.Items.AddRange(new object[] {
-            "Món Lẩu",
+            "Bò",
+            "Lợn",
+            "Lẩu",
             "Cơm",
-            "Món Chay",
-            "Món Tráng Miệng",
-            "Bún - Phở"});
+            "Bún - Phở",
+            "Cháo",
+            "Hải Sản",
+            "Gà",
+            "Dê"});
             this.cbDanhMucMA.Location = new System.Drawing.Point(126, 171);
             this.cbDanhMucMA.Name = "cbDanhMucMA";
             this.cbDanhMucMA.Size = new System.Drawing.Size(265, 22);
@@ -420,7 +425,7 @@
             this.RefeshDM.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.RefeshDM.Image = global::AppQuanLyQuanAn.Properties.Resources.refesh;
             this.RefeshDM.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.RefeshDM.Location = new System.Drawing.Point(693, 307);
+            this.RefeshDM.Location = new System.Drawing.Point(723, 306);
             this.RefeshDM.Name = "RefeshDM";
             this.RefeshDM.Size = new System.Drawing.Size(173, 27);
             this.RefeshDM.TabIndex = 0;
@@ -435,7 +440,7 @@
             this.btnTimKiemMA.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnTimKiemMA.Image = global::AppQuanLyQuanAn.Properties.Resources.Search;
             this.btnTimKiemMA.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTimKiemMA.Location = new System.Drawing.Point(323, 299);
+            this.btnTimKiemMA.Location = new System.Drawing.Point(353, 299);
             this.btnTimKiemMA.Name = "btnTimKiemMA";
             this.btnTimKiemMA.Size = new System.Drawing.Size(84, 37);
             this.btnTimKiemMA.TabIndex = 2;

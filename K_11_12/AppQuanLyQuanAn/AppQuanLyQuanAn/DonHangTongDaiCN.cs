@@ -13,22 +13,63 @@ namespace AppQuanLyQuanAn
 {
     public partial class DonHangTongDaiCN : Form
     {
-       SqlConnection conn;
-        SqlCommand cmd;
+        static SqlConnection conn = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=QuanLiQuanAn;Integrated Security=True");
+
         public DonHangTongDaiCN()
         {
             InitializeComponent();
             string Sqlconnection = "Data Source=.\\SQLEXPRESS;Initial Catalog=QuanLiQuanAn;Integrated Security=True";
             conn = new SqlConnection(Sqlconnection);
+
+        }
+        void hiendonhang()
+        {
+            dgv_HienThiDanhSachDonHangTongDai.DataSource = kn.LayBang("select * from Don_Hang_Tong_Dai");
         }
 
-        void HienThiDonHangTongDai()
+        void tongtien()
         {
-            DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter("Select * from Don_Hang_Tong_Dai", conn);
-            da.Fill(dt);
-            dgv_HienThiDanhSachDonHangTongDai.DataSource = dt;
-            dgv_HienThiDanhSachDonHangTongDai.RowHeadersVisible = false;
+            conn.Open();
+            string sql = "select mh.Ma_MA,mh.Ten_MA,mh.Gia,mh.GhiChu from Mon_An mh,Chi_Tiet_Don_Hang_DT ctdhdt where mh.Ma_MA = ctdhdt.Ma_MA  and ctdhdt.Ma_DHTD='" + lm1.ToString() + "'";
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable lm = new DataTable();
+            da.Fill(lm);
+            int tongdonhang = 0, a;
+            if (lm.Rows.Count > 0)
+            {
+                for (int i = 0; i < lm.Rows.Count; i++)
+                {
+                    a = Convert.ToInt32(lm.Rows[i]["Gia"]);
+                    tongdonhang = tongdonhang + a;
+                }
+
+            }
+            txt_TongTien.Text = tongdonhang.ToString();
+            conn.Close();
+        }
+        void hienchinhanh()
+        {
+            cbb_TenChiNhanh.DataSource = kn.LayBang("select Ten_CN from Chi_Nhanh");
+            cbb_TenChiNhanh.DisplayMember = "Ten_CN";
+            cbb_TenChiNhanh.ValueMember = "Ten_CN";
+        }
+        int c, lm1, T;
+        private void DonHangTongDai_Load(object sender, EventArgs e)
+        {
+            hiendonhang();
+            conn.Open();
+            string sql = "select * from Don_Hang_Tong_Dai ";
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable lm = new DataTable();
+            da.Fill(lm);
+            c = lm.Rows.Count - 1;
+            lm1 = Convert.ToInt32(lm.Rows[c]["Ma_DHTD"]);
+            T = lm1 + 1;
+            conn.Close();
+            tongtien();
+            hienchinhanh();
         }
 
         private void OffChiNhanh_Click(object sender, EventArgs e)
@@ -38,175 +79,71 @@ namespace AppQuanLyQuanAn
 
         private void btn_ThemMoi_Click(object sender, EventArgs e)
         {
-            int count = 0;
-            count = dgv_HienThiDanhSachDonHangTongDai.Rows.Count;
-            string chuoi = "";
-            int chuoi2 = 0;
-            chuoi = Convert.ToString(dgv_HienThiDanhSachDonHangTongDai.Rows[count - 2].Cells[0].Value);
-            chuoi2 = Convert.ToInt32((chuoi.Remove(0, 4)));
-            if (chuoi2 + 1 < 10)
-            {
-                txt_MaDonHang.Text = "DHTD0" + (chuoi2 + 1).ToString();
-            }
-            else if (chuoi2 + 1 < 100)
-            {
-                txt_MaDonHang.Text = "DHTD" + (chuoi2 + 1).ToString();
-            }
+            kn.ThayDoiDL("UPDATE Don_Hang_Tong_Dai SET Ten_DH = '" + txt_TenDonHang.Text.ToString() + "',sdtKH = '" + txt_sdtKH.Text.ToString() + "',dcKH = '" + txt_dcKH.Text.ToString() + "',Ten_CN = '" + cbb_TenChiNhanh.Text.ToString() + "',TrangThai = '" + cbb_TrangThai.Text.ToString() + "',KhuyenMai = '" + cbb_KhuyenMai.Text.ToString() + "',NhanVien = '" + txt_tennv.Text.ToString() + "',ThoiGian = '" + Time_ThoiGian.Text.ToString() + "',TongTien = '" + txt_TongTien.Text.ToString() + "' where Ma_DHTD = '" + lm1.ToString() + "'");
+            kn.ThayDoiDL("Insert into Don_Hang_Tong_Dai(Ma_DHTD) values('" + T.ToString() + "')");
+            DonHangTongDai_Load(sender, e);
+        }
+
+        private void HeaderPanelDM_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+     
+
+        private void timkh_Click_1(object sender, EventArgs e)
+        {
             conn.Open();
-            string SqlInsert = "Insert into Don_Hang_Tong_Dai values('" + txt_MaDonHang.Text + "',N'" + txt_TenDonHang.Text + "','" + cbb_MaKhachHang.Text + "',N'" + cbb_TenChiNhanh.Text + "',N'" + cbb_TrangThai.Text + "',N'" + cbb_KhuyenMai.Text + "',N'" + cbb_NhanVien.Text + "','" + Time_ThoiGian.Text + "','" + txt_TongTien.Text + "')";
-            cmd = new SqlCommand(SqlInsert, conn);
-            if (cmd.ExecuteNonQuery() == 1)
+            string sql = "select * from Khach_Hang where SoDienThoai_KH = '" + txt_sdtKH.Text.ToString() + "'";
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable lm = new DataTable();
+            da.Fill(lm);
+            if (lm.Rows.Count > 0)
             {
-                MessageBox.Show("Add Successful", "Thông báo");
+                txt_dcKH.Text = lm.Rows[0]["DiaChi_KH"].ToString();
             }
             else
             {
-                MessageBox.Show("Add fail", "Thông báo");
+                MessageBox.Show("Không Tìm Thấy", "Thông Báo");
             }
-            HienThiDonHangTongDai();
-            txt_MaDonHang.Text = txt_TenDonHang.Text = cbb_MaKhachHang.Text = cbb_TenChiNhanh.Text = cbb_TrangThai.Text = cbb_KhuyenMai.Text = cbb_NhanVien.Text = Time_ThoiGian.Text = txt_TongTien.Text = "";
-            btn_ThemMoi.Visible = true;
             conn.Close();
+        }
+
+        private void btn_Max_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void btn_LamMoi_Click(object sender, EventArgs e)
         {
-            HienThiDonHangTongDai();
-            txt_MaDonHang.Text = txt_TenDonHang.Text = cbb_MaKhachHang.Text = cbb_TenChiNhanh.Text = cbb_TrangThai.Text = cbb_KhuyenMai.Text = cbb_NhanVien.Text = Time_ThoiGian.Text = txt_TongTien.Text = "";
-            btn_ThemMoi.Visible = true;
-        }
-
-        private void btn_CapNhat_Click(object sender, EventArgs e)
-        {
-            conn.Open();
-            string SqlUpdate = "Update Don_Hang_Tong_Dai set Ten_DH = '" + txt_TenDonHang.Text + "',Ma_KH = '" + cbb_MaKhachHang.Text + "',Ten_CN = N'" + cbb_TenChiNhanh.Text + "',TrangThai = N'" + cbb_TrangThai.Text + "',KhuyenMai = '" + cbb_KhuyenMai.Text + "',NhanVien = N'" + cbb_NhanVien.Text + "',ThoiGian = '" + Time_ThoiGian.Text + "',TongTien = '" + cbb_TrangThai.Text + "' Where Ma_DHCN = '" + txt_MaDonHang.Text + "'";
-            cmd = new SqlCommand(SqlUpdate, conn);
-            if (cmd.ExecuteNonQuery() == 1)
-            {
-                MessageBox.Show("Update Successful", "Thông báo");
-            }
-            else
-            {
-                MessageBox.Show("Update fail", "Thông báo");
-            }
-            HienThiDonHangTongDai();
-            txt_MaDonHang.Text = txt_TenDonHang.Text = cbb_MaKhachHang.Text = cbb_TenChiNhanh.Text = cbb_TrangThai.Text = cbb_KhuyenMai.Text = cbb_NhanVien.Text = Time_ThoiGian.Text = txt_TongTien.Text = "";
-            btn_ThemMoi.Visible = true;
-            conn.Close();
+            DonHangTongDai_Load(sender, e);
         }
 
         private void btn_Xoa_Click(object sender, EventArgs e)
         {
             conn.Open();
-            string SqlDelete = "Delete Don_Hang_Tong_Dai Where Ma_DHCN = '" + txt_MaDonHang.Text + "'";
-            cmd = new SqlCommand(SqlDelete, conn);
-            if (cmd.ExecuteNonQuery() == 1)
-            {
-                MessageBox.Show("Delete Successful", "Thông báo");
-            }
-            else
-            {
-                MessageBox.Show("Delete fail", "Thông báo");
-            }
-            HienThiDonHangTongDai();
-            txt_MaDonHang.Text = txt_TenDonHang.Text = cbb_MaKhachHang.Text = cbb_TenChiNhanh.Text = cbb_TrangThai.Text = cbb_KhuyenMai.Text = cbb_NhanVien.Text = Time_ThoiGian.Text = txt_TongTien.Text = "";
-            btn_ThemMoi.Visible = true;
+
+            string id = dgv_HienThiDanhSachDonHangTongDai.CurrentRow.Cells[0].Value.ToString();
+
+            string delete = "delete from Don_Hang_Tong_Dai  where Ma_DHTD = '" + id.ToString() + "'";
+            SqlCommand deletecmd = new SqlCommand(delete, conn);
+            deletecmd.CommandType = CommandType.Text;
+            deletecmd.ExecuteNonQuery();
             conn.Close();
+            DonHangTongDai_Load(sender, e);
         }
 
-        private void dgv_HienThiDanhSachDonHangChiNhanh_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void button4_Click_1(object sender, EventArgs e)
         {
-            int index = e.RowIndex;
-            DataGridViewRow row = dgv_HienThiDanhSachDonHangTongDai.Rows[index];
-
-            txt_MaDonHang.Text = row.Cells[0].Value.ToString();
-            txt_TenDonHang.Text = row.Cells[1].Value.ToString();
-            cbb_MaKhachHang.Text = row.Cells[2].Value.ToString();
-            cbb_TenChiNhanh.Text = row.Cells[3].Value.ToString();
-            cbb_TrangThai.Text = row.Cells[4].Value.ToString();
-            cbb_KhuyenMai.Text = row.Cells[5].Value.ToString();
-            cbb_NhanVien.Text = row.Cells[6].Value.ToString();
-            Time_ThoiGian.Text = row.Cells[7].Value.ToString();
-            txt_TongTien.Text = row.Cells[8].Value.ToString();
-            btn_ThemMoi.Visible = false;
+            themmonantongdai f = new themmonantongdai();
+            f.MaDHDT = lm1.ToString();
+            f.ShowDialog();
+            DonHangTongDai_Load(sender, e);
         }
 
-        void ComboboxMaKhachHang()
-        {
-            cmd = new SqlCommand("Select Ma_KH from Khach_Hang", conn);
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataSet ds = new DataSet();
-            da.Fill(ds, "Khach_Hang");
-            cbb_MaKhachHang.DataSource = ds.Tables[0];
-            cbb_MaKhachHang.DisplayMember = "Ma_KH";
-        }
-
-        void ComboboxTenChiNhanh()
-        {
-            cmd = new SqlCommand("Select Ten_CN from Chi_Nhanh", conn);
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataSet ds = new DataSet();
-            da.Fill(ds, "Chi_Nhanh");
-            cbb_TenChiNhanh.DataSource = ds.Tables[0];
-            cbb_TenChiNhanh.DisplayMember = "Ten_CN";
-        }
-
-        void ComboboxNhanVien()
-        {
-            cmd = new SqlCommand("Select Ma_NV from Nhan_Vien", conn);
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataSet ds = new DataSet();
-            da.Fill(ds, "Nhan_Vien");
-            cbb_NhanVien.DataSource = ds.Tables[0];
-            cbb_NhanVien.DisplayMember = "Ma_NV";
-        }
-
-
-        void ComboboxSearchChiNhanh()
-        {
-            cmd = new SqlCommand("Select Ten_CN from Chi_Nhanh", conn);
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataSet ds = new DataSet();
-            da.Fill(ds, "Chi_Nhanh");
-            cbb_SearchTenChiNhanh.DataSource = ds.Tables[0];
-            cbb_SearchTenChiNhanh.DisplayMember = "Ten_CN";
-        }
-
-        private void txt_SearchDonHangChiNhanh_TextChanged(object sender, EventArgs e)
-        {
-            (dgv_HienThiDanhSachDonHangTongDai.DataSource as DataTable).DefaultView.RowFilter = string.Format("Ten_DH LIKE '%{0}%'", cbb_SearchTenChiNhanh.Text);
-        }
-
-        private void DonHangTongDai_Load(object sender, EventArgs e)
-        {
-            ComboboxMaKhachHang();
-            ComboboxTenChiNhanh();
-            ComboboxNhanVien();
-            ComboboxSearchChiNhanh();
-            HienThiDonHangTongDai();
-        }
-
-        private void btn_Search_Click_1(object sender, EventArgs e)
-        {
-            DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter("Select * from  Don_Hang_Chi_Nhanh Where Ten_CN = '" + cbb_SearchTenChiNhanh.Text + "'", conn);
-            da.Fill(dt);
-            dgv_HienThiDanhSachDonHangTongDai.DataSource = dt;
-        }
-
-        private void btn_Min_Click(object sender, EventArgs e)
-        {
-            FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            WindowState = FormWindowState.Normal;
-            TopMost = false;
-        }
-
-        private void btn_Max_Click(object sender, EventArgs e)
-        {
-            FormBorderStyle = FormBorderStyle.None;
-            WindowState = FormWindowState.Maximized;
-            TopMost = true;
-        }
+       
 
     }
+
 }
