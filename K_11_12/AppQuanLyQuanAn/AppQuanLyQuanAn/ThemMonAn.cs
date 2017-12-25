@@ -45,7 +45,7 @@ namespace AppQuanLyQuanAn
             }
             else
             {
-                string SqlInsert = "Insert into Mon_An values('" + txt_MaMonAn.Text + "',N'" + txt_TenMonAn.Text + "','" + txt_Gia.Text + "',N'" + txt_GhiChu.Text + "',N'" + txt_TenDanhMuc.Text + "')";
+                string SqlInsert = "Insert into Mon_An values('" + txt_MaMonAn.Text + "',N'" + txt_TenMonAn.Text + "','" + txt_Gia.Text + "',N'" + txt_GhiChu.Text + "',N'" + cbb_TenDanhMuc.Text + "')";
                 cmd = new SqlCommand(SqlInsert, conn);
                 if (cmd.ExecuteNonQuery() == 1)
                 {
@@ -56,7 +56,7 @@ namespace AppQuanLyQuanAn
                     MessageBox.Show("Add fail", "Thông báo");
                 }
                 HienThiMonAn();
-                txt_MaMonAn.Text = txt_TenMonAn.Text = txt_Gia.Text = txt_GhiChu.Text = "";
+                txt_MaMonAn.Text = txt_TenMonAn.Text = txt_Gia.Text = txt_GhiChu.Text = cbb_TenDanhMuc.Text = "";
             }
             conn.Close();
         }
@@ -66,11 +66,20 @@ namespace AppQuanLyQuanAn
             this.Close();
         }
 
-       
+        void ComboboxDanhMuc()
+        {
+            cmd = new SqlCommand("Select Ten_DM from Mon_An", conn);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataSet ds = new DataSet();
+            da.Fill(ds, "Mon_An");
+            cbb_TenDanhMuc.DataSource = ds.Tables[0];
+            cbb_TenDanhMuc.DisplayMember = "Ten_DM";
+        }
 
         private void ThemMonAn_Load(object sender, EventArgs e)
         {
-            HienThiMonAn(); 
+            HienThiMonAn();
+            ComboboxDanhMuc();
         }
 
         void HienThiMonAn()
@@ -83,7 +92,7 @@ namespace AppQuanLyQuanAn
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {
+        {  
             this.Close();
         }
 

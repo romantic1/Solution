@@ -47,8 +47,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_ThemMonAn = new System.Windows.Forms.Button();
-            this.txt_TenDanhMuc = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.cbb_TenDanhMuc = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ThemMonAn)).BeginInit();
             this.HeaderPanelDM.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -57,7 +57,7 @@
             // dgv_ThemMonAn
             // 
             this.dgv_ThemMonAn.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgv_ThemMonAn.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dgv_ThemMonAn.BackgroundColor = System.Drawing.SystemColors.ControlDark;
             this.dgv_ThemMonAn.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_ThemMonAn.Location = new System.Drawing.Point(-1, 267);
             this.dgv_ThemMonAn.Name = "dgv_ThemMonAn";
@@ -235,10 +235,10 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.PaleGoldenrod;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.cbb_TenDanhMuc);
             this.panel1.Controls.Add(this.dgv_ThemMonAn);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.btn_ThemMonAn);
-            this.panel1.Controls.Add(this.txt_TenDanhMuc);
             this.panel1.Controls.Add(this.txt_GhiChu);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label6);
@@ -270,15 +270,6 @@
             this.btn_ThemMonAn.UseVisualStyleBackColor = false;
             this.btn_ThemMonAn.Click += new System.EventHandler(this.btn_ThemMonAn_Click);
             // 
-            // txt_TenDanhMuc
-            // 
-            this.txt_TenDanhMuc.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_TenDanhMuc.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txt_TenDanhMuc.Location = new System.Drawing.Point(164, 197);
-            this.txt_TenDanhMuc.Name = "txt_TenDanhMuc";
-            this.txt_TenDanhMuc.Size = new System.Drawing.Size(335, 18);
-            this.txt_TenDanhMuc.TabIndex = 39;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -288,6 +279,14 @@
             this.label7.Size = new System.Drawing.Size(98, 15);
             this.label7.TabIndex = 41;
             this.label7.Text = "Tên Danh Mục:";
+            // 
+            // cbb_TenDanhMuc
+            // 
+            this.cbb_TenDanhMuc.FormattingEnabled = true;
+            this.cbb_TenDanhMuc.Location = new System.Drawing.Point(164, 197);
+            this.cbb_TenDanhMuc.Name = "cbb_TenDanhMuc";
+            this.cbb_TenDanhMuc.Size = new System.Drawing.Size(335, 21);
+            this.cbb_TenDanhMuc.TabIndex = 51;
             // 
             // ThemMonAn
             // 
@@ -327,9 +326,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox txt_TenDanhMuc;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btn_Min;
         private System.Windows.Forms.Button btn_Max;
+        private System.Windows.Forms.ComboBox cbb_TenDanhMuc;
     }
 }

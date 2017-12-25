@@ -97,7 +97,7 @@
             // 
             // dgv_ThemChiNhanh
             // 
-            this.dgv_ThemChiNhanh.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_ThemChiNhanh.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgv_ThemChiNhanh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_ThemChiNhanh.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgv_ThemChiNhanh.Location = new System.Drawing.Point(0, 259);

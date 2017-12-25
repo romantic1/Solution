@@ -95,7 +95,7 @@ namespace AppQuanLyQuanAn
         private void btn_CapNhat_Click(object sender, EventArgs e)
         {
             conn.Open();
-            string SqlUpdate = "Update Don_Hang_Chi_Nhanh set Ten_DH = '" + txt_TenDonHang.Text + "',Ma_KH = '" + cbb_MaKhachHang.Text + "',Ten_CN = N'" + cbb_TenChiNhanh.Text + "',TrangThai = N'" + cbb_TrangThai.Text + "',KhuyenMai = '" + cbb_KhuyenMai.Text + "',NhanVien = N'" + cbb_NhanVien.Text + "',ThoiGian = '" + Time_ThoiGian.Text + "',TongTien = '" + cbb_TrangThai.Text + "' Where Ma_DHCN = '" + txt_MaDonHang.Text + "'";
+            string SqlUpdate = "Update Don_Hang_Chi_Nhanh set Ten_DH = N'" + txt_TenDonHang.Text + "',Ma_KH = '" + cbb_MaKhachHang.Text + "',Ten_CN = N'" + cbb_TenChiNhanh.Text + "',TrangThai = N'" + cbb_TrangThai.Text + "',KhuyenMai = N'" + cbb_KhuyenMai.Text + "',NhanVien = N'" + cbb_NhanVien.Text + "',ThoiGian = '" + Time_ThoiGian.Text + "',TongTien = '" + txt_TongTien.Text + "' Where Ma_DHCN = '" + txt_MaDonHang.Text + "'";
             cmd = new SqlCommand(SqlUpdate, conn);
             if (cmd.ExecuteNonQuery() == 1)
             {
@@ -190,10 +190,7 @@ namespace AppQuanLyQuanAn
 
         private void btn_Search_Click(object sender, EventArgs e)
         {
-            DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter("Select * from  Don_Hang_Chi_Nhanh Where Ten_CN = '" + cbb_SearchTenChiNhanh.Text + "'", conn);
-            da.Fill(dt);
-            dgv_HienThiDanhSachDonHangChiNhanh.DataSource = dt;
+            (dgv_HienThiDanhSachDonHangChiNhanh.DataSource as DataTable).DefaultView.RowFilter = string.Format("Ten_CN LIKE '%{0}%'", cbb_SearchTenChiNhanh.Text);
         }
 
         private void txt_SearchDonHangChiNhanh_TextChanged(object sender, EventArgs e)

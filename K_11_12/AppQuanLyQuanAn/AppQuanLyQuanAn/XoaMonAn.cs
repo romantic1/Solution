@@ -61,9 +61,7 @@ namespace AppQuanLyQuanAn
 
         private void button1_Click(object sender, EventArgs e)
         {
-            QuanLiChiNhanh frmCNQL = new QuanLiChiNhanh();
             this.Close();
-            frmCNQL.Show();
         }
 
         private void btn_Min_Click(object sender, EventArgs e)

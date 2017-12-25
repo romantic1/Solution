@@ -204,6 +204,7 @@ CREATE TABLE Don_Hang_Tong_Dai(
 	ThoiGian datetime,
 	TongTien float,
 )
+
 CREATE TABLE Chi_Tiet_Don_Hang_DT
 (	id int IDENTITY(1,1),
 	Ma_DHTD char(10),
@@ -234,7 +235,7 @@ InSert into Mon_An values('MA06',N'Gà Ta Luột','130000','',N'Gà')
 InSert into Mon_An values('MA07',N'Dê Nướng Trong Gừng','120000','',N'Dê')
 InSert into Mon_An values('MA08',N'Bò Xiên Nướng','120000','',N'Bò')
 InSert into Mon_An values('MA09',N'Sườn Lợn Suốt','140000','',N'Lợn')
-InSert into Mon_An values('MA010',N'Bò Muối Chua Ngọt','160000','',N'Bò')
+
 -- Danh mục
 InSert into Danh_Muc values('DM01',N'Bò')
 InSert into Danh_Muc values('DM02',N'Lợn')
@@ -245,6 +246,7 @@ InSert into Danh_Muc values('DM06',N'Cháo')
 InSert into Danh_Muc values('DM07',N'Hải Sản')
 InSert into Danh_Muc values('DM08',N'Gà')
 InSert into Danh_Muc values('DM09',N'Dê')
+
 --Chi_Tiet_Danh_Muc
 InSert into Chi_Tiet_Danh_Muc values('DM01','MA01')
 InSert into Chi_Tiet_Danh_Muc values('DM01','MA10')
@@ -255,9 +257,10 @@ InSert into Chi_Tiet_Danh_Muc values('DM02','MA04')
 InSert into Chi_Tiet_Danh_Muc values('DM02','MA09')
 InSert into Chi_Tiet_Danh_Muc values('DM09','MA03')
 InSert into Chi_Tiet_Danh_Muc values('DM09','MA07')
---Don_Hang_Tong_Dai
 
+--Don_Hang_Tong_Dai
 InSert into Don_Hang_Tong_Dai values('1','','','','','','','','','')
+
 --Nhan Vien
 Insert into Nhan_Vien values('NV01','ADMIN','Xuan123',N'Nguyễn Thị Kiều Xuân','365423269','09094236541',N'Nhà Hàng Quận 1','123',N'Giám Đốc','','20121220','')
 Insert into Nhan_Vien values('NV02','TKNV2','Phuc123',N'Nguyễn Xuân Phúc','365423245','09094236524',N'Nhà Hàng Quận 3','123',N'Bán Hàng',N'Tốt','20121222','15000')

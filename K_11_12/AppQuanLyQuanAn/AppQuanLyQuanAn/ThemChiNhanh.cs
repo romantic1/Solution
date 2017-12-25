@@ -30,9 +30,7 @@ namespace AppQuanLyQuanAn
 
         private void button1_Click(object sender, EventArgs e)
         {
-            QuanLiChiNhanh frmQLCT = new QuanLiChiNhanh();
             this.Close();
-            frmQLCT.Show();
         }
 
         private void button6_Click(object sender, EventArgs e)

@@ -86,5 +86,10 @@ namespace AppQuanLyQuanAn
             WindowState = FormWindowState.Maximized;
             TopMost = true;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
