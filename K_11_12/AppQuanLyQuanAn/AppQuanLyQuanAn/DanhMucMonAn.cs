@@ -29,7 +29,6 @@ namespace AppQuanLyQuanAn
             LoadlbDanhMucMonAn();
             MaTuTangMonAn();
             MaTuTangDanhMuc();
-
         }
 
         Provider kn = new Provider();
@@ -37,9 +36,7 @@ namespace AppQuanLyQuanAn
 
 //Hien Thi Man Hinh
         private void ClearScr()
-        {
-            
-            
+        {           
             txtTenMA.Clear();
             txtTenDM.Clear();
             txtTimKiemMA.Clear();
@@ -83,8 +80,6 @@ namespace AppQuanLyQuanAn
 
             string sql = "select * from Mon_An ";
             dgvDanhSachMA.DataSource = kn.Select(CommandType.Text, sql);
-
-
             kn.Disconnect();
         }
 

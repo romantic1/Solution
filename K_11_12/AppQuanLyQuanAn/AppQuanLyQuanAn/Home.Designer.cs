@@ -97,7 +97,6 @@
             this.txt_TaiKhoan.Name = "txt_TaiKhoan";
             this.txt_TaiKhoan.Size = new System.Drawing.Size(198, 20);
             this.txt_TaiKhoan.TabIndex = 5;
-            this.txt_TaiKhoan.Text = "admin";
             // 
             // txt_MatKhau
             // 
@@ -105,7 +104,6 @@
             this.txt_MatKhau.Name = "txt_MatKhau";
             this.txt_MatKhau.Size = new System.Drawing.Size(198, 20);
             this.txt_MatKhau.TabIndex = 7;
-            this.txt_MatKhau.Text = "xuan123";
             this.txt_MatKhau.UseSystemPasswordChar = true;
             // 
             // monthCalendar1
