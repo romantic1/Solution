@@ -25,9 +25,10 @@ namespace AppQuanLyQuanAn
         private void ThongTinBan_Load(object sender, EventArgs e)
         {
             HienThiThongTinBan();
-            ComboboxTenChiNhanh();
+            ComboboxTinhTrangBan();
             ComboboxMaKhachHang();
             ComboboxSearchChiNhanh();
+            ComboboxTenChiNhanh();
         }
 
         private void OffChiNhanh_Click(object sender, EventArgs e)
@@ -52,7 +53,7 @@ namespace AppQuanLyQuanAn
                 txt_MaBan.Text = "B" + (chuoi2 + 1).ToString();
             }
             conn.Open();
-            string SqlInsert = "Insert into ThongTinBan values('" + txt_MaBan.Text + "',N'" + cbb_LoaiBan.Text + "','" + txt_SoLuongNguoi.Text + "',N'" + cbb_TinhTrangBan.Text + "',N'" + cbb_TenChiNhanh.Text + "','" + cbb_MaKhachHang.Text + "')";
+            string SqlInsert = "Insert into ThongTinBan values('" + txt_MaBan.Text + "',N'" + cbb_LoaiBan.Text + "','" + txt_SoLuongNguoi.Text + "',N'" + cbb_TenChiNhanh.Text + "',N'" + cbb_TinhTrangBan.Text + "','" + cbb_MaKhachHang.Text + "')";
             cmd = new SqlCommand(SqlInsert, conn);
             if (cmd.ExecuteNonQuery() == 1)
             {
@@ -63,7 +64,7 @@ namespace AppQuanLyQuanAn
                 MessageBox.Show("Add fail", "Thông báo");
             }
             HienThiThongTinBan();
-            txt_MaBan.Text = cbb_LoaiBan.Text = txt_SoLuongNguoi.Text = cbb_TenChiNhanh.Text = cbb_TinhTrangBan.Text = cbb_MaKhachHang.Text = "";
+            txt_MaBan.Text = cbb_LoaiBan.Text = txt_SoLuongNguoi.Text = cbb_TinhTrangBan.Text = cbb_TenChiNhanh.Text = cbb_MaKhachHang.Text = "";
             btn_ThemMoi.Visible = true;
             conn.Close();
         }
@@ -79,7 +80,7 @@ namespace AppQuanLyQuanAn
 
         private void btn_LamMoi_Click(object sender, EventArgs e)
         {
-            txt_MaBan.Text = cbb_LoaiBan.Text = txt_SoLuongNguoi.Text = cbb_TenChiNhanh.Text = cbb_TinhTrangBan.Text = cbb_MaKhachHang.Text = "";
+            txt_MaBan.Text = cbb_LoaiBan.Text = txt_SoLuongNguoi.Text = cbb_TinhTrangBan.Text = cbb_TenChiNhanh.Text = cbb_MaKhachHang.Text = "";
             HienThiThongTinBan();
             btn_ThemMoi.Visible = true;
         }
@@ -87,7 +88,7 @@ namespace AppQuanLyQuanAn
         private void btn_CapNhat_Click(object sender, EventArgs e)
         {
             conn.Open();
-            string SqlUpdate = "Update ThongTinBan set LoaiBan = N'" + cbb_LoaiBan.Text + "',SoLuongNguoi = '" + txt_SoLuongNguoi.Text + "',TinhTrangBan = N'" + cbb_TinhTrangBan.Text + "',Ten_CN = N'" + cbb_TenChiNhanh.Text + "',MaKhachHang = '" +cbb_MaKhachHang.Text + "' Where Ma_Ban = '" + txt_MaBan.Text + "'";
+            string SqlUpdate = "Update ThongTinBan set LoaiBan = N'" + cbb_LoaiBan.Text + "',SoLuongNguoi = '" + txt_SoLuongNguoi.Text + "',TinhTrangBan = N'" + cbb_TenChiNhanh.Text + "',Ten_CN = N'" + cbb_TinhTrangBan.Text + "',MaKhachHang = '" +cbb_MaKhachHang.Text + "' Where Ma_Ban = '" + txt_MaBan.Text + "'";
             cmd = new SqlCommand(SqlUpdate, conn);
             if (cmd.ExecuteNonQuery() == 1)
             {
@@ -98,7 +99,7 @@ namespace AppQuanLyQuanAn
                 MessageBox.Show("Update fail", "Thông báo");
             }
             HienThiThongTinBan();
-            txt_MaBan.Text = cbb_LoaiBan.Text = txt_SoLuongNguoi.Text = cbb_TenChiNhanh.Text = cbb_TinhTrangBan.Text = cbb_MaKhachHang.Text = "";
+            txt_MaBan.Text = cbb_LoaiBan.Text = txt_SoLuongNguoi.Text = cbb_TinhTrangBan.Text = cbb_TenChiNhanh.Text = cbb_MaKhachHang.Text = "";
             btn_ThemMoi.Visible = true;
             conn.Close();
         }
@@ -111,8 +112,8 @@ namespace AppQuanLyQuanAn
             txt_MaBan.Text = row.Cells[0].Value.ToString();
             cbb_LoaiBan.Text = row.Cells[1].Value.ToString();
             txt_SoLuongNguoi.Text = row.Cells[2].Value.ToString();
-            cbb_TenChiNhanh.Text = row.Cells[3].Value.ToString();
             cbb_TinhTrangBan.Text = row.Cells[4].Value.ToString();
+            cbb_TenChiNhanh.Text = row.Cells[3].Value.ToString();
             cbb_MaKhachHang.Text = row.Cells[5].Value.ToString();
             btn_ThemMoi.Visible = false;
         }
@@ -131,7 +132,7 @@ namespace AppQuanLyQuanAn
                 MessageBox.Show("Delete fail", "Thông báo");
             }
             HienThiThongTinBan();
-            txt_MaBan.Text = cbb_LoaiBan.Text = txt_SoLuongNguoi.Text = cbb_TenChiNhanh.Text = cbb_TinhTrangBan.Text = cbb_MaKhachHang.Text = "";
+            txt_MaBan.Text = cbb_LoaiBan.Text = txt_SoLuongNguoi.Text = cbb_TinhTrangBan.Text = cbb_TenChiNhanh.Text = cbb_MaKhachHang.Text = "";
             btn_ThemMoi.Visible = true;
             conn.Close();
         }
@@ -154,6 +155,16 @@ namespace AppQuanLyQuanAn
             da.Fill(ds, "Chi_Nhanh");
             cbb_SearchTenChiNhanh.DataSource = ds.Tables[0];
             cbb_SearchTenChiNhanh.DisplayMember = "Ten_CN";
+        }
+
+        void ComboboxTinhTrangBan()
+        {
+            cmd = new SqlCommand("Select TinhTrangBan from ThongTinBan", conn);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataSet ds = new DataSet();
+            da.Fill(ds, "ThongTinBan");
+            cbb_TinhTrangBan.DataSource = ds.Tables[0];
+            cbb_TinhTrangBan.DisplayMember = "TinhTrangBan";
         }
 
         void ComboboxTenChiNhanh()
